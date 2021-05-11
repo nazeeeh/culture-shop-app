@@ -3,7 +3,11 @@
    <v-list dense nav class="py-0 mx-5">
           <v-list-item v-for="(user, i) in users" :key="i" two-line class="px-0">
             <v-list-item-avatar>
-              <img src="">
+              <v-avatar color="indigo">
+              <v-icon dark>
+             mdi-account-circle
+            </v-icon>
+            </v-avatar>
             </v-list-item-avatar>
 
             <v-list-item-content>

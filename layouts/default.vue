@@ -7,7 +7,7 @@
     >
       <Avatar fixed/>
 
-      <Sidebar />
+      <Sidebar fixed/>
       <!-- <v-list>
         <v-list-item
           v-for="(dash, i) in dashs"
@@ -47,30 +47,22 @@
 
         
       </v-list> -->
-
-      
     </v-navigation-drawer>
 
     
     <!-- Content loads -->
     <v-main>
-      <v-container>
+      <v-container-fluid>
         <nuxt />
-      </v-container>
+      </v-container-fluid>
     </v-main>
     
-    <!-- Footer section -->
-    <v-footer
-      app
-    >
-      <span>&copy; {{ new Date().getFullYear() }}</span>
-    </v-footer>
   </v-app>
 </template>
 
 <script>
 
- import Avatar from '~/components/avatar'
+//  import Avatar from '~/components/avatar'
 //  import Icon from '~/components/Icon'
 
 export default {
@@ -97,7 +89,7 @@ export default {
     }
 
     components: {
-    Avatar
+    // Avatar
     // Icon
   }
 
