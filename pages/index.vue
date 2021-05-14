@@ -48,7 +48,6 @@ font-family: 'Space Grotesk';
 font-style: normal;
 font-weight: bold;
 font-size: 24px;
-padding: 0;
 }
 .subheading{
   font-family: 'Space Grotesk';
@@ -59,7 +58,8 @@ padding: 0;
   letter-spacing: 0.07em;
 }
 .top-section{
-  margin: 5px 0 5px 34px;
+  margin: 5px 0 6px 34px;
 }
+
 
 </style>

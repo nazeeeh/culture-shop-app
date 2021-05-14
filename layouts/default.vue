@@ -52,11 +52,10 @@
     
     <!-- Content loads -->
     <v-main>
-      <v-container-fluid>
+      <v-container fluid>
         <nuxt />
-      </v-container-fluid>
+      </v-container>
     </v-main>
-    
   </v-app>
 </template>
 
@@ -95,5 +94,10 @@ export default {
 
 </script>
 <style scoped>
-  
+  * {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
 </style>

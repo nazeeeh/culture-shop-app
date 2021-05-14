@@ -35,9 +35,5 @@ export default {
     color: #192135;
 }
 
-.a-link-hover:hover{
-    color: red;
-}
-
 
 </style>

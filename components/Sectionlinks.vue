@@ -8,8 +8,8 @@
                 </span>
             </nuxt-link>
         
-            <nuxt-link to="#" class="text-settings ">
-                    <span class="flex-content mx-8">
+            <nuxt-link to="#" class="text-settings">
+                    <span class="flex-content mx-8 ">
                     <Icon name="orders"/>
                     <span class="mx-3 mt-1">Orders</span>
                     <Icon name="dropdown" class="mx-16"/> 
@@ -124,7 +124,7 @@
                     <Icon name="logout"/>
                     <span class="mx-3 mt-1">Logout</span>
                     </span>
-                </nuxt-link>                
+            </nuxt-link>                
     </div>
 </template>
 <style scoped>
@@ -137,7 +137,6 @@
 }
 .flex-content{
     display: flex;
-    
     align-items: flex-start;
     margin-bottom: 10px;
     /* max-width: 400px; */
@@ -154,4 +153,11 @@
     text-decoration: none;
     color: #192135;
 }
+
+.a-link-hover:hover{
+    padding: 20px;
+    background: #8D8D8D;
+    width: 100%;
+}
+
 </style>

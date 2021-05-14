@@ -62,7 +62,7 @@ export default {
     /* margin: 1rem 1rem 0 2rem; */
 }
 .outer-layer{
-    width: 24vw;
+    width: 23.5vw;
     font-family: Space Grotesk;
     border: 2px solid #F2F2F2;
     box-sizing: border-box;
