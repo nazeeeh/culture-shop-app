@@ -6,13 +6,23 @@
 
     <div v-for="(set, i) in settingsTwo" :key="i" class="settings-list" :style="{color: set.color}" >
         <div>
-            <span class="p-b"> {{ set.content }} </span>
+            <v-list dense>
+             <v-list-item>
+                 <span class="p-b"> {{ set.content }} </span>
+             </v-list-item>
+            </v-list>
         </div>
-        <div class="f-left">
-            <span class="p-s text-uppercase mt-1">{{ set.views }}</span>
-            <Icon :name="set.icon" />
+        <v-list dense>
+         <div class="f-left">
+         <v-list-item :to="set.to" router>
+         <span class="p-s text-uppercase">
+                {{ set.views }}
+            </span>
+              <icon :name="set.icon" class="mt-2"></icon>
+
+         </v-list-item>
         </div>
-        
+        </v-list>
     </div>
   </div>
 </template>
@@ -24,10 +34,10 @@ export default {
  {
      return {
            settingsTwo: [
-              {content: 'GDPR', views: 'view', icon: 'right'},
-              {content: 'invoice & reports', views: 'view', icon: 'right'},
-              {content: 'push notifications', views: 'view', icon: 'right'},
-              {content: '2FA authentication', views: 'view', icon: 'right', color: '#8D8D8D'},
+              {content: 'GDPR', views: 'view', icon: 'right', to: '/'},
+              {content: 'invoice & reports', views: 'view', icon: 'right', to: '/'},
+              {content: 'push notifications', views: 'view', icon: 'right', to: '/'},
+              {content: '2FA authentication', views: 'view', icon: 'right', color: '#8D8D8D', to: '/'},
           ],
      }
  }}
@@ -47,7 +57,7 @@ export default {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 20px 35px;
+    padding: 20px 20px;
     font-family: 'Space Grotesk';
     border-bottom: 2px solid #F2F2F2;
 }

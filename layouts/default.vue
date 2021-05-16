@@ -61,9 +61,6 @@
 
 <script>
 
-//  import Avatar from '~/components/avatar'
-//  import Icon from '~/components/Icon'
-
 export default {
     // data () {
     //   return {
@@ -86,11 +83,6 @@ export default {
     //     ]
     //   }
     }
-
-    components: {
-    // Avatar
-    // Icon
-  }
 
 </script>
 <style scoped>

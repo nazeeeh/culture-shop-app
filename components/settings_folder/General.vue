@@ -4,15 +4,25 @@
         <span class="text-uppercase text-bg">General</span>
     </div>
     
-    <div v-for="(setting, i) in settings" :key="i" class="settings-list" :to="setting.to" router>
+    <div v-for="(setting, i) in settings" :key="i" class="settings-list">
         <div>
-            <span class="p-b"> {{ setting.content }} </span>
+            <v-list dense>
+             <v-list-item>
+                 <span class="p-b"> {{ setting.content }} </span>
+             </v-list-item>
+            </v-list>
         </div>
-        <div class="f-left">
-            <span class="p-s text-uppercase mt-1">{{ setting.views }}</span>
-            <Icon :name="setting.icon" />
+        <v-list dense>
+         <div class="f-left">
+         <v-list-item :to="setting.to" router>
+         <span class="p-s text-uppercase">
+                {{ setting.views }}
+            </span>
+              <icon :name="setting.icon" class="mt-2"></icon>
+
+         </v-list-item>
         </div>
-        
+        </v-list>
     </div>
   </div>
 </template>
@@ -24,11 +34,11 @@ export default {
  {
      return {
          settings: [
-              {content: 'User permissions', views: 'view', icon: 'right', to: '/user_permission'},
-              {content: 'vendor agreements', views: 'view', icon: 'right', to: '/vendor_agreement'},
-              {content: 'driver agreements', views: 'view', icon: 'right', to: '/driver_agreement'},
-              {content: 'privacy policy', views: 'view', icon: 'right'},
-              {content: 'terms & conditions', views: 'view', icon: 'right'},
+              {content: 'User permissions', views: 'view', icon: 'right', to: '/settings/user_permissions'},
+              {content: 'vendor agreements', views: 'view', icon: 'right', to: '/settings/vendor_agreement'},
+              {content: 'driver agreements', views: 'view', icon: 'right', to: '/settings/driver_agreement'},
+              {content: 'privacy policy', views: 'view', icon: 'right', to: '/settings/driver_agreement'},
+              {content: 'terms & conditions', views: 'view', icon: 'right', to: '/settings/driver_agreement'},
           ],
      }
  }}
@@ -48,7 +58,7 @@ export default {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 20px 35px;
+    padding: 20px 20px;
     font-family: 'Space Grotesk';
     border-bottom: 2px solid #F2F2F2;
 }
@@ -66,5 +76,7 @@ export default {
     letter-spacing: 0.07em;
     color: #8D8D8D;
 }
-
+/* a{
+    text-decoration: none;
+} */
 </style>

@@ -1,7 +1,7 @@
 <template>
     <div>
         <!-- Dashboard svg -->
-      <svg v-if="name==='dashboard'" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg v-if="name==='dashboard'" width="24" height="24" viewBox="0 0 24 24" fill="none"  xmlns="http://www.w3.org/2000/svg">
         <g id="Icon/Dashboard">
         <g id="Category">
         <g id="Category_2">
@@ -104,7 +104,7 @@
     </svg>
 
     <!-- Graph svg -->
-    <svg v-else-if="name==='graph'" width="293" height="184" viewBox="0 0 293 184" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg v-else-if="name==='graph'" width="280" height="184" viewBox="0 0 280 184" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.6">
 <path d="M1.34 7.638V8.814H2.32V11.754H1.284V13H8.494V11.754H3.664V8.814H5.302V7.638H3.664V6.042C3.664 4.922 4.294 4.25 5.358 4.25C6.45 4.25 7.094 4.936 7.094 6.042V6.882H8.438V6.07C8.438 4.11 7.248 3.004 5.316 3.004C3.482 3.004 2.32 4.068 2.32 6.07V7.638H1.34ZM12.062 3.2L9.38803 7.498H10.9L12.636 4.684H12.804V13H14.19L14.204 3.2H12.062ZM22.8423 6.126H20.8963L17.4103 9.206V3.2H16.0943V13H17.4103V10.816L18.6843 9.71L21.1763 13H22.7863L19.6223 8.898L22.8423 6.126Z" fill="#333B4F"/>
 <path d="M1.34 7.638V8.814H2.32V11.754H1.284V13H8.494V11.754H3.664V8.814H5.302V7.638H3.664V6.042C3.664 4.922 4.294 4.25 5.358 4.25C6.45 4.25 7.094 4.936 7.094 6.042V6.882H8.438V6.07C8.438 4.11 7.248 3.004 5.316 3.004C3.482 3.004 2.32 4.068 2.32 6.07V7.638H1.34ZM12.062 3.2L9.38803 7.498H10.9L12.636 4.684H12.804V13H14.19L14.204 3.2H12.062ZM22.8423 6.126H20.8963L17.4103 9.206V3.2H16.0943V13H17.4103V10.816L18.6843 9.71L21.1763 13H22.7863L19.6223 8.898L22.8423 6.126Z" fill="#192135"/>
@@ -152,7 +152,7 @@
 </svg>
 
 <!-- Graph - 2 svg -->
-  <svg v-else-if="name==='graph-2'" width="293" height="184" viewBox="0 0 293 184" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <svg v-else-if="name==='graph-2'" width="280" height="184" viewBox="0 0 280 184" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0)">
 <g opacity="0.6">
 <path d="M3.23 3.2L0.556 7.498H2.068L3.804 4.684H3.972V13H5.358L5.372 3.2H3.23ZM14.0102 6.126H12.0642L8.57822 9.206V3.2H7.26222V13H8.57822V10.816L9.85222 9.71L12.3442 13H13.9542L10.7902 8.898L14.0102 6.126Z" fill="#333B4F"/>

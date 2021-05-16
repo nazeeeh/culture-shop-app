@@ -12,8 +12,11 @@
          </div>
         </div>
         <v-divider class="mx-8"></v-divider>
-        <Icon name="graph" class="mx-8 my-6" />
+        <div class="graph-1">
+         <icon name="graph" class="mx-8 my-6"></icon>
         </div>
+        </div>
+
         <div class="outer-layer">
           <div class="box-display">
          <div>
@@ -26,7 +29,9 @@
          </div>
         </div>
         <v-divider class="mx-8"></v-divider>
-        <Icon name="graph" class="mx-8 my-6" />
+        <div class="graph-1">
+        <icon name="graph" class="mx-8 my-6 "></icon>
+        </div>
         </div>
         <div class="outer-layer">
           <div class="box-display">
@@ -40,7 +45,11 @@
          </div>
         </div>
         <v-divider class="mx-8"></v-divider>
-        <Icon name="graph-2" class="mx-8 my-6" />
+        <div>
+        <div class="graph-1">
+        <icon name="graph-2" class="mx-8 my-6"></icon>  
+        </div>
+        </div>
         </div>
      </div>
 </template>
@@ -63,10 +72,11 @@ export default {
 }
 .outer-layer{
     width: 23.5vw;
-    font-family: Space Grotesk;
+    font-family: 'Space Grotesk';
     border: 2px solid #F2F2F2;
     box-sizing: border-box;
     border-radius: 24px;
+    padding: 10px auto;
 
 }
 .rounded-corners{
@@ -97,6 +107,13 @@ export default {
     line-height: 16px;
     letter-spacing: 0.07em;
     text-transform: uppercase;
+}
+
+.graph-1 {
+    position: relative;
+    
+    /* margin: 0 auto; */
+    width: 100%;
 }
 
 </style>
