@@ -23,8 +23,8 @@
 </template>
 <script>
 
-import General from '~/components/settings_folder/General.vue'
-import Privacy from '~/components/settings_folder/Privacy.vue'
+import General from '~/components/settings/General.vue'
+import Privacy from '~/components/settings/Privacy.vue'
 
 export default {
     data () {

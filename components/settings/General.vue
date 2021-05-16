@@ -1,24 +1,24 @@
 <template>
   <div class="settings">
    <div class="bg">
-        <span class="text-uppercase text-bg">privacy and security</span>
+        <span class="text-uppercase text-bg">General</span>
     </div>
-
-    <div v-for="(set, i) in settingsTwo" :key="i" class="settings-list" :style="{color: set.color}" >
+    
+    <div v-for="(setting, i) in settings" :key="i" class="settings-list">
         <div>
             <v-list dense>
              <v-list-item>
-                 <span class="p-b"> {{ set.content }} </span>
+                 <span class="p-b"> {{ setting.content }} </span>
              </v-list-item>
             </v-list>
         </div>
         <v-list dense>
          <div class="f-left">
-         <v-list-item :to="set.to" router>
+         <v-list-item :to="setting.to" router>
          <span class="p-s text-uppercase">
-                {{ set.views }}
+                {{ setting.views }}
             </span>
-              <icon :name="set.icon" class="mt-2"></icon>
+              <icon :name="setting.icon" class="mt-2"></icon>
 
          </v-list-item>
         </div>
@@ -28,19 +28,21 @@
 </template>
 <script>
 export default {
-    name: 'Privacy',
-    
-    data ()
- {
+    name: 'General',
+
+    data () {
      return {
-           settingsTwo: [
-              {content: 'GDPR', views: 'view', icon: 'right', to: '/'},
-              {content: 'invoice & reports', views: 'view', icon: 'right', to: '/'},
-              {content: 'push notifications', views: 'view', icon: 'right', to: '/'},
-              {content: '2FA authentication', views: 'view', icon: 'right', color: '#8D8D8D', to: '/'},
+         settings: [
+              {content: 'User permissions', views: 'view', icon: 'right', to: '/settings/general/user-permissions'},
+              {content: 'vendor agreements', views: 'view', icon: 'right', to: '/settings/general/vendor-agreements'},
+              {content: 'driver agreements', views: 'view', icon: 'right', to: '/settings/general/driver-agreements'},
+              {content: 'privacy policy', views: 'view', icon: 'right', to: '/settings/general/privacy-policy'},
+              {content: 'terms & conditions', views: 'view', icon: 'right', to: '/settings/general/terms & conditions'},
           ],
      }
- }}
+     
+    }
+ }
 </script>
 <style scoped>
 .bg{
@@ -75,5 +77,7 @@ export default {
     letter-spacing: 0.07em;
     color: #8D8D8D;
 }
-
+/* a{
+    text-decoration: none;
+} */
 </style>

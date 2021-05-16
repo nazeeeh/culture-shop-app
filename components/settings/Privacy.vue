@@ -1,24 +1,24 @@
 <template>
   <div class="settings">
    <div class="bg">
-        <span class="text-uppercase text-bg">General</span>
+        <span class="text-uppercase text-bg">privacy and security</span>
     </div>
-    
-    <div v-for="(setting, i) in settings" :key="i" class="settings-list">
+
+    <div v-for="(set, i) in settingsTwo" :key="i" class="settings-list"  >
         <div>
             <v-list dense>
              <v-list-item>
-                 <span class="p-b"> {{ setting.content }} </span>
+                 <span class="p-b" :style="{color: set.color}"> {{ set.content }} </span>
              </v-list-item>
             </v-list>
         </div>
         <v-list dense>
          <div class="f-left">
-         <v-list-item :to="setting.to" router>
+         <v-list-item :to="set.to" router>
          <span class="p-s text-uppercase">
-                {{ setting.views }}
+                {{ set.views }}
             </span>
-              <icon :name="setting.icon" class="mt-2"></icon>
+              <icon :name="set.icon" class="mt-2"></icon>
 
          </v-list-item>
         </div>
@@ -28,17 +28,16 @@
 </template>
 <script>
 export default {
-    name: 'General',
-
+    name: 'Privacy',
+    
     data ()
  {
      return {
-         settings: [
-              {content: 'User permissions', views: 'view', icon: 'right', to: '/settings/user_permissions'},
-              {content: 'vendor agreements', views: 'view', icon: 'right', to: '/settings/vendor_agreement'},
-              {content: 'driver agreements', views: 'view', icon: 'right', to: '/settings/driver_agreement'},
-              {content: 'privacy policy', views: 'view', icon: 'right', to: '/settings/driver_agreement'},
-              {content: 'terms & conditions', views: 'view', icon: 'right', to: '/settings/driver_agreement'},
+           settingsTwo: [
+              {content: 'GDPR', views: 'view', icon: 'right', to: '/'},
+              {content: 'invoice & reports', views: 'view', icon: 'right', to: '/'},
+              {content: 'push notifications', views: 'view', icon: 'right', to: '/'},
+              {content: '2FA authentication', views: 'view', icon: 'right', color: '#8D8D8D', to: '/'},
           ],
      }
  }}
@@ -76,7 +75,5 @@ export default {
     letter-spacing: 0.07em;
     color: #8D8D8D;
 }
-/* a{
-    text-decoration: none;
-} */
+
 </style>
