@@ -8,17 +8,25 @@
         </div>
       </v-col>
     </v-row>
-
+    
     <!-- General settings -->
     <General />
 
     <!-- privacy and security -->
     <Privacy />
     
-    <div class="flex-content">
-        <Icon name="logout" />
-        <span class="ml-3">Logout</span>
-    </div>
+    <v-list>
+    
+        <v-list-item>
+          <v-list-content>
+            <div class="flex-content">
+            <Icon name="logout" />
+            <span class="ml-3">Logout</span>
+            </div>
+          </v-list-content>
+        </v-list-item>
+    
+    </v-list>
   </div>
 </template>
 <script>

@@ -1,9 +1,9 @@
 <template>
      <div class="card-2">
-        <div class="box-display" v-for="(content, i) in contents" :key="i">
-          <div class="text-uppercase p-style ml-8 mt-4">
+        <div class="box-display" v-for="(content, i) in contents" :key="i" :style="{backgroundColor: content.backgroundColor}">
+          <div class="text-uppercase p-style ml-8 mt-4" >
             <p>{{content.name}}</p>
-            <p class="p-counts">{{content.rate}}</p>
+            <p class="p-counts" :style="{color: content.color}">{{content.rate}}</p>
           </div>
             <Icon name="right" class="mr-8 mt-6" />
         </div>
@@ -14,14 +14,14 @@ export default {
     data () {
       return {
         contents: [
-            {name: 'Delivered orders', rate: 0, backgroundColor: '#E7F7F1'},
-            {name: 'Refunded orders', rate: 0, backgroundColor: '#FDF0E8'},
-            {name: 'Cancelled orders', rate: 0, backgroundColor: '#FEE7EE'},
-            {name: 'Failed orders', rate: 0, backgroundColor: '#FEE7EE'},
-            {name: 'Tbc ', rate: 0, backgroundColor: '#E7F7F1'},
-            {name: 'Pending orders', rate: 0, backgroundColor: '#FDF0E8'},
-            {name: 'Comfirmed orders', rate: 0, backgroundColor: '#E7F7F1'},
-            {name: 'Tbc', rate: 0, backgroundColor: '#E7F7F1'}
+            {name: 'Delivered orders', rate: 0, backgroundColor: '#E7F7F1', color: '#0CAD73'},
+            {name: 'Refunded orders', rate: 0, backgroundColor: '#FDF0E8', color: '#E76D14'},
+            {name: 'Cancelled orders', rate: 0, backgroundColor: '#FEE7EE', color: '#F11054'},
+            {name: 'Failed orders', rate: 0, backgroundColor: '#FEE7EE', color: '#F11054'},
+            {name: 'Tbc ', rate: 0, backgroundColor: '#E7F7F1', color: '#0CAD73'},
+            {name: 'Pending orders', rate: 0, backgroundColor: '#FDF0E8', color: '#E76D14'},
+            {name: 'Comfirmed orders', rate: 0, backgroundColor: '#E7F7F1', color: '#0CAD73'},
+            {name: 'Tbc', rate: 0, backgroundColor: '#E7F7F1', color: '#0CAD73'}
         ]
         }
     }
