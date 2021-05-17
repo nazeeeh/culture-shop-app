@@ -7,7 +7,7 @@
     >
       <Avatar fixed/>
 
-      <Sidebar fixed/>
+      <Sidebar />
       <!-- <v-list>
         <v-list-item
           v-for="(dash, i) in dashs"

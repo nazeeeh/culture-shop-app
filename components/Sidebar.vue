@@ -3,6 +3,9 @@
         <div class="justify-left">
           <Internallinks/>
           <Sectionlinks />
+          <Manage-vendor />
+          <Manage-driver />
+          <General />
       </div>
   </div>
 </template>

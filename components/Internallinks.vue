@@ -1,11 +1,18 @@
 <template>
-    <div class="internal-links mt-8">
-        <div class="dashboard mx-8">
-            <Icon name='dashboard' class="grey-lighten-2" active/>
-            <nuxt-link class="text-settings a-link-hover mx-3 mt-1" to="/">
-            Dashboard
-        </nuxt-link>
+    <!-- Dashboard link -->
+    <div class="dashboard-link">
+      <v-list flat>
+        <div class="internal-links mt-4">
+          <v-list-item to="/">
+            <v-list-item-action>
+              <icon name='dashboard'></icon>
+            </v-list-item-action>
+            <v-list-content class="mb-2">
+              <span class="text-settings">Dashboard</span> 
+            </v-list-content>
+          </v-list-item>
         </div>
+      </v-list>
     </div>
 </template>
 <script>
@@ -16,15 +23,9 @@ export default {
 
 <style scoped>
 
-.internal-links{   
-    width: 100%;
-    padding: 5px;
-}
-.dashboard {
-    display: flex;
-    flex-wrap: nowrap;
-
-}
+/* .internal-links{   
+    border: 1px solid red;
+} */
 .text-settings{
     font-family: 'Space Grotesk';
     text-transform: uppercase;
@@ -34,6 +35,5 @@ export default {
     text-decoration: none;
     color: #192135;
 }
-
 
 </style>
