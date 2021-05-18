@@ -22,11 +22,11 @@
           <v-col cols="6">
             <form>
                 <div class="input">
-                <label for="name">Name</label><br>
+                <label for="name" class="name">Name</label><br>
                 <input type="text"><br><br>
                 </div>
                 <div class="input">
-                <label for="description">Description</label><br>
+                <label for="description" class="name">Description</label><br>
                 <textarea name="" id="" cols="57" rows="10" placeholder="Reply"></textarea>
                 </div>
             </form>
@@ -128,6 +128,13 @@ textarea{
 }
 .input{
    margin: 20px 0 20px 34px; 
+}
+.name{
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
 }
 
 .system-bar{
