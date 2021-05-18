@@ -7,9 +7,7 @@
             <v-list-item-action>
               <icon name='dashboard'></icon>
             </v-list-item-action>
-            <v-list-content class="mb-2">
-              <span class="text-settings">Dashboard</span> 
-            </v-list-content>
+              <span class="text-settings mb-2">Dashboard</span> 
           </v-list-item>
         </div>
       </v-list>

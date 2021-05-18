@@ -7,13 +7,6 @@
     "_name": "_8e4aa19c"
   },
   {
-    "name": "settings-user_permissions",
-    "path": "/settings/user_permissions",
-    "component": "C:\\\\Users\\\\Gemdajs-001\\\\Documents\\\\culture-shop\\\\pages\\\\settings\\\\user_permissions.vue",
-    "chunkName": "pages/settings/user_permissions",
-    "_name": "_153536e0"
-  },
-  {
     "name": "settings-general-name",
     "path": "/settings/general/:name?",
     "component": "C:\\\\Users\\\\Gemdajs-001\\\\Documents\\\\culture-shop\\\\pages\\\\settings\\\\general\\\\_name.vue",

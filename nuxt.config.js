@@ -1,6 +1,9 @@
 import colors from 'vuetify/es5/util/colors'
 
 export default {
+  
+  target: 'static',
+    ssr: false,
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     titleTemplate: '%s - culture-shop',
@@ -80,8 +83,7 @@ export default {
         ['@babel/plugin-proposal-private-methods', { loose: true}]
       ]
     },
-    target: 'static',
-    ssr: false
+    
 
   }
 }

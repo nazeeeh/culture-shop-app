@@ -9,21 +9,20 @@
                     <v-list-item-action>
                      <icon name="profile"></icon>
                     </v-list-item-action>
-                    <v-list-content class="mb-1">
+                    <v-list-item-content class="mb-1">
                      <span>Settings</span>
-                    </v-list-content>
+                    </v-list-item-content>
                  </v-list-item>
                     <!-- Orders -->
                  <v-list-item class="text-settings" to="/">
                     <v-list-item-action class="ml-4">
                      <icon name="logout"></icon>
                     </v-list-item-action>
-                    <v-list-content class="mb-1">
+                    <v-list-item-content class="mb-1">
                      <span>Logout</span>
-                    </v-list-content>
+                    </v-list-item-content>
             
                  </v-list-item>
-
               </v-list-item-group> 
             </v-list>
     </div>

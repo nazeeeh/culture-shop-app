@@ -18,12 +18,12 @@
     <v-list>
     
         <v-list-item>
-          <v-list-content>
+          <v-list-item-content>
             <div class="flex-content">
             <Icon name="logout" />
             <span class="ml-3">Logout</span>
             </div>
-          </v-list-content>
+          </v-list-item-content>
         </v-list-item>
     
     </v-list>

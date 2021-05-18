@@ -24,7 +24,6 @@ import Card from '~/components/Card-1.vue'
 import Cardgraph from '~/components/Card-graph.vue'
 import Card2 from '~/components/Card-2.vue'
 import Bottomgraph from '~/components/Bottom-graph.vue'
-// import VuetifyLogo from '~/components/VuetifyLogo.vue'
 
 export default {
   data () {
