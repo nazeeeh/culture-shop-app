@@ -6,7 +6,7 @@
               <v-list-item-group >
                   <!-- Analytics -->
                 <v-list-item class="text-settings" to="/settings">
-                    <v-list-item-action>
+                    <v-list-item-action class="ml-4">
                      <icon name="profile"></icon>
                     </v-list-item-action>
                     <v-list-item-content class="mb-1">
