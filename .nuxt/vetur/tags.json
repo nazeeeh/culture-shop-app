@@ -1,0 +1,56 @@
+{
+  "Avatar": {
+    "description": "Auto imported from components/avatar.vue"
+  },
+  "BottomGraph": {
+    "description": "Auto imported from components/Bottom-graph.vue"
+  },
+  "Card1": {
+    "description": "Auto imported from components/Card-1.vue"
+  },
+  "Card2": {
+    "description": "Auto imported from components/Card-2.vue"
+  },
+  "CardGraph": {
+    "description": "Auto imported from components/Card-graph.vue"
+  },
+  "DashboardSubhead": {
+    "description": "Auto imported from components/Dashboard-subhead.vue"
+  },
+  "General": {
+    "description": "Auto imported from components/General.vue"
+  },
+  "Icon": {
+    "description": "Auto imported from components/Icon.vue"
+  },
+  "Internallinks": {
+    "description": "Auto imported from components/Internallinks.vue"
+  },
+  "ManageDriver": {
+    "description": "Auto imported from components/Manage-driver.vue"
+  },
+  "ManageVendor": {
+    "description": "Auto imported from components/Manage-vendor.vue"
+  },
+  "Sectionlinks": {
+    "description": "Auto imported from components/Sectionlinks.vue"
+  },
+  "Sidebar": {
+    "description": "Auto imported from components/Sidebar.vue"
+  },
+  "GeneralDriveragreement": {
+    "description": "Auto imported from components/General/Driveragreement.vue"
+  },
+  "GeneralUserpermission": {
+    "description": "Auto imported from components/General/Userpermission.vue"
+  },
+  "GeneralVendoragreement": {
+    "description": "Auto imported from components/General/Vendoragreement.vue"
+  },
+  "SettingsGeneral": {
+    "description": "Auto imported from components/settings/General.vue"
+  },
+  "SettingsPrivacy": {
+    "description": "Auto imported from components/settings/Privacy.vue"
+  }
+}
