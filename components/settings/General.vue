@@ -33,8 +33,8 @@ export default {
     data () {
      return {
          settings: [
-              {content: 'User permissions', views: 'view', icon: 'right', to: '/settings/general/user-permissions'},
-              {content: 'vendor agreements', views: 'view', icon: 'right', to: '/settings/general/vendor-agreements'},
+              {content: 'User permissions', views: 'view', icon: 'right', to: '/settings/general/user-permission'},
+              {content: 'vendor agreements', views: 'view', icon: 'right', to: '/settings/general/vendor-agreement'},
               {content: 'driver agreements', views: 'view', icon: 'right', to: '/settings/general/driver-agreements'},
               {content: 'privacy policy', views: 'view', icon: 'right', to: '/settings/general/privacy-policy'},
               {content: 'terms & conditions', views: 'view', icon: 'right', to: '/settings/general/terms & conditions'},

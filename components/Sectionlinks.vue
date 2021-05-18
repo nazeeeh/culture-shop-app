@@ -9,18 +9,16 @@
                     <v-list-item-action>
                      <icon name="analytics"></icon>
                     </v-list-item-action>
-                    <v-list-content class="mb-1">
-                     <span>Analytics</span>
-                    </v-list-content>
+                   
+                     <span class="mb-1">Analytics</span>
+                 
                  </v-list-item>
                     <!-- Orders -->
                  <v-list-item class="text-settings" to="/">
                     <v-list-item-action class="ml-4">
                      <icon name="orders"></icon>
                     </v-list-item-action>
-                    <v-list-content class="mb-1">
-                     <span>orders</span>
-                    </v-list-content>
+                     <span class="mb-1">orders</span>
                     <div>
                       <icon name="dropdown" class="mx-16"></icon>
                     </div>
@@ -30,9 +28,9 @@
                     <v-list-item-action class="ml-4">
                      <icon name="customers"></icon>
                     </v-list-item-action>
-                    <v-list-content class="mb-1">
-                     <span>Customers</span>
-                    </v-list-content>
+                   
+                     <span class="mb-1">Customers</span>
+                   
                     <div>
                       <icon name="dropdown" class="mx-9"></icon>
                     </div>
@@ -42,9 +40,7 @@
                     <v-list-item-action class="ml-4">
                      <icon name="category"></icon>
                     </v-list-item-action>
-                    <v-list-content class="mb-1">
-                     <span>Categories</span>
-                    </v-list-content>
+                     <span class="mb-1">Categories</span>
                     <div>
                       <icon name="dropdown" class="mx-9"></icon>
                     </div>
@@ -54,9 +50,9 @@
                     <v-list-item-action class="ml-4">
                      <icon name="new"></icon>
                     </v-list-item-action>
-                    <v-list-content class="mb-1">
-                     <span>Support</span>
-                    </v-list-content>
+                    
+                     <span class="mb-1">Support</span>
+                    
                  </v-list-item>
 
               </v-list-item-group> 

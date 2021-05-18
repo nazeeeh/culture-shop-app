@@ -2,17 +2,19 @@
   <div class="name-route">
     <div class="header">
       <h2 class="t-title">{{$route.params.name.replace(/-/g, ' ')}}</h2>
+
+      <nuxt-link to= "/settings">
+        <span class="sub-title text-uppercase">General /</span>
+    </nuxt-link>
+    <nuxt-link to= "">
+         <span class="sub-title text-uppercase">{{$route.params.name}}</span>   
+    </nuxt-link>
     </div>
-        <!-- <h1>{{$route.params.name.replace(/-/g, ' ')}}</h1>
-        <nuxt-link to= "/settings">
-            General /
-        </nuxt-link>
-        <nuxt-link to= "">
-            {{$route.params.name}}
-        </nuxt-link>
+    
+    <v-divider></v-divider>
     <component :is="currentComponent">
 
-    </component> -->
+    </component>
   </div> 
 </template>
 <script>
@@ -47,5 +49,12 @@ a {
     font-weight: bold;
     font-size: 24px;
     text-transform: capitalize;
+}
+.sub-title{
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.07em;
+    color: #8D8D8D;
 }
 </style>

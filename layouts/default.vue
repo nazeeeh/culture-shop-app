@@ -62,26 +62,7 @@
 <script>
 
 export default {
-    // data () {
-    //   return {
-        
-    //     dashs: [
-    //      {
-    //       title: 'Dashboard',
-    //       to: '/'
-    //     }
-    //   ],
-    //     analyts:[
-    //       {
-    //         title: 'Analytics',
-            
-    //       }
-    //     ],
-    //     sections:[
-    //       {icon: 'orders', title: 'Customers', to: '/customers'},
-    //       {icon: 'orders', title: 'Customers', to: '/customers'},
-    //     ]
-    //   }
+ 
     }
 
 </script>

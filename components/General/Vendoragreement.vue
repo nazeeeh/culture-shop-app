@@ -1,11 +1,138 @@
 <template>
-    <div>
-        <h3>Vendor agreement</h3>
-    </div>
+    <div class="vendor-permission">
+      <div class="btn-flex">
+       <v-btn class="btn-btn py-6 px-10 text-uppercase">Cancel</v-btn>
+       <v-btn class="btn-btn py-6 px-12 text-uppercase mx-2" :style="{background: '#0CAD73', color: '#fff'}">Save</v-btn>
+      </div>
+      
+      <div>
+        <div class="flex-section">
+         <div class="box">
+          <span class="text-uppercase t-text">Most up to date</span> 
+         </div>
+          <icon name="calender" class="mx-4"></icon>
+
+          <!-- Date -->
+          <span class="text-uppercase datepicker mt-1">{{ displayDate }}</span> 
+        </div>
+        <v-divider></v-divider>
+      </div>
+
+        <v-row>
+          <v-col cols="6">
+            <form>
+                <div class="input">
+                <label for="name">Name</label><br>
+                <input type="text"><br><br>
+                </div>
+                <div class="input">
+                <label for="description">Description</label><br>
+                <textarea name="" id="" cols="57" rows="10" placeholder="Reply"></textarea>
+                </div>
+            </form>
+            
+          </v-col>
+          <v-spacer></v-spacer>
+          <v-col cols="6">
+              <div class="system-bar">
+                 
+              </div>
+          </v-col>
+        </v-row>
+      
+      
+      </div>
+      
 </template>
 
 <script>
     export default {
-      name: 'vendor-agreement'
+      name: 'vendor-agreement',
+
+    data: () => ({
+        date: new Date(),
+        time: new Date()
+    }),
+
+    computed: {
+
+    displayDate(){
+        const date = new Date(this.date);
+        date.setHours(this.time.getHours())
+        date.setMinutes(this.time.getMinutes())
+        return date
+        }
     }
+    
+  }
+
 </script>
+<style scoped>
+.vendor-permission{
+    font-family: 'Space Grotesk';
+}
+.btn-flex{
+    
+    width: 21vw;
+    position: absolute;
+    top: 10px;
+    right: 5px;
+}
+.btn-btn{
+    border-radius: 16px;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.07em;
+    box-shadow: none;
+}
+.t-text{
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 0.07em;
+    color: #0CAD73;
+}
+.box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10vw;
+    background: rgba(12, 173, 115, 0.1);
+    border-radius: 16px;
+    height: 4vh;
+}
+.flex-section{
+    display: flex;
+    margin: 20px 0 20px 34px;
+    /* border: 1px solid red; */
+}
+.datepicker{
+    font-weight: 600;
+font-size: 12px;
+line-height: 16px;
+letter-spacing: 0.07em
+}
+input[type='text']{
+    border: 2px solid #192135;
+    border-radius: 16px;
+    width: 40vw;
+    height: 6vh;
+    padding: 10px;
+}
+
+textarea{
+    border: 2px solid #ECECEC;
+    border-radius: 16px;
+    padding: 10px;
+
+}
+.input{
+   margin: 20px 0 20px 34px; 
+}
+
+.system-bar{
+    border-left: 2px solid #ECECEC;
+    height: 100vh;
+    margin-left: 40px;
+}
+</style>
