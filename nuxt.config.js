@@ -16,6 +16,7 @@ export default {
     ]
   },
 
+
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
   ],
@@ -78,6 +79,9 @@ export default {
       plugins: [
         ['@babel/plugin-proposal-private-methods', { loose: true}]
       ]
-    }
+    },
+    target: 'static',
+    ssr: false
+
   }
 }
