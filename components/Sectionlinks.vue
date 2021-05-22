@@ -1,19 +1,62 @@
 <template>
-    <div class="section">
-        <!-- Manage customer settings -->
+    <div class="section px-0">
+    <div class="text-settings">
+      <v-list flat>
+      <p class="mx-5 text-cap text-uppercase">Manage customers</p>
+      <v-list-item to="/">
+        <v-list-item-icon>
+          <icon name="analytics"></icon>
+        </v-list-item-icon>
+        <v-list-item-title class="text-uppercase text-settings mb-1">Analytics</v-list-item-title>
+      </v-list-item>
+
+      <v-list-group
+        v-for="item in items"
+        no-action
+        :key="item.title"
+        v-model="item.active"
+        color="success"
+      >
+        <template v-slot:activator>
+          <v-list-item-icon>
+            <icon :name="item.action"></icon>
+          </v-list-item-icon>
+          <v-list-item-content>
+            <v-list-item-title v-text="item.title" class="text-uppercase text-settings mb-1"></v-list-item-title>
+          </v-list-item-content>
+        </template>
+
+        <v-list-item
+          v-for="child in item.items"
+          :key="child.title"
+        >
+          <v-list-item-content>
+            <v-list-item-title v-text="child.title" class="text-uppercase text-settings"></v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+      </v-list-group>
+
+      <v-list-item to="/">
+        <v-list-item-icon>
+          <icon name="new"></icon>
+        </v-list-item-icon>
+        <v-list-item-title class="text-uppercase text-settings mb-1">Support</v-list-item-title>
+      </v-list-item>
+    </v-list>
+    </div>
+  
+         <!-- Manage customer settings
             <v-list flat>
             <p class="mx-9 text-cap text-uppercase">Manage customers</p>
-              <v-list-item-group v-model="selectedItem" >
-                  <!-- Analytics -->
+              <v-list-item-group v-model="selectedItem">
+                  Analytics
                 <v-list-item class="text-settings" to="/">
                     <v-list-item-action>
                      <icon name="analytics"></icon>
                     </v-list-item-action>
-                   
                      <span class="mb-1">Analytics</span>
-                 
                  </v-list-item>
-                    <!-- Orders -->
+                    Orders
                  <v-list-item class="text-settings" to="/">
                     <v-list-item-action class="ml-4">
                      <icon name="orders"></icon>
@@ -23,7 +66,7 @@
                       <icon name="dropdown" class="mx-16"></icon>
                     </div>
                  </v-list-item>
-                    <!-- Customers -->
+                    Customers
                  <v-list-item class="text-settings" to="/">
                     <v-list-item-action class="ml-4">
                      <icon name="customers"></icon>
@@ -35,7 +78,7 @@
                       <icon name="dropdown" class="mx-9"></icon>
                     </div>
                  </v-list-item>
-                  <!-- Categories -->
+                  Categories
                  <v-list-item class="text-settings" to="/">
                     <v-list-item-action class="ml-4">
                      <icon name="category"></icon>
@@ -45,7 +88,7 @@
                       <icon name="dropdown" class="mx-9"></icon>
                     </div>
                  </v-list-item>
-                 <!-- Support -->
+                 Support
                  <v-list-item class="text-settings" to="/">
                     <v-list-item-action class="ml-4">
                      <icon name="new"></icon>
@@ -56,29 +99,53 @@
                  </v-list-item>
 
               </v-list-item-group> 
-            </v-list>
+            </v-list> -->
     </div>
 </template>
 <script>
 export default {
     data () {
       return {
-          selectedItem: 1,
+          items: [
+        // {
+        //   action: 'analytics',
+        //   title: 'Analytics',
+        // },
 
-        links: [
-            {icon: 'analytics', text: 'analytics', to: '/'},
-            {icon: 'analytics', text: 'analytics', to: '/'},
-            {icon: 'analytics', text: 'analytics', to: '/'},
-            {icon: 'categories', text: 'analytics', to: '/'},
-            {icon: 'support', text: 'analytics', to: '/'},
-        ]
+        {
+          action: 'orders',
+          active: true,
+          items: [
+            { title: 'Breakfast & brunch' },
+            { title: 'New American' },
+            { title: 'Sushi' },
+          ],
+          title: 'Orders',
+        },
 
+        {
+          action: 'customers',
+          items: [{ title: 'List Item' }],
+          title: 'Customers',
+        },
+
+        {
+          action: 'category',
+          items: [{ title: 'List Item' }],
+          title: 'Categories',
+        }, 
+       
+      ],
 
         }
     }
 }
 </script>
 <style scoped>
+.section {
+  font-family: 'Space Grotesk';
+ 
+}
 .text-cap{
     color: #8D8D8D;
     font-family: 'Space Grotesk';
@@ -105,10 +172,9 @@ export default {
     color: #192135;
 }
 
-.a-link-hover:hover{
-    padding: 20px;
-    background: #8D8D8D;
-    width: 100%;
-}
+/* .right-icon{
+  display: flex;  
+
+} */
 
 </style>

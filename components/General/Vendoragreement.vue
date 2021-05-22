@@ -1,8 +1,8 @@
 <template>
     <div class="vendor-permission">
       <div class="btn-flex">
-       <v-btn class="btn-btn py-6 px-10 text-uppercase">Cancel</v-btn>
-       <v-btn class="btn-btn py-6 px-12 text-uppercase mx-2" :style="{background: '#0CAD73', color: '#fff'}">Save</v-btn>
+       <v-btn class="btn-cancel py-6 px-10 text-uppercase">Cancel</v-btn>
+       <v-btn class="btn-save py-6 px-12 text-uppercase mx-2" :style="{background: '#0CAD73', color: '#fff'}">Save</v-btn>
       </div>
       
       <div>
@@ -27,7 +27,7 @@
                 </div>
                 <div class="input">
                 <label for="description" class="name">Description</label><br>
-                <textarea name="" id="" cols="57" rows="10" placeholder="Reply"></textarea>
+                <textarea name="" id="" rows="10" placeholder="Reply"></textarea>
                 </div>
             </form>
             
@@ -71,14 +71,29 @@
 .vendor-permission{
     font-family: 'Space Grotesk';
 }
-.btn-flex{
+/* .btn-flex{
     
     width: 21vw;
     position: absolute;
     top: 10px;
     right: 5px;
+    border: 1px solid red;
+} */
+.btn-save{
+    position: absolute;
+    top: 10px;
+    right: 5px;
+    border-radius: 16px;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.07em;
+    box-shadow: none;
 }
-.btn-btn{
+.btn-cancel{
+    position: absolute;
+    top: 10px;
+    right: 160px;
     border-radius: 16px;
     font-weight: 600;
     font-size: 12px;
@@ -124,6 +139,7 @@ textarea{
     border: 2px solid #ECECEC;
     border-radius: 16px;
     padding: 10px;
+    width: 40vw;
 
 }
 .input{

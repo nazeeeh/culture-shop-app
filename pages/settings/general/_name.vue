@@ -11,6 +11,7 @@
     </nuxt-link>
     </div>
     
+    
     <v-divider></v-divider>
     <component :is="currentComponent">
 

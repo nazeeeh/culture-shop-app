@@ -12,7 +12,7 @@
          </div>
         </div>
         <v-divider class="mx-8"></v-divider>
-        <Icon name="graph-grow" class="mx-8 my-6" />
+        <img src="~/assets/img/Graph-grow.png" class="mx-8 my-6 " />
         </div>
      </div>
 </template>

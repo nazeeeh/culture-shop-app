@@ -83,7 +83,5 @@ export default {
         ['@babel/plugin-proposal-private-methods', { loose: true}]
       ]
     },
-    
-
   }
 }

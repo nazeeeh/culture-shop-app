@@ -9,8 +9,10 @@ export { default as DashboardSubhead } from '../..\\components\\Dashboard-subhea
 export { default as General } from '../..\\components\\General.vue'
 export { default as Icon } from '../..\\components\\Icon.vue'
 export { default as Internallinks } from '../..\\components\\Internallinks.vue'
+export { default as Logout } from '../..\\components\\Logout.vue'
 export { default as ManageDriver } from '../..\\components\\Manage-driver.vue'
 export { default as ManageVendor } from '../..\\components\\Manage-vendor.vue'
+export { default as Popup } from '../..\\components\\Popup.vue'
 export { default as Sectionlinks } from '../..\\components\\Sectionlinks.vue'
 export { default as Sidebar } from '../..\\components\\Sidebar.vue'
 export { default as GeneralDriveragreement } from '../..\\components\\General\\Driveragreement.vue'
@@ -28,8 +30,10 @@ export const LazyDashboardSubhead = import('../..\\components\\Dashboard-subhead
 export const LazyGeneral = import('../..\\components\\General.vue' /* webpackChunkName: "components/general" */).then(c => wrapFunctional(c.default || c))
 export const LazyIcon = import('../..\\components\\Icon.vue' /* webpackChunkName: "components/icon" */).then(c => wrapFunctional(c.default || c))
 export const LazyInternallinks = import('../..\\components\\Internallinks.vue' /* webpackChunkName: "components/internallinks" */).then(c => wrapFunctional(c.default || c))
+export const LazyLogout = import('../..\\components\\Logout.vue' /* webpackChunkName: "components/logout" */).then(c => wrapFunctional(c.default || c))
 export const LazyManageDriver = import('../..\\components\\Manage-driver.vue' /* webpackChunkName: "components/manage-driver" */).then(c => wrapFunctional(c.default || c))
 export const LazyManageVendor = import('../..\\components\\Manage-vendor.vue' /* webpackChunkName: "components/manage-vendor" */).then(c => wrapFunctional(c.default || c))
+export const LazyPopup = import('../..\\components\\Popup.vue' /* webpackChunkName: "components/popup" */).then(c => wrapFunctional(c.default || c))
 export const LazySectionlinks = import('../..\\components\\Sectionlinks.vue' /* webpackChunkName: "components/sectionlinks" */).then(c => wrapFunctional(c.default || c))
 export const LazySidebar = import('../..\\components\\Sidebar.vue' /* webpackChunkName: "components/sidebar" */).then(c => wrapFunctional(c.default || c))
 export const LazyGeneralDriveragreement = import('../..\\components\\General\\Driveragreement.vue' /* webpackChunkName: "components/general-driveragreement" */).then(c => wrapFunctional(c.default || c))

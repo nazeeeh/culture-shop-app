@@ -5,7 +5,7 @@
       app
       fixed
     >
-      <Avatar fixed/>
+      <Avatar />
 
       <Sidebar />
       <!-- <v-list>

@@ -1,120 +1,82 @@
 <template>
     <div class="section">
-        <!-- Manage customer settings -->
-            <v-list flat>
-            <p class="mx-9 text-cap text-uppercase">Manage vendors</p>
-              <v-list-item-group v-model="selectedItem" >
-                  <!-- Analytics -->
-                <v-list-item class="text-settings" to="/">
-                    <v-list-item-action>
-                     <icon name="analytics"></icon>
-                    </v-list-item-action>
-                
-                     <span class="mb-1">Analytics</span>
-                    
-                 </v-list-item>
-                    <!-- Orders -->
-                 <v-list-item class="text-settings" to="/">
-                    <v-list-item-action class="ml-4">
-                     <icon name="orders"></icon>
-                    </v-list-item-action>
-                  
-                     <span class="mb-1">orders</span>
-                   
-                    <div>
-                      <icon name="dropdown" class="mx-16"></icon>
-                    </div>
-                 </v-list-item>
-                    <!-- Vendor -->
-                 <v-list-item class="text-settings" to="/">
-                    <v-list-item-action class="ml-4">
-                     <icon name="vendor"></icon>
-                    </v-list-item-action>
-              
-                     <span class="mb-1">vendors</span>
-               
-                    <div>
-                      <icon name="dropdown" class="mx-14"></icon>
-                    </div>
-                 </v-list-item>
-                  <!-- Product -->
-                 <v-list-item class="text-settings" to="/">
-                    <v-list-item-action class="ml-4">
-                     <icon name="product"></icon>
-                    </v-list-item-action>
-                
-                     <span class="mb-1">Products</span>
-                   
-                    <div>
-                      <icon name="dropdown" class="mx-12"></icon>
-                    </div>
-                 </v-list-item>
-                 <!-- Support -->
-                 <v-list-item class="text-settings" to="/">
-                    <v-list-item-action class="ml-4">
-                     <icon name="new"></icon>
-                    </v-list-item-action>
-                 
-                     <span class="mb-1">Support</span>
-           
-                 </v-list-item>
+        <!-- Manage Vendor-->
+            <div class="text-settings">
+      <v-list flat>
+      <p class="mx-5 text-cap text-uppercase">Manage vendors</p>
+      <v-list-item to="/">
+        <v-list-item-icon>
+          <icon name="analytics"></icon>
+        </v-list-item-icon>
+        <v-list-item-title class="text-uppercase text-settings mb-1">Analytics</v-list-item-title>
+      </v-list-item>
 
-              </v-list-item-group> 
-            </v-list>
+      <v-list-group
+        v-for="item in items"
+        no-action
+        :key="item.title"
+        v-model="item.active"
+        color="success"
+      >
+        <template v-slot:activator>
+          <v-list-item-icon>
+            <icon :name="item.action"></icon>
+          </v-list-item-icon>
+          <v-list-item-content>
+            <v-list-item-title v-text="item.title" class="text-uppercase text-settings mb-1"></v-list-item-title>
+          </v-list-item-content>
+        </template>
 
-            <!-- Driver -->
-            <!-- <p class="mx-9 mt-5 text-cap text-uppercase">Manage Drivers</p>
-            <nuxt-link to="#" class="text-settings ">
-                <span class="flex-content mx-8">
-                <Icon name="analytics"/>
-                <span class="mx-3 mt-1">Analytics</span> 
-                </span>
-            </nuxt-link>
-        
-            <nuxt-link to="#" class="text-settings ">
-                    <span class="flex-content mx-8">
-                    <Icon name="orders"/>
-                    <span class="mx-3 mt-1">Orders</span>
-                    <Icon name="dropdown" class="mx-16"/> 
-                    </span>
-                </nuxt-link>
+        <v-list-item
+          v-for="child in item.items"
+          :key="child.title"
+        >
+          <v-list-item-content>
+            <v-list-item-title v-text="child.title" class="text-uppercase text-settings"></v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+      </v-list-group>
 
-            <nuxt-link to="#" class="text-settings ">
-                <span class="flex-content mx-8">
-                <Icon name="driver"/>
-                <span class="mx-3 mt-1">Drivers</span>
-                <Icon name="dropdown" class="mx-15"/> 
-                </span>
-            </nuxt-link>
-
-            <nuxt-link to="#" class="text-settings ">
-                <span class="flex-content mx-8">
-                <Icon name="new"/>
-                <span class="mx-3 mt-1">Support</span> 
-                </span>
-            </nuxt-link>
-
-            <p class="mx-9 mt-5 text-cap text-uppercase">General</p>
-            <nuxt-link to="#" class="text-settings ">
-                <span class="flex-content mx-8">
-                <Icon name="profile"/>
-                <span class="mx-3 mt-1">Settings</span> 
-                </span>
-            </nuxt-link>
-        
-            <nuxt-link to="#" class="text-settings ">
-                    <span class="flex-content mx-8">
-                    <Icon name="logout"/>
-                    <span class="mx-3 mt-1">Logout</span>
-                    </span>
-            </nuxt-link>                 -->
+      <v-list-item to="/">
+        <v-list-item-icon>
+          <icon name="new"></icon>
+        </v-list-item-icon>
+        <v-list-item-title class="text-uppercase text-settings mb-1">Support</v-list-item-title>
+      </v-list-item>
+    </v-list>
+    </div>
     </div>
 </template>
 <script>
 export default {
     data () {
       return {
-          selectedItem: 0,
+           items: [
+
+        {
+          action: 'orders',
+          active: true,
+          items: [
+            { title: 'Breakfast & brunch' },
+            { title: 'New American' },
+            { title: 'Sushi' },
+          ],
+          title: 'Orders',
+        },
+
+        {
+          action: 'vendor',
+          items: [{ title: 'List Item' }],
+          title: 'Vendors',
+        },
+
+        {
+          action: 'product',
+          items: [{ title: 'List Item' }],
+          title: 'Products',
+        }, 
+       
+      ],
         }
     }
 }
