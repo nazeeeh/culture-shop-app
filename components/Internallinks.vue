@@ -3,7 +3,7 @@
     <div class="dashboard-link " >
       <v-list flat class="py-2">
       <v-list-item-group>
-        <v-list-item v-for="(item, i) in items" :key="i">
+        <v-list-item v-for="(item, i) in items" :key="i" :to="item.to">
           <v-list-item-icon>
             <icon :name="item.action"></icon>
           </v-list-item-icon>
@@ -33,7 +33,8 @@ export default {
       return {
         items:[
           {action: 'dashboard',
-           title: 'Dashboard'
+           title: 'Dashboard',
+           to: '/'
           
           }
         ]

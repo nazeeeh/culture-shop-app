@@ -5,12 +5,12 @@
 
       <nuxt-link to= "/settings">
         <span class="sub-title text-uppercase">General /</span>
-    </nuxt-link>
+      </nuxt-link>
+
     <nuxt-link to= "">
          <span class="sub-title text-uppercase">{{$route.params.name}}</span>   
     </nuxt-link>
     </div>
-    
     
     <v-divider></v-divider>
     <component :is="currentComponent">
@@ -28,7 +28,7 @@ export default {
     components: {
         userPermission,
         vendorAgreement,
-        driverAgreement
+        driverAgreement,
     },
 
     computed: {

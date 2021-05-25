@@ -26,17 +26,11 @@
   "Internallinks": {
     "description": "Auto imported from components/Internallinks.vue"
   },
-  "Logout": {
-    "description": "Auto imported from components/Logout.vue"
-  },
   "ManageDriver": {
     "description": "Auto imported from components/Manage-driver.vue"
   },
   "ManageVendor": {
     "description": "Auto imported from components/Manage-vendor.vue"
-  },
-  "Popup": {
-    "description": "Auto imported from components/Popup.vue"
   },
   "Sectionlinks": {
     "description": "Auto imported from components/Sectionlinks.vue"

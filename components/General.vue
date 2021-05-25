@@ -29,7 +29,7 @@
     <v-dialog v-model="dialog" persistent max-width="500">
       
       <v-card class="dialog py-8 px-12">
-        <v-card-text class="text-header"><span>Are you sure you want to logout? </span></v-card-text>
+        <v-card-text class="text-header" :style="{color: '#192135'}"><span>Are you sure you want to logout? </span></v-card-text>
         <v-card-actions>
         <div class="btn-btn">
           <v-btn class="btn-f mx-2 px-14 py-6 white--text" color="#192135" @click="dialog = false"><span>No</span></v-btn>
@@ -111,10 +111,10 @@ export default {
 }
 
 .btn-btn{
-    /* margin: 0 auto; */
+   
     width: 100%;
     text-align: center;
-    /* padding: 10px; */
+
 }
 
 .btn-f{
