@@ -26,7 +26,7 @@
     :single-select="singleSelect"
     item-key="id"
     show-select
-    class="elevation-1"
+    class="elevation-1 table"
   >
     <template v-slot:top>
       <v-switch
@@ -262,6 +262,14 @@
   .user-permission {
     font-family: 'Space Grotesk';
     margin: 5px 0 6px 34px;
+  }
+  .table {
+    font-family: 'Space Grotesk';
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
   }
   .btn-btn{
     position: absolute;
