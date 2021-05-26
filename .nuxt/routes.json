@@ -3,21 +3,18 @@
     "name": "settings",
     "path": "/settings",
     "component": "C:\\\\Users\\\\Gemdajs-001\\\\Documents\\\\culture-shop\\\\pages\\\\settings\\\\index.vue",
-    "chunkName": "pages/settings/index",
-    "_name": "_8e4aa19c"
+    "chunkName": "pages/settings/index"
   },
   {
     "name": "settings-general-name",
     "path": "/settings/general/:name?",
     "component": "C:\\\\Users\\\\Gemdajs-001\\\\Documents\\\\culture-shop\\\\pages\\\\settings\\\\general\\\\_name.vue",
-    "chunkName": "pages/settings/general/_name",
-    "_name": "_35be2fd2"
+    "chunkName": "pages/settings/general/_name"
   },
   {
     "name": "index",
     "path": "/",
     "component": "C:\\\\Users\\\\Gemdajs-001\\\\Documents\\\\culture-shop\\\\pages\\\\index.vue",
-    "chunkName": "pages/index",
-    "_name": "_4d5d8716"
+    "chunkName": "pages/index"
   }
 ]
