@@ -5,7 +5,7 @@
       <v-list-item-group>
         <v-list-item v-for="(item, i) in items" :key="i" :to="item.to">
           <v-list-item-icon>
-            <icon :name="item.action"></icon>
+              <icon :name="item.action" ></icon>
           </v-list-item-icon>
           <v-list-item-content>
             <v-list-item-title v-text="item.title" class="text-uppercase text-settings mb-1"></v-list-item-title>
@@ -13,6 +13,7 @@
         </v-list-item>
       </v-list-item-group>
     </v-list>
+    
       <!-- <v-list flat>
         <div class="internal-links mt-4">
           <v-list-item-group color="success">
@@ -31,13 +32,22 @@
 export default {
     data(){
       return {
+         color: 'red',
+
         items:[
           {action: 'dashboard',
            title: 'Dashboard',
+           color: 'green',
            to: '/'
           
           }
         ]
+      }
+    },
+    methods: {
+      changeColor(){
+        let color = this.color;
+        return color
       }
     }
 }

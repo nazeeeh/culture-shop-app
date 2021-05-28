@@ -1,4 +1,5 @@
 <template>
+
   <div class="user-permisions">
     <v-btn @click="showPage = !showPage" class="btn-btn py-6 px-10 text-uppercase" v-show="showPage">add new</v-btn>
       <div class="hide-show" v-if="showPage">
@@ -19,23 +20,48 @@
         </div>
 
         <!-- Table -->
-      <v-data-table
-    v-model="selected"
-    :headers="headers"
-    :items="users"
-    :single-select="singleSelect"
-    item-key="id"
-    show-select
-    class="elevation-1 table"
-  >
-    <template v-slot:top>
-      <v-switch
-        v-model="singleSelect"
-        label="Single select"
-        class="pa-3"
-      ></v-switch>
-    </template>
-  </v-data-table>
+        <div class="round">
+                  <input type="checkbox" id="checkbox" />
+                  <label for="checkbox"></label>
+                </div>
+        <div class="table">
+          
+          <sorted-table :values="values">
+            <thead>
+              <tr> 
+                <th scope="col" style="text-align: left; width: 10rem;">
+                  <sort-link name="id">Id</sort-link>
+                </th>
+                <th scope="col" style="text-align: left; width: 10rem;">
+                  <sort-link name="name"><span style="display: flex; align-items: center"> Date <icon name="up"></icon></span></sort-link>
+                </th>
+                <th scope="col" style="text-align: left; width: 10rem;">
+                  <sort-link name="hits">Admin & Role</sort-link>
+                </th>
+                <th scope="col" style="text-align: left; width: 10rem;">
+                  <sort-link name="hits">Admin Details</sort-link>
+                </th>
+                <th scope="col" style="text-align: left; width: 10rem;">
+                  <sort-link name="hits"><span style="display: flex; align-items: center"><span style="color: grey; margin-right: 1rem;">Status</span> All <icon name="dropdown"></icon> </span></sort-link>
+                </th>
+              </tr>
+            </thead>
+      <template>
+        <tbody>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </template>
+    </sorted-table>
+    </div>
+
+    <div class="export-box bulk-action">
+        <span class="text-uppercase t-text">Bulk Action</span>
+        <icon name="dropdown" class="mt-1"></icon>
+      </div>
   </div>
 
   <div v-else class="user-page">
@@ -136,10 +162,10 @@
 </template>
 
 <script>
-    export default {
 
-      // middleware: ['user'],
+    export default {
       name: 'user-permission',
+      components: {},
       
       data () {
       return {
@@ -148,102 +174,6 @@
 
         showPage: true,
         dialog: false,
-        singleSelect: false,
-        selected: [],
-        headers: [
-          {
-            text: 'ID',
-            align: 'start',
-            sortable: false,
-            value: 'id',
-          },
-          { text: 'Date', value: 'date' },
-          { text: 'Admin & Role', value: 'admin&role' },
-          { text: 'Admin Details', value: 'admindetails' },
-          { text: 'Status All', value: 'status' },
-        ],
-        users: [
-          {
-            id: '#424345',
-            calories: 159,
-            fat: 6.0,
-            carbs: 24,
-            protein: 4.0,
-            iron: '1%',
-          },
-          {
-            name: 'Ice cream sandwich',
-            calories: 237,
-            fat: 9.0,
-            carbs: 37,
-            protein: 4.3,
-            iron: '1%',
-          },
-          {
-            name: 'Eclair',
-            calories: 262,
-            fat: 16.0,
-            carbs: 23,
-            protein: 6.0,
-            iron: '7%',
-          },
-          {
-            name: 'Cupcake',
-            calories: 305,
-            fat: 3.7,
-            carbs: 67,
-            protein: 4.3,
-            iron: '8%',
-          },
-          {
-            name: 'Gingerbread',
-            calories: 356,
-            fat: 16.0,
-            carbs: 49,
-            protein: 3.9,
-            iron: '16%',
-          },
-          {
-            name: 'Jelly bean',
-            calories: 375,
-            fat: 0.0,
-            carbs: 94,
-            protein: 0.0,
-            iron: '0%',
-          },
-          {
-            name: 'Lollipop',
-            calories: 392,
-            fat: 0.2,
-            carbs: 98,
-            protein: 0,
-            iron: '2%',
-          },
-          {
-            name: 'Honeycomb',
-            calories: 408,
-            fat: 3.2,
-            carbs: 87,
-            protein: 6.5,
-            iron: '45%',
-          },
-          {
-            name: 'Donut',
-            calories: 452,
-            fat: 25.0,
-            carbs: 51,
-            protein: 4.9,
-            iron: '22%',
-          },
-          {
-            name: 'KitKat',
-            calories: 518,
-            fat: 26.0,
-            carbs: 65,
-            protein: 7,
-            iron: '6%',
-          },
-        ],
       }
     },
 
@@ -270,20 +200,62 @@
     line-height: 16px;
     letter-spacing: 0.07em;
     text-transform: uppercase;
+    margin: 5px 0px 6px 100px;
   }
-  .btn-btn{
-    position: absolute;
-    top: 10px;
-    right: 40px;
-    background: #0CAD73 !important;
-    color: #fff;
-    box-shadow: none;
-    border-radius: 16px;
-    font-family: 'Space Grotesk';
-    font-weight: 600;
-    font-size: 12px;
-    line-height: 16px;
-    letter-spacing: 0.07em;
+  .round {
+  position: relative;
+}
+
+.round label {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 20px;
+  left: 35px;
+  position: absolute;
+  top: 35px;
+  width: 20px;
+}
+.round label:after {
+  border: 2px solid #fff;
+  border-top: none;
+  border-right: none;
+  content: "";
+  height: 6px;
+  left: 4px;
+  opacity: 0;
+  position: absolute;
+  top: 5px;
+  transform: rotate(-45deg);
+  width: 12px;
+}
+
+.round input[type="checkbox"] {
+  visibility: hidden;
+}
+.round input[type="checkbox"]:checked + label {
+  background-color: grey;
+  border-color: grey;
+}
+
+.round input[type="checkbox"]:checked + label:after {
+  opacity: 1;
+}
+ 
+.btn-btn{
+  position: absolute;
+  top: 10px;
+  right: 40px;
+  background: #0CAD73 !important;
+  color: #fff;
+  box-shadow: none;
+  border-radius: 16px;
+  font-family: 'Space Grotesk';
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.07em;
   }
   .main-flex{
     display: flex;
@@ -316,6 +288,14 @@
     border-radius: 12px;
     height: 6vh;
     padding: 10px;
+  }
+  .bulk-action{
+    font-family: 'Space Grotesk';
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 0.07em;
+    color: grey;
+    margin: 50px 0 6px 34px;
   }
 /* Add users */
 .box{
@@ -430,7 +410,6 @@
 .dialog{
     font-family: 'Space Grotesk'; 
 }
-
-/* sabon dale suite 7 */
 </style>
+
 

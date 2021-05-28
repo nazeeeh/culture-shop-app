@@ -18,6 +18,7 @@ import nuxt_plugin_workbox_e857d0b6 from 'nuxt_plugin_workbox_e857d0b6' // Sourc
 import nuxt_plugin_metaplugin_8a58d1b6 from 'nuxt_plugin_metaplugin_8a58d1b6' // Source: .\\pwa\\meta.plugin.js (mode: 'all')
 import nuxt_plugin_iconplugin_810986ce from 'nuxt_plugin_iconplugin_810986ce' // Source: .\\pwa\\icon.plugin.js (mode: 'all')
 import nuxt_plugin_axios_1b269e6e from 'nuxt_plugin_axios_1b269e6e' // Source: .\\axios.js (mode: 'all')
+import nuxt_plugin_prettycheckbox_41a8731a from 'nuxt_plugin_prettycheckbox_41a8731a' // Source: ..\\plugins\\pretty-checkbox.js (mode: 'all')
 
 // Component: <ClientOnly>
 Vue.component(ClientOnly.name, ClientOnly)
@@ -203,6 +204,10 @@ async function createApp(ssrContext, config = {}) {
 
   if (typeof nuxt_plugin_axios_1b269e6e === 'function') {
     await nuxt_plugin_axios_1b269e6e(app.context, inject)
+  }
+
+  if (typeof nuxt_plugin_prettycheckbox_41a8731a === 'function') {
+    await nuxt_plugin_prettycheckbox_41a8731a(app.context, inject)
   }
 
   // Lock enablePreview in context
