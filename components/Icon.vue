@@ -126,7 +126,4 @@ svg{
   fill: grey;
 }
 
-svg:hover{
-  fill:green;
-}
 </style>
