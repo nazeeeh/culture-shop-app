@@ -1,5 +1,10 @@
 <template>
     <div class="Recovery-Option">
+     <!-- back-icon --> 
+      <v-btn class="arrow" fab small to="/login">
+        <icon name="left-arrow"></icon>
+      </v-btn>
+      <!-- main section -->
      <div class="main">
       <!-- Sub-title -->
       <h3 class="sub-title">Step 1 / 3</h3>
@@ -9,7 +14,7 @@
             <input type="radio" checked="checked" name="radio">
             <span class="checkmark"></span>
         </label>
-        <hr>
+        <v-divider></v-divider>
         <label class="container"><span class="label">Text message<span style="font-weight: none; margin-left: 5px;"> (SMS)</span></span>
             <input type="radio" name="radio">
             <span class="checkmark"></span>
@@ -42,12 +47,16 @@
     font-size: 16px;
     line-height: 22px;
 }
-/* .main{
+.Recovery-Option{
     position: relative;
-    left: 20%;
-} */
+}
+.arrow{
+    position: absolute;
+    right: 75em;
+    bottom: 55em;
+    box-shadow: none;
+}
 .recovery-choices{
-
     width: 22rem;
     padding: 10px 0;
     margin: 20px auto;
@@ -60,9 +69,6 @@
     padding: 20px 0;
 } */
 /* The container */
-hr {
-    border: 2px solid #F0F0F0;
-}
         .container {
           display: block;
           position: relative;

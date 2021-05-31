@@ -29,7 +29,7 @@
             <!-- <input type="checkbox">
             <label for="checkbox"></label><br><br> -->
             <v-btn class="sign-in-btn">Sign In</v-btn><br><br>
-            <nuxt-link to="">
+            <nuxt-link to="/forget-password/recovery-option">
              <span class="forgotten-password">Forgotten password</span>
             </nuxt-link>
            </form>

@@ -1,10 +1,11 @@
 <template>
-    <div class="Phone-Verification">
+    <div class="Phone-verification">
+     <v-btn class="arrow" fab small to="/login">
+        <icon name="left-arrow"></icon>
+      </v-btn>
      <div class="main">
       <h3 class="sub-title">Step 2 / 3</h3>
-
       <div class="verify">
-        
           <form>
             <div class="number-box">
              <input type="text"/>
@@ -26,8 +27,7 @@
           <div class="btn">
            <v-btn text class="cancel">Cancel</v-btn>
           </div>
-          </form>  
-      
+          </form>
       </div>
      </div>
     </div>
