@@ -12,6 +12,8 @@
 </script>
 
 <style scoped>
-
+.logo{
+    margin-bottom: 20px;
+}
 
 </style>
