@@ -1,9 +1,6 @@
 <template>
     <div class="Recovery-Option">
-     <!-- back-icon --> 
-      <v-btn class="arrow" fab small to="/login">
-        <icon name="left-arrow"></icon>
-      </v-btn>
+     
       <!-- main section -->
      <div class="main">
       <!-- Sub-title -->
@@ -49,12 +46,6 @@
 }
 .Recovery-Option{
     position: relative;
-}
-.arrow{
-    position: absolute;
-    right: 75em;
-    bottom: 55em;
-    box-shadow: none;
 }
 .recovery-choices{
     width: 22rem;

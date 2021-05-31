@@ -1,5 +1,9 @@
 <template>
  <div class="name-route">
+  <!-- back-icon --> 
+  <v-btn class="arrow" fab small to="/login">
+    <icon name="left-arrow"></icon>
+  </v-btn>
   <div class="main">
    <div class="logo">
     <Logo />
@@ -45,6 +49,12 @@
     position: relative;
     text-align: center;
     font-family: 'Space Grotesk';
+}
+.arrow{
+    position: absolute;
+    left: 5em;
+    top: 2em;
+    box-shadow: none;
 }
 .name-route .main{
     position: absolute;

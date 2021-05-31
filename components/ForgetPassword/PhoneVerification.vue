@@ -1,8 +1,5 @@
 <template>
     <div class="Phone-verification">
-     <v-btn class="arrow" fab small to="/login">
-        <icon name="left-arrow"></icon>
-      </v-btn>
      <div class="main">
       <h3 class="sub-title">Step 2 / 3</h3>
       <div class="verify">
@@ -45,6 +42,15 @@
     font-weight: 600;
     font-size: 16px;
     line-height: 22px;
+}
+.Phone-verification{
+    position: relative;
+}
+.arrow{
+    position: absolute;
+    right: 75em;
+    bottom: 45em;
+    box-shadow: none;
 }
 input[type='text']{
     border: 2px solid #ECECEC;
