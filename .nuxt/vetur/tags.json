@@ -65,6 +65,12 @@
   "ResourcesAnalyticscard": {
     "description": "Auto imported from components/resources/Analyticscard.vue"
   },
+  "ResourcesAnalyticsgraph": {
+    "description": "Auto imported from components/resources/Analyticsgraph.vue"
+  },
+  "ResourcesCards": {
+    "description": "Auto imported from components/resources/Cards.vue"
+  },
   "SettingsGeneral": {
     "description": "Auto imported from components/settings/General.vue"
   },

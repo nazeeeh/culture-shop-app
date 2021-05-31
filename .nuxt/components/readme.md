@@ -28,5 +28,7 @@ You can directly use them in pages and other components without the need to impo
 - `<GeneralVendoragreement>` | `<general-vendoragreement>` (components/General/Vendoragreement.vue)
 - `<ManageCustomersAnalytics>` | `<manage-customers-analytics>` (components/manageCustomers/Analytics.vue)
 - `<ResourcesAnalyticscard>` | `<resources-analyticscard>` (components/resources/Analyticscard.vue)
+- `<ResourcesAnalyticsgraph>` | `<resources-analyticsgraph>` (components/resources/Analyticsgraph.vue)
+- `<ResourcesCards>` | `<resources-cards>` (components/resources/Cards.vue)
 - `<SettingsGeneral>` | `<settings-general>` (components/settings/General.vue)
 - `<SettingsPrivacy>` | `<settings-privacy>` (components/settings/Privacy.vue)

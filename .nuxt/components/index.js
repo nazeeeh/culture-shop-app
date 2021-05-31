@@ -22,6 +22,8 @@ export { default as GeneralUserpermission } from '../..\\components\\General\\Us
 export { default as GeneralVendoragreement } from '../..\\components\\General\\Vendoragreement.vue'
 export { default as ManageCustomersAnalytics } from '../..\\components\\manageCustomers\\Analytics.vue'
 export { default as ResourcesAnalyticscard } from '../..\\components\\resources\\Analyticscard.vue'
+export { default as ResourcesAnalyticsgraph } from '../..\\components\\resources\\Analyticsgraph.vue'
+export { default as ResourcesCards } from '../..\\components\\resources\\Cards.vue'
 export { default as SettingsGeneral } from '../..\\components\\settings\\General.vue'
 export { default as SettingsPrivacy } from '../..\\components\\settings\\Privacy.vue'
 
@@ -47,5 +49,7 @@ export const LazyGeneralUserpermission = import('../..\\components\\General\\Use
 export const LazyGeneralVendoragreement = import('../..\\components\\General\\Vendoragreement.vue' /* webpackChunkName: "components/general-vendoragreement" */).then(c => wrapFunctional(c.default || c))
 export const LazyManageCustomersAnalytics = import('../..\\components\\manageCustomers\\Analytics.vue' /* webpackChunkName: "components/manage-customers-analytics" */).then(c => wrapFunctional(c.default || c))
 export const LazyResourcesAnalyticscard = import('../..\\components\\resources\\Analyticscard.vue' /* webpackChunkName: "components/resources-analyticscard" */).then(c => wrapFunctional(c.default || c))
+export const LazyResourcesAnalyticsgraph = import('../..\\components\\resources\\Analyticsgraph.vue' /* webpackChunkName: "components/resources-analyticsgraph" */).then(c => wrapFunctional(c.default || c))
+export const LazyResourcesCards = import('../..\\components\\resources\\Cards.vue' /* webpackChunkName: "components/resources-cards" */).then(c => wrapFunctional(c.default || c))
 export const LazySettingsGeneral = import('../..\\components\\settings\\General.vue' /* webpackChunkName: "components/settings-general" */).then(c => wrapFunctional(c.default || c))
 export const LazySettingsPrivacy = import('../..\\components\\settings\\Privacy.vue' /* webpackChunkName: "components/settings-privacy" */).then(c => wrapFunctional(c.default || c))

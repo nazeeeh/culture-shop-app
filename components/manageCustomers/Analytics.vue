@@ -4,7 +4,8 @@
     <Subhead />
     <v-divider></v-divider>
     <AnalyticsCard />
-    <Bottomgraph />
+    <Analyticsgraph />
+    <Cards />
   </div>
  </div>
 </template>
@@ -12,15 +13,16 @@
 <script>
 import Subhead from '../Dashboard-subhead'
 import AnalyticsCard from '../resources/Analyticscard'
-import Bottomgraph from '../Bottom-graph'
+import Analyticsgraph from '../resources/Analyticsgraph'
+import Cards from '../resources/Cards'
     export default {
         name: 'analytics',
         components: {
           Subhead,
           AnalyticsCard,
-          Bottomgraph
-        }
-        
+          Analyticsgraph,
+          Cards
+        } 
     }
 </script>
 
