@@ -26,5 +26,6 @@ You can directly use them in pages and other components without the need to impo
 - `<ForgetPasswordPhoneVerification>` | `<forget-password-phone-verification>` (components/ForgetPassword/PhoneVerification.vue)
 - `<ForgetPasswordRecoveryOption>` | `<forget-password-recovery-option>` (components/ForgetPassword/RecoveryOption.vue)
 - `<ForgetPasswordResetPassword>` | `<forget-password-reset-password>` (components/ForgetPassword/ResetPassword.vue)
+- `<ManageCustomersAnalytics>` | `<manage-customers-analytics>` (components/manageCustomers/Analytics.vue)
 - `<SettingsGeneral>` | `<settings-general>` (components/settings/General.vue)
 - `<SettingsPrivacy>` | `<settings-privacy>` (components/settings/Privacy.vue)

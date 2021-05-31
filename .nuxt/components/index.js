@@ -20,6 +20,7 @@ export { default as GeneralVendoragreement } from '../..\\components\\General\\V
 export { default as ForgetPasswordPhoneVerification } from '../..\\components\\ForgetPassword\\PhoneVerification.vue'
 export { default as ForgetPasswordRecoveryOption } from '../..\\components\\ForgetPassword\\RecoveryOption.vue'
 export { default as ForgetPasswordResetPassword } from '../..\\components\\ForgetPassword\\ResetPassword.vue'
+export { default as ManageCustomersAnalytics } from '../..\\components\\manageCustomers\\Analytics.vue'
 export { default as SettingsGeneral } from '../..\\components\\settings\\General.vue'
 export { default as SettingsPrivacy } from '../..\\components\\settings\\Privacy.vue'
 
@@ -43,5 +44,6 @@ export const LazyGeneralVendoragreement = import('../..\\components\\General\\Ve
 export const LazyForgetPasswordPhoneVerification = import('../..\\components\\ForgetPassword\\PhoneVerification.vue' /* webpackChunkName: "components/forget-password-phone-verification" */).then(c => wrapFunctional(c.default || c))
 export const LazyForgetPasswordRecoveryOption = import('../..\\components\\ForgetPassword\\RecoveryOption.vue' /* webpackChunkName: "components/forget-password-recovery-option" */).then(c => wrapFunctional(c.default || c))
 export const LazyForgetPasswordResetPassword = import('../..\\components\\ForgetPassword\\ResetPassword.vue' /* webpackChunkName: "components/forget-password-reset-password" */).then(c => wrapFunctional(c.default || c))
+export const LazyManageCustomersAnalytics = import('../..\\components\\manageCustomers\\Analytics.vue' /* webpackChunkName: "components/manage-customers-analytics" */).then(c => wrapFunctional(c.default || c))
 export const LazySettingsGeneral = import('../..\\components\\settings\\General.vue' /* webpackChunkName: "components/settings-general" */).then(c => wrapFunctional(c.default || c))
 export const LazySettingsPrivacy = import('../..\\components\\settings\\Privacy.vue' /* webpackChunkName: "components/settings-privacy" */).then(c => wrapFunctional(c.default || c))

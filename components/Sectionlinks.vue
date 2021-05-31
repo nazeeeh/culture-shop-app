@@ -3,7 +3,7 @@
     <div class="text-settings">
       <v-list flat>
       <p class="mx-5 text-cap text-uppercase">Manage customers</p>
-      <v-list-item to="/">
+      <v-list-item to="/manage-customers/analytics">
         <v-list-item-icon>
           <icon name="analytics"></icon>
         </v-list-item-icon>

@@ -28,6 +28,13 @@
     "_name": "_4416617c"
   },
   {
+    "name": "manage-customers-name",
+    "path": "/manage-customers/:name?",
+    "component": "C:\\\\Users\\\\Gemdajs-001\\\\Documents\\\\culture-shop\\\\pages\\\\manage-customers\\\\_name.vue",
+    "chunkName": "pages/manage-customers/_name",
+    "_name": "_3d0dea80"
+  },
+  {
     "name": "index",
     "path": "/",
     "component": "C:\\\\Users\\\\Gemdajs-001\\\\Documents\\\\culture-shop\\\\pages\\\\index.vue",

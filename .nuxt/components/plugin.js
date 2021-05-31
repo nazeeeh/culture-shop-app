@@ -22,6 +22,7 @@ const components = {
   ForgetPasswordPhoneVerification: () => import('../..\\components\\ForgetPassword\\PhoneVerification.vue' /* webpackChunkName: "components/forget-password-phone-verification" */).then(c => wrapFunctional(c.default || c)),
   ForgetPasswordRecoveryOption: () => import('../..\\components\\ForgetPassword\\RecoveryOption.vue' /* webpackChunkName: "components/forget-password-recovery-option" */).then(c => wrapFunctional(c.default || c)),
   ForgetPasswordResetPassword: () => import('../..\\components\\ForgetPassword\\ResetPassword.vue' /* webpackChunkName: "components/forget-password-reset-password" */).then(c => wrapFunctional(c.default || c)),
+  ManageCustomersAnalytics: () => import('../..\\components\\manageCustomers\\Analytics.vue' /* webpackChunkName: "components/manage-customers-analytics" */).then(c => wrapFunctional(c.default || c)),
   SettingsGeneral: () => import('../..\\components\\settings\\General.vue' /* webpackChunkName: "components/settings-general" */).then(c => wrapFunctional(c.default || c)),
   SettingsPrivacy: () => import('../..\\components\\settings\\Privacy.vue' /* webpackChunkName: "components/settings-privacy" */).then(c => wrapFunctional(c.default || c))
 }

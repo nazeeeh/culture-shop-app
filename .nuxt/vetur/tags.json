@@ -59,6 +59,9 @@
   "ForgetPasswordResetPassword": {
     "description": "Auto imported from components/ForgetPassword/ResetPassword.vue"
   },
+  "ManageCustomersAnalytics": {
+    "description": "Auto imported from components/manageCustomers/Analytics.vue"
+  },
   "SettingsGeneral": {
     "description": "Auto imported from components/settings/General.vue"
   },

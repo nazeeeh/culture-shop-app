@@ -8,6 +8,7 @@ const _ba0e40e8 = () => interopDefault(import('..\\pages\\login.vue' /* webpackC
 const _8e4aa19c = () => interopDefault(import('..\\pages\\settings\\index.vue' /* webpackChunkName: "pages/settings/index" */))
 const _35be2fd2 = () => interopDefault(import('..\\pages\\settings\\general\\_name.vue' /* webpackChunkName: "pages/settings/general/_name" */))
 const _4416617c = () => interopDefault(import('..\\pages\\forget-password\\_name.vue' /* webpackChunkName: "pages/forget-password/_name" */))
+const _3d0dea80 = () => interopDefault(import('..\\pages\\manage-customers\\_name.vue' /* webpackChunkName: "pages/manage-customers/_name" */))
 const _4d5d8716 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
 
 const emptyFn = () => {}
@@ -37,6 +38,10 @@ export const routerOptions = {
     path: "/forget-password/:name?",
     component: _4416617c,
     name: "forget-password-name"
+  }, {
+    path: "/manage-customers/:name?",
+    component: _3d0dea80,
+    name: "manage-customers-name"
   }, {
     path: "/",
     component: _4d5d8716,
