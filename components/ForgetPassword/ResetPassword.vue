@@ -30,7 +30,12 @@
 
 <script>
     export default {
-        name: 'reset-password'
+        name: 'reset-password',
+        methods: {
+            goToRoute(){
+                
+            }
+        }
     }
 </script>
 

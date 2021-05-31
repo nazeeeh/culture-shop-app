@@ -19,7 +19,7 @@
               </div>
             </div>
             <div class="btn">
-           <v-btn class="continue">Continue</v-btn>
+           <v-btn class="continue" @click="goToRoute">Continue</v-btn>
           </div>
           <div class="btn">
            <v-btn text class="cancel">Cancel</v-btn>
@@ -32,7 +32,12 @@
 
 <script>
     export default {
-        name: 'phone-verification'
+        name: 'phone-verification',
+        methods: {
+            goToRoute(){
+                this.$router.push({ path: '/forget-password/reset-password'});
+            }
+        }
     }
 </script>
 

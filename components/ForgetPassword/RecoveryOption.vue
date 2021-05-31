@@ -21,7 +21,7 @@
            <input type="text"/>
           </div>
           <div class="btn">
-           <v-btn class="continue" @click="nextRoute">Continue</v-btn>
+           <v-btn class="continue" @click="goToRoute">Continue</v-btn>
           </div>
           <div class="btn">
            <v-btn text class="cancel">Cancel</v-btn>
@@ -37,7 +37,7 @@
         name: 'recovery-option',
 
         methods: {
-            nextRoute(){
+            goToRoute(){
                 this.$router.push({ path: '/forget-password/phone-verification'});
             }
         }
