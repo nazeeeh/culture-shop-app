@@ -18,7 +18,7 @@
 </template>
 <script>
 export default {
-    // props: ['Subhead']
+    props: ['Subhead']
 }
 </script>
 <style scoped>

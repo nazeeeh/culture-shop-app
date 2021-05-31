@@ -1,14 +1,22 @@
 <template>
  <div class="Analytics">
   <div>
-    
+    <Subhead />
+    <v-divider></v-divider>
+    <AnalyticsCard />
   </div>
  </div>
 </template>
 
 <script>
+import Subhead from '../Dashboard-subhead'
+import AnalyticsCard from '../resources/Analyticscard'
     export default {
-        name: 'analytics'
+        name: 'analytics',
+        components: {
+            Subhead,
+            AnalyticsCard
+        }
         
     }
 </script>
