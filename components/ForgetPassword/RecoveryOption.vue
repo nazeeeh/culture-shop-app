@@ -21,7 +21,7 @@
            <input type="text"/>
           </div>
           <div class="btn">
-           <v-btn class="continue">Continue</v-btn>
+           <v-btn class="continue" @click="nextRoute">Continue</v-btn>
           </div>
           <div class="btn">
            <v-btn text class="cancel">Cancel</v-btn>
@@ -34,7 +34,13 @@
 
 <script>
     export default {
-        name: 'recovery-option'
+        name: 'recovery-option',
+
+        methods: {
+            nextRoute(){
+                this.$router.push({ path: '/forget-password/phone-verification'});
+            }
+        }
     }
 </script>
 <style scoped>
