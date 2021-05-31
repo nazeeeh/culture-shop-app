@@ -14,12 +14,12 @@ export { default as ManageDriver } from '../..\\components\\Manage-driver.vue'
 export { default as ManageVendor } from '../..\\components\\Manage-vendor.vue'
 export { default as Sectionlinks } from '../..\\components\\Sectionlinks.vue'
 export { default as Sidebar } from '../..\\components\\Sidebar.vue'
-export { default as ForgetPasswordPhoneVerification } from '../..\\components\\ForgetPassword\\PhoneVerification.vue'
-export { default as ForgetPasswordRecoveryOption } from '../..\\components\\ForgetPassword\\RecoveryOption.vue'
-export { default as ForgetPasswordResetPassword } from '../..\\components\\ForgetPassword\\ResetPassword.vue'
 export { default as GeneralDriveragreement } from '../..\\components\\General\\Driveragreement.vue'
 export { default as GeneralUserpermission } from '../..\\components\\General\\Userpermission.vue'
 export { default as GeneralVendoragreement } from '../..\\components\\General\\Vendoragreement.vue'
+export { default as ForgetPasswordPhoneVerification } from '../..\\components\\ForgetPassword\\PhoneVerification.vue'
+export { default as ForgetPasswordRecoveryOption } from '../..\\components\\ForgetPassword\\RecoveryOption.vue'
+export { default as ForgetPasswordResetPassword } from '../..\\components\\ForgetPassword\\ResetPassword.vue'
 export { default as SettingsGeneral } from '../..\\components\\settings\\General.vue'
 export { default as SettingsPrivacy } from '../..\\components\\settings\\Privacy.vue'
 
@@ -37,11 +37,11 @@ export const LazyManageDriver = import('../..\\components\\Manage-driver.vue' /*
 export const LazyManageVendor = import('../..\\components\\Manage-vendor.vue' /* webpackChunkName: "components/manage-vendor" */).then(c => wrapFunctional(c.default || c))
 export const LazySectionlinks = import('../..\\components\\Sectionlinks.vue' /* webpackChunkName: "components/sectionlinks" */).then(c => wrapFunctional(c.default || c))
 export const LazySidebar = import('../..\\components\\Sidebar.vue' /* webpackChunkName: "components/sidebar" */).then(c => wrapFunctional(c.default || c))
-export const LazyForgetPasswordPhoneVerification = import('../..\\components\\ForgetPassword\\PhoneVerification.vue' /* webpackChunkName: "components/forget-password-phone-verification" */).then(c => wrapFunctional(c.default || c))
-export const LazyForgetPasswordRecoveryOption = import('../..\\components\\ForgetPassword\\RecoveryOption.vue' /* webpackChunkName: "components/forget-password-recovery-option" */).then(c => wrapFunctional(c.default || c))
-export const LazyForgetPasswordResetPassword = import('../..\\components\\ForgetPassword\\ResetPassword.vue' /* webpackChunkName: "components/forget-password-reset-password" */).then(c => wrapFunctional(c.default || c))
 export const LazyGeneralDriveragreement = import('../..\\components\\General\\Driveragreement.vue' /* webpackChunkName: "components/general-driveragreement" */).then(c => wrapFunctional(c.default || c))
 export const LazyGeneralUserpermission = import('../..\\components\\General\\Userpermission.vue' /* webpackChunkName: "components/general-userpermission" */).then(c => wrapFunctional(c.default || c))
 export const LazyGeneralVendoragreement = import('../..\\components\\General\\Vendoragreement.vue' /* webpackChunkName: "components/general-vendoragreement" */).then(c => wrapFunctional(c.default || c))
+export const LazyForgetPasswordPhoneVerification = import('../..\\components\\ForgetPassword\\PhoneVerification.vue' /* webpackChunkName: "components/forget-password-phone-verification" */).then(c => wrapFunctional(c.default || c))
+export const LazyForgetPasswordRecoveryOption = import('../..\\components\\ForgetPassword\\RecoveryOption.vue' /* webpackChunkName: "components/forget-password-recovery-option" */).then(c => wrapFunctional(c.default || c))
+export const LazyForgetPasswordResetPassword = import('../..\\components\\ForgetPassword\\ResetPassword.vue' /* webpackChunkName: "components/forget-password-reset-password" */).then(c => wrapFunctional(c.default || c))
 export const LazySettingsGeneral = import('../..\\components\\settings\\General.vue' /* webpackChunkName: "components/settings-general" */).then(c => wrapFunctional(c.default || c))
 export const LazySettingsPrivacy = import('../..\\components\\settings\\Privacy.vue' /* webpackChunkName: "components/settings-privacy" */).then(c => wrapFunctional(c.default || c))

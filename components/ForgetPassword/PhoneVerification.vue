@@ -72,7 +72,8 @@ input[type='text']:focus{
 }
 .number-box{
     margin-top: 60px;
-    margin-left: 8rem; 
+    margin-right: 2rem;
+   
 }
 .flex{
     display: flex;
@@ -84,14 +85,14 @@ input[type='text']:focus{
     margin-top: 20px;
 }
 .verify{
-    width: 30rem;
+    width: 40rem;
 }
 .resend{
     color: #0CAD73;
 }
 .btn{
     margin-top: 20px;
-    margin-left: 8rem;
+    margin-right: 2rem;
 }
 .continue{
     width: 23.5vw;

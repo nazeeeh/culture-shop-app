@@ -41,15 +41,6 @@
   "Sidebar": {
     "description": "Auto imported from components/Sidebar.vue"
   },
-  "ForgetPasswordPhoneVerification": {
-    "description": "Auto imported from components/ForgetPassword/PhoneVerification.vue"
-  },
-  "ForgetPasswordRecoveryOption": {
-    "description": "Auto imported from components/ForgetPassword/RecoveryOption.vue"
-  },
-  "ForgetPasswordResetPassword": {
-    "description": "Auto imported from components/ForgetPassword/ResetPassword.vue"
-  },
   "GeneralDriveragreement": {
     "description": "Auto imported from components/General/Driveragreement.vue"
   },
@@ -58,6 +49,15 @@
   },
   "GeneralVendoragreement": {
     "description": "Auto imported from components/General/Vendoragreement.vue"
+  },
+  "ForgetPasswordPhoneVerification": {
+    "description": "Auto imported from components/ForgetPassword/PhoneVerification.vue"
+  },
+  "ForgetPasswordRecoveryOption": {
+    "description": "Auto imported from components/ForgetPassword/RecoveryOption.vue"
+  },
+  "ForgetPasswordResetPassword": {
+    "description": "Auto imported from components/ForgetPassword/ResetPassword.vue"
   },
   "SettingsGeneral": {
     "description": "Auto imported from components/settings/General.vue"
