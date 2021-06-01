@@ -52,14 +52,18 @@ export default {
     data () {
       return {
         items: [
-
         {
           action: 'orders',
           active: true,
           items: [
-            { title: 'Breakfast & brunch' },
-            { title: 'New American' },
-            { title: 'Sushi' },
+            { title: 'All' },
+            { title: 'Completed' },
+            { title: 'Out for delivery' },
+            { title: 'delivered' },
+            { title: 'pending' },
+            { title: 'refunded' },
+            { title: 'Failed' },
+            { title: 'Cancelled' }
           ],
           title: 'Orders',
         },

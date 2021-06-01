@@ -1,9 +1,9 @@
 <template>
      <div class="card-2">
-        <div class="box-display" v-for="(content, i) in contents" :key="i" :style="{backgroundColor: content.backgroundColor}">
+        <div class="box-display" v-for="(content, i) in contents" :key="i">
           <div class="text-uppercase p-style ml-8 mt-4" >
             <p>{{content.name}}</p>
-            <p class="p-counts" :style="{color: content.color}">{{content.rate}}</p>
+            <p class="p-counts">{{content.rate}}</p>
           </div>
             <Icon name="right" class="mr-8 mt-6" />
         </div>
