@@ -21,11 +21,10 @@
 
         <!-- Table -->
         <div class="round">
-                  <input type="checkbox" id="checkbox" />
-                  <label for="checkbox"></label>
-                </div>
+          <input type="checkbox" id="checkbox" />
+          <label for="checkbox"></label>
+        </div>
         <div class="table">
-          
           <sorted-table :values="values">
             <thead>
               <tr> 
@@ -36,7 +35,7 @@
                   <sort-link name="name"><span style="display: flex; align-items: center"> Date <icon name="up"></icon></span></sort-link>
                 </th>
                 <th scope="col" style="text-align: left; width: 10rem;">
-                  <sort-link name="hits">Admin & Role</sort-link>
+                  <sort-link name="hits">Admin &#38; Role</sort-link>
                 </th>
                 <th scope="col" style="text-align: left; width: 10rem;">
                   <sort-link name="hits">Admin Details</sort-link>
@@ -61,7 +60,7 @@
     <div class="export-box bulk-action">
         <span class="text-uppercase t-text">Bulk Action</span>
         <icon name="dropdown" class="mt-1"></icon>
-      </div>
+    </div>
   </div>
 
   <div v-else class="user-page">

@@ -68,13 +68,25 @@
   "ResourcesAnalyticsgraph": {
     "description": "Auto imported from components/resources/Analyticsgraph.vue"
   },
+  "ResourcesBulkaction": {
+    "description": "Auto imported from components/resources/Bulkaction.vue"
+  },
   "ResourcesCards": {
     "description": "Auto imported from components/resources/Cards.vue"
+  },
+  "ResourcesSearch": {
+    "description": "Auto imported from components/resources/Search.vue"
+  },
+  "ResourcesTables": {
+    "description": "Auto imported from components/resources/Tables.vue"
   },
   "SettingsGeneral": {
     "description": "Auto imported from components/settings/General.vue"
   },
   "SettingsPrivacy": {
     "description": "Auto imported from components/settings/Privacy.vue"
+  },
+  "ManageCustomersOrdersAllorders": {
+    "description": "Auto imported from components/manageCustomers/orders/Allorders.vue"
   }
 }
