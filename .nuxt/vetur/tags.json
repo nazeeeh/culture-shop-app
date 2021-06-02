@@ -89,6 +89,9 @@
   "SettingsPrivacy": {
     "description": "Auto imported from components/settings/Privacy.vue"
   },
+  "ManageCustomersCategories": {
+    "description": "Auto imported from components/manageCustomers/categories/Categories.vue"
+  },
   "ManageCustomers": {
     "description": "Auto imported from components/manageCustomers/customers/Customers.vue"
   },

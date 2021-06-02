@@ -30,6 +30,7 @@ export { default as ResourcesSearch } from '../..\\components\\resources\\Search
 export { default as ResourcesTables } from '../..\\components\\resources\\Tables.vue'
 export { default as SettingsGeneral } from '../..\\components\\settings\\General.vue'
 export { default as SettingsPrivacy } from '../..\\components\\settings\\Privacy.vue'
+export { default as ManageCustomersCategories } from '../..\\components\\manageCustomers\\categories\\Categories.vue'
 export { default as ManageCustomers } from '../..\\components\\manageCustomers\\customers\\Customers.vue'
 export { default as ManageCustomersOrdersAllorders } from '../..\\components\\manageCustomers\\orders\\Allorders.vue'
 export { default as ManageCustomersSupportOverview } from '../..\\components\\manageCustomers\\support\\Overview.vue'
@@ -64,6 +65,7 @@ export const LazyResourcesSearch = import('../..\\components\\resources\\Search.
 export const LazyResourcesTables = import('../..\\components\\resources\\Tables.vue' /* webpackChunkName: "components/resources-tables" */).then(c => wrapFunctional(c.default || c))
 export const LazySettingsGeneral = import('../..\\components\\settings\\General.vue' /* webpackChunkName: "components/settings-general" */).then(c => wrapFunctional(c.default || c))
 export const LazySettingsPrivacy = import('../..\\components\\settings\\Privacy.vue' /* webpackChunkName: "components/settings-privacy" */).then(c => wrapFunctional(c.default || c))
+export const LazyManageCustomersCategories = import('../..\\components\\manageCustomers\\categories\\Categories.vue' /* webpackChunkName: "components/manage-customers-categories" */).then(c => wrapFunctional(c.default || c))
 export const LazyManageCustomers = import('../..\\components\\manageCustomers\\customers\\Customers.vue' /* webpackChunkName: "components/manage-customers" */).then(c => wrapFunctional(c.default || c))
 export const LazyManageCustomersOrdersAllorders = import('../..\\components\\manageCustomers\\orders\\Allorders.vue' /* webpackChunkName: "components/manage-customers-orders-allorders" */).then(c => wrapFunctional(c.default || c))
 export const LazyManageCustomersSupportOverview = import('../..\\components\\manageCustomers\\support\\Overview.vue' /* webpackChunkName: "components/manage-customers-support-overview" */).then(c => wrapFunctional(c.default || c))
