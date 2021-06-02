@@ -27,10 +27,12 @@ const components = {
   ResourcesAnalyticsgraph: () => import('../..\\components\\resources\\Analyticsgraph.vue' /* webpackChunkName: "components/resources-analyticsgraph" */).then(c => wrapFunctional(c.default || c)),
   ResourcesBulkaction: () => import('../..\\components\\resources\\Bulkaction.vue' /* webpackChunkName: "components/resources-bulkaction" */).then(c => wrapFunctional(c.default || c)),
   ResourcesCards: () => import('../..\\components\\resources\\Cards.vue' /* webpackChunkName: "components/resources-cards" */).then(c => wrapFunctional(c.default || c)),
+  ResourcesExport: () => import('../..\\components\\resources\\Export.vue' /* webpackChunkName: "components/resources-export" */).then(c => wrapFunctional(c.default || c)),
   ResourcesSearch: () => import('../..\\components\\resources\\Search.vue' /* webpackChunkName: "components/resources-search" */).then(c => wrapFunctional(c.default || c)),
   ResourcesTables: () => import('../..\\components\\resources\\Tables.vue' /* webpackChunkName: "components/resources-tables" */).then(c => wrapFunctional(c.default || c)),
   SettingsGeneral: () => import('../..\\components\\settings\\General.vue' /* webpackChunkName: "components/settings-general" */).then(c => wrapFunctional(c.default || c)),
   SettingsPrivacy: () => import('../..\\components\\settings\\Privacy.vue' /* webpackChunkName: "components/settings-privacy" */).then(c => wrapFunctional(c.default || c)),
+  ManageCustomers: () => import('../..\\components\\manageCustomers\\customers\\Customers.vue' /* webpackChunkName: "components/manage-customers" */).then(c => wrapFunctional(c.default || c)),
   ManageCustomersOrdersAllorders: () => import('../..\\components\\manageCustomers\\orders\\Allorders.vue' /* webpackChunkName: "components/manage-customers-orders-allorders" */).then(c => wrapFunctional(c.default || c))
 }
 

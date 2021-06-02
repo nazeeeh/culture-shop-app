@@ -25,10 +25,12 @@ export { default as ResourcesAnalyticscard } from '../..\\components\\resources\
 export { default as ResourcesAnalyticsgraph } from '../..\\components\\resources\\Analyticsgraph.vue'
 export { default as ResourcesBulkaction } from '../..\\components\\resources\\Bulkaction.vue'
 export { default as ResourcesCards } from '../..\\components\\resources\\Cards.vue'
+export { default as ResourcesExport } from '../..\\components\\resources\\Export.vue'
 export { default as ResourcesSearch } from '../..\\components\\resources\\Search.vue'
 export { default as ResourcesTables } from '../..\\components\\resources\\Tables.vue'
 export { default as SettingsGeneral } from '../..\\components\\settings\\General.vue'
 export { default as SettingsPrivacy } from '../..\\components\\settings\\Privacy.vue'
+export { default as ManageCustomers } from '../..\\components\\manageCustomers\\customers\\Customers.vue'
 export { default as ManageCustomersOrdersAllorders } from '../..\\components\\manageCustomers\\orders\\Allorders.vue'
 
 export const LazyAvatar = import('../..\\components\\avatar.vue' /* webpackChunkName: "components/avatar" */).then(c => wrapFunctional(c.default || c))
@@ -56,8 +58,10 @@ export const LazyResourcesAnalyticscard = import('../..\\components\\resources\\
 export const LazyResourcesAnalyticsgraph = import('../..\\components\\resources\\Analyticsgraph.vue' /* webpackChunkName: "components/resources-analyticsgraph" */).then(c => wrapFunctional(c.default || c))
 export const LazyResourcesBulkaction = import('../..\\components\\resources\\Bulkaction.vue' /* webpackChunkName: "components/resources-bulkaction" */).then(c => wrapFunctional(c.default || c))
 export const LazyResourcesCards = import('../..\\components\\resources\\Cards.vue' /* webpackChunkName: "components/resources-cards" */).then(c => wrapFunctional(c.default || c))
+export const LazyResourcesExport = import('../..\\components\\resources\\Export.vue' /* webpackChunkName: "components/resources-export" */).then(c => wrapFunctional(c.default || c))
 export const LazyResourcesSearch = import('../..\\components\\resources\\Search.vue' /* webpackChunkName: "components/resources-search" */).then(c => wrapFunctional(c.default || c))
 export const LazyResourcesTables = import('../..\\components\\resources\\Tables.vue' /* webpackChunkName: "components/resources-tables" */).then(c => wrapFunctional(c.default || c))
 export const LazySettingsGeneral = import('../..\\components\\settings\\General.vue' /* webpackChunkName: "components/settings-general" */).then(c => wrapFunctional(c.default || c))
 export const LazySettingsPrivacy = import('../..\\components\\settings\\Privacy.vue' /* webpackChunkName: "components/settings-privacy" */).then(c => wrapFunctional(c.default || c))
+export const LazyManageCustomers = import('../..\\components\\manageCustomers\\customers\\Customers.vue' /* webpackChunkName: "components/manage-customers" */).then(c => wrapFunctional(c.default || c))
 export const LazyManageCustomersOrdersAllorders = import('../..\\components\\manageCustomers\\orders\\Allorders.vue' /* webpackChunkName: "components/manage-customers-orders-allorders" */).then(c => wrapFunctional(c.default || c))

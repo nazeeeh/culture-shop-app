@@ -103,7 +103,10 @@ export default {
         
         {
           icon: 'customers',
-          lists: [{ sub: 'List Item' }],
+          lists: [
+            { sub: 'All' },
+            { sub: 'New' }
+          ],
           sub: 'Customers',
         },
 

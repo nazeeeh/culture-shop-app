@@ -74,6 +74,9 @@
   "ResourcesCards": {
     "description": "Auto imported from components/resources/Cards.vue"
   },
+  "ResourcesExport": {
+    "description": "Auto imported from components/resources/Export.vue"
+  },
   "ResourcesSearch": {
     "description": "Auto imported from components/resources/Search.vue"
   },
@@ -85,6 +88,9 @@
   },
   "SettingsPrivacy": {
     "description": "Auto imported from components/settings/Privacy.vue"
+  },
+  "ManageCustomers": {
+    "description": "Auto imported from components/manageCustomers/customers/Customers.vue"
   },
   "ManageCustomersOrdersAllorders": {
     "description": "Auto imported from components/manageCustomers/orders/Allorders.vue"

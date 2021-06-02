@@ -6,6 +6,7 @@ import scrollBehavior from './router.scrollBehavior.js'
 
 const _ba0e40e8 = () => interopDefault(import('..\\pages\\login.vue' /* webpackChunkName: "pages/login" */))
 const _8e4aa19c = () => interopDefault(import('..\\pages\\settings\\index.vue' /* webpackChunkName: "pages/settings/index" */))
+const _6678bfda = () => interopDefault(import('..\\pages\\manage-customers\\customers\\_name\\index.vue' /* webpackChunkName: "pages/manage-customers/customers/_name/index" */))
 const _69f52232 = () => interopDefault(import('..\\pages\\manage-customers\\orders\\_name\\index.vue' /* webpackChunkName: "pages/manage-customers/orders/_name/index" */))
 const _35be2fd2 = () => interopDefault(import('..\\pages\\settings\\general\\_name.vue' /* webpackChunkName: "pages/settings/general/_name" */))
 const _4416617c = () => interopDefault(import('..\\pages\\forget-password\\_name.vue' /* webpackChunkName: "pages/forget-password/_name" */))
@@ -31,6 +32,10 @@ export const routerOptions = {
     path: "/settings",
     component: _8e4aa19c,
     name: "settings"
+  }, {
+    path: "/manage-customers/customers/:name",
+    component: _6678bfda,
+    name: "manage-customers-customers-name"
   }, {
     path: "/manage-customers/orders/:name",
     component: _69f52232,

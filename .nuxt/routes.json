@@ -14,6 +14,13 @@
     "_name": "_8e4aa19c"
   },
   {
+    "name": "manage-customers-customers-name",
+    "path": "/manage-customers/customers/:name",
+    "component": "C:\\\\Users\\\\Gemdajs-001\\\\Documents\\\\culture-shop\\\\pages\\\\manage-customers\\\\customers\\\\_name\\\\index.vue",
+    "chunkName": "pages/manage-customers/customers/_name/index",
+    "_name": "_6678bfda"
+  },
+  {
     "name": "manage-customers-orders-name",
     "path": "/manage-customers/orders/:name",
     "component": "C:\\\\Users\\\\Gemdajs-001\\\\Documents\\\\culture-shop\\\\pages\\\\manage-customers\\\\orders\\\\_name\\\\index.vue",
