@@ -28,6 +28,13 @@
     "_name": "_69f52232"
   },
   {
+    "name": "manage-customers-support-name",
+    "path": "/manage-customers/support/:name",
+    "component": "C:\\\\Users\\\\Gemdajs-001\\\\Documents\\\\culture-shop\\\\pages\\\\manage-customers\\\\support\\\\_name\\\\index.vue",
+    "chunkName": "pages/manage-customers/support/_name/index",
+    "_name": "_10f3f08d"
+  },
+  {
     "name": "settings-general-name",
     "path": "/settings/general/:name?",
     "component": "C:\\\\Users\\\\Gemdajs-001\\\\Documents\\\\culture-shop\\\\pages\\\\settings\\\\general\\\\_name.vue",

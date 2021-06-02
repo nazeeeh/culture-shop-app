@@ -112,7 +112,10 @@ export default {
 
         {
           icon: 'category',
-          lists: [{ sub: 'List Item' }],
+          lists: [
+            { sub: 'All' },
+            { sub: 'Add new' },
+            ],
           sub: 'Categories',
         } 
       ]

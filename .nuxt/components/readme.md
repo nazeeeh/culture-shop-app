@@ -38,3 +38,4 @@ You can directly use them in pages and other components without the need to impo
 - `<SettingsPrivacy>` | `<settings-privacy>` (components/settings/Privacy.vue)
 - `<ManageCustomers>` | `<manage-customers>` (components/manageCustomers/customers/Customers.vue)
 - `<ManageCustomersOrdersAllorders>` | `<manage-customers-orders-allorders>` (components/manageCustomers/orders/Allorders.vue)
+- `<ManageCustomersSupportOverview>` | `<manage-customers-support-overview>` (components/manageCustomers/support/Overview.vue)

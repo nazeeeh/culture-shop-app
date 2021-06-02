@@ -8,6 +8,7 @@ const _ba0e40e8 = () => interopDefault(import('..\\pages\\login.vue' /* webpackC
 const _8e4aa19c = () => interopDefault(import('..\\pages\\settings\\index.vue' /* webpackChunkName: "pages/settings/index" */))
 const _6678bfda = () => interopDefault(import('..\\pages\\manage-customers\\customers\\_name\\index.vue' /* webpackChunkName: "pages/manage-customers/customers/_name/index" */))
 const _69f52232 = () => interopDefault(import('..\\pages\\manage-customers\\orders\\_name\\index.vue' /* webpackChunkName: "pages/manage-customers/orders/_name/index" */))
+const _10f3f08d = () => interopDefault(import('..\\pages\\manage-customers\\support\\_name\\index.vue' /* webpackChunkName: "pages/manage-customers/support/_name/index" */))
 const _35be2fd2 = () => interopDefault(import('..\\pages\\settings\\general\\_name.vue' /* webpackChunkName: "pages/settings/general/_name" */))
 const _4416617c = () => interopDefault(import('..\\pages\\forget-password\\_name.vue' /* webpackChunkName: "pages/forget-password/_name" */))
 const _3d0dea80 = () => interopDefault(import('..\\pages\\manage-customers\\_name.vue' /* webpackChunkName: "pages/manage-customers/_name" */))
@@ -40,6 +41,10 @@ export const routerOptions = {
     path: "/manage-customers/orders/:name",
     component: _69f52232,
     name: "manage-customers-orders-name"
+  }, {
+    path: "/manage-customers/support/:name",
+    component: _10f3f08d,
+    name: "manage-customers-support-name"
   }, {
     path: "/settings/general/:name?",
     component: _35be2fd2,

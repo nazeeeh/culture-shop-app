@@ -32,6 +32,7 @@ export { default as SettingsGeneral } from '../..\\components\\settings\\General
 export { default as SettingsPrivacy } from '../..\\components\\settings\\Privacy.vue'
 export { default as ManageCustomers } from '../..\\components\\manageCustomers\\customers\\Customers.vue'
 export { default as ManageCustomersOrdersAllorders } from '../..\\components\\manageCustomers\\orders\\Allorders.vue'
+export { default as ManageCustomersSupportOverview } from '../..\\components\\manageCustomers\\support\\Overview.vue'
 
 export const LazyAvatar = import('../..\\components\\avatar.vue' /* webpackChunkName: "components/avatar" */).then(c => wrapFunctional(c.default || c))
 export const LazyBottomGraph = import('../..\\components\\Bottom-graph.vue' /* webpackChunkName: "components/bottom-graph" */).then(c => wrapFunctional(c.default || c))
@@ -65,3 +66,4 @@ export const LazySettingsGeneral = import('../..\\components\\settings\\General.
 export const LazySettingsPrivacy = import('../..\\components\\settings\\Privacy.vue' /* webpackChunkName: "components/settings-privacy" */).then(c => wrapFunctional(c.default || c))
 export const LazyManageCustomers = import('../..\\components\\manageCustomers\\customers\\Customers.vue' /* webpackChunkName: "components/manage-customers" */).then(c => wrapFunctional(c.default || c))
 export const LazyManageCustomersOrdersAllorders = import('../..\\components\\manageCustomers\\orders\\Allorders.vue' /* webpackChunkName: "components/manage-customers-orders-allorders" */).then(c => wrapFunctional(c.default || c))
+export const LazyManageCustomersSupportOverview = import('../..\\components\\manageCustomers\\support\\Overview.vue' /* webpackChunkName: "components/manage-customers-support-overview" */).then(c => wrapFunctional(c.default || c))

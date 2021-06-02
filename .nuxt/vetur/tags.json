@@ -94,5 +94,8 @@
   },
   "ManageCustomersOrdersAllorders": {
     "description": "Auto imported from components/manageCustomers/orders/Allorders.vue"
+  },
+  "ManageCustomersSupportOverview": {
+    "description": "Auto imported from components/manageCustomers/support/Overview.vue"
   }
 }

@@ -33,7 +33,8 @@ const components = {
   SettingsGeneral: () => import('../..\\components\\settings\\General.vue' /* webpackChunkName: "components/settings-general" */).then(c => wrapFunctional(c.default || c)),
   SettingsPrivacy: () => import('../..\\components\\settings\\Privacy.vue' /* webpackChunkName: "components/settings-privacy" */).then(c => wrapFunctional(c.default || c)),
   ManageCustomers: () => import('../..\\components\\manageCustomers\\customers\\Customers.vue' /* webpackChunkName: "components/manage-customers" */).then(c => wrapFunctional(c.default || c)),
-  ManageCustomersOrdersAllorders: () => import('../..\\components\\manageCustomers\\orders\\Allorders.vue' /* webpackChunkName: "components/manage-customers-orders-allorders" */).then(c => wrapFunctional(c.default || c))
+  ManageCustomersOrdersAllorders: () => import('../..\\components\\manageCustomers\\orders\\Allorders.vue' /* webpackChunkName: "components/manage-customers-orders-allorders" */).then(c => wrapFunctional(c.default || c)),
+  ManageCustomersSupportOverview: () => import('../..\\components\\manageCustomers\\support\\Overview.vue' /* webpackChunkName: "components/manage-customers-support-overview" */).then(c => wrapFunctional(c.default || c))
 }
 
 for (const name in components) {
