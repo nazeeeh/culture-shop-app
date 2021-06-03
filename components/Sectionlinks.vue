@@ -31,6 +31,7 @@
         <v-list-item
           v-for="child in item.items"
           :key="child.title"
+          :to="child.to"
         ><div class="round" :style="{backgroundColor: child.backgroundColor}"><span class="ml-3 mt-2" :style="{color: child.color}">{{child.tag}}</span></div>
           <v-list-item-content>
             <v-list-item-title v-text="child.title" class="text-uppercase text-settings"></v-list-item-title>
@@ -59,6 +60,7 @@
         <v-list-item
           v-for="child in list.lists"
           :key="child.sub"
+           :to="child.to"
         >
           <v-list-item-content>
             <v-list-item-title v-text="child.sub" class="text-uppercase text-settings"></v-list-item-title>
@@ -66,7 +68,7 @@
         </v-list-item>
       </v-list-group>
 
-      <v-list-item to="/">
+      <v-list-item to="/manage-customers/support/overview">
         <v-list-item-icon>
           <icon name="new"></icon>
         </v-list-item-icon>
@@ -86,7 +88,7 @@ export default {
           action: 'orders',
           active: true,
           items: [
-            { title: 'All', tag: 0, backgroundColor: "rgba(12, 173, 115, 0.1)", color: "#0CAD73"},
+            { title: 'All', tag: 0, backgroundColor: "rgba(12, 173, 115, 0.1)", color: "#0CAD73", to:'/manage-customers/orders/all'},
             { title: 'Completed', tag: 0, backgroundColor: "rgba(12, 173, 115, 0.1)", color: "#0CAD73"},
             { title: 'Out for delivery', tag: 0, backgroundColor: "rgba(12, 173, 115, 0.1)", color: "#0CAD73"},
             { title: 'delivered', tag: 0, backgroundColor: "rgba(12, 173, 115, 0.1)", color: "#0CAD73" },
@@ -104,7 +106,7 @@ export default {
         {
           icon: 'customers',
           lists: [
-            { sub: 'All' },
+            { sub: 'All', to:'/manage-customers/customers/all'},
             { sub: 'New' }
           ],
           sub: 'Customers',
@@ -113,7 +115,7 @@ export default {
         {
           icon: 'category',
           lists: [
-            { sub: 'All' },
+            { sub: 'All', to:'/manage-customers/category/all' },
             { sub: 'Add new' },
             ],
           sub: 'Categories',
