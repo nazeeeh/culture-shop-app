@@ -86,6 +86,9 @@
   "ResourcesSubhead": {
     "description": "Auto imported from components/resources/Subhead.vue"
   },
+  "ResourcesSubheadcategory": {
+    "description": "Auto imported from components/resources/Subheadcategory.vue"
+  },
   "ResourcesTables": {
     "description": "Auto imported from components/resources/Tables.vue"
   },
@@ -94,6 +97,9 @@
   },
   "SettingsPrivacy": {
     "description": "Auto imported from components/settings/Privacy.vue"
+  },
+  "ManageCustomersCategoriesAddcategory": {
+    "description": "Auto imported from components/manageCustomers/categories/Addcategory.vue"
   },
   "ManageCustomersCategories": {
     "description": "Auto imported from components/manageCustomers/categories/Categories.vue"
@@ -104,10 +110,10 @@
   "ManageCustomersCustomersEdit": {
     "description": "Auto imported from components/manageCustomers/customers/Edit.vue"
   },
-  "ManageCustomersOrdersAllorders": {
-    "description": "Auto imported from components/manageCustomers/orders/Allorders.vue"
-  },
   "ManageCustomersSupportOverview": {
     "description": "Auto imported from components/manageCustomers/support/Overview.vue"
+  },
+  "ManageCustomersOrdersAllorders": {
+    "description": "Auto imported from components/manageCustomers/orders/Allorders.vue"
   }
 }

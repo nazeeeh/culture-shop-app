@@ -14,6 +14,13 @@
     "_name": "_8e4aa19c"
   },
   {
+    "name": "manage-customers-category-add-name",
+    "path": "/manage-customers/category/add/:name?",
+    "component": "C:\\\\Users\\\\Gemdajs-001\\\\Documents\\\\culture-shop\\\\pages\\\\manage-customers\\\\category\\\\add\\\\_name.vue",
+    "chunkName": "pages/manage-customers/category/add/_name",
+    "_name": "_d40dc57e"
+  },
+  {
     "name": "manage-customers-customers-edit-id",
     "path": "/manage-customers/customers/edit/:id?",
     "component": "C:\\\\Users\\\\Gemdajs-001\\\\Documents\\\\culture-shop\\\\pages\\\\manage-customers\\\\customers\\\\edit\\\\_id.vue",

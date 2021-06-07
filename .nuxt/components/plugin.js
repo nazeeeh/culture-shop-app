@@ -31,14 +31,16 @@ const components = {
   ResourcesExport: () => import('../..\\components\\resources\\Export.vue' /* webpackChunkName: "components/resources-export" */).then(c => wrapFunctional(c.default || c)),
   ResourcesSearch: () => import('../..\\components\\resources\\Search.vue' /* webpackChunkName: "components/resources-search" */).then(c => wrapFunctional(c.default || c)),
   ResourcesSubhead: () => import('../..\\components\\resources\\Subhead.vue' /* webpackChunkName: "components/resources-subhead" */).then(c => wrapFunctional(c.default || c)),
+  ResourcesSubheadcategory: () => import('../..\\components\\resources\\Subheadcategory.vue' /* webpackChunkName: "components/resources-subheadcategory" */).then(c => wrapFunctional(c.default || c)),
   ResourcesTables: () => import('../..\\components\\resources\\Tables.vue' /* webpackChunkName: "components/resources-tables" */).then(c => wrapFunctional(c.default || c)),
   SettingsGeneral: () => import('../..\\components\\settings\\General.vue' /* webpackChunkName: "components/settings-general" */).then(c => wrapFunctional(c.default || c)),
   SettingsPrivacy: () => import('../..\\components\\settings\\Privacy.vue' /* webpackChunkName: "components/settings-privacy" */).then(c => wrapFunctional(c.default || c)),
+  ManageCustomersCategoriesAddcategory: () => import('../..\\components\\manageCustomers\\categories\\Addcategory.vue' /* webpackChunkName: "components/manage-customers-categories-addcategory" */).then(c => wrapFunctional(c.default || c)),
   ManageCustomersCategories: () => import('../..\\components\\manageCustomers\\categories\\Categories.vue' /* webpackChunkName: "components/manage-customers-categories" */).then(c => wrapFunctional(c.default || c)),
   ManageCustomers: () => import('../..\\components\\manageCustomers\\customers\\Customers.vue' /* webpackChunkName: "components/manage-customers" */).then(c => wrapFunctional(c.default || c)),
   ManageCustomersCustomersEdit: () => import('../..\\components\\manageCustomers\\customers\\Edit.vue' /* webpackChunkName: "components/manage-customers-customers-edit" */).then(c => wrapFunctional(c.default || c)),
-  ManageCustomersOrdersAllorders: () => import('../..\\components\\manageCustomers\\orders\\Allorders.vue' /* webpackChunkName: "components/manage-customers-orders-allorders" */).then(c => wrapFunctional(c.default || c)),
-  ManageCustomersSupportOverview: () => import('../..\\components\\manageCustomers\\support\\Overview.vue' /* webpackChunkName: "components/manage-customers-support-overview" */).then(c => wrapFunctional(c.default || c))
+  ManageCustomersSupportOverview: () => import('../..\\components\\manageCustomers\\support\\Overview.vue' /* webpackChunkName: "components/manage-customers-support-overview" */).then(c => wrapFunctional(c.default || c)),
+  ManageCustomersOrdersAllorders: () => import('../..\\components\\manageCustomers\\orders\\Allorders.vue' /* webpackChunkName: "components/manage-customers-orders-allorders" */).then(c => wrapFunctional(c.default || c))
 }
 
 for (const name in components) {

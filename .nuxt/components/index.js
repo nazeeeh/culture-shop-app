@@ -29,14 +29,16 @@ export { default as ResourcesCards } from '../..\\components\\resources\\Cards.v
 export { default as ResourcesExport } from '../..\\components\\resources\\Export.vue'
 export { default as ResourcesSearch } from '../..\\components\\resources\\Search.vue'
 export { default as ResourcesSubhead } from '../..\\components\\resources\\Subhead.vue'
+export { default as ResourcesSubheadcategory } from '../..\\components\\resources\\Subheadcategory.vue'
 export { default as ResourcesTables } from '../..\\components\\resources\\Tables.vue'
 export { default as SettingsGeneral } from '../..\\components\\settings\\General.vue'
 export { default as SettingsPrivacy } from '../..\\components\\settings\\Privacy.vue'
+export { default as ManageCustomersCategoriesAddcategory } from '../..\\components\\manageCustomers\\categories\\Addcategory.vue'
 export { default as ManageCustomersCategories } from '../..\\components\\manageCustomers\\categories\\Categories.vue'
 export { default as ManageCustomers } from '../..\\components\\manageCustomers\\customers\\Customers.vue'
 export { default as ManageCustomersCustomersEdit } from '../..\\components\\manageCustomers\\customers\\Edit.vue'
-export { default as ManageCustomersOrdersAllorders } from '../..\\components\\manageCustomers\\orders\\Allorders.vue'
 export { default as ManageCustomersSupportOverview } from '../..\\components\\manageCustomers\\support\\Overview.vue'
+export { default as ManageCustomersOrdersAllorders } from '../..\\components\\manageCustomers\\orders\\Allorders.vue'
 
 export const LazyAvatar = import('../..\\components\\avatar.vue' /* webpackChunkName: "components/avatar" */).then(c => wrapFunctional(c.default || c))
 export const LazyBottomGraph = import('../..\\components\\Bottom-graph.vue' /* webpackChunkName: "components/bottom-graph" */).then(c => wrapFunctional(c.default || c))
@@ -67,11 +69,13 @@ export const LazyResourcesCards = import('../..\\components\\resources\\Cards.vu
 export const LazyResourcesExport = import('../..\\components\\resources\\Export.vue' /* webpackChunkName: "components/resources-export" */).then(c => wrapFunctional(c.default || c))
 export const LazyResourcesSearch = import('../..\\components\\resources\\Search.vue' /* webpackChunkName: "components/resources-search" */).then(c => wrapFunctional(c.default || c))
 export const LazyResourcesSubhead = import('../..\\components\\resources\\Subhead.vue' /* webpackChunkName: "components/resources-subhead" */).then(c => wrapFunctional(c.default || c))
+export const LazyResourcesSubheadcategory = import('../..\\components\\resources\\Subheadcategory.vue' /* webpackChunkName: "components/resources-subheadcategory" */).then(c => wrapFunctional(c.default || c))
 export const LazyResourcesTables = import('../..\\components\\resources\\Tables.vue' /* webpackChunkName: "components/resources-tables" */).then(c => wrapFunctional(c.default || c))
 export const LazySettingsGeneral = import('../..\\components\\settings\\General.vue' /* webpackChunkName: "components/settings-general" */).then(c => wrapFunctional(c.default || c))
 export const LazySettingsPrivacy = import('../..\\components\\settings\\Privacy.vue' /* webpackChunkName: "components/settings-privacy" */).then(c => wrapFunctional(c.default || c))
+export const LazyManageCustomersCategoriesAddcategory = import('../..\\components\\manageCustomers\\categories\\Addcategory.vue' /* webpackChunkName: "components/manage-customers-categories-addcategory" */).then(c => wrapFunctional(c.default || c))
 export const LazyManageCustomersCategories = import('../..\\components\\manageCustomers\\categories\\Categories.vue' /* webpackChunkName: "components/manage-customers-categories" */).then(c => wrapFunctional(c.default || c))
 export const LazyManageCustomers = import('../..\\components\\manageCustomers\\customers\\Customers.vue' /* webpackChunkName: "components/manage-customers" */).then(c => wrapFunctional(c.default || c))
 export const LazyManageCustomersCustomersEdit = import('../..\\components\\manageCustomers\\customers\\Edit.vue' /* webpackChunkName: "components/manage-customers-customers-edit" */).then(c => wrapFunctional(c.default || c))
-export const LazyManageCustomersOrdersAllorders = import('../..\\components\\manageCustomers\\orders\\Allorders.vue' /* webpackChunkName: "components/manage-customers-orders-allorders" */).then(c => wrapFunctional(c.default || c))
 export const LazyManageCustomersSupportOverview = import('../..\\components\\manageCustomers\\support\\Overview.vue' /* webpackChunkName: "components/manage-customers-support-overview" */).then(c => wrapFunctional(c.default || c))
+export const LazyManageCustomersOrdersAllorders = import('../..\\components\\manageCustomers\\orders\\Allorders.vue' /* webpackChunkName: "components/manage-customers-orders-allorders" */).then(c => wrapFunctional(c.default || c))
