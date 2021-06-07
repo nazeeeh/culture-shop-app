@@ -65,9 +65,10 @@
                 </div>
                 </div>
             </form>
-            
           </v-col>
+          
           <v-spacer></v-spacer>
+
           <v-col cols="6">
            <div class="system-bar">
             <div class="bar-section">
