@@ -21,8 +21,6 @@ export { default as ForgetPasswordPhoneVerification } from '../..\\components\\F
 export { default as ForgetPasswordRecoveryOption } from '../..\\components\\ForgetPassword\\RecoveryOption.vue'
 export { default as ForgetPasswordResetPassword } from '../..\\components\\ForgetPassword\\ResetPassword.vue'
 export { default as ManageCustomersAnalytics } from '../..\\components\\manageCustomers\\Analytics.vue'
-export { default as SettingsGeneral } from '../..\\components\\settings\\General.vue'
-export { default as SettingsPrivacy } from '../..\\components\\settings\\Privacy.vue'
 export { default as ResourcesAnalyticscard } from '../..\\components\\resources\\Analyticscard.vue'
 export { default as ResourcesAnalyticsgraph } from '../..\\components\\resources\\Analyticsgraph.vue'
 export { default as ResourcesBulkaction } from '../..\\components\\resources\\Bulkaction.vue'
@@ -35,10 +33,12 @@ export { default as ResourcesSubheadcategory } from '../..\\components\\resource
 export { default as ResourcesTables } from '../..\\components\\resources\\Tables.vue'
 export { default as ResourcesTicketbutton } from '../..\\components\\resources\\Ticketbutton.vue'
 export { default as ResourcesTicketsubhead } from '../..\\components\\resources\\Ticketsubhead.vue'
-export { default as ManageCustomers } from '../..\\components\\manageCustomers\\customers\\Customers.vue'
-export { default as ManageCustomersCustomersEdit } from '../..\\components\\manageCustomers\\customers\\Edit.vue'
+export { default as SettingsGeneral } from '../..\\components\\settings\\General.vue'
+export { default as SettingsPrivacy } from '../..\\components\\settings\\Privacy.vue'
 export { default as ManageCustomersCategoriesAddcategory } from '../..\\components\\manageCustomers\\categories\\Addcategory.vue'
 export { default as ManageCustomersCategories } from '../..\\components\\manageCustomers\\categories\\Categories.vue'
+export { default as ManageCustomers } from '../..\\components\\manageCustomers\\customers\\Customers.vue'
+export { default as ManageCustomersCustomersEdit } from '../..\\components\\manageCustomers\\customers\\Edit.vue'
 export { default as ManageCustomersOrdersAllorders } from '../..\\components\\manageCustomers\\orders\\Allorders.vue'
 export { default as ManageCustomersSupportOverview } from '../..\\components\\manageCustomers\\support\\Overview.vue'
 export { default as ManageCustomersSupportUnresolveticket } from '../..\\components\\manageCustomers\\support\\Unresolveticket.vue'
@@ -64,8 +64,6 @@ export const LazyForgetPasswordPhoneVerification = import('../..\\components\\Fo
 export const LazyForgetPasswordRecoveryOption = import('../..\\components\\ForgetPassword\\RecoveryOption.vue' /* webpackChunkName: "components/forget-password-recovery-option" */).then(c => wrapFunctional(c.default || c))
 export const LazyForgetPasswordResetPassword = import('../..\\components\\ForgetPassword\\ResetPassword.vue' /* webpackChunkName: "components/forget-password-reset-password" */).then(c => wrapFunctional(c.default || c))
 export const LazyManageCustomersAnalytics = import('../..\\components\\manageCustomers\\Analytics.vue' /* webpackChunkName: "components/manage-customers-analytics" */).then(c => wrapFunctional(c.default || c))
-export const LazySettingsGeneral = import('../..\\components\\settings\\General.vue' /* webpackChunkName: "components/settings-general" */).then(c => wrapFunctional(c.default || c))
-export const LazySettingsPrivacy = import('../..\\components\\settings\\Privacy.vue' /* webpackChunkName: "components/settings-privacy" */).then(c => wrapFunctional(c.default || c))
 export const LazyResourcesAnalyticscard = import('../..\\components\\resources\\Analyticscard.vue' /* webpackChunkName: "components/resources-analyticscard" */).then(c => wrapFunctional(c.default || c))
 export const LazyResourcesAnalyticsgraph = import('../..\\components\\resources\\Analyticsgraph.vue' /* webpackChunkName: "components/resources-analyticsgraph" */).then(c => wrapFunctional(c.default || c))
 export const LazyResourcesBulkaction = import('../..\\components\\resources\\Bulkaction.vue' /* webpackChunkName: "components/resources-bulkaction" */).then(c => wrapFunctional(c.default || c))
@@ -78,10 +76,12 @@ export const LazyResourcesSubheadcategory = import('../..\\components\\resources
 export const LazyResourcesTables = import('../..\\components\\resources\\Tables.vue' /* webpackChunkName: "components/resources-tables" */).then(c => wrapFunctional(c.default || c))
 export const LazyResourcesTicketbutton = import('../..\\components\\resources\\Ticketbutton.vue' /* webpackChunkName: "components/resources-ticketbutton" */).then(c => wrapFunctional(c.default || c))
 export const LazyResourcesTicketsubhead = import('../..\\components\\resources\\Ticketsubhead.vue' /* webpackChunkName: "components/resources-ticketsubhead" */).then(c => wrapFunctional(c.default || c))
-export const LazyManageCustomers = import('../..\\components\\manageCustomers\\customers\\Customers.vue' /* webpackChunkName: "components/manage-customers" */).then(c => wrapFunctional(c.default || c))
-export const LazyManageCustomersCustomersEdit = import('../..\\components\\manageCustomers\\customers\\Edit.vue' /* webpackChunkName: "components/manage-customers-customers-edit" */).then(c => wrapFunctional(c.default || c))
+export const LazySettingsGeneral = import('../..\\components\\settings\\General.vue' /* webpackChunkName: "components/settings-general" */).then(c => wrapFunctional(c.default || c))
+export const LazySettingsPrivacy = import('../..\\components\\settings\\Privacy.vue' /* webpackChunkName: "components/settings-privacy" */).then(c => wrapFunctional(c.default || c))
 export const LazyManageCustomersCategoriesAddcategory = import('../..\\components\\manageCustomers\\categories\\Addcategory.vue' /* webpackChunkName: "components/manage-customers-categories-addcategory" */).then(c => wrapFunctional(c.default || c))
 export const LazyManageCustomersCategories = import('../..\\components\\manageCustomers\\categories\\Categories.vue' /* webpackChunkName: "components/manage-customers-categories" */).then(c => wrapFunctional(c.default || c))
+export const LazyManageCustomers = import('../..\\components\\manageCustomers\\customers\\Customers.vue' /* webpackChunkName: "components/manage-customers" */).then(c => wrapFunctional(c.default || c))
+export const LazyManageCustomersCustomersEdit = import('../..\\components\\manageCustomers\\customers\\Edit.vue' /* webpackChunkName: "components/manage-customers-customers-edit" */).then(c => wrapFunctional(c.default || c))
 export const LazyManageCustomersOrdersAllorders = import('../..\\components\\manageCustomers\\orders\\Allorders.vue' /* webpackChunkName: "components/manage-customers-orders-allorders" */).then(c => wrapFunctional(c.default || c))
 export const LazyManageCustomersSupportOverview = import('../..\\components\\manageCustomers\\support\\Overview.vue' /* webpackChunkName: "components/manage-customers-support-overview" */).then(c => wrapFunctional(c.default || c))
 export const LazyManageCustomersSupportUnresolveticket = import('../..\\components\\manageCustomers\\support\\Unresolveticket.vue' /* webpackChunkName: "components/manage-customers-support-unresolveticket" */).then(c => wrapFunctional(c.default || c))

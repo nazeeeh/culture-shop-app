@@ -62,12 +62,6 @@
   "ManageCustomersAnalytics": {
     "description": "Auto imported from components/manageCustomers/Analytics.vue"
   },
-  "SettingsGeneral": {
-    "description": "Auto imported from components/settings/General.vue"
-  },
-  "SettingsPrivacy": {
-    "description": "Auto imported from components/settings/Privacy.vue"
-  },
   "ResourcesAnalyticscard": {
     "description": "Auto imported from components/resources/Analyticscard.vue"
   },
@@ -104,17 +98,23 @@
   "ResourcesTicketsubhead": {
     "description": "Auto imported from components/resources/Ticketsubhead.vue"
   },
-  "ManageCustomers": {
-    "description": "Auto imported from components/manageCustomers/customers/Customers.vue"
+  "SettingsGeneral": {
+    "description": "Auto imported from components/settings/General.vue"
   },
-  "ManageCustomersCustomersEdit": {
-    "description": "Auto imported from components/manageCustomers/customers/Edit.vue"
+  "SettingsPrivacy": {
+    "description": "Auto imported from components/settings/Privacy.vue"
   },
   "ManageCustomersCategoriesAddcategory": {
     "description": "Auto imported from components/manageCustomers/categories/Addcategory.vue"
   },
   "ManageCustomersCategories": {
     "description": "Auto imported from components/manageCustomers/categories/Categories.vue"
+  },
+  "ManageCustomers": {
+    "description": "Auto imported from components/manageCustomers/customers/Customers.vue"
+  },
+  "ManageCustomersCustomersEdit": {
+    "description": "Auto imported from components/manageCustomers/customers/Edit.vue"
   },
   "ManageCustomersOrdersAllorders": {
     "description": "Auto imported from components/manageCustomers/orders/Allorders.vue"

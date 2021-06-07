@@ -30,9 +30,35 @@
         <v-list-item
           v-for="child in item.items"
           :key="child.title"
-        >
+        ><div class="round" :style="{backgroundColor: child.backgroundColor}"><span class="ml-3 mt-2" :style="{color: child.color}">{{child.tag}}</span></div>
           <v-list-item-content>
             <v-list-item-title v-text="child.title" class="text-uppercase text-settings"></v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+      </v-list-group>
+      <!-- Drivers -->
+       <v-list-group
+        v-for="list in lists"
+        no-action
+        :key="list.sub"
+        v-model="list.active"
+        color="success"
+      >
+        <template v-slot:activator>
+          <v-list-item-icon>
+            <icon :name="list.icon"></icon>
+          </v-list-item-icon>
+          <v-list-item-content>
+            <v-list-item-title v-text="list.sub" class="text-uppercase text-settings mb-1"></v-list-item-title>
+          </v-list-item-content>
+        </template>
+
+        <v-list-item
+          v-for="child in list.lists"
+          :key="child.sub"
+        >
+          <v-list-item-content>
+            <v-list-item-title v-text="child.sub" class="text-uppercase text-settings"></v-list-item-title>
           </v-list-item-content>
         </v-list-item>
       </v-list-group>
@@ -56,21 +82,27 @@ export default {
           action: 'orders',
           active: true,
           items: [
-            { title: 'All' },
-            { title: 'Completed' },
-            { title: 'Out for delivery' },
-            { title: 'delivered' },
-            { title: 'pending' },
-            { title: 'refunded' },
-            { title: 'Failed' },
-            { title: 'Cancelled' }
+            { title: 'All', tag: 0, backgroundColor: "rgba(12, 173, 115, 0.1)", color: "#0CAD73" },
+            { title: 'Completed', tag: 0, backgroundColor: "rgba(12, 173, 115, 0.1)", color: "#0CAD73" },
+            { title: 'delivered',tag: 0, backgroundColor: "rgba(12, 173, 115, 0.1)", color: "#0CAD73" },
+            { title: 'pending', tag: 0, backgroundColor: "rgba(231, 109, 20, 0.1)", color: "#E76D14" },
+            { title: 'refunded', tag: 0, backgroundColor: "rgba(231, 109, 20, 0.1)", color: "#E76D14" },
+            { title: 'Failed', tag: 0, backgroundColor: "rgba(241, 16, 84, 0.1)", color: "#F11054" },
+            { title: 'Cancelled', tag: 0, backgroundColor: "rgba(241, 16, 84, 0.1)", color: "#F11054" }
           ],
           title: 'Orders',
-        },
+        }
+      ],
+
+        lists: [
         {
-          action: 'driver',
-          items: [{ title: 'List Item' }],
-          title: 'Drivers',
+          icon: 'driver',
+          lists: [
+            { sub: 'All' },
+            { sub: 'Add New' }
+          ],
+
+          sub: 'Drivers',
         }, 
        
       ],
@@ -104,6 +136,13 @@ export default {
     font-size: 12px;
     text-decoration: none;
     color: #192135;
+}
+.round{
+  height: 3vh;
+  background: red;
+  border-radius: 16px;
+  width: 30px !important;
+  margin-right: 5px;
 }
 
 </style>
