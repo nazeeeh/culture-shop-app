@@ -5,29 +5,28 @@
     <div class="flex-section">
     <span>#ID</span>
      <div class="box">
-      <span class="text-uppercase t-text" :style="{color: '#E76D14'}">Draft</span> 
+      <span class="text-uppercase t-text" :style="{color: '#E76D14'}">Unresolved</span> 
      </div>
      <icon name="calender" class="mx-4"></icon>
      <!-- Date -->
      <span class="text-uppercase datepicker mt-1">{{ displayDate }}</span> 
      </div>
-     <div>
-      <Subhead />
-     </div>
-   </div>
-   <v-divider></v-divider>
+     <Subhead />
+     </div> 
+     <v-divider></v-divider>
 
-   <v-row>
+     <v-row>
     <v-col cols="6">
      <form>
       <div class="input">
-       <label for="name" class="name">Name</label><br>
+       <label for="name" class="name">Ticket Title</label><br>
        <input type="text"><br><br>
       </div>
       <div class="input">
-       <label for="description" class="name">Description</label><br>
+       <label for="description" class="name">Message</label><br>
        <textarea name="" id="" rows="10" placeholder="Reply"></textarea>
       </div>
+      <v-btn class="btn">Submit Reply</v-btn>
      </form>    
     </v-col>
     <v-spacer></v-spacer>
@@ -35,17 +34,17 @@
            <div class="system-bar">
             <div class="bar-section">
               <div class="customer-spending">
-             <icon name="info"></icon>
-             <span class="t-head mt-1 mx-2 text-capitalize">Information</span>
-            </div>
+               <icon name="profile"></icon>
+               <span class="t-head mt-1 mx-2 text-capitalize">Customer</span>
+              </div>
               <v-divider></v-divider>
-            <div class="life-spending">
+              <div class="previous-reply">
+               <icon name="new"></icon>
+               <span class="t-head mx-2 text-capitalize">Previous Replies</span>
+              </div>
+            <!-- <div class="life-spending">
              <span class="t-small text-capitalize">Products:</span>
-            </div>
-                <v-divider></v-divider>
-            <div class="life-spending">
-             <span class="t-small mt-1 text-capitalize">Vendors:</span>
-            </div>
+            </div> -->
                 <v-divider></v-divider>
             
             </div>
@@ -57,10 +56,10 @@
 </template>
 
 <script>
-    import Button from '../../resources/Buttons'
-    import Subhead from '../../resources/Subheadcategory'
+    import Button from '../../resources/Ticketbutton'
+    import Subhead from '../../resources/Ticketsubhead'
     export default {
-        components: {
+        components:{
             Button,
             Subhead
         },
@@ -148,6 +147,18 @@ textarea:focus{
     text-transform: uppercase;
     outline: none;
 }
+.btn{
+    font-family: 'Space Grotesk';
+    background: #0CAD73 !important;
+    color: #fff !important;
+    border-radius: 16px;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.07em;
+    box-shadow: none;
+    margin: 0px 0 20px 34px; 
+}
 
 .system-bar{
     border-left: 2px solid #ECECEC;
@@ -158,6 +169,11 @@ textarea:focus{
     display: flex;
     font-family: 'Space Grotesk';
     margin-bottom: 20px;
+}
+.previous-reply{
+    display: flex;
+    font-family: 'Space Grotesk';
+    margin-top: 20px;
 }
 .life-spending{
     display: flex;

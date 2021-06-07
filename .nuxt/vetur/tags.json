@@ -41,15 +41,6 @@
   "Sidebar": {
     "description": "Auto imported from components/Sidebar.vue"
   },
-  "ForgetPasswordPhoneVerification": {
-    "description": "Auto imported from components/ForgetPassword/PhoneVerification.vue"
-  },
-  "ForgetPasswordRecoveryOption": {
-    "description": "Auto imported from components/ForgetPassword/RecoveryOption.vue"
-  },
-  "ForgetPasswordResetPassword": {
-    "description": "Auto imported from components/ForgetPassword/ResetPassword.vue"
-  },
   "GeneralDriveragreement": {
     "description": "Auto imported from components/General/Driveragreement.vue"
   },
@@ -59,8 +50,23 @@
   "GeneralVendoragreement": {
     "description": "Auto imported from components/General/Vendoragreement.vue"
   },
+  "ForgetPasswordPhoneVerification": {
+    "description": "Auto imported from components/ForgetPassword/PhoneVerification.vue"
+  },
+  "ForgetPasswordRecoveryOption": {
+    "description": "Auto imported from components/ForgetPassword/RecoveryOption.vue"
+  },
+  "ForgetPasswordResetPassword": {
+    "description": "Auto imported from components/ForgetPassword/ResetPassword.vue"
+  },
   "ManageCustomersAnalytics": {
     "description": "Auto imported from components/manageCustomers/Analytics.vue"
+  },
+  "SettingsGeneral": {
+    "description": "Auto imported from components/settings/General.vue"
+  },
+  "SettingsPrivacy": {
+    "description": "Auto imported from components/settings/Privacy.vue"
   },
   "ResourcesAnalyticscard": {
     "description": "Auto imported from components/resources/Analyticscard.vue"
@@ -92,17 +98,11 @@
   "ResourcesTables": {
     "description": "Auto imported from components/resources/Tables.vue"
   },
-  "SettingsGeneral": {
-    "description": "Auto imported from components/settings/General.vue"
+  "ResourcesTicketbutton": {
+    "description": "Auto imported from components/resources/Ticketbutton.vue"
   },
-  "SettingsPrivacy": {
-    "description": "Auto imported from components/settings/Privacy.vue"
-  },
-  "ManageCustomersCategoriesAddcategory": {
-    "description": "Auto imported from components/manageCustomers/categories/Addcategory.vue"
-  },
-  "ManageCustomersCategories": {
-    "description": "Auto imported from components/manageCustomers/categories/Categories.vue"
+  "ResourcesTicketsubhead": {
+    "description": "Auto imported from components/resources/Ticketsubhead.vue"
   },
   "ManageCustomers": {
     "description": "Auto imported from components/manageCustomers/customers/Customers.vue"
@@ -110,10 +110,19 @@
   "ManageCustomersCustomersEdit": {
     "description": "Auto imported from components/manageCustomers/customers/Edit.vue"
   },
-  "ManageCustomersSupportOverview": {
-    "description": "Auto imported from components/manageCustomers/support/Overview.vue"
+  "ManageCustomersCategoriesAddcategory": {
+    "description": "Auto imported from components/manageCustomers/categories/Addcategory.vue"
+  },
+  "ManageCustomersCategories": {
+    "description": "Auto imported from components/manageCustomers/categories/Categories.vue"
   },
   "ManageCustomersOrdersAllorders": {
     "description": "Auto imported from components/manageCustomers/orders/Allorders.vue"
+  },
+  "ManageCustomersSupportOverview": {
+    "description": "Auto imported from components/manageCustomers/support/Overview.vue"
+  },
+  "ManageCustomersSupportUnresolveticket": {
+    "description": "Auto imported from components/manageCustomers/support/Unresolveticket.vue"
   }
 }
