@@ -80,6 +80,9 @@
   "ResourcesExport": {
     "description": "Auto imported from components/resources/Export.vue"
   },
+  "ResourcesResolvedbutton": {
+    "description": "Auto imported from components/resources/Resolvedbutton.vue"
+  },
   "ResourcesSearch": {
     "description": "Auto imported from components/resources/Search.vue"
   },
@@ -121,6 +124,9 @@
   },
   "ManageCustomersSupportOverview": {
     "description": "Auto imported from components/manageCustomers/support/Overview.vue"
+  },
+  "ManageCustomersSupportResolvedticket": {
+    "description": "Auto imported from components/manageCustomers/support/Resolvedticket.vue"
   },
   "ManageCustomersSupportUnresolveticket": {
     "description": "Auto imported from components/manageCustomers/support/Unresolveticket.vue"

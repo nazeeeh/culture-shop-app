@@ -29,6 +29,7 @@ const components = {
   ResourcesButtons: () => import('../..\\components\\resources\\Buttons.vue' /* webpackChunkName: "components/resources-buttons" */).then(c => wrapFunctional(c.default || c)),
   ResourcesCards: () => import('../..\\components\\resources\\Cards.vue' /* webpackChunkName: "components/resources-cards" */).then(c => wrapFunctional(c.default || c)),
   ResourcesExport: () => import('../..\\components\\resources\\Export.vue' /* webpackChunkName: "components/resources-export" */).then(c => wrapFunctional(c.default || c)),
+  ResourcesResolvedbutton: () => import('../..\\components\\resources\\Resolvedbutton.vue' /* webpackChunkName: "components/resources-resolvedbutton" */).then(c => wrapFunctional(c.default || c)),
   ResourcesSearch: () => import('../..\\components\\resources\\Search.vue' /* webpackChunkName: "components/resources-search" */).then(c => wrapFunctional(c.default || c)),
   ResourcesSubhead: () => import('../..\\components\\resources\\Subhead.vue' /* webpackChunkName: "components/resources-subhead" */).then(c => wrapFunctional(c.default || c)),
   ResourcesSubheadcategory: () => import('../..\\components\\resources\\Subheadcategory.vue' /* webpackChunkName: "components/resources-subheadcategory" */).then(c => wrapFunctional(c.default || c)),
@@ -43,6 +44,7 @@ const components = {
   ManageCustomers: () => import('../..\\components\\manageCustomers\\customers\\Customers.vue' /* webpackChunkName: "components/manage-customers" */).then(c => wrapFunctional(c.default || c)),
   ManageCustomersCustomersEdit: () => import('../..\\components\\manageCustomers\\customers\\Edit.vue' /* webpackChunkName: "components/manage-customers-customers-edit" */).then(c => wrapFunctional(c.default || c)),
   ManageCustomersSupportOverview: () => import('../..\\components\\manageCustomers\\support\\Overview.vue' /* webpackChunkName: "components/manage-customers-support-overview" */).then(c => wrapFunctional(c.default || c)),
+  ManageCustomersSupportResolvedticket: () => import('../..\\components\\manageCustomers\\support\\Resolvedticket.vue' /* webpackChunkName: "components/manage-customers-support-resolvedticket" */).then(c => wrapFunctional(c.default || c)),
   ManageCustomersSupportUnresolveticket: () => import('../..\\components\\manageCustomers\\support\\Unresolveticket.vue' /* webpackChunkName: "components/manage-customers-support-unresolveticket" */).then(c => wrapFunctional(c.default || c)),
   ManageCustomersOrdersAllorders: () => import('../..\\components\\manageCustomers\\orders\\Allorders.vue' /* webpackChunkName: "components/manage-customers-orders-allorders" */).then(c => wrapFunctional(c.default || c))
 }

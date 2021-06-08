@@ -27,6 +27,7 @@ export { default as ResourcesBulkaction } from '../..\\components\\resources\\Bu
 export { default as ResourcesButtons } from '../..\\components\\resources\\Buttons.vue'
 export { default as ResourcesCards } from '../..\\components\\resources\\Cards.vue'
 export { default as ResourcesExport } from '../..\\components\\resources\\Export.vue'
+export { default as ResourcesResolvedbutton } from '../..\\components\\resources\\Resolvedbutton.vue'
 export { default as ResourcesSearch } from '../..\\components\\resources\\Search.vue'
 export { default as ResourcesSubhead } from '../..\\components\\resources\\Subhead.vue'
 export { default as ResourcesSubheadcategory } from '../..\\components\\resources\\Subheadcategory.vue'
@@ -41,6 +42,7 @@ export { default as ManageCustomersCustomersAddcustomers } from '../..\\componen
 export { default as ManageCustomers } from '../..\\components\\manageCustomers\\customers\\Customers.vue'
 export { default as ManageCustomersCustomersEdit } from '../..\\components\\manageCustomers\\customers\\Edit.vue'
 export { default as ManageCustomersSupportOverview } from '../..\\components\\manageCustomers\\support\\Overview.vue'
+export { default as ManageCustomersSupportResolvedticket } from '../..\\components\\manageCustomers\\support\\Resolvedticket.vue'
 export { default as ManageCustomersSupportUnresolveticket } from '../..\\components\\manageCustomers\\support\\Unresolveticket.vue'
 export { default as ManageCustomersOrdersAllorders } from '../..\\components\\manageCustomers\\orders\\Allorders.vue'
 
@@ -71,6 +73,7 @@ export const LazyResourcesBulkaction = import('../..\\components\\resources\\Bul
 export const LazyResourcesButtons = import('../..\\components\\resources\\Buttons.vue' /* webpackChunkName: "components/resources-buttons" */).then(c => wrapFunctional(c.default || c))
 export const LazyResourcesCards = import('../..\\components\\resources\\Cards.vue' /* webpackChunkName: "components/resources-cards" */).then(c => wrapFunctional(c.default || c))
 export const LazyResourcesExport = import('../..\\components\\resources\\Export.vue' /* webpackChunkName: "components/resources-export" */).then(c => wrapFunctional(c.default || c))
+export const LazyResourcesResolvedbutton = import('../..\\components\\resources\\Resolvedbutton.vue' /* webpackChunkName: "components/resources-resolvedbutton" */).then(c => wrapFunctional(c.default || c))
 export const LazyResourcesSearch = import('../..\\components\\resources\\Search.vue' /* webpackChunkName: "components/resources-search" */).then(c => wrapFunctional(c.default || c))
 export const LazyResourcesSubhead = import('../..\\components\\resources\\Subhead.vue' /* webpackChunkName: "components/resources-subhead" */).then(c => wrapFunctional(c.default || c))
 export const LazyResourcesSubheadcategory = import('../..\\components\\resources\\Subheadcategory.vue' /* webpackChunkName: "components/resources-subheadcategory" */).then(c => wrapFunctional(c.default || c))
@@ -85,5 +88,6 @@ export const LazyManageCustomersCustomersAddcustomers = import('../..\\component
 export const LazyManageCustomers = import('../..\\components\\manageCustomers\\customers\\Customers.vue' /* webpackChunkName: "components/manage-customers" */).then(c => wrapFunctional(c.default || c))
 export const LazyManageCustomersCustomersEdit = import('../..\\components\\manageCustomers\\customers\\Edit.vue' /* webpackChunkName: "components/manage-customers-customers-edit" */).then(c => wrapFunctional(c.default || c))
 export const LazyManageCustomersSupportOverview = import('../..\\components\\manageCustomers\\support\\Overview.vue' /* webpackChunkName: "components/manage-customers-support-overview" */).then(c => wrapFunctional(c.default || c))
+export const LazyManageCustomersSupportResolvedticket = import('../..\\components\\manageCustomers\\support\\Resolvedticket.vue' /* webpackChunkName: "components/manage-customers-support-resolvedticket" */).then(c => wrapFunctional(c.default || c))
 export const LazyManageCustomersSupportUnresolveticket = import('../..\\components\\manageCustomers\\support\\Unresolveticket.vue' /* webpackChunkName: "components/manage-customers-support-unresolveticket" */).then(c => wrapFunctional(c.default || c))
 export const LazyManageCustomersOrdersAllorders = import('../..\\components\\manageCustomers\\orders\\Allorders.vue' /* webpackChunkName: "components/manage-customers-orders-allorders" */).then(c => wrapFunctional(c.default || c))
