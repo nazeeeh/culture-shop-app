@@ -41,15 +41,6 @@
   "Sidebar": {
     "description": "Auto imported from components/Sidebar.vue"
   },
-  "GeneralDriveragreement": {
-    "description": "Auto imported from components/General/Driveragreement.vue"
-  },
-  "GeneralUserpermission": {
-    "description": "Auto imported from components/General/Userpermission.vue"
-  },
-  "GeneralVendoragreement": {
-    "description": "Auto imported from components/General/Vendoragreement.vue"
-  },
   "ForgetPasswordPhoneVerification": {
     "description": "Auto imported from components/ForgetPassword/PhoneVerification.vue"
   },
@@ -58,6 +49,15 @@
   },
   "ForgetPasswordResetPassword": {
     "description": "Auto imported from components/ForgetPassword/ResetPassword.vue"
+  },
+  "GeneralDriveragreement": {
+    "description": "Auto imported from components/General/Driveragreement.vue"
+  },
+  "GeneralUserpermission": {
+    "description": "Auto imported from components/General/Userpermission.vue"
+  },
+  "GeneralVendoragreement": {
+    "description": "Auto imported from components/General/Vendoragreement.vue"
   },
   "ManageCustomersAnalytics": {
     "description": "Auto imported from components/manageCustomers/Analytics.vue"
@@ -110,19 +110,22 @@
   "ManageCustomersCategories": {
     "description": "Auto imported from components/manageCustomers/categories/Categories.vue"
   },
+  "ManageCustomersCustomersAddcustomers": {
+    "description": "Auto imported from components/manageCustomers/customers/Addcustomers.vue"
+  },
   "ManageCustomers": {
     "description": "Auto imported from components/manageCustomers/customers/Customers.vue"
   },
   "ManageCustomersCustomersEdit": {
     "description": "Auto imported from components/manageCustomers/customers/Edit.vue"
   },
-  "ManageCustomersOrdersAllorders": {
-    "description": "Auto imported from components/manageCustomers/orders/Allorders.vue"
-  },
   "ManageCustomersSupportOverview": {
     "description": "Auto imported from components/manageCustomers/support/Overview.vue"
   },
   "ManageCustomersSupportUnresolveticket": {
     "description": "Auto imported from components/manageCustomers/support/Unresolveticket.vue"
+  },
+  "ManageCustomersOrdersAllorders": {
+    "description": "Auto imported from components/manageCustomers/orders/Allorders.vue"
   }
 }

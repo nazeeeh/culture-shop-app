@@ -7,6 +7,7 @@ import scrollBehavior from './router.scrollBehavior.js'
 const _ba0e40e8 = () => interopDefault(import('..\\pages\\login.vue' /* webpackChunkName: "pages/login" */))
 const _8e4aa19c = () => interopDefault(import('..\\pages\\settings\\index.vue' /* webpackChunkName: "pages/settings/index" */))
 const _d40dc57e = () => interopDefault(import('..\\pages\\manage-customers\\category\\add\\_name.vue' /* webpackChunkName: "pages/manage-customers/category/add/_name" */))
+const _cbe34c58 = () => interopDefault(import('..\\pages\\manage-customers\\customers\\add\\_name.vue' /* webpackChunkName: "pages/manage-customers/customers/add/_name" */))
 const _632321d6 = () => interopDefault(import('..\\pages\\manage-customers\\customers\\edit\\_id.vue' /* webpackChunkName: "pages/manage-customers/customers/edit/_id" */))
 const _08c92770 = () => interopDefault(import('..\\pages\\manage-customers\\support\\tickets\\_name.vue' /* webpackChunkName: "pages/manage-customers/support/tickets/_name" */))
 const _572d3202 = () => interopDefault(import('..\\pages\\manage-customers\\category\\_name.vue' /* webpackChunkName: "pages/manage-customers/category/_name" */))
@@ -41,6 +42,10 @@ export const routerOptions = {
     path: "/manage-customers/category/add/:name?",
     component: _d40dc57e,
     name: "manage-customers-category-add-name"
+  }, {
+    path: "/manage-customers/customers/add/:name?",
+    component: _cbe34c58,
+    name: "manage-customers-customers-add-name"
   }, {
     path: "/manage-customers/customers/edit/:id?",
     component: _632321d6,
