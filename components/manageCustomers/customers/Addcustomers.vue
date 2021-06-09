@@ -75,6 +75,9 @@
 <script>
     import Button from '../../resources/Buttons'
     export default {
+      name: 'Addcustomer',
+      props: ['customers'],
+      
         components: {
             Button
         },

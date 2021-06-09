@@ -107,12 +107,6 @@
   "SettingsPrivacy": {
     "description": "Auto imported from components/settings/Privacy.vue"
   },
-  "ManageCustomersCategoriesAddcategory": {
-    "description": "Auto imported from components/manageCustomers/categories/Addcategory.vue"
-  },
-  "ManageCustomersCategories": {
-    "description": "Auto imported from components/manageCustomers/categories/Categories.vue"
-  },
   "ManageCustomersCustomersAddcustomers": {
     "description": "Auto imported from components/manageCustomers/customers/Addcustomers.vue"
   },
@@ -122,6 +116,15 @@
   "ManageCustomersCustomersEdit": {
     "description": "Auto imported from components/manageCustomers/customers/Edit.vue"
   },
+  "ManageCustomersCategoriesAddcategory": {
+    "description": "Auto imported from components/manageCustomers/categories/Addcategory.vue"
+  },
+  "ManageCustomersCategories": {
+    "description": "Auto imported from components/manageCustomers/categories/Categories.vue"
+  },
+  "ManageCustomersOrdersAllorders": {
+    "description": "Auto imported from components/manageCustomers/orders/Allorders.vue"
+  },
   "ManageCustomersSupportOverview": {
     "description": "Auto imported from components/manageCustomers/support/Overview.vue"
   },
@@ -130,8 +133,5 @@
   },
   "ManageCustomersSupportUnresolveticket": {
     "description": "Auto imported from components/manageCustomers/support/Unresolveticket.vue"
-  },
-  "ManageCustomersOrdersAllorders": {
-    "description": "Auto imported from components/manageCustomers/orders/Allorders.vue"
   }
 }
