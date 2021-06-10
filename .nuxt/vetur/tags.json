@@ -62,6 +62,9 @@
   "ManageCustomersAnalytics": {
     "description": "Auto imported from components/manageCustomers/Analytics.vue"
   },
+  "ManageDriversAnalytics": {
+    "description": "Auto imported from components/manageDrivers/Analytics.vue"
+  },
   "ResourcesAnalyticscard": {
     "description": "Auto imported from components/resources/Analyticscard.vue"
   },
@@ -76,6 +79,12 @@
   },
   "ResourcesCards": {
     "description": "Auto imported from components/resources/Cards.vue"
+  },
+  "ResourcesDriversanalytic": {
+    "description": "Auto imported from components/resources/Driversanalytic.vue"
+  },
+  "ResourcesDriverscard": {
+    "description": "Auto imported from components/resources/Driverscard.vue"
   },
   "ResourcesExport": {
     "description": "Auto imported from components/resources/Export.vue"
@@ -107,6 +116,12 @@
   "SettingsPrivacy": {
     "description": "Auto imported from components/settings/Privacy.vue"
   },
+  "ManageCustomersCategoriesAddcategory": {
+    "description": "Auto imported from components/manageCustomers/categories/Addcategory.vue"
+  },
+  "ManageCustomersCategories": {
+    "description": "Auto imported from components/manageCustomers/categories/Categories.vue"
+  },
   "ManageCustomersCustomersAddcustomers": {
     "description": "Auto imported from components/manageCustomers/customers/Addcustomers.vue"
   },
@@ -115,12 +130,6 @@
   },
   "ManageCustomersCustomersEdit": {
     "description": "Auto imported from components/manageCustomers/customers/Edit.vue"
-  },
-  "ManageCustomersCategoriesAddcategory": {
-    "description": "Auto imported from components/manageCustomers/categories/Addcategory.vue"
-  },
-  "ManageCustomersCategories": {
-    "description": "Auto imported from components/manageCustomers/categories/Categories.vue"
   },
   "ManageCustomersOrdersAllorders": {
     "description": "Auto imported from components/manageCustomers/orders/Allorders.vue"

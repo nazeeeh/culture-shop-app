@@ -8,7 +8,7 @@
       <v-row justify="center">
       <v-dialog v-model="dialog" persistent max-width="500" :customers="customers">
        <v-card class="dialog py-8 px-12">
-        <v-card-text  :style="{color: '#192135'}"><span class="text-header">Are you sure want to add this new customer?</span>
+        <v-card-text :style="{color: '#192135'}"><span class="text-header">Are you sure want to add this new customer?</span>
         </v-card-text>
          <v-card-actions>
           <div class="button-dialog">

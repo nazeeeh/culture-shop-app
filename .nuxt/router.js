@@ -5,6 +5,7 @@ import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
 const _ba0e40e8 = () => interopDefault(import('..\\pages\\login.vue' /* webpackChunkName: "pages/login" */))
+const _c1a0195c = () => interopDefault(import('..\\pages\\manage-vendors\\index.vue' /* webpackChunkName: "pages/manage-vendors/index" */))
 const _8e4aa19c = () => interopDefault(import('..\\pages\\settings\\index.vue' /* webpackChunkName: "pages/settings/index" */))
 const _3e750a50 = () => interopDefault(import('..\\pages\\manage-customers\\support\\tickets\\resolved\\_name.vue' /* webpackChunkName: "pages/manage-customers/support/tickets/resolved/_name" */))
 const _2f3b8197 = () => interopDefault(import('..\\pages\\manage-customers\\support\\tickets\\unresolved\\_name.vue' /* webpackChunkName: "pages/manage-customers/support/tickets/unresolved/_name" */))
@@ -18,6 +19,7 @@ const _10f3f08d = () => interopDefault(import('..\\pages\\manage-customers\\supp
 const _35be2fd2 = () => interopDefault(import('..\\pages\\settings\\general\\_name.vue' /* webpackChunkName: "pages/settings/general/_name" */))
 const _4416617c = () => interopDefault(import('..\\pages\\forget-password\\_name.vue' /* webpackChunkName: "pages/forget-password/_name" */))
 const _3d0dea80 = () => interopDefault(import('..\\pages\\manage-customers\\_name.vue' /* webpackChunkName: "pages/manage-customers/_name" */))
+const _c096d66c = () => interopDefault(import('..\\pages\\manage-drivers\\_name.vue' /* webpackChunkName: "pages/manage-drivers/_name" */))
 const _4d5d8716 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
 
 const emptyFn = () => {}
@@ -35,6 +37,10 @@ export const routerOptions = {
     path: "/login",
     component: _ba0e40e8,
     name: "login"
+  }, {
+    path: "/manage-vendors",
+    component: _c1a0195c,
+    name: "manage-vendors"
   }, {
     path: "/settings",
     component: _8e4aa19c,
@@ -87,6 +93,10 @@ export const routerOptions = {
     path: "/manage-customers/:name?",
     component: _3d0dea80,
     name: "manage-customers-name"
+  }, {
+    path: "/manage-drivers/:name?",
+    component: _c096d66c,
+    name: "manage-drivers-name"
   }, {
     path: "/",
     component: _4d5d8716,
