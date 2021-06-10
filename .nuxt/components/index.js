@@ -22,6 +22,7 @@ export { default as GeneralUserpermission } from '../..\\components\\General\\Us
 export { default as GeneralVendoragreement } from '../..\\components\\General\\Vendoragreement.vue'
 export { default as ManageCustomersAnalytics } from '../..\\components\\manageCustomers\\Analytics.vue'
 export { default as ManageDriversAnalytics } from '../..\\components\\manageDrivers\\Analytics.vue'
+export { default as ManageVendorsAnalytics } from '../..\\components\\manageVendors\\Analytics.vue'
 export { default as ResourcesAnalyticscard } from '../..\\components\\resources\\Analyticscard.vue'
 export { default as ResourcesAnalyticsgraph } from '../..\\components\\resources\\Analyticsgraph.vue'
 export { default as ResourcesBulkaction } from '../..\\components\\resources\\Bulkaction.vue'
@@ -37,6 +38,8 @@ export { default as ResourcesSubheadcategory } from '../..\\components\\resource
 export { default as ResourcesTables } from '../..\\components\\resources\\Tables.vue'
 export { default as ResourcesTicketbutton } from '../..\\components\\resources\\Ticketbutton.vue'
 export { default as ResourcesTicketsubhead } from '../..\\components\\resources\\Ticketsubhead.vue'
+export { default as ResourcesVendorsanalytic } from '../..\\components\\resources\\Vendorsanalytic.vue'
+export { default as ResourcesVendorscard } from '../..\\components\\resources\\Vendorscard.vue'
 export { default as SettingsGeneral } from '../..\\components\\settings\\General.vue'
 export { default as SettingsPrivacy } from '../..\\components\\settings\\Privacy.vue'
 export { default as ManageCustomersCategoriesAddcategory } from '../..\\components\\manageCustomers\\categories\\Addcategory.vue'
@@ -71,6 +74,7 @@ export const LazyGeneralUserpermission = import('../..\\components\\General\\Use
 export const LazyGeneralVendoragreement = import('../..\\components\\General\\Vendoragreement.vue' /* webpackChunkName: "components/general-vendoragreement" */).then(c => wrapFunctional(c.default || c))
 export const LazyManageCustomersAnalytics = import('../..\\components\\manageCustomers\\Analytics.vue' /* webpackChunkName: "components/manage-customers-analytics" */).then(c => wrapFunctional(c.default || c))
 export const LazyManageDriversAnalytics = import('../..\\components\\manageDrivers\\Analytics.vue' /* webpackChunkName: "components/manage-drivers-analytics" */).then(c => wrapFunctional(c.default || c))
+export const LazyManageVendorsAnalytics = import('../..\\components\\manageVendors\\Analytics.vue' /* webpackChunkName: "components/manage-vendors-analytics" */).then(c => wrapFunctional(c.default || c))
 export const LazyResourcesAnalyticscard = import('../..\\components\\resources\\Analyticscard.vue' /* webpackChunkName: "components/resources-analyticscard" */).then(c => wrapFunctional(c.default || c))
 export const LazyResourcesAnalyticsgraph = import('../..\\components\\resources\\Analyticsgraph.vue' /* webpackChunkName: "components/resources-analyticsgraph" */).then(c => wrapFunctional(c.default || c))
 export const LazyResourcesBulkaction = import('../..\\components\\resources\\Bulkaction.vue' /* webpackChunkName: "components/resources-bulkaction" */).then(c => wrapFunctional(c.default || c))
@@ -86,6 +90,8 @@ export const LazyResourcesSubheadcategory = import('../..\\components\\resources
 export const LazyResourcesTables = import('../..\\components\\resources\\Tables.vue' /* webpackChunkName: "components/resources-tables" */).then(c => wrapFunctional(c.default || c))
 export const LazyResourcesTicketbutton = import('../..\\components\\resources\\Ticketbutton.vue' /* webpackChunkName: "components/resources-ticketbutton" */).then(c => wrapFunctional(c.default || c))
 export const LazyResourcesTicketsubhead = import('../..\\components\\resources\\Ticketsubhead.vue' /* webpackChunkName: "components/resources-ticketsubhead" */).then(c => wrapFunctional(c.default || c))
+export const LazyResourcesVendorsanalytic = import('../..\\components\\resources\\Vendorsanalytic.vue' /* webpackChunkName: "components/resources-vendorsanalytic" */).then(c => wrapFunctional(c.default || c))
+export const LazyResourcesVendorscard = import('../..\\components\\resources\\Vendorscard.vue' /* webpackChunkName: "components/resources-vendorscard" */).then(c => wrapFunctional(c.default || c))
 export const LazySettingsGeneral = import('../..\\components\\settings\\General.vue' /* webpackChunkName: "components/settings-general" */).then(c => wrapFunctional(c.default || c))
 export const LazySettingsPrivacy = import('../..\\components\\settings\\Privacy.vue' /* webpackChunkName: "components/settings-privacy" */).then(c => wrapFunctional(c.default || c))
 export const LazyManageCustomersCategoriesAddcategory = import('../..\\components\\manageCustomers\\categories\\Addcategory.vue' /* webpackChunkName: "components/manage-customers-categories-addcategory" */).then(c => wrapFunctional(c.default || c))

@@ -7,13 +7,6 @@
     "_name": "_ba0e40e8"
   },
   {
-    "name": "manage-vendors",
-    "path": "/manage-vendors",
-    "component": "C:\\\\Users\\\\Gemdajs-001\\\\Documents\\\\culture-shop\\\\pages\\\\manage-vendors\\\\index.vue",
-    "chunkName": "pages/manage-vendors/index",
-    "_name": "_c1a0195c"
-  },
-  {
     "name": "settings",
     "path": "/settings",
     "component": "C:\\\\Users\\\\Gemdajs-001\\\\Documents\\\\culture-shop\\\\pages\\\\settings\\\\index.vue",
@@ -110,6 +103,13 @@
     "component": "C:\\\\Users\\\\Gemdajs-001\\\\Documents\\\\culture-shop\\\\pages\\\\manage-drivers\\\\_name.vue",
     "chunkName": "pages/manage-drivers/_name",
     "_name": "_c096d66c"
+  },
+  {
+    "name": "manage-vendors-name",
+    "path": "/manage-vendors/:name?",
+    "component": "C:\\\\Users\\\\Gemdajs-001\\\\Documents\\\\culture-shop\\\\pages\\\\manage-vendors\\\\_name.vue",
+    "chunkName": "pages/manage-vendors/_name",
+    "_name": "_426bf1ea"
   },
   {
     "name": "index",

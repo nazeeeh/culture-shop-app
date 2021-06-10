@@ -65,6 +65,9 @@
   "ManageDriversAnalytics": {
     "description": "Auto imported from components/manageDrivers/Analytics.vue"
   },
+  "ManageVendorsAnalytics": {
+    "description": "Auto imported from components/manageVendors/Analytics.vue"
+  },
   "ResourcesAnalyticscard": {
     "description": "Auto imported from components/resources/Analyticscard.vue"
   },
@@ -109,6 +112,12 @@
   },
   "ResourcesTicketsubhead": {
     "description": "Auto imported from components/resources/Ticketsubhead.vue"
+  },
+  "ResourcesVendorsanalytic": {
+    "description": "Auto imported from components/resources/Vendorsanalytic.vue"
+  },
+  "ResourcesVendorscard": {
+    "description": "Auto imported from components/resources/Vendorscard.vue"
   },
   "SettingsGeneral": {
     "description": "Auto imported from components/settings/General.vue"
