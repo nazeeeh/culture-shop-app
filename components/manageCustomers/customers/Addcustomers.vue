@@ -14,10 +14,10 @@
         <v-row>
           <v-col cols="6">
             <form>
-                <div class="input">
+                <!-- <div class="input">
                 <label for="permission" class="name ">Permissions</label><br>
                 <input type="dropdown" class="permission"><br><br>
-                </div>
+                </div> -->
                 <div class="grid-input">
                   <div class="input">
                  <label for="first name" class="name">First Name</label><br>
@@ -143,7 +143,7 @@
   border-radius: 16px;
   height: 4vh;
 }
-.permission {
+/* .permission {
   border: 2px solid #ECECEC;
   border-radius: 16px;
   width: 40vw;
@@ -153,7 +153,7 @@
 }
 .permission:focus{
   border: 2px solid #192135;
-}
+} */
 .input{
   margin: 20px 0 10px 34px;
 }
