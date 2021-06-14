@@ -1,11 +1,13 @@
 <template>
-  <div>
-    <!-- Table -->
-        <div class="round">
-          <input type="checkbox" id="checkbox" />
-          <label for="checkbox"></label>
-        </div>
-        <div class="table">
+ <div class="Drivers-section">
+  <v-btn class="btn-btn py-6 px-10 text-uppercase" >add new</v-btn>
+   <ExportSearch />
+   <!-- Table -->
+    <div class="round">
+     <input type="checkbox" id="checkbox" />
+     <label for="checkbox"></label>
+    </div>
+    <div class="table">
           <sorted-table :values="values">
             <thead>
               <tr> 
@@ -16,13 +18,10 @@
                   <sort-link name="name"><span style="display: flex; align-items: center"> Date <icon name="up"></icon></span></sort-link>
                 </th>
                 <th scope="col" style="text-align: left; width: 10rem;">
-                  <sort-link name="hits">Customer &#38; Role</sort-link>
+                  <sort-link name="hits">Driver &#38; Role</sort-link>
                 </th>
                 <th scope="col" style="text-align: left; width: 10rem;">
-                  <sort-link name="hits">Vendor &#38; Role</sort-link>
-                </th>
-                <th scope="col" style="text-align: left; width: 10rem;">
-                  <sort-link name="name"><span style="display: flex; align-items: center"> Total <icon name="up"></icon></span></sort-link>
+                  <sort-link name="hits">Driver Details</sort-link>
                 </th>
                 <th scope="col" style="text-align: left; width: 10rem;">
                   <sort-link name="hits"><span style="display: flex; align-items: center"><span style="color: grey; margin-right: 1rem;">Status</span> All <icon name="dropdown"></icon> </span></sort-link>
@@ -40,16 +39,37 @@
       </template>
     </sorted-table>
     </div>
-  </div>
+    <BulkAction />
+ </div>
 </template>
 
 <script>
+    import ExportSearch from '../../resources/Export'
+    import BulkAction from '../../resources/Bulkaction'
     export default {
+     components: {
+         ExportSearch,
+         BulkAction
+     }
         
     }
 </script>
 
 <style scoped>
+.btn-btn{
+  position: absolute;
+  top: 10px;
+  right: 40px;
+  background: #0CAD73 !important;
+  color: #fff;
+  box-shadow: none;
+  border-radius: 16px;
+  font-family: 'Space Grotesk';
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.07em;
+}
 .table {
     font-family: 'Space Grotesk';
     font-weight: 600;
@@ -59,7 +79,7 @@
     text-transform: uppercase;
     margin: 5px 0px 6px 100px;
   }
-  .round {
+   .round {
   position: relative;
 }
 

@@ -57,3 +57,6 @@ You can directly use them in pages and other components without the need to impo
 - `<ManageCustomersSupportOverview>` | `<manage-customers-support-overview>` (components/manageCustomers/support/Overview.vue)
 - `<ManageCustomersSupportResolvedticket>` | `<manage-customers-support-resolvedticket>` (components/manageCustomers/support/Resolvedticket.vue)
 - `<ManageCustomersSupportUnresolveticket>` | `<manage-customers-support-unresolveticket>` (components/manageCustomers/support/Unresolveticket.vue)
+- `<ManageDrivers>` | `<manage-drivers>` (components/manageDrivers/drivers/Drivers.vue)
+- `<ManageDriversOrdersAllorders>` | `<manage-drivers-orders-allorders>` (components/manageDrivers/orders/Allorders.vue)
+- `<ManageDriversSupportOverview>` | `<manage-drivers-support-overview>` (components/manageDrivers/support/Overview.vue)

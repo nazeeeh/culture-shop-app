@@ -1,6 +1,7 @@
 <template>
-  <div>
-    <!-- Table -->
+ <div>
+  <SearchBox />
+   <!-- Table -->
         <div class="round">
           <input type="checkbox" id="checkbox" />
           <label for="checkbox"></label>
@@ -16,7 +17,7 @@
                   <sort-link name="name"><span style="display: flex; align-items: center"> Date <icon name="up"></icon></span></sort-link>
                 </th>
                 <th scope="col" style="text-align: left; width: 10rem;">
-                  <sort-link name="hits">Customer &#38; Role</sort-link>
+                  <sort-link name="hits">Driver &#38; Role</sort-link>
                 </th>
                 <th scope="col" style="text-align: left; width: 10rem;">
                   <sort-link name="hits">Vendor &#38; Role</sort-link>
@@ -40,11 +41,19 @@
       </template>
     </sorted-table>
     </div>
-  </div>
+    <BulkAction />
+ </div>
 </template>
 
 <script>
+    import SearchBox from '../../resources/Search'
+    import BulkAction from '../../resources/Bulkaction'
     export default {
+        components: {
+         SearchBox,
+         BulkAction
+
+        }
         
     }
 </script>

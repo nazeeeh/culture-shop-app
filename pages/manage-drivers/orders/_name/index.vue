@@ -6,7 +6,10 @@
       </div>
       <div class= "nav-links">
        <nuxt-link to= "/">
-        <span class="sub-title text-uppercase">Manage Drivers /</span>
+        <span class="sub-title text-uppercase">Manage drivers /</span>
+       </nuxt-link>
+       <nuxt-link to= "/">
+        <span class="sub-title text-uppercase">Orders /</span>
        </nuxt-link>
        <nuxt-link to= "/">
         <span class="sub-title text-uppercase">{{$route.params.name}}</span>
@@ -14,22 +17,29 @@
       </div>
      </div>
      <v-divider w-100></v-divider>
-    <Analytics />
+     <AllOrders />
     </div>
 </template>
 
 <script>
 
-import Analytics from '~/components/manageDrivers/Analytics.vue'
+    import AllOrders from '~/components/manageDrivers/orders/Allorders.vue'
+
     export default {
         components: {
-            Analytics
+            AllOrders
         },
-        data() {
-            return{
-                title: 'Analytics'
+
+        data () {
+            return {
+                title: 'Orders'
             }
-        }
+        },
+    // computed: {
+    //     currentComponent() {
+    //         return this.$route.params.name;
+    //     }
+    // }
         
 }
 </script>

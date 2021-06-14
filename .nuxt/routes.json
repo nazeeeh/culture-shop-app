@@ -77,6 +77,27 @@
     "_name": "_10f3f08d"
   },
   {
+    "name": "manage-drivers-drivers-name",
+    "path": "/manage-drivers/drivers/:name",
+    "component": "C:\\\\Users\\\\Gemdajs-001\\\\Documents\\\\culture-shop\\\\pages\\\\manage-drivers\\\\drivers\\\\_name\\\\index.vue",
+    "chunkName": "pages/manage-drivers/drivers/_name/index",
+    "_name": "_5a6fa5da"
+  },
+  {
+    "name": "manage-drivers-orders-name",
+    "path": "/manage-drivers/orders/:name",
+    "component": "C:\\\\Users\\\\Gemdajs-001\\\\Documents\\\\culture-shop\\\\pages\\\\manage-drivers\\\\orders\\\\_name\\\\index.vue",
+    "chunkName": "pages/manage-drivers/orders/_name/index",
+    "_name": "_3e9160c6"
+  },
+  {
+    "name": "manage-drivers-support-name",
+    "path": "/manage-drivers/support/:name",
+    "component": "C:\\\\Users\\\\Gemdajs-001\\\\Documents\\\\culture-shop\\\\pages\\\\manage-drivers\\\\support\\\\_name\\\\index.vue",
+    "chunkName": "pages/manage-drivers/support/_name/index",
+    "_name": "_9d03b2d2"
+  },
+  {
     "name": "settings-general-name",
     "path": "/settings/general/:name?",
     "component": "C:\\\\Users\\\\Gemdajs-001\\\\Documents\\\\culture-shop\\\\pages\\\\settings\\\\general\\\\_name.vue",

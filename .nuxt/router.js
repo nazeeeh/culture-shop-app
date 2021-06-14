@@ -15,6 +15,9 @@ const _572d3202 = () => interopDefault(import('..\\pages\\manage-customers\\cate
 const _6678bfda = () => interopDefault(import('..\\pages\\manage-customers\\customers\\_name\\index.vue' /* webpackChunkName: "pages/manage-customers/customers/_name/index" */))
 const _69f52232 = () => interopDefault(import('..\\pages\\manage-customers\\orders\\_name\\index.vue' /* webpackChunkName: "pages/manage-customers/orders/_name/index" */))
 const _10f3f08d = () => interopDefault(import('..\\pages\\manage-customers\\support\\_name\\index.vue' /* webpackChunkName: "pages/manage-customers/support/_name/index" */))
+const _5a6fa5da = () => interopDefault(import('..\\pages\\manage-drivers\\drivers\\_name\\index.vue' /* webpackChunkName: "pages/manage-drivers/drivers/_name/index" */))
+const _3e9160c6 = () => interopDefault(import('..\\pages\\manage-drivers\\orders\\_name\\index.vue' /* webpackChunkName: "pages/manage-drivers/orders/_name/index" */))
+const _9d03b2d2 = () => interopDefault(import('..\\pages\\manage-drivers\\support\\_name\\index.vue' /* webpackChunkName: "pages/manage-drivers/support/_name/index" */))
 const _35be2fd2 = () => interopDefault(import('..\\pages\\settings\\general\\_name.vue' /* webpackChunkName: "pages/settings/general/_name" */))
 const _4416617c = () => interopDefault(import('..\\pages\\forget-password\\_name.vue' /* webpackChunkName: "pages/forget-password/_name" */))
 const _3d0dea80 = () => interopDefault(import('..\\pages\\manage-customers\\_name.vue' /* webpackChunkName: "pages/manage-customers/_name" */))
@@ -77,6 +80,18 @@ export const routerOptions = {
     path: "/manage-customers/support/:name",
     component: _10f3f08d,
     name: "manage-customers-support-name"
+  }, {
+    path: "/manage-drivers/drivers/:name",
+    component: _5a6fa5da,
+    name: "manage-drivers-drivers-name"
+  }, {
+    path: "/manage-drivers/orders/:name",
+    component: _3e9160c6,
+    name: "manage-drivers-orders-name"
+  }, {
+    path: "/manage-drivers/support/:name",
+    component: _9d03b2d2,
+    name: "manage-drivers-support-name"
   }, {
     path: "/settings/general/:name?",
     component: _35be2fd2,
