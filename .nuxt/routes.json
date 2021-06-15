@@ -49,6 +49,13 @@
     "_name": "_632321d6"
   },
   {
+    "name": "manage-drivers-drivers-edit-id",
+    "path": "/manage-drivers/drivers/edit/:id?",
+    "component": "C:\\\\Users\\\\Gemdajs-001\\\\Documents\\\\culture-shop\\\\pages\\\\manage-drivers\\\\drivers\\\\edit\\\\_id.vue",
+    "chunkName": "pages/manage-drivers/drivers/edit/_id",
+    "_name": "_287d0215"
+  },
+  {
     "name": "manage-customers-category-name",
     "path": "/manage-customers/category/:name?",
     "component": "C:\\\\Users\\\\Gemdajs-001\\\\Documents\\\\culture-shop\\\\pages\\\\manage-customers\\\\category\\\\_name.vue",

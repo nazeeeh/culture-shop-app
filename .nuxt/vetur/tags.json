@@ -59,11 +59,11 @@
   "GeneralVendoragreement": {
     "description": "Auto imported from components/General/Vendoragreement.vue"
   },
-  "ManageCustomersAnalytics": {
-    "description": "Auto imported from components/manageCustomers/Analytics.vue"
-  },
   "ManageDriversAnalytics": {
     "description": "Auto imported from components/manageDrivers/Analytics.vue"
+  },
+  "ManageCustomersAnalytics": {
+    "description": "Auto imported from components/manageCustomers/Analytics.vue"
   },
   "ManageVendorsAnalytics": {
     "description": "Auto imported from components/manageVendors/Analytics.vue"
@@ -104,6 +104,9 @@
   "ResourcesSubheadcategory": {
     "description": "Auto imported from components/resources/Subheadcategory.vue"
   },
+  "ResourcesSubheaddriver": {
+    "description": "Auto imported from components/resources/Subheaddriver.vue"
+  },
   "ResourcesTables": {
     "description": "Auto imported from components/resources/Tables.vue"
   },
@@ -124,6 +127,18 @@
   },
   "SettingsPrivacy": {
     "description": "Auto imported from components/settings/Privacy.vue"
+  },
+  "ManageDriversOrdersAllorders": {
+    "description": "Auto imported from components/manageDrivers/orders/Allorders.vue"
+  },
+  "ManageDrivers": {
+    "description": "Auto imported from components/manageDrivers/drivers/Drivers.vue"
+  },
+  "ManageDriversDriversEdit": {
+    "description": "Auto imported from components/manageDrivers/drivers/Edit.vue"
+  },
+  "ManageDriversSupportOverview": {
+    "description": "Auto imported from components/manageDrivers/support/Overview.vue"
   },
   "ManageCustomersCategoriesAddcategory": {
     "description": "Auto imported from components/manageCustomers/categories/Addcategory.vue"
@@ -151,14 +166,5 @@
   },
   "ManageCustomersSupportUnresolveticket": {
     "description": "Auto imported from components/manageCustomers/support/Unresolveticket.vue"
-  },
-  "ManageDrivers": {
-    "description": "Auto imported from components/manageDrivers/drivers/Drivers.vue"
-  },
-  "ManageDriversOrdersAllorders": {
-    "description": "Auto imported from components/manageDrivers/orders/Allorders.vue"
-  },
-  "ManageDriversSupportOverview": {
-    "description": "Auto imported from components/manageDrivers/support/Overview.vue"
   }
 }

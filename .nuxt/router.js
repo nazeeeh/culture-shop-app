@@ -11,6 +11,7 @@ const _2f3b8197 = () => interopDefault(import('..\\pages\\manage-customers\\supp
 const _d40dc57e = () => interopDefault(import('..\\pages\\manage-customers\\category\\add\\_name.vue' /* webpackChunkName: "pages/manage-customers/category/add/_name" */))
 const _cbe34c58 = () => interopDefault(import('..\\pages\\manage-customers\\customers\\add\\_name.vue' /* webpackChunkName: "pages/manage-customers/customers/add/_name" */))
 const _632321d6 = () => interopDefault(import('..\\pages\\manage-customers\\customers\\edit\\_id.vue' /* webpackChunkName: "pages/manage-customers/customers/edit/_id" */))
+const _287d0215 = () => interopDefault(import('..\\pages\\manage-drivers\\drivers\\edit\\_id.vue' /* webpackChunkName: "pages/manage-drivers/drivers/edit/_id" */))
 const _572d3202 = () => interopDefault(import('..\\pages\\manage-customers\\category\\_name.vue' /* webpackChunkName: "pages/manage-customers/category/_name" */))
 const _6678bfda = () => interopDefault(import('..\\pages\\manage-customers\\customers\\_name\\index.vue' /* webpackChunkName: "pages/manage-customers/customers/_name/index" */))
 const _69f52232 = () => interopDefault(import('..\\pages\\manage-customers\\orders\\_name\\index.vue' /* webpackChunkName: "pages/manage-customers/orders/_name/index" */))
@@ -64,6 +65,10 @@ export const routerOptions = {
     path: "/manage-customers/customers/edit/:id?",
     component: _632321d6,
     name: "manage-customers-customers-edit-id"
+  }, {
+    path: "/manage-drivers/drivers/edit/:id?",
+    component: _287d0215,
+    name: "manage-drivers-drivers-edit-id"
   }, {
     path: "/manage-customers/category/:name?",
     component: _572d3202,
