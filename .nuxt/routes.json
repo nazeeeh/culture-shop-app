@@ -28,6 +28,20 @@
     "_name": "_2f3b8197"
   },
   {
+    "name": "manage-drivers-support-tickets-resolved-name",
+    "path": "/manage-drivers/support/tickets/resolved/:name?",
+    "component": "C:\\\\Users\\\\Gemdajs-001\\\\Documents\\\\culture-shop\\\\pages\\\\manage-drivers\\\\support\\\\tickets\\\\resolved\\\\_name.vue",
+    "chunkName": "pages/manage-drivers/support/tickets/resolved/_name",
+    "_name": "_547c815a"
+  },
+  {
+    "name": "manage-drivers-support-tickets-unresolved-name",
+    "path": "/manage-drivers/support/tickets/unresolved/:name?",
+    "component": "C:\\\\Users\\\\Gemdajs-001\\\\Documents\\\\culture-shop\\\\pages\\\\manage-drivers\\\\support\\\\tickets\\\\unresolved\\\\_name.vue",
+    "chunkName": "pages/manage-drivers/support/tickets/unresolved/_name",
+    "_name": "_3d7d43be"
+  },
+  {
     "name": "manage-customers-category-add-name",
     "path": "/manage-customers/category/add/:name?",
     "component": "C:\\\\Users\\\\Gemdajs-001\\\\Documents\\\\culture-shop\\\\pages\\\\manage-customers\\\\category\\\\add\\\\_name.vue",

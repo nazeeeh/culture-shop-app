@@ -1,6 +1,6 @@
 <template>
  <div>
-  <Button />
+  <Buttons />
   <div class="sub-section">
     <div class="flex-section">
     <span>#ID</span>
@@ -15,7 +15,7 @@
      </div> 
      <v-divider></v-divider>
 
-     <v-row>
+      <v-row>
     <v-col cols="6">
      <form>
       <div class="input">
@@ -52,15 +52,16 @@
             </div>
           </v-col>
     </v-row>
+
  </div>
 </template>
 
 <script>
-    import Button from '../../resources/Ticketbutton'
-    import Subhead from '../../resources/Ticketsubhead'
+    import Buttons from '../../resources/Ticketbutton'
+     import Subhead from '../../resources/Ticketsubhead'
     export default {
         components:{
-            Button,
+            Buttons,
             Subhead
         },
          data () {

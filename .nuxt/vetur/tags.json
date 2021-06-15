@@ -59,11 +59,11 @@
   "GeneralVendoragreement": {
     "description": "Auto imported from components/General/Vendoragreement.vue"
   },
-  "ManageDriversAnalytics": {
-    "description": "Auto imported from components/manageDrivers/Analytics.vue"
-  },
   "ManageCustomersAnalytics": {
     "description": "Auto imported from components/manageCustomers/Analytics.vue"
+  },
+  "ManageDriversAnalytics": {
+    "description": "Auto imported from components/manageDrivers/Analytics.vue"
   },
   "ManageVendorsAnalytics": {
     "description": "Auto imported from components/manageVendors/Analytics.vue"
@@ -128,18 +128,6 @@
   "SettingsPrivacy": {
     "description": "Auto imported from components/settings/Privacy.vue"
   },
-  "ManageDriversOrdersAllorders": {
-    "description": "Auto imported from components/manageDrivers/orders/Allorders.vue"
-  },
-  "ManageDrivers": {
-    "description": "Auto imported from components/manageDrivers/drivers/Drivers.vue"
-  },
-  "ManageDriversDriversEdit": {
-    "description": "Auto imported from components/manageDrivers/drivers/Edit.vue"
-  },
-  "ManageDriversSupportOverview": {
-    "description": "Auto imported from components/manageDrivers/support/Overview.vue"
-  },
   "ManageCustomersCategoriesAddcategory": {
     "description": "Auto imported from components/manageCustomers/categories/Addcategory.vue"
   },
@@ -166,5 +154,23 @@
   },
   "ManageCustomersSupportUnresolveticket": {
     "description": "Auto imported from components/manageCustomers/support/Unresolveticket.vue"
+  },
+  "ManageDrivers": {
+    "description": "Auto imported from components/manageDrivers/drivers/Drivers.vue"
+  },
+  "ManageDriversDriversEdit": {
+    "description": "Auto imported from components/manageDrivers/drivers/Edit.vue"
+  },
+  "ManageDriversOrdersAllorders": {
+    "description": "Auto imported from components/manageDrivers/orders/Allorders.vue"
+  },
+  "ManageDriversSupportOverview": {
+    "description": "Auto imported from components/manageDrivers/support/Overview.vue"
+  },
+  "ManageDriversSupportResolvedticket": {
+    "description": "Auto imported from components/manageDrivers/support/Resolvedticket.vue"
+  },
+  "ManageDriversSupportUnresolveticket": {
+    "description": "Auto imported from components/manageDrivers/support/Unresolveticket.vue"
   }
 }

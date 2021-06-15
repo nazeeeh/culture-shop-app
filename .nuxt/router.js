@@ -8,6 +8,8 @@ const _ba0e40e8 = () => interopDefault(import('..\\pages\\login.vue' /* webpackC
 const _8e4aa19c = () => interopDefault(import('..\\pages\\settings\\index.vue' /* webpackChunkName: "pages/settings/index" */))
 const _3e750a50 = () => interopDefault(import('..\\pages\\manage-customers\\support\\tickets\\resolved\\_name.vue' /* webpackChunkName: "pages/manage-customers/support/tickets/resolved/_name" */))
 const _2f3b8197 = () => interopDefault(import('..\\pages\\manage-customers\\support\\tickets\\unresolved\\_name.vue' /* webpackChunkName: "pages/manage-customers/support/tickets/unresolved/_name" */))
+const _547c815a = () => interopDefault(import('..\\pages\\manage-drivers\\support\\tickets\\resolved\\_name.vue' /* webpackChunkName: "pages/manage-drivers/support/tickets/resolved/_name" */))
+const _3d7d43be = () => interopDefault(import('..\\pages\\manage-drivers\\support\\tickets\\unresolved\\_name.vue' /* webpackChunkName: "pages/manage-drivers/support/tickets/unresolved/_name" */))
 const _d40dc57e = () => interopDefault(import('..\\pages\\manage-customers\\category\\add\\_name.vue' /* webpackChunkName: "pages/manage-customers/category/add/_name" */))
 const _cbe34c58 = () => interopDefault(import('..\\pages\\manage-customers\\customers\\add\\_name.vue' /* webpackChunkName: "pages/manage-customers/customers/add/_name" */))
 const _632321d6 = () => interopDefault(import('..\\pages\\manage-customers\\customers\\edit\\_id.vue' /* webpackChunkName: "pages/manage-customers/customers/edit/_id" */))
@@ -53,6 +55,14 @@ export const routerOptions = {
     path: "/manage-customers/support/tickets/unresolved/:name?",
     component: _2f3b8197,
     name: "manage-customers-support-tickets-unresolved-name"
+  }, {
+    path: "/manage-drivers/support/tickets/resolved/:name?",
+    component: _547c815a,
+    name: "manage-drivers-support-tickets-resolved-name"
+  }, {
+    path: "/manage-drivers/support/tickets/unresolved/:name?",
+    component: _3d7d43be,
+    name: "manage-drivers-support-tickets-unresolved-name"
   }, {
     path: "/manage-customers/category/add/:name?",
     component: _d40dc57e,
