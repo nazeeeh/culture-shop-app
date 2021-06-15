@@ -123,6 +123,9 @@ input[type='text']{
     outline: none;
     
 }
+form{
+    font-family: 'Space Grotesk';
+}
 input[type='text']:focus{
     border: 2px solid #192135;
 }

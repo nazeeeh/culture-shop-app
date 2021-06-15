@@ -1,8 +1,8 @@
 <template>
  <div class="btn-btn">
    <v-btn class="btn btn-cancel py-6 px-10 text-uppercase mr-2">Cancel</v-btn>
-   <v-btn class="btn btn-save-as-draft py-6 px-12 text-uppercase mr-2">Reopen Ticket</v-btn>
-   <v-btn class="btn btn-save py-6 px-12 text-uppercase" @click="dialog = true">Save</v-btn>
+   <v-btn class="btn btn-save-as-draft py-6 px-12 text-uppercase mr-2" @click="dialog = true">Reopen Ticket</v-btn>
+   <v-btn class="btn btn-save py-6 px-12 text-uppercase" >Save</v-btn>
     <!-- Dialog -->
     <v-layout>
       <v-row justify="center">

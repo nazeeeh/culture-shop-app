@@ -34,8 +34,8 @@
            <div class="system-bar">
             <div class="bar-section">
               <div class="customer-spending">
-               <icon name="profile"></icon>
-               <span class="t-head mt-1 mx-2 text-capitalize">Customer</span>
+               <icon name="driver"></icon>
+               <span class="t-head mt-1 mx-2 text-capitalize">Driver</span>
               </div>
               <v-divider></v-divider>
               <div class="previous-reply">
