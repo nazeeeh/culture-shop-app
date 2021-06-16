@@ -23,6 +23,7 @@ const _5a6fa5da = () => interopDefault(import('..\\pages\\manage-drivers\\driver
 const _3e9160c6 = () => interopDefault(import('..\\pages\\manage-drivers\\orders\\_name\\index.vue' /* webpackChunkName: "pages/manage-drivers/orders/_name/index" */))
 const _9d03b2d2 = () => interopDefault(import('..\\pages\\manage-drivers\\support\\_name\\index.vue' /* webpackChunkName: "pages/manage-drivers/support/_name/index" */))
 const _35be2fd2 = () => interopDefault(import('..\\pages\\settings\\general\\_name.vue' /* webpackChunkName: "pages/settings/general/_name" */))
+const _24e1693e = () => interopDefault(import('..\\pages\\manage-drivers\\orders\\_name\\all\\_id.vue' /* webpackChunkName: "pages/manage-drivers/orders/_name/all/_id" */))
 const _4416617c = () => interopDefault(import('..\\pages\\forget-password\\_name.vue' /* webpackChunkName: "pages/forget-password/_name" */))
 const _3d0dea80 = () => interopDefault(import('..\\pages\\manage-customers\\_name.vue' /* webpackChunkName: "pages/manage-customers/_name" */))
 const _c096d66c = () => interopDefault(import('..\\pages\\manage-drivers\\_name.vue' /* webpackChunkName: "pages/manage-drivers/_name" */))
@@ -116,6 +117,10 @@ export const routerOptions = {
     path: "/settings/general/:name?",
     component: _35be2fd2,
     name: "settings-general-name"
+  }, {
+    path: "/manage-drivers/orders/:name?/all/:id",
+    component: _24e1693e,
+    name: "manage-drivers-orders-name-all-id"
   }, {
     path: "/forget-password/:name?",
     component: _4416617c,

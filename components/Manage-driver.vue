@@ -101,7 +101,7 @@ export default {
           icon: 'driver',
           lists: [
             { sub: 'All', to:'/manage-drivers/drivers/all'},
-            { sub: 'Add New' }
+            { sub: 'Add New', to:'/manage-drivers/drivers/add' }
           ],
 
           sub: 'Drivers',

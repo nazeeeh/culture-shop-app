@@ -21,8 +21,8 @@ export { default as GeneralDriveragreement } from '../..\\components\\General\\D
 export { default as GeneralUserpermission } from '../..\\components\\General\\Userpermission.vue'
 export { default as GeneralVendoragreement } from '../..\\components\\General\\Vendoragreement.vue'
 export { default as ManageCustomersAnalytics } from '../..\\components\\manageCustomers\\Analytics.vue'
-export { default as ManageDriversAnalytics } from '../..\\components\\manageDrivers\\Analytics.vue'
 export { default as ManageVendorsAnalytics } from '../..\\components\\manageVendors\\Analytics.vue'
+export { default as ManageDriversAnalytics } from '../..\\components\\manageDrivers\\Analytics.vue'
 export { default as ResourcesAnalyticscard } from '../..\\components\\resources\\Analyticscard.vue'
 export { default as ResourcesAnalyticsgraph } from '../..\\components\\resources\\Analyticsgraph.vue'
 export { default as ResourcesBulkaction } from '../..\\components\\resources\\Bulkaction.vue'
@@ -31,6 +31,7 @@ export { default as ResourcesCards } from '../..\\components\\resources\\Cards.v
 export { default as ResourcesDriversanalytic } from '../..\\components\\resources\\Driversanalytic.vue'
 export { default as ResourcesDriverscard } from '../..\\components\\resources\\Driverscard.vue'
 export { default as ResourcesExport } from '../..\\components\\resources\\Export.vue'
+export { default as ResourcesPrevNext } from '../..\\components\\resources\\PrevNext.vue'
 export { default as ResourcesResolvedbutton } from '../..\\components\\resources\\Resolvedbutton.vue'
 export { default as ResourcesSearch } from '../..\\components\\resources\\Search.vue'
 export { default as ResourcesSubhead } from '../..\\components\\resources\\Subhead.vue'
@@ -56,6 +57,7 @@ export { default as ManageDriversDriversAdddriver } from '../..\\components\\man
 export { default as ManageDrivers } from '../..\\components\\manageDrivers\\drivers\\Drivers.vue'
 export { default as ManageDriversDriversEdit } from '../..\\components\\manageDrivers\\drivers\\Edit.vue'
 export { default as ManageDriversOrdersAllorders } from '../..\\components\\manageDrivers\\orders\\Allorders.vue'
+export { default as ManageDriversOrders } from '../..\\components\\manageDrivers\\orders\\orders.vue'
 export { default as ManageDriversSupportOverview } from '../..\\components\\manageDrivers\\support\\Overview.vue'
 export { default as ManageDriversSupportResolvedticket } from '../..\\components\\manageDrivers\\support\\Resolvedticket.vue'
 export { default as ManageDriversSupportUnresolveticket } from '../..\\components\\manageDrivers\\support\\Unresolveticket.vue'
@@ -81,8 +83,8 @@ export const LazyGeneralDriveragreement = import('../..\\components\\General\\Dr
 export const LazyGeneralUserpermission = import('../..\\components\\General\\Userpermission.vue' /* webpackChunkName: "components/general-userpermission" */).then(c => wrapFunctional(c.default || c))
 export const LazyGeneralVendoragreement = import('../..\\components\\General\\Vendoragreement.vue' /* webpackChunkName: "components/general-vendoragreement" */).then(c => wrapFunctional(c.default || c))
 export const LazyManageCustomersAnalytics = import('../..\\components\\manageCustomers\\Analytics.vue' /* webpackChunkName: "components/manage-customers-analytics" */).then(c => wrapFunctional(c.default || c))
-export const LazyManageDriversAnalytics = import('../..\\components\\manageDrivers\\Analytics.vue' /* webpackChunkName: "components/manage-drivers-analytics" */).then(c => wrapFunctional(c.default || c))
 export const LazyManageVendorsAnalytics = import('../..\\components\\manageVendors\\Analytics.vue' /* webpackChunkName: "components/manage-vendors-analytics" */).then(c => wrapFunctional(c.default || c))
+export const LazyManageDriversAnalytics = import('../..\\components\\manageDrivers\\Analytics.vue' /* webpackChunkName: "components/manage-drivers-analytics" */).then(c => wrapFunctional(c.default || c))
 export const LazyResourcesAnalyticscard = import('../..\\components\\resources\\Analyticscard.vue' /* webpackChunkName: "components/resources-analyticscard" */).then(c => wrapFunctional(c.default || c))
 export const LazyResourcesAnalyticsgraph = import('../..\\components\\resources\\Analyticsgraph.vue' /* webpackChunkName: "components/resources-analyticsgraph" */).then(c => wrapFunctional(c.default || c))
 export const LazyResourcesBulkaction = import('../..\\components\\resources\\Bulkaction.vue' /* webpackChunkName: "components/resources-bulkaction" */).then(c => wrapFunctional(c.default || c))
@@ -91,6 +93,7 @@ export const LazyResourcesCards = import('../..\\components\\resources\\Cards.vu
 export const LazyResourcesDriversanalytic = import('../..\\components\\resources\\Driversanalytic.vue' /* webpackChunkName: "components/resources-driversanalytic" */).then(c => wrapFunctional(c.default || c))
 export const LazyResourcesDriverscard = import('../..\\components\\resources\\Driverscard.vue' /* webpackChunkName: "components/resources-driverscard" */).then(c => wrapFunctional(c.default || c))
 export const LazyResourcesExport = import('../..\\components\\resources\\Export.vue' /* webpackChunkName: "components/resources-export" */).then(c => wrapFunctional(c.default || c))
+export const LazyResourcesPrevNext = import('../..\\components\\resources\\PrevNext.vue' /* webpackChunkName: "components/resources-prev-next" */).then(c => wrapFunctional(c.default || c))
 export const LazyResourcesResolvedbutton = import('../..\\components\\resources\\Resolvedbutton.vue' /* webpackChunkName: "components/resources-resolvedbutton" */).then(c => wrapFunctional(c.default || c))
 export const LazyResourcesSearch = import('../..\\components\\resources\\Search.vue' /* webpackChunkName: "components/resources-search" */).then(c => wrapFunctional(c.default || c))
 export const LazyResourcesSubhead = import('../..\\components\\resources\\Subhead.vue' /* webpackChunkName: "components/resources-subhead" */).then(c => wrapFunctional(c.default || c))
@@ -116,6 +119,7 @@ export const LazyManageDriversDriversAdddriver = import('../..\\components\\mana
 export const LazyManageDrivers = import('../..\\components\\manageDrivers\\drivers\\Drivers.vue' /* webpackChunkName: "components/manage-drivers" */).then(c => wrapFunctional(c.default || c))
 export const LazyManageDriversDriversEdit = import('../..\\components\\manageDrivers\\drivers\\Edit.vue' /* webpackChunkName: "components/manage-drivers-drivers-edit" */).then(c => wrapFunctional(c.default || c))
 export const LazyManageDriversOrdersAllorders = import('../..\\components\\manageDrivers\\orders\\Allorders.vue' /* webpackChunkName: "components/manage-drivers-orders-allorders" */).then(c => wrapFunctional(c.default || c))
+export const LazyManageDriversOrders = import('../..\\components\\manageDrivers\\orders\\orders.vue' /* webpackChunkName: "components/manage-drivers-orders" */).then(c => wrapFunctional(c.default || c))
 export const LazyManageDriversSupportOverview = import('../..\\components\\manageDrivers\\support\\Overview.vue' /* webpackChunkName: "components/manage-drivers-support-overview" */).then(c => wrapFunctional(c.default || c))
 export const LazyManageDriversSupportResolvedticket = import('../..\\components\\manageDrivers\\support\\Resolvedticket.vue' /* webpackChunkName: "components/manage-drivers-support-resolvedticket" */).then(c => wrapFunctional(c.default || c))
 export const LazyManageDriversSupportUnresolveticket = import('../..\\components\\manageDrivers\\support\\Unresolveticket.vue' /* webpackChunkName: "components/manage-drivers-support-unresolveticket" */).then(c => wrapFunctional(c.default || c))

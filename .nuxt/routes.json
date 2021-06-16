@@ -133,6 +133,13 @@
     "_name": "_35be2fd2"
   },
   {
+    "name": "manage-drivers-orders-name-all-id",
+    "path": "/manage-drivers/orders/:name?/all/:id",
+    "component": "C:\\\\Users\\\\Gemdajs-001\\\\Documents\\\\culture-shop\\\\pages\\\\manage-drivers\\\\orders\\\\_name\\\\all\\\\_id.vue",
+    "chunkName": "pages/manage-drivers/orders/_name/all/_id",
+    "_name": "_24e1693e"
+  },
+  {
     "name": "forget-password-name",
     "path": "/forget-password/:name?",
     "component": "C:\\\\Users\\\\Gemdajs-001\\\\Documents\\\\culture-shop\\\\pages\\\\forget-password\\\\_name.vue",
