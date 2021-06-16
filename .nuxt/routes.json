@@ -63,6 +63,13 @@
     "_name": "_632321d6"
   },
   {
+    "name": "manage-drivers-drivers-add-name",
+    "path": "/manage-drivers/drivers/add/:name?",
+    "component": "C:\\\\Users\\\\Gemdajs-001\\\\Documents\\\\culture-shop\\\\pages\\\\manage-drivers\\\\drivers\\\\add\\\\_name.vue",
+    "chunkName": "pages/manage-drivers/drivers/add/_name",
+    "_name": "_fc5bb258"
+  },
+  {
     "name": "manage-drivers-drivers-edit-id",
     "path": "/manage-drivers/drivers/edit/:id?",
     "component": "C:\\\\Users\\\\Gemdajs-001\\\\Documents\\\\culture-shop\\\\pages\\\\manage-drivers\\\\drivers\\\\edit\\\\_id.vue",

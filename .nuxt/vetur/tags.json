@@ -155,6 +155,9 @@
   "ManageCustomersSupportUnresolveticket": {
     "description": "Auto imported from components/manageCustomers/support/Unresolveticket.vue"
   },
+  "ManageDriversDriversAdddriver": {
+    "description": "Auto imported from components/manageDrivers/drivers/Adddriver.vue"
+  },
   "ManageDrivers": {
     "description": "Auto imported from components/manageDrivers/drivers/Drivers.vue"
   },

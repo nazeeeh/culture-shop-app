@@ -54,6 +54,7 @@ const components = {
   ManageCustomersSupportOverview: () => import('../..\\components\\manageCustomers\\support\\Overview.vue' /* webpackChunkName: "components/manage-customers-support-overview" */).then(c => wrapFunctional(c.default || c)),
   ManageCustomersSupportResolvedticket: () => import('../..\\components\\manageCustomers\\support\\Resolvedticket.vue' /* webpackChunkName: "components/manage-customers-support-resolvedticket" */).then(c => wrapFunctional(c.default || c)),
   ManageCustomersSupportUnresolveticket: () => import('../..\\components\\manageCustomers\\support\\Unresolveticket.vue' /* webpackChunkName: "components/manage-customers-support-unresolveticket" */).then(c => wrapFunctional(c.default || c)),
+  ManageDriversDriversAdddriver: () => import('../..\\components\\manageDrivers\\drivers\\Adddriver.vue' /* webpackChunkName: "components/manage-drivers-drivers-adddriver" */).then(c => wrapFunctional(c.default || c)),
   ManageDrivers: () => import('../..\\components\\manageDrivers\\drivers\\Drivers.vue' /* webpackChunkName: "components/manage-drivers" */).then(c => wrapFunctional(c.default || c)),
   ManageDriversDriversEdit: () => import('../..\\components\\manageDrivers\\drivers\\Edit.vue' /* webpackChunkName: "components/manage-drivers-drivers-edit" */).then(c => wrapFunctional(c.default || c)),
   ManageDriversOrdersAllorders: () => import('../..\\components\\manageDrivers\\orders\\Allorders.vue' /* webpackChunkName: "components/manage-drivers-orders-allorders" */).then(c => wrapFunctional(c.default || c)),
