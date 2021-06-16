@@ -92,6 +92,12 @@
   "ResourcesExport": {
     "description": "Auto imported from components/resources/Export.vue"
   },
+  "ResourcesOrderdetails": {
+    "description": "Auto imported from components/resources/Orderdetails.vue"
+  },
+  "ResourcesOrdersubhead": {
+    "description": "Auto imported from components/resources/Ordersubhead.vue"
+  },
   "ResourcesPrevNext": {
     "description": "Auto imported from components/resources/PrevNext.vue"
   },

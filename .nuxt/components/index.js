@@ -31,6 +31,8 @@ export { default as ResourcesCards } from '../..\\components\\resources\\Cards.v
 export { default as ResourcesDriversanalytic } from '../..\\components\\resources\\Driversanalytic.vue'
 export { default as ResourcesDriverscard } from '../..\\components\\resources\\Driverscard.vue'
 export { default as ResourcesExport } from '../..\\components\\resources\\Export.vue'
+export { default as ResourcesOrderdetails } from '../..\\components\\resources\\Orderdetails.vue'
+export { default as ResourcesOrdersubhead } from '../..\\components\\resources\\Ordersubhead.vue'
 export { default as ResourcesPrevNext } from '../..\\components\\resources\\PrevNext.vue'
 export { default as ResourcesResolvedbutton } from '../..\\components\\resources\\Resolvedbutton.vue'
 export { default as ResourcesSearch } from '../..\\components\\resources\\Search.vue'
@@ -93,6 +95,8 @@ export const LazyResourcesCards = import('../..\\components\\resources\\Cards.vu
 export const LazyResourcesDriversanalytic = import('../..\\components\\resources\\Driversanalytic.vue' /* webpackChunkName: "components/resources-driversanalytic" */).then(c => wrapFunctional(c.default || c))
 export const LazyResourcesDriverscard = import('../..\\components\\resources\\Driverscard.vue' /* webpackChunkName: "components/resources-driverscard" */).then(c => wrapFunctional(c.default || c))
 export const LazyResourcesExport = import('../..\\components\\resources\\Export.vue' /* webpackChunkName: "components/resources-export" */).then(c => wrapFunctional(c.default || c))
+export const LazyResourcesOrderdetails = import('../..\\components\\resources\\Orderdetails.vue' /* webpackChunkName: "components/resources-orderdetails" */).then(c => wrapFunctional(c.default || c))
+export const LazyResourcesOrdersubhead = import('../..\\components\\resources\\Ordersubhead.vue' /* webpackChunkName: "components/resources-ordersubhead" */).then(c => wrapFunctional(c.default || c))
 export const LazyResourcesPrevNext = import('../..\\components\\resources\\PrevNext.vue' /* webpackChunkName: "components/resources-prev-next" */).then(c => wrapFunctional(c.default || c))
 export const LazyResourcesResolvedbutton = import('../..\\components\\resources\\Resolvedbutton.vue' /* webpackChunkName: "components/resources-resolvedbutton" */).then(c => wrapFunctional(c.default || c))
 export const LazyResourcesSearch = import('../..\\components\\resources\\Search.vue' /* webpackChunkName: "components/resources-search" */).then(c => wrapFunctional(c.default || c))

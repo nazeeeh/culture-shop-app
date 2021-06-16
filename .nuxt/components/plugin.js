@@ -33,6 +33,8 @@ const components = {
   ResourcesDriversanalytic: () => import('../..\\components\\resources\\Driversanalytic.vue' /* webpackChunkName: "components/resources-driversanalytic" */).then(c => wrapFunctional(c.default || c)),
   ResourcesDriverscard: () => import('../..\\components\\resources\\Driverscard.vue' /* webpackChunkName: "components/resources-driverscard" */).then(c => wrapFunctional(c.default || c)),
   ResourcesExport: () => import('../..\\components\\resources\\Export.vue' /* webpackChunkName: "components/resources-export" */).then(c => wrapFunctional(c.default || c)),
+  ResourcesOrderdetails: () => import('../..\\components\\resources\\Orderdetails.vue' /* webpackChunkName: "components/resources-orderdetails" */).then(c => wrapFunctional(c.default || c)),
+  ResourcesOrdersubhead: () => import('../..\\components\\resources\\Ordersubhead.vue' /* webpackChunkName: "components/resources-ordersubhead" */).then(c => wrapFunctional(c.default || c)),
   ResourcesPrevNext: () => import('../..\\components\\resources\\PrevNext.vue' /* webpackChunkName: "components/resources-prev-next" */).then(c => wrapFunctional(c.default || c)),
   ResourcesResolvedbutton: () => import('../..\\components\\resources\\Resolvedbutton.vue' /* webpackChunkName: "components/resources-resolvedbutton" */).then(c => wrapFunctional(c.default || c)),
   ResourcesSearch: () => import('../..\\components\\resources\\Search.vue' /* webpackChunkName: "components/resources-search" */).then(c => wrapFunctional(c.default || c)),

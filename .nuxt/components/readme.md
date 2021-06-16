@@ -37,6 +37,8 @@ You can directly use them in pages and other components without the need to impo
 - `<ResourcesDriversanalytic>` | `<resources-driversanalytic>` (components/resources/Driversanalytic.vue)
 - `<ResourcesDriverscard>` | `<resources-driverscard>` (components/resources/Driverscard.vue)
 - `<ResourcesExport>` | `<resources-export>` (components/resources/Export.vue)
+- `<ResourcesOrderdetails>` | `<resources-orderdetails>` (components/resources/Orderdetails.vue)
+- `<ResourcesOrdersubhead>` | `<resources-ordersubhead>` (components/resources/Ordersubhead.vue)
 - `<ResourcesPrevNext>` | `<resources-prev-next>` (components/resources/PrevNext.vue)
 - `<ResourcesResolvedbutton>` | `<resources-resolvedbutton>` (components/resources/Resolvedbutton.vue)
 - `<ResourcesSearch>` | `<resources-search>` (components/resources/Search.vue)
