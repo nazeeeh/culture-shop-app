@@ -62,11 +62,14 @@
   "ManageCustomersAnalytics": {
     "description": "Auto imported from components/manageCustomers/Analytics.vue"
   },
+  "ManageDriversAnalytics": {
+    "description": "Auto imported from components/manageDrivers/Analytics.vue"
+  },
   "ManageVendorsAnalytics": {
     "description": "Auto imported from components/manageVendors/Analytics.vue"
   },
-  "ManageDriversAnalytics": {
-    "description": "Auto imported from components/manageDrivers/Analytics.vue"
+  "ResourcesAddbutton": {
+    "description": "Auto imported from components/resources/Addbutton.vue"
   },
   "ResourcesAnalyticscard": {
     "description": "Auto imported from components/resources/Analyticscard.vue"
@@ -100,6 +103,9 @@
   },
   "ResourcesPrevNext": {
     "description": "Auto imported from components/resources/PrevNext.vue"
+  },
+  "ResourcesProductExportCat": {
+    "description": "Auto imported from components/resources/ProductExportCat.vue"
   },
   "ResourcesResolvedbutton": {
     "description": "Auto imported from components/resources/Resolvedbutton.vue"
@@ -187,5 +193,8 @@
   },
   "ManageDriversSupportUnresolveticket": {
     "description": "Auto imported from components/manageDrivers/support/Unresolveticket.vue"
+  },
+  "ManageVendorsProductsAllproducts": {
+    "description": "Auto imported from components/manageVendors/Products/Allproducts.vue"
   }
 }

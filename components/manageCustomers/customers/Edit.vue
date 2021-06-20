@@ -81,7 +81,7 @@
              <span class="t-small mt-1 text-capitalize">Life spending</span>
              <icon name="dropdown"></icon>
             </div>
-                <v-divider></v-divider>
+              <v-divider></v-divider>
             <div class="outer-layer">
              <div class="box-display">
               <div>

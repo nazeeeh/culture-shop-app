@@ -14,6 +14,13 @@
     "_name": "_8e4aa19c"
   },
   {
+    "name": "manage-vendors-products-all",
+    "path": "/manage-vendors/products/all",
+    "component": "C:\\\\Users\\\\Gemdajs-001\\\\Documents\\\\culture-shop\\\\pages\\\\manage-vendors\\\\products\\\\all\\\\index.vue",
+    "chunkName": "pages/manage-vendors/products/all/index",
+    "_name": "_5a82a5a5"
+  },
+  {
     "name": "manage-customers-support-tickets-resolved-name",
     "path": "/manage-customers/support/tickets/resolved/:name?",
     "component": "C:\\\\Users\\\\Gemdajs-001\\\\Documents\\\\culture-shop\\\\pages\\\\manage-customers\\\\support\\\\tickets\\\\resolved\\\\_name.vue",

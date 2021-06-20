@@ -23,8 +23,9 @@ const components = {
   GeneralUserpermission: () => import('../..\\components\\General\\Userpermission.vue' /* webpackChunkName: "components/general-userpermission" */).then(c => wrapFunctional(c.default || c)),
   GeneralVendoragreement: () => import('../..\\components\\General\\Vendoragreement.vue' /* webpackChunkName: "components/general-vendoragreement" */).then(c => wrapFunctional(c.default || c)),
   ManageCustomersAnalytics: () => import('../..\\components\\manageCustomers\\Analytics.vue' /* webpackChunkName: "components/manage-customers-analytics" */).then(c => wrapFunctional(c.default || c)),
-  ManageVendorsAnalytics: () => import('../..\\components\\manageVendors\\Analytics.vue' /* webpackChunkName: "components/manage-vendors-analytics" */).then(c => wrapFunctional(c.default || c)),
   ManageDriversAnalytics: () => import('../..\\components\\manageDrivers\\Analytics.vue' /* webpackChunkName: "components/manage-drivers-analytics" */).then(c => wrapFunctional(c.default || c)),
+  ManageVendorsAnalytics: () => import('../..\\components\\manageVendors\\Analytics.vue' /* webpackChunkName: "components/manage-vendors-analytics" */).then(c => wrapFunctional(c.default || c)),
+  ResourcesAddbutton: () => import('../..\\components\\resources\\Addbutton.vue' /* webpackChunkName: "components/resources-addbutton" */).then(c => wrapFunctional(c.default || c)),
   ResourcesAnalyticscard: () => import('../..\\components\\resources\\Analyticscard.vue' /* webpackChunkName: "components/resources-analyticscard" */).then(c => wrapFunctional(c.default || c)),
   ResourcesAnalyticsgraph: () => import('../..\\components\\resources\\Analyticsgraph.vue' /* webpackChunkName: "components/resources-analyticsgraph" */).then(c => wrapFunctional(c.default || c)),
   ResourcesBulkaction: () => import('../..\\components\\resources\\Bulkaction.vue' /* webpackChunkName: "components/resources-bulkaction" */).then(c => wrapFunctional(c.default || c)),
@@ -36,6 +37,7 @@ const components = {
   ResourcesOrderdetails: () => import('../..\\components\\resources\\Orderdetails.vue' /* webpackChunkName: "components/resources-orderdetails" */).then(c => wrapFunctional(c.default || c)),
   ResourcesOrdersubhead: () => import('../..\\components\\resources\\Ordersubhead.vue' /* webpackChunkName: "components/resources-ordersubhead" */).then(c => wrapFunctional(c.default || c)),
   ResourcesPrevNext: () => import('../..\\components\\resources\\PrevNext.vue' /* webpackChunkName: "components/resources-prev-next" */).then(c => wrapFunctional(c.default || c)),
+  ResourcesProductExportCat: () => import('../..\\components\\resources\\ProductExportCat.vue' /* webpackChunkName: "components/resources-product-export-cat" */).then(c => wrapFunctional(c.default || c)),
   ResourcesResolvedbutton: () => import('../..\\components\\resources\\Resolvedbutton.vue' /* webpackChunkName: "components/resources-resolvedbutton" */).then(c => wrapFunctional(c.default || c)),
   ResourcesSearch: () => import('../..\\components\\resources\\Search.vue' /* webpackChunkName: "components/resources-search" */).then(c => wrapFunctional(c.default || c)),
   ResourcesSubhead: () => import('../..\\components\\resources\\Subhead.vue' /* webpackChunkName: "components/resources-subhead" */).then(c => wrapFunctional(c.default || c)),
@@ -64,7 +66,8 @@ const components = {
   ManageDriversOrders: () => import('../..\\components\\manageDrivers\\orders\\orders.vue' /* webpackChunkName: "components/manage-drivers-orders" */).then(c => wrapFunctional(c.default || c)),
   ManageDriversSupportOverview: () => import('../..\\components\\manageDrivers\\support\\Overview.vue' /* webpackChunkName: "components/manage-drivers-support-overview" */).then(c => wrapFunctional(c.default || c)),
   ManageDriversSupportResolvedticket: () => import('../..\\components\\manageDrivers\\support\\Resolvedticket.vue' /* webpackChunkName: "components/manage-drivers-support-resolvedticket" */).then(c => wrapFunctional(c.default || c)),
-  ManageDriversSupportUnresolveticket: () => import('../..\\components\\manageDrivers\\support\\Unresolveticket.vue' /* webpackChunkName: "components/manage-drivers-support-unresolveticket" */).then(c => wrapFunctional(c.default || c))
+  ManageDriversSupportUnresolveticket: () => import('../..\\components\\manageDrivers\\support\\Unresolveticket.vue' /* webpackChunkName: "components/manage-drivers-support-unresolveticket" */).then(c => wrapFunctional(c.default || c)),
+  ManageVendorsProductsAllproducts: () => import('../..\\components\\manageVendors\\Products\\Allproducts.vue' /* webpackChunkName: "components/manage-vendors-products-allproducts" */).then(c => wrapFunctional(c.default || c))
 }
 
 for (const name in components) {
