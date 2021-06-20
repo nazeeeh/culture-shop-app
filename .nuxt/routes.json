@@ -14,11 +14,25 @@
     "_name": "_8e4aa19c"
   },
   {
+    "name": "manage-vendors-orders-all",
+    "path": "/manage-vendors/orders/all",
+    "component": "C:\\\\Users\\\\Gemdajs-001\\\\Documents\\\\culture-shop\\\\pages\\\\manage-vendors\\\\orders\\\\all\\\\index.vue",
+    "chunkName": "pages/manage-vendors/orders/all/index",
+    "_name": "_373289b4"
+  },
+  {
     "name": "manage-vendors-products-all",
     "path": "/manage-vendors/products/all",
     "component": "C:\\\\Users\\\\Gemdajs-001\\\\Documents\\\\culture-shop\\\\pages\\\\manage-vendors\\\\products\\\\all\\\\index.vue",
     "chunkName": "pages/manage-vendors/products/all/index",
     "_name": "_5a82a5a5"
+  },
+  {
+    "name": "manage-vendors-vendors-all",
+    "path": "/manage-vendors/vendors/all",
+    "component": "C:\\\\Users\\\\Gemdajs-001\\\\Documents\\\\culture-shop\\\\pages\\\\manage-vendors\\\\vendors\\\\all\\\\index.vue",
+    "chunkName": "pages/manage-vendors/vendors/all/index",
+    "_name": "_0ea17988"
   },
   {
     "name": "manage-customers-support-tickets-resolved-name",

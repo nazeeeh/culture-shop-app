@@ -67,7 +67,9 @@ const components = {
   ManageDriversSupportOverview: () => import('../..\\components\\manageDrivers\\support\\Overview.vue' /* webpackChunkName: "components/manage-drivers-support-overview" */).then(c => wrapFunctional(c.default || c)),
   ManageDriversSupportResolvedticket: () => import('../..\\components\\manageDrivers\\support\\Resolvedticket.vue' /* webpackChunkName: "components/manage-drivers-support-resolvedticket" */).then(c => wrapFunctional(c.default || c)),
   ManageDriversSupportUnresolveticket: () => import('../..\\components\\manageDrivers\\support\\Unresolveticket.vue' /* webpackChunkName: "components/manage-drivers-support-unresolveticket" */).then(c => wrapFunctional(c.default || c)),
-  ManageVendorsProductsAllproducts: () => import('../..\\components\\manageVendors\\Products\\Allproducts.vue' /* webpackChunkName: "components/manage-vendors-products-allproducts" */).then(c => wrapFunctional(c.default || c))
+  ManageVendorsOrdersAllorders: () => import('../..\\components\\manageVendors\\Orders\\Allorders.vue' /* webpackChunkName: "components/manage-vendors-orders-allorders" */).then(c => wrapFunctional(c.default || c)),
+  ManageVendorsProductsAllproducts: () => import('../..\\components\\manageVendors\\Products\\Allproducts.vue' /* webpackChunkName: "components/manage-vendors-products-allproducts" */).then(c => wrapFunctional(c.default || c)),
+  ManageVendorsVendorsAllvendors: () => import('../..\\components\\manageVendors\\Vendors\\Allvendors.vue' /* webpackChunkName: "components/manage-vendors-vendors-allvendors" */).then(c => wrapFunctional(c.default || c))
 }
 
 for (const name in components) {

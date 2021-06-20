@@ -194,7 +194,13 @@
   "ManageDriversSupportUnresolveticket": {
     "description": "Auto imported from components/manageDrivers/support/Unresolveticket.vue"
   },
+  "ManageVendorsOrdersAllorders": {
+    "description": "Auto imported from components/manageVendors/Orders/Allorders.vue"
+  },
   "ManageVendorsProductsAllproducts": {
     "description": "Auto imported from components/manageVendors/Products/Allproducts.vue"
+  },
+  "ManageVendorsVendorsAllvendors": {
+    "description": "Auto imported from components/manageVendors/Vendors/Allvendors.vue"
   }
 }
