@@ -42,7 +42,6 @@
     </sorted-table>
     </div>
     <BulkAction />
-
  </div>
 </template>
 
