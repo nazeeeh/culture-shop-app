@@ -28,6 +28,13 @@
     "_name": "_5a82a5a5"
   },
   {
+    "name": "manage-vendors-support-overview",
+    "path": "/manage-vendors/support/overview",
+    "component": "C:\\\\Users\\\\Gemdajs-001\\\\Documents\\\\culture-shop\\\\pages\\\\manage-vendors\\\\support\\\\overview\\\\index.vue",
+    "chunkName": "pages/manage-vendors/support/overview/index",
+    "_name": "_3db5a5fa"
+  },
+  {
     "name": "manage-vendors-vendors-all",
     "path": "/manage-vendors/vendors/all",
     "component": "C:\\\\Users\\\\Gemdajs-001\\\\Documents\\\\culture-shop\\\\pages\\\\manage-vendors\\\\vendors\\\\all\\\\index.vue",
