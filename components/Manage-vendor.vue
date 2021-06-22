@@ -30,6 +30,7 @@
         <v-list-item
           v-for="child in item.items"
           :key="child.title"
+          :to="child.to"
         ><div class="round" :style="{backgroundColor: child.backgroundColor}"><span class="ml-3 mt-2" :style="{color: child.color}">{{child.tag}}</span></div>
           <v-list-item-content>
             <v-list-item-title v-text="child.title" class="text-uppercase text-settings"></v-list-item-title>
@@ -55,6 +56,7 @@
         <v-list-item
           v-for="child in list.lists"
           :key="child.sub"
+          :to="child.to"
         >
           <v-list-item-content>
             <v-list-item-title v-text="child.sub" class="text-uppercase text-settings"></v-list-item-title>
@@ -62,7 +64,7 @@
         </v-list-item>
       </v-list-group>
 
-      <v-list-item to="/">
+      <v-list-item to="/manage-vendors/support/overview">
         <v-list-item-icon>
           <icon name="new"></icon>
         </v-list-item-icon>
@@ -81,7 +83,7 @@ export default {
           action: 'orders',
           active: true,
           items: [
-            { title: 'All', tag: 0, backgroundColor: "rgba(12, 173, 115, 0.1)", color: "#0CAD73", to:'/manage-customers/orders/all'},
+            { title: 'All', tag: 0, backgroundColor: "rgba(12, 173, 115, 0.1)", color: "#0CAD73", to:'/manage-vendors/orders/all'},
             { title: 'Completed', tag: 0, backgroundColor: "rgba(12, 173, 115, 0.1)", color: "#0CAD73"},
             { title: 'Out for delivery', tag: 0, backgroundColor: "rgba(12, 173, 115, 0.1)", color: "#0CAD73"},
             { title: 'delivered', tag: 0, backgroundColor: "rgba(12, 173, 115, 0.1)", color: "#0CAD73" },
@@ -99,8 +101,8 @@ export default {
         {
           icon: 'vendor',
           lists: [
-            { sub: 'All' },
-            { sub: 'Add New' },
+            { sub: 'All', to:'/manage-vendors/vendors/all' },
+            { sub: 'Add New', to:'' },
           
           ],
 
@@ -110,7 +112,7 @@ export default {
         {
           icon: 'product',
           lists: [
-            { sub: 'All' },
+            { sub: 'All', to:'/manage-vendors/products/all' },
             { sub: 'Add New' },
             ],
           sub: 'Products',

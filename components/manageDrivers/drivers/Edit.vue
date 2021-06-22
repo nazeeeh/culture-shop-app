@@ -222,6 +222,9 @@
   border-radius: 16px;
   height: 4vh;
 }
+form{
+  font-family: 'Space Grotesk';
+}
 .permission {
   border: 2px solid #ECECEC;
   border-radius: 16px;
