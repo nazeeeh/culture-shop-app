@@ -102,7 +102,7 @@ export default {
           icon: 'vendor',
           lists: [
             { sub: 'All', to:'/manage-vendors/vendors/all' },
-            { sub: 'Add New', to:'' },
+            { sub: 'Add New' },
           
           ],
 
@@ -113,7 +113,7 @@ export default {
           icon: 'product',
           lists: [
             { sub: 'All', to:'/manage-vendors/products/all' },
-            { sub: 'Add New' },
+            { sub: 'Add New', to:'/manage-vendors/products/add' },
             ],
           sub: 'Products',
         }, 

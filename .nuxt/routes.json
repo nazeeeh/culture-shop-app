@@ -84,6 +84,20 @@
     "_name": "_3d7d43be"
   },
   {
+    "name": "manage-vendors-support-tickets-resolved-name",
+    "path": "/manage-vendors/support/tickets/resolved/:name?",
+    "component": "C:\\\\Users\\\\Gemdajs-001\\\\Documents\\\\culture-shop\\\\pages\\\\manage-vendors\\\\support\\\\tickets\\\\resolved\\\\_name.vue",
+    "chunkName": "pages/manage-vendors/support/tickets/resolved/_name",
+    "_name": "_7eb2ee7a"
+  },
+  {
+    "name": "manage-vendors-support-tickets-unresolved-name",
+    "path": "/manage-vendors/support/tickets/unresolved/:name?",
+    "component": "C:\\\\Users\\\\Gemdajs-001\\\\Documents\\\\culture-shop\\\\pages\\\\manage-vendors\\\\support\\\\tickets\\\\unresolved\\\\_name.vue",
+    "chunkName": "pages/manage-vendors/support/tickets/unresolved/_name",
+    "_name": "_57910341"
+  },
+  {
     "name": "manage-customers-category-add-name",
     "path": "/manage-customers/category/add/:name?",
     "component": "C:\\\\Users\\\\Gemdajs-001\\\\Documents\\\\culture-shop\\\\pages\\\\manage-customers\\\\category\\\\add\\\\_name.vue",

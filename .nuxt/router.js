@@ -16,6 +16,8 @@ const _3e750a50 = () => interopDefault(import('..\\pages\\manage-customers\\supp
 const _2f3b8197 = () => interopDefault(import('..\\pages\\manage-customers\\support\\tickets\\unresolved\\_name.vue' /* webpackChunkName: "pages/manage-customers/support/tickets/unresolved/_name" */))
 const _547c815a = () => interopDefault(import('..\\pages\\manage-drivers\\support\\tickets\\resolved\\_name.vue' /* webpackChunkName: "pages/manage-drivers/support/tickets/resolved/_name" */))
 const _3d7d43be = () => interopDefault(import('..\\pages\\manage-drivers\\support\\tickets\\unresolved\\_name.vue' /* webpackChunkName: "pages/manage-drivers/support/tickets/unresolved/_name" */))
+const _7eb2ee7a = () => interopDefault(import('..\\pages\\manage-vendors\\support\\tickets\\resolved\\_name.vue' /* webpackChunkName: "pages/manage-vendors/support/tickets/resolved/_name" */))
+const _57910341 = () => interopDefault(import('..\\pages\\manage-vendors\\support\\tickets\\unresolved\\_name.vue' /* webpackChunkName: "pages/manage-vendors/support/tickets/unresolved/_name" */))
 const _d40dc57e = () => interopDefault(import('..\\pages\\manage-customers\\category\\add\\_name.vue' /* webpackChunkName: "pages/manage-customers/category/add/_name" */))
 const _cbe34c58 = () => interopDefault(import('..\\pages\\manage-customers\\customers\\add\\_name.vue' /* webpackChunkName: "pages/manage-customers/customers/add/_name" */))
 const _632321d6 = () => interopDefault(import('..\\pages\\manage-customers\\customers\\edit\\_id.vue' /* webpackChunkName: "pages/manage-customers/customers/edit/_id" */))
@@ -95,6 +97,14 @@ export const routerOptions = {
     path: "/manage-drivers/support/tickets/unresolved/:name?",
     component: _3d7d43be,
     name: "manage-drivers-support-tickets-unresolved-name"
+  }, {
+    path: "/manage-vendors/support/tickets/resolved/:name?",
+    component: _7eb2ee7a,
+    name: "manage-vendors-support-tickets-resolved-name"
+  }, {
+    path: "/manage-vendors/support/tickets/unresolved/:name?",
+    component: _57910341,
+    name: "manage-vendors-support-tickets-unresolved-name"
   }, {
     path: "/manage-customers/category/add/:name?",
     component: _d40dc57e,
