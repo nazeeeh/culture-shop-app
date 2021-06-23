@@ -26,6 +26,7 @@ const components = {
   ManageDriversAnalytics: () => import('../..\\components\\manageDrivers\\Analytics.vue' /* webpackChunkName: "components/manage-drivers-analytics" */).then(c => wrapFunctional(c.default || c)),
   ManageVendorsAnalytics: () => import('../..\\components\\manageVendors\\Analytics.vue' /* webpackChunkName: "components/manage-vendors-analytics" */).then(c => wrapFunctional(c.default || c)),
   ResourcesAddbutton: () => import('../..\\components\\resources\\Addbutton.vue' /* webpackChunkName: "components/resources-addbutton" */).then(c => wrapFunctional(c.default || c)),
+  ResourcesAddproductbtn: () => import('../..\\components\\resources\\Addproductbtn.vue' /* webpackChunkName: "components/resources-addproductbtn" */).then(c => wrapFunctional(c.default || c)),
   ResourcesAnalyticscard: () => import('../..\\components\\resources\\Analyticscard.vue' /* webpackChunkName: "components/resources-analyticscard" */).then(c => wrapFunctional(c.default || c)),
   ResourcesAnalyticsgraph: () => import('../..\\components\\resources\\Analyticsgraph.vue' /* webpackChunkName: "components/resources-analyticsgraph" */).then(c => wrapFunctional(c.default || c)),
   ResourcesBulkaction: () => import('../..\\components\\resources\\Bulkaction.vue' /* webpackChunkName: "components/resources-bulkaction" */).then(c => wrapFunctional(c.default || c)),
@@ -37,6 +38,7 @@ const components = {
   ResourcesOrderdetails: () => import('../..\\components\\resources\\Orderdetails.vue' /* webpackChunkName: "components/resources-orderdetails" */).then(c => wrapFunctional(c.default || c)),
   ResourcesOrdersubhead: () => import('../..\\components\\resources\\Ordersubhead.vue' /* webpackChunkName: "components/resources-ordersubhead" */).then(c => wrapFunctional(c.default || c)),
   ResourcesPrevNext: () => import('../..\\components\\resources\\PrevNext.vue' /* webpackChunkName: "components/resources-prev-next" */).then(c => wrapFunctional(c.default || c)),
+  ResourcesProductdelete: () => import('../..\\components\\resources\\Productdelete.vue' /* webpackChunkName: "components/resources-productdelete" */).then(c => wrapFunctional(c.default || c)),
   ResourcesProductExportCat: () => import('../..\\components\\resources\\ProductExportCat.vue' /* webpackChunkName: "components/resources-product-export-cat" */).then(c => wrapFunctional(c.default || c)),
   ResourcesResolvedbutton: () => import('../..\\components\\resources\\Resolvedbutton.vue' /* webpackChunkName: "components/resources-resolvedbutton" */).then(c => wrapFunctional(c.default || c)),
   ResourcesSearch: () => import('../..\\components\\resources\\Search.vue' /* webpackChunkName: "components/resources-search" */).then(c => wrapFunctional(c.default || c)),
@@ -68,6 +70,7 @@ const components = {
   ManageDriversSupportResolvedticket: () => import('../..\\components\\manageDrivers\\support\\Resolvedticket.vue' /* webpackChunkName: "components/manage-drivers-support-resolvedticket" */).then(c => wrapFunctional(c.default || c)),
   ManageDriversSupportUnresolveticket: () => import('../..\\components\\manageDrivers\\support\\Unresolveticket.vue' /* webpackChunkName: "components/manage-drivers-support-unresolveticket" */).then(c => wrapFunctional(c.default || c)),
   ManageVendorsOrdersAllorders: () => import('../..\\components\\manageVendors\\Orders\\Allorders.vue' /* webpackChunkName: "components/manage-vendors-orders-allorders" */).then(c => wrapFunctional(c.default || c)),
+  ManageVendorsProductsAddproduct: () => import('../..\\components\\manageVendors\\Products\\Addproduct.vue' /* webpackChunkName: "components/manage-vendors-products-addproduct" */).then(c => wrapFunctional(c.default || c)),
   ManageVendorsProductsAllproducts: () => import('../..\\components\\manageVendors\\Products\\Allproducts.vue' /* webpackChunkName: "components/manage-vendors-products-allproducts" */).then(c => wrapFunctional(c.default || c)),
   ManageVendorsSupportOverview: () => import('../..\\components\\manageVendors\\Support\\Overview.vue' /* webpackChunkName: "components/manage-vendors-support-overview" */).then(c => wrapFunctional(c.default || c)),
   ManageVendorsVendorsAllvendors: () => import('../..\\components\\manageVendors\\Vendors\\Allvendors.vue' /* webpackChunkName: "components/manage-vendors-vendors-allvendors" */).then(c => wrapFunctional(c.default || c))

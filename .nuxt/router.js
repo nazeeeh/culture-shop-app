@@ -7,6 +7,7 @@ import scrollBehavior from './router.scrollBehavior.js'
 const _ba0e40e8 = () => interopDefault(import('..\\pages\\login.vue' /* webpackChunkName: "pages/login" */))
 const _8e4aa19c = () => interopDefault(import('..\\pages\\settings\\index.vue' /* webpackChunkName: "pages/settings/index" */))
 const _373289b4 = () => interopDefault(import('..\\pages\\manage-vendors\\orders\\all\\index.vue' /* webpackChunkName: "pages/manage-vendors/orders/all/index" */))
+const _ae4572b6 = () => interopDefault(import('..\\pages\\manage-vendors\\products\\add\\index.vue' /* webpackChunkName: "pages/manage-vendors/products/add/index" */))
 const _5a82a5a5 = () => interopDefault(import('..\\pages\\manage-vendors\\products\\all\\index.vue' /* webpackChunkName: "pages/manage-vendors/products/all/index" */))
 const _3db5a5fa = () => interopDefault(import('..\\pages\\manage-vendors\\support\\overview\\index.vue' /* webpackChunkName: "pages/manage-vendors/support/overview/index" */))
 const _0ea17988 = () => interopDefault(import('..\\pages\\manage-vendors\\vendors\\all\\index.vue' /* webpackChunkName: "pages/manage-vendors/vendors/all/index" */))
@@ -57,6 +58,10 @@ export const routerOptions = {
     path: "/manage-vendors/orders/all",
     component: _373289b4,
     name: "manage-vendors-orders-all"
+  }, {
+    path: "/manage-vendors/products/add",
+    component: _ae4572b6,
+    name: "manage-vendors-products-add"
   }, {
     path: "/manage-vendors/products/all",
     component: _5a82a5a5,

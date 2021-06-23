@@ -71,6 +71,9 @@
   "ResourcesAddbutton": {
     "description": "Auto imported from components/resources/Addbutton.vue"
   },
+  "ResourcesAddproductbtn": {
+    "description": "Auto imported from components/resources/Addproductbtn.vue"
+  },
   "ResourcesAnalyticscard": {
     "description": "Auto imported from components/resources/Analyticscard.vue"
   },
@@ -103,6 +106,9 @@
   },
   "ResourcesPrevNext": {
     "description": "Auto imported from components/resources/PrevNext.vue"
+  },
+  "ResourcesProductdelete": {
+    "description": "Auto imported from components/resources/Productdelete.vue"
   },
   "ResourcesProductExportCat": {
     "description": "Auto imported from components/resources/ProductExportCat.vue"
@@ -196,6 +202,9 @@
   },
   "ManageVendorsOrdersAllorders": {
     "description": "Auto imported from components/manageVendors/Orders/Allorders.vue"
+  },
+  "ManageVendorsProductsAddproduct": {
+    "description": "Auto imported from components/manageVendors/Products/Addproduct.vue"
   },
   "ManageVendorsProductsAllproducts": {
     "description": "Auto imported from components/manageVendors/Products/Allproducts.vue"

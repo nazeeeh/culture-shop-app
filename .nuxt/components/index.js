@@ -24,6 +24,7 @@ export { default as ManageCustomersAnalytics } from '../..\\components\\manageCu
 export { default as ManageDriversAnalytics } from '../..\\components\\manageDrivers\\Analytics.vue'
 export { default as ManageVendorsAnalytics } from '../..\\components\\manageVendors\\Analytics.vue'
 export { default as ResourcesAddbutton } from '../..\\components\\resources\\Addbutton.vue'
+export { default as ResourcesAddproductbtn } from '../..\\components\\resources\\Addproductbtn.vue'
 export { default as ResourcesAnalyticscard } from '../..\\components\\resources\\Analyticscard.vue'
 export { default as ResourcesAnalyticsgraph } from '../..\\components\\resources\\Analyticsgraph.vue'
 export { default as ResourcesBulkaction } from '../..\\components\\resources\\Bulkaction.vue'
@@ -35,6 +36,7 @@ export { default as ResourcesExport } from '../..\\components\\resources\\Export
 export { default as ResourcesOrderdetails } from '../..\\components\\resources\\Orderdetails.vue'
 export { default as ResourcesOrdersubhead } from '../..\\components\\resources\\Ordersubhead.vue'
 export { default as ResourcesPrevNext } from '../..\\components\\resources\\PrevNext.vue'
+export { default as ResourcesProductdelete } from '../..\\components\\resources\\Productdelete.vue'
 export { default as ResourcesProductExportCat } from '../..\\components\\resources\\ProductExportCat.vue'
 export { default as ResourcesResolvedbutton } from '../..\\components\\resources\\Resolvedbutton.vue'
 export { default as ResourcesSearch } from '../..\\components\\resources\\Search.vue'
@@ -66,6 +68,7 @@ export { default as ManageDriversSupportOverview } from '../..\\components\\mana
 export { default as ManageDriversSupportResolvedticket } from '../..\\components\\manageDrivers\\support\\Resolvedticket.vue'
 export { default as ManageDriversSupportUnresolveticket } from '../..\\components\\manageDrivers\\support\\Unresolveticket.vue'
 export { default as ManageVendorsOrdersAllorders } from '../..\\components\\manageVendors\\Orders\\Allorders.vue'
+export { default as ManageVendorsProductsAddproduct } from '../..\\components\\manageVendors\\Products\\Addproduct.vue'
 export { default as ManageVendorsProductsAllproducts } from '../..\\components\\manageVendors\\Products\\Allproducts.vue'
 export { default as ManageVendorsSupportOverview } from '../..\\components\\manageVendors\\Support\\Overview.vue'
 export { default as ManageVendorsVendorsAllvendors } from '../..\\components\\manageVendors\\Vendors\\Allvendors.vue'
@@ -94,6 +97,7 @@ export const LazyManageCustomersAnalytics = import('../..\\components\\manageCus
 export const LazyManageDriversAnalytics = import('../..\\components\\manageDrivers\\Analytics.vue' /* webpackChunkName: "components/manage-drivers-analytics" */).then(c => wrapFunctional(c.default || c))
 export const LazyManageVendorsAnalytics = import('../..\\components\\manageVendors\\Analytics.vue' /* webpackChunkName: "components/manage-vendors-analytics" */).then(c => wrapFunctional(c.default || c))
 export const LazyResourcesAddbutton = import('../..\\components\\resources\\Addbutton.vue' /* webpackChunkName: "components/resources-addbutton" */).then(c => wrapFunctional(c.default || c))
+export const LazyResourcesAddproductbtn = import('../..\\components\\resources\\Addproductbtn.vue' /* webpackChunkName: "components/resources-addproductbtn" */).then(c => wrapFunctional(c.default || c))
 export const LazyResourcesAnalyticscard = import('../..\\components\\resources\\Analyticscard.vue' /* webpackChunkName: "components/resources-analyticscard" */).then(c => wrapFunctional(c.default || c))
 export const LazyResourcesAnalyticsgraph = import('../..\\components\\resources\\Analyticsgraph.vue' /* webpackChunkName: "components/resources-analyticsgraph" */).then(c => wrapFunctional(c.default || c))
 export const LazyResourcesBulkaction = import('../..\\components\\resources\\Bulkaction.vue' /* webpackChunkName: "components/resources-bulkaction" */).then(c => wrapFunctional(c.default || c))
@@ -105,6 +109,7 @@ export const LazyResourcesExport = import('../..\\components\\resources\\Export.
 export const LazyResourcesOrderdetails = import('../..\\components\\resources\\Orderdetails.vue' /* webpackChunkName: "components/resources-orderdetails" */).then(c => wrapFunctional(c.default || c))
 export const LazyResourcesOrdersubhead = import('../..\\components\\resources\\Ordersubhead.vue' /* webpackChunkName: "components/resources-ordersubhead" */).then(c => wrapFunctional(c.default || c))
 export const LazyResourcesPrevNext = import('../..\\components\\resources\\PrevNext.vue' /* webpackChunkName: "components/resources-prev-next" */).then(c => wrapFunctional(c.default || c))
+export const LazyResourcesProductdelete = import('../..\\components\\resources\\Productdelete.vue' /* webpackChunkName: "components/resources-productdelete" */).then(c => wrapFunctional(c.default || c))
 export const LazyResourcesProductExportCat = import('../..\\components\\resources\\ProductExportCat.vue' /* webpackChunkName: "components/resources-product-export-cat" */).then(c => wrapFunctional(c.default || c))
 export const LazyResourcesResolvedbutton = import('../..\\components\\resources\\Resolvedbutton.vue' /* webpackChunkName: "components/resources-resolvedbutton" */).then(c => wrapFunctional(c.default || c))
 export const LazyResourcesSearch = import('../..\\components\\resources\\Search.vue' /* webpackChunkName: "components/resources-search" */).then(c => wrapFunctional(c.default || c))
@@ -136,6 +141,7 @@ export const LazyManageDriversSupportOverview = import('../..\\components\\manag
 export const LazyManageDriversSupportResolvedticket = import('../..\\components\\manageDrivers\\support\\Resolvedticket.vue' /* webpackChunkName: "components/manage-drivers-support-resolvedticket" */).then(c => wrapFunctional(c.default || c))
 export const LazyManageDriversSupportUnresolveticket = import('../..\\components\\manageDrivers\\support\\Unresolveticket.vue' /* webpackChunkName: "components/manage-drivers-support-unresolveticket" */).then(c => wrapFunctional(c.default || c))
 export const LazyManageVendorsOrdersAllorders = import('../..\\components\\manageVendors\\Orders\\Allorders.vue' /* webpackChunkName: "components/manage-vendors-orders-allorders" */).then(c => wrapFunctional(c.default || c))
+export const LazyManageVendorsProductsAddproduct = import('../..\\components\\manageVendors\\Products\\Addproduct.vue' /* webpackChunkName: "components/manage-vendors-products-addproduct" */).then(c => wrapFunctional(c.default || c))
 export const LazyManageVendorsProductsAllproducts = import('../..\\components\\manageVendors\\Products\\Allproducts.vue' /* webpackChunkName: "components/manage-vendors-products-allproducts" */).then(c => wrapFunctional(c.default || c))
 export const LazyManageVendorsSupportOverview = import('../..\\components\\manageVendors\\Support\\Overview.vue' /* webpackChunkName: "components/manage-vendors-support-overview" */).then(c => wrapFunctional(c.default || c))
 export const LazyManageVendorsVendorsAllvendors = import('../..\\components\\manageVendors\\Vendors\\Allvendors.vue' /* webpackChunkName: "components/manage-vendors-vendors-allvendors" */).then(c => wrapFunctional(c.default || c))
