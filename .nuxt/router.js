@@ -11,6 +11,7 @@ const _ae4572b6 = () => interopDefault(import('..\\pages\\manage-vendors\\produc
 const _5a82a5a5 = () => interopDefault(import('..\\pages\\manage-vendors\\products\\all\\index.vue' /* webpackChunkName: "pages/manage-vendors/products/all/index" */))
 const _3db5a5fa = () => interopDefault(import('..\\pages\\manage-vendors\\support\\overview\\index.vue' /* webpackChunkName: "pages/manage-vendors/support/overview/index" */))
 const _0ea17988 = () => interopDefault(import('..\\pages\\manage-vendors\\vendors\\all\\index.vue' /* webpackChunkName: "pages/manage-vendors/vendors/all/index" */))
+const _599ce726 = () => interopDefault(import('..\\pages\\manage-vendors\\vendors\\edit\\index.vue' /* webpackChunkName: "pages/manage-vendors/vendors/edit/index" */))
 const _3e750a50 = () => interopDefault(import('..\\pages\\manage-customers\\support\\tickets\\resolved\\_name.vue' /* webpackChunkName: "pages/manage-customers/support/tickets/resolved/_name" */))
 const _2f3b8197 = () => interopDefault(import('..\\pages\\manage-customers\\support\\tickets\\unresolved\\_name.vue' /* webpackChunkName: "pages/manage-customers/support/tickets/unresolved/_name" */))
 const _547c815a = () => interopDefault(import('..\\pages\\manage-drivers\\support\\tickets\\resolved\\_name.vue' /* webpackChunkName: "pages/manage-drivers/support/tickets/resolved/_name" */))
@@ -74,6 +75,10 @@ export const routerOptions = {
     path: "/manage-vendors/vendors/all",
     component: _0ea17988,
     name: "manage-vendors-vendors-all"
+  }, {
+    path: "/manage-vendors/vendors/edit",
+    component: _599ce726,
+    name: "manage-vendors-vendors-edit"
   }, {
     path: "/manage-customers/support/tickets/resolved/:name?",
     component: _3e750a50,

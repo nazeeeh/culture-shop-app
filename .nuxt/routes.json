@@ -49,6 +49,13 @@
     "_name": "_0ea17988"
   },
   {
+    "name": "manage-vendors-vendors-edit",
+    "path": "/manage-vendors/vendors/edit",
+    "component": "C:\\\\Users\\\\Gemdajs-001\\\\Documents\\\\culture-shop\\\\pages\\\\manage-vendors\\\\vendors\\\\edit\\\\index.vue",
+    "chunkName": "pages/manage-vendors/vendors/edit/index",
+    "_name": "_599ce726"
+  },
+  {
     "name": "manage-customers-support-tickets-resolved-name",
     "path": "/manage-customers/support/tickets/resolved/:name?",
     "component": "C:\\\\Users\\\\Gemdajs-001\\\\Documents\\\\culture-shop\\\\pages\\\\manage-customers\\\\support\\\\tickets\\\\resolved\\\\_name.vue",
