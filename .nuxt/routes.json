@@ -42,6 +42,13 @@
     "_name": "_3db5a5fa"
   },
   {
+    "name": "manage-vendors-vendors-add",
+    "path": "/manage-vendors/vendors/add",
+    "component": "C:\\\\Users\\\\Gemdajs-001\\\\Documents\\\\culture-shop\\\\pages\\\\manage-vendors\\\\vendors\\\\add\\\\index.vue",
+    "chunkName": "pages/manage-vendors/vendors/add/index",
+    "_name": "_4709e43c"
+  },
+  {
     "name": "manage-vendors-vendors-all",
     "path": "/manage-vendors/vendors/all",
     "component": "C:\\\\Users\\\\Gemdajs-001\\\\Documents\\\\culture-shop\\\\pages\\\\manage-vendors\\\\vendors\\\\all\\\\index.vue",

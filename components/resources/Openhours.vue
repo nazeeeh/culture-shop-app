@@ -1,6 +1,6 @@
 <template>
  <div>
-  <v-list flat width="470px">
+  <v-list class="mb-8" flat width="470px">
     <v-list-group
         v-for="item in items"
         no-action
@@ -22,7 +22,10 @@
           :key="child.title">
           <v-list-item-content>
             <div class="time-border">
-             <v-list-item-title v-text="child.title" class="text"><span>change</span></v-list-item-title>
+             <v-list-item-title v-text="child.title" class="text lis"></v-list-item-title>
+               <div class="change">
+                <span >9:00 - 23:00</span><span style="color: #0CAD73;">Change</span>
+               </div>
             </div>
           </v-list-item-content>
         </v-list-item>
@@ -41,13 +44,13 @@
           action: 'time',
           active: true,
           items: [
-            { title: 'Monday', tag: 0},
-            { title: 'Tuesday', tag: 0},
-            { title: 'Wednesday',tag: 0},
-            { title: 'Thursday', tag: 0},
-            { title: 'Friday', tag: 0},
-            { title: 'Saturday', tag: 0},
-            { title: 'Sunday', tag: 0}
+            { title: 'Monday'},
+            { title: 'Tuesday'},
+            { title: 'Wednesday'},
+            { title: 'Thursday'},
+            { title: 'Friday'},
+            { title: 'Saturday'},
+            { title: 'Sunday'}
           ],
           title: 'Opening hours',
         }
@@ -72,9 +75,22 @@
     line-height: 22px;
 }
 .time-border{
+    display:flex;
+    /* justify-content: center; */
     padding: 10px;
     border: 2px solid #ECECEC;
     border-radius: 16px;
-
+}
+.lis{
+  
+  /* width: 10px; */
+}
+.change{
+  display: flex;
+  margin-left: -80px;
+  justify-content: space-evenly;
+ 
+  width: 300px;
+  /* margin-right: 30px; */
 }
 </style>

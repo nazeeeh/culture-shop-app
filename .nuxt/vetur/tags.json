@@ -68,12 +68,6 @@
   "ManageVendorsAnalytics": {
     "description": "Auto imported from components/manageVendors/Analytics.vue"
   },
-  "SettingsGeneral": {
-    "description": "Auto imported from components/settings/General.vue"
-  },
-  "SettingsPrivacy": {
-    "description": "Auto imported from components/settings/Privacy.vue"
-  },
   "ResourcesAddbutton": {
     "description": "Auto imported from components/resources/Addbutton.vue"
   },
@@ -158,6 +152,15 @@
   "ResourcesVendorsubhead": {
     "description": "Auto imported from components/resources/Vendorsubhead.vue"
   },
+  "SettingsGeneral": {
+    "description": "Auto imported from components/settings/General.vue"
+  },
+  "SettingsPrivacy": {
+    "description": "Auto imported from components/settings/Privacy.vue"
+  },
+  "ManageCustomersOrdersAllorders": {
+    "description": "Auto imported from components/manageCustomers/orders/Allorders.vue"
+  },
   "ManageCustomersCategoriesAddcategory": {
     "description": "Auto imported from components/manageCustomers/categories/Addcategory.vue"
   },
@@ -172,9 +175,6 @@
   },
   "ManageCustomersCustomersEdit": {
     "description": "Auto imported from components/manageCustomers/customers/Edit.vue"
-  },
-  "ManageCustomersOrdersAllorders": {
-    "description": "Auto imported from components/manageCustomers/orders/Allorders.vue"
   },
   "ManageCustomersSupportOverview": {
     "description": "Auto imported from components/manageCustomers/support/Overview.vue"
@@ -226,6 +226,9 @@
   },
   "ManageVendorsSupportUnresolvedticket": {
     "description": "Auto imported from components/manageVendors/Support/Unresolvedticket.vue"
+  },
+  "ManageVendorsVendorsAddvendor": {
+    "description": "Auto imported from components/manageVendors/Vendors/Addvendor.vue"
   },
   "ManageVendorsVendorsAllvendors": {
     "description": "Auto imported from components/manageVendors/Vendors/Allvendors.vue"

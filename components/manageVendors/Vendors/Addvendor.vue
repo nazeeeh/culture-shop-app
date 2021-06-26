@@ -1,24 +1,23 @@
 <template>
  <div>
-  <AddProductButton />
-   <div class="sub-section">
-    <div class="flex-section">
-    <span>#ID</span>
+  <SaveOrCancelButton />
+  <div class="sub-section">
+     <div class="flex-section">
      <div class="box">
-      <span class="text-uppercase t-text" :style="{color: '#0CAD73'}">0 in stock</span> 
+      <span class="text-uppercase t-text" :style="{color: '#E76D14'}">Pending</span> 
      </div>
-     </div>
-     <div>
-      <Subhead />
-     </div>
- </div>
- <v-divider></v-divider>
- <v-layout>
+     <icon name="calender" class="mx-4"></icon>
+     <!-- Date -->
+     <span class="text-uppercase datepicker mt-1">{{ displayDate }}</span> 
+    </div>
+    </div>
+    <v-divider></v-divider>
+    <v-layout>
         <v-row>
           <v-col cols="6">
             <form>
                 <div class="proof">
-                 <label for="proof" class="name">Add images</label><br>
+                 <label for="proof" class="name">Storefront imagery</label><br>
                  <div class="border-bg">
                   <div class="images">
                     <div class="pic">
@@ -29,74 +28,68 @@
                 </div>
                 <div class="grid-input">
                   <div class="input">
-                 <label for="name" class="name">Name</label><br>
-                 <input type="text" class="grid">
+                 <label for="Permissions" class="name">Permissions</label><br>
+                 <input type="text" class="grid" >
                 </div>
                 <div class="input">
-                 <label for="price" class="name">Price</label><br>
-                 <input type="text" class="grid" placeholder="£ 0.00">
+                 <label for="Store name" class="name">Store name</label><br>
+                 <input type="text" class="grid" value="Leon store">
                 </div>
                 </div>
                 <div class="grid-input">
                   <div class="input">
-                 <label for="category" class="name">Category</label><br>
+                 <label for="First name" class="name">First name</label><br>
                  <input type="text" class="grid">
                 </div>
                 <div class="input">
-                 <label for="tags" class="name">Tags</label><br>
-                 <input type="text" class="grid" placeholder="Enter tag(s)">
+                 <label for="Last name" class="name">Last name</label><br>
+                 <input type="text" class="grid">
                 </div>
                 </div>
                 <div class="grid-input">
                   <div class="input">
-                 <label for="Weight of product" class="name">Weight of product</label><br>
+                 <label for="Email address" class="name">Email address</label><br>
+                 <input type="email" class="grid">
+                </div>
+                <div class="input">
+                 <label for="password" class="name">Password</label><br>
+                 <input type="password" class="grid">
+                </div>
+                </div>
+                <div class="input">
+                <label for="Mobile number" class="name">Mobile number</label><br>
+                <input type="text" class="stock"><br>
+                </div>
+                 <div class="grid-input">
+                  <div class="input">
+                 <label for="Street address" class="name">Street address</label><br>
                  <input type="text" class="grid">
                 </div>
                 <div class="input">
-                 <label for="sku" class="name">Sku</label><br>
+                 <label for="postcode" class="name">Postcode</label><br>
                  <input type="text" class="grid">
                 </div>
                 </div>
-                <div class="input">
-                <label for="permission" class="name">Stock</label><br>
-                <input type="dropdown" class="stock"><br>
+                <div class="grid-input">
+                  <div class="input">
+                 <label for="City" class="name">City</label><br>
+                 <input type="text" class="grid">
                 </div>
                 <div class="input">
-                <label for="description" class="name">Description</label><br>
-                <textarea placeholder="Description"></textarea>
+                 <label for="Storewide discount" class="name">Storewide discount</label><br>
+                 <input type="text" class="grid">
                 </div>
-                
+                </div>
             </form>
           </v-col>
-          
           <v-spacer></v-spacer>
-
           <v-col cols="6">
            <div class="system-bar">
             <div class="bar-section">
               <div class="customer-spending">
-             <icon name="vendor"></icon>
-             <span class="t-head mt-1 mx-2 text-capitalize">Vendor</span>
+                <OpeningHours />  
+              </div>
             </div>
-              <v-divider></v-divider>
-            <div class="life-spending">
-             <span class="t-small mt-1 text-capitalize">Products:</span>
-             <div class="view">
-              <span>View</span>
-              <icon name="right"></icon>
-             </div>
-            </div>
-            <v-divider></v-divider>
-            <div class="life-spending">
-             <span class="t-small mt-1 text-capitalize">Categories:</span>
-             <div class="view">
-              <span>View</span>
-              <icon name="right"></icon>
-             </div>
-            </div>
-            <v-divider></v-divider>
-            </div>
-            
             </div>
           </v-col>
         </v-row>
@@ -105,15 +98,29 @@
 </template>
 
 <script>
-    import AddProductButton from '../../resources/Addproductbtn'
-    import Subhead from '../../resources/Productdelete.vue'
+    import SaveOrCancelButton from '../../resources/Saveorcancel.vue'
+    import OpeningHours from '../../resources/Openhours.vue'
     export default {
         components: {
-            AddProductButton,
-            Subhead
+            SaveOrCancelButton,
+            OpeningHours
+        },
+        data () {
+        return {
+            date: new Date(),
+            time: new Date(),
+            }
+        },
 
+    computed: {
+     displayDate(){
+        const date = new Date(this.date);
+        date.setHours(this.time.getHours())
+        date.setMinutes(this.time.getMinutes())
+        return date
         }
-        
+    }
+
     }
 </script>
 
@@ -146,16 +153,20 @@
     font-size: 14px;
     line-height: 130%;
 }
+.datepicker{
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.07em;
+}
 .box{
-  /* font-family: 'Space Grotesk'; */
   display: flex;
   align-items: center;
   justify-content: center;
   width: 7vw;
-  background: rgba(12, 173, 115, 0.1);
+  background: rgba(231, 109, 20, 0.1);
   border-radius: 16px;
   height: 4vh;
-  margin-left: 20px;
 }
 form{
   font-family: 'Space Grotesk';
@@ -208,17 +219,8 @@ textarea::placeholder{
 .customer-spending{
     display: flex;
     font-family: 'Space Grotesk';
-    margin-bottom: 20px;
+  
 }
-.life-spending{
-    display: flex;
-    justify-content: space-between;
-    margin: 20px 0;
-}
-.bar-section{
-    padding: 40px;
-}
-
 .grid-input{
   display: flex;
   flex-wrap: nowrap;
@@ -245,8 +247,6 @@ textarea::placeholder{
     color: #0CAD73;
 
 }
-
-/*  */
 .images .pic {
   border: 1px solid #ECECEC;
   border-radius: 6.29091px;
