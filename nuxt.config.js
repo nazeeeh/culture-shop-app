@@ -1,10 +1,12 @@
 import colors from 'vuetify/es5/util/colors'
 
-
 export default {
   
   target: 'static',
     ssr: false,
+    generate: {
+      fallback: true
+    },
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     titleTemplate: '%s - culture-shop',
@@ -46,7 +48,8 @@ export default {
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
-    '@nuxtjs/pwa'
+    '@nuxtjs/pwa',
+    '@nuxtjs/auth'  
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
