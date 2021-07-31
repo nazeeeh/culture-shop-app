@@ -4,8 +4,9 @@ import { normalizeURL, decode } from 'ufo'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
-const _ba0e40e8 = () => interopDefault(import('..\\pages\\login.vue' /* webpackChunkName: "pages/login" */))
+const _26776092 = () => interopDefault(import('..\\pages\\dashboard.vue' /* webpackChunkName: "pages/dashboard" */))
 const _8e4aa19c = () => interopDefault(import('..\\pages\\settings\\index.vue' /* webpackChunkName: "pages/settings/index" */))
+const _6329861e = () => interopDefault(import('..\\pages\\manage-customers\\orders\\orders\\index.vue' /* webpackChunkName: "pages/manage-customers/orders/orders/index" */))
 const _373289b4 = () => interopDefault(import('..\\pages\\manage-vendors\\orders\\all\\index.vue' /* webpackChunkName: "pages/manage-vendors/orders/all/index" */))
 const _ae4572b6 = () => interopDefault(import('..\\pages\\manage-vendors\\products\\add\\index.vue' /* webpackChunkName: "pages/manage-vendors/products/add/index" */))
 const _5a82a5a5 = () => interopDefault(import('..\\pages\\manage-vendors\\products\\all\\index.vue' /* webpackChunkName: "pages/manage-vendors/products/all/index" */))
@@ -51,13 +52,17 @@ export const routerOptions = {
   scrollBehavior,
 
   routes: [{
-    path: "/login",
-    component: _ba0e40e8,
-    name: "login"
+    path: "/dashboard",
+    component: _26776092,
+    name: "dashboard"
   }, {
     path: "/settings",
     component: _8e4aa19c,
     name: "settings"
+  }, {
+    path: "/manage-customers/orders/orders",
+    component: _6329861e,
+    name: "manage-customers-orders-orders"
   }, {
     path: "/manage-vendors/orders/all",
     component: _373289b4,

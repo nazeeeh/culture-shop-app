@@ -1,10 +1,10 @@
 [
   {
-    "name": "login",
-    "path": "/login",
-    "component": "C:\\\\Users\\\\Gemdajs-001\\\\Documents\\\\culture-shop\\\\pages\\\\login.vue",
-    "chunkName": "pages/login",
-    "_name": "_ba0e40e8"
+    "name": "dashboard",
+    "path": "/dashboard",
+    "component": "C:\\\\Users\\\\Gemdajs-001\\\\Documents\\\\culture-shop\\\\pages\\\\dashboard.vue",
+    "chunkName": "pages/dashboard",
+    "_name": "_26776092"
   },
   {
     "name": "settings",
@@ -12,6 +12,13 @@
     "component": "C:\\\\Users\\\\Gemdajs-001\\\\Documents\\\\culture-shop\\\\pages\\\\settings\\\\index.vue",
     "chunkName": "pages/settings/index",
     "_name": "_8e4aa19c"
+  },
+  {
+    "name": "manage-customers-orders-orders",
+    "path": "/manage-customers/orders/orders",
+    "component": "C:\\\\Users\\\\Gemdajs-001\\\\Documents\\\\culture-shop\\\\pages\\\\manage-customers\\\\orders\\\\orders\\\\index.vue",
+    "chunkName": "pages/manage-customers/orders/orders/index",
+    "_name": "_6329861e"
   },
   {
     "name": "manage-vendors-orders-all",

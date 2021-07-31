@@ -23,7 +23,21 @@
 import userPermission from '~/components/General/Userpermission.vue'
 import vendorAgreement from '~/components/General/Vendoragreement.vue'
 import driverAgreement from '~/components/General/Driveragreement.vue'
+import Config from '../../../services/config'
 export default {
+  props: ['users'],
+
+  //  async asyncData({ $axios }){
+  //     try{
+  //       let response = await $axios.$get(Config.endpoints.admins)
+  //       console.log(response)
+  //       return{
+  //         admins: response.admins
+  //       }
+  //       }catch(err){
+  //         console.log(err)
+  //       }
+  //     },
 
     components: {
         userPermission,

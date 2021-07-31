@@ -1,5 +1,7 @@
 import colors from 'vuetify/es5/util/colors'
 
+const URL = 'https://api.thecultureshop.co.uk'
+
 export default {
   
   target: 'static',
@@ -24,12 +26,35 @@ export default {
 
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [
-  ],
+  css: [],
+
+  publicRuntimeConfig: {
+    orderService: {
+      getAll: process.env.ORDERS,
+      pending: process.env.PENDING_ORDERS,
+      cancelled: process.env.CANCELLED_ORDERS,
+      refunded: process.env.REFUNDED_ORDERS,
+      delivered: process.env.DELIVERED_ORDERS
+    },
+    customerService:{
+      getCustomer: process.env.CUSTOMERS,
+      editCustomer: process.env.EDIT_CUSTOMERS
+    },
+    productService: {
+      getProducts: process.env.PRODUCTS,
+      addProduct: process.env.ADD_PRODUCT
+    }
+
+    
+  },
+
+
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    '~/plugins/pretty-checkbox'        
+    '~/plugins/pretty-checkbox',
+    '~/plugins/globalSnackbar',         
+    '~/plugins/api',
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -53,7 +78,32 @@ export default {
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {},
+  axios: {
+    baseURL: URL
+  },
+
+  auth: {
+    strategies: {
+      local: {
+        endpoints: {
+          login: {
+            url: '/api/v1/login/admin',
+            method: 'post',
+            propertyName: 'token'
+          },
+          user: {
+            url: '/api/v1/admin',
+            method: 'get',
+            propertyName: 'user'
+          },
+          logout: false,
+        }
+      }
+    },
+    redirect:{
+      home: '/dashboard'
+    }
+  },
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
@@ -76,7 +126,16 @@ export default {
           warning: colors.amber.base,
           error: colors.deepOrange.accent4,
           success: colors.green.accent3
-        }
+        },
+        light: {
+          primary: colors.green.darken1,
+          secondary: colors.lightBlue.darken4,
+          accent: colors.grey.darken3,
+          info: colors.teal.lighten1,
+          warning: colors.amber.base,
+          error: colors.deepOrange.accent4,
+          success: colors.green.accent3,
+        },
       }
     }
   },
@@ -88,6 +147,12 @@ export default {
         ['@babel/plugin-proposal-private-methods', { loose: true}]
       ]
     },
+  },
+
+  loadingIndicator: {
+    name: 'circle',
+    color: '#fff',
+    background: colors.green.darken1,
   },
 
   // serverMiddleware: [

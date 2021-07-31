@@ -29,6 +29,11 @@
         components: {
             Edit
         },
+        // async fetch({ params }){
+        //     const response = await this.$api.editCustomer()
+        //     console.log(response)
+        //     console.log(params.id)
+        // },
 
         data () {
             return {

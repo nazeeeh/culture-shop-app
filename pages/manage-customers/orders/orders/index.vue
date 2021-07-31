@@ -9,37 +9,35 @@
         <span class="sub-title text-uppercase">Manage customers /</span>
        </nuxt-link>
        <nuxt-link to= "/">
-        <span class="sub-title text-uppercase">Customers /</span>
+        <span class="sub-title text-uppercase">Orders /</span>
        </nuxt-link>
        <nuxt-link to= "/">
-        <span class="sub-title text-uppercase">{{$route.params.name}}</span>
+        <span class="sub-title text-uppercase">All /</span>
+       </nuxt-link>
+       <nuxt-link to= "/">
+        <span class="sub-title text-uppercase">{{$route.params.id}}</span>
        </nuxt-link>
       </div>
      </div>
      <v-divider w-100></v-divider>
-     <AllCustomers />
+     <Orders />
     </div>
 </template>
 
 <script>
 
-    import AllCustomers from '~/components/manageCustomers/customers/Customers.vue'
+    import Orders from '~/components/manageCustomers/orders/Orders.vue'
 
     export default {
         components: {
-           AllCustomers
-        },
-        async fetch({ params }){
-            console.log(params.id)
+            Orders
         },
 
         data () {
             return {
-                title: 'Customers'
+                title: 'Orders'
             }
-        },
-    
-        
+        },      
 }
 </script>
 

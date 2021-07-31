@@ -8,23 +8,18 @@
           <label for="checkbox"></label>
         </div>
   <div class="table">
-          <sorted-table :values="values">
             <thead>
               <tr> 
+                <th scope="col" style="text-align: left; width: 10rem;">Id</th>
                 <th scope="col" style="text-align: left; width: 10rem;">
-                  <sort-link name="id">Id</sort-link>
+                  <span style="display: flex; align-items: center">Name</span>
                 </th>
+                <th scope="col" style="text-align: left; width: 10rem;">Product</th>
+                <th scope="col" style="text-align: left; width: 10rem;">Vendor</th>
                 <th scope="col" style="text-align: left; width: 10rem;">
-                  <sort-link name="name"><span style="display: flex; align-items: center">Name</span></sort-link>
-                </th>
-                <th scope="col" style="text-align: left; width: 10rem;">
-                  <sort-link name="hits">Product</sort-link>
-                </th>
-                <th scope="col" style="text-align: left; width: 10rem;">
-                  <sort-link name="hits">Vendor</sort-link>
-                </th>
-                <th scope="col" style="text-align: left; width: 10rem;">
-                  <sort-link name="hits"><span style="display: flex; align-items: center"><span style="color: grey; margin-right: 1rem;">Status</span> All <icon name="dropdown"></icon> </span></sort-link>
+                 <span style="display: flex; align-items: center"><span style="color: grey; margin-right: 1rem;">
+                   Status</span> All <icon name="dropdown"></icon> 
+                  </span>
                 </th>
               </tr>
             </thead>
@@ -37,7 +32,6 @@
           </tr>
         </tbody>
       </template>
-    </sorted-table>
     </div>
     <BulkAction />
  </div>
@@ -48,6 +42,7 @@
     import BulkAction from '../../resources/Bulkaction'
     export default {
         name: "all",
+        
         components:{
             SearchBar,
             BulkAction

@@ -35,11 +35,6 @@
                 title: 'Orders'
             }
         },
-    // computed: {
-    //     currentComponent() {
-    //         return this.$route.params.name;
-    //     }
-    // }
         
 }
 </script>

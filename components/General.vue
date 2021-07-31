@@ -33,7 +33,7 @@
         <v-card-actions>
         <div class="btn-btn">
           <v-btn class="btn-f mx-2 px-14 py-6 white--text" color="#192135" @click="dialog = false"><span>No</span></v-btn>
-          <v-btn class="btn-f px-14 py-6 white--text" color="#0CAD73" @click="dialog = false"><span>Yes</span></v-btn>
+          <v-btn class="btn-f px-14 py-6 white--text" color="#0CAD73" @click="logout"><span>Yes</span></v-btn>
         </div>
         </v-card-actions>
       </v-card>
@@ -67,6 +67,13 @@ export default {
 
         ]
       }
+    },
+
+    methods: {
+      logout() {
+      this.$auth.logout()
+      this.$router.push('/')
+    },
     }
 }
 

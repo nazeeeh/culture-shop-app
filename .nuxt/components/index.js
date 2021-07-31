@@ -14,6 +14,7 @@ export { default as ManageDriver } from '../..\\components\\Manage-driver.vue'
 export { default as ManageVendor } from '../..\\components\\Manage-vendor.vue'
 export { default as Sectionlinks } from '../..\\components\\Sectionlinks.vue'
 export { default as Sidebar } from '../..\\components\\Sidebar.vue'
+export { default as Snackbar } from '../..\\components\\snackbar.vue'
 export { default as ForgetPasswordPhoneVerification } from '../..\\components\\ForgetPassword\\PhoneVerification.vue'
 export { default as ForgetPasswordRecoveryOption } from '../..\\components\\ForgetPassword\\RecoveryOption.vue'
 export { default as ForgetPasswordResetPassword } from '../..\\components\\ForgetPassword\\ResetPassword.vue'
@@ -23,6 +24,8 @@ export { default as GeneralVendoragreement } from '../..\\components\\General\\V
 export { default as ManageCustomersAnalytics } from '../..\\components\\manageCustomers\\Analytics.vue'
 export { default as ManageDriversAnalytics } from '../..\\components\\manageDrivers\\Analytics.vue'
 export { default as ManageVendorsAnalytics } from '../..\\components\\manageVendors\\Analytics.vue'
+export { default as SettingsGeneral } from '../..\\components\\settings\\General.vue'
+export { default as SettingsPrivacy } from '../..\\components\\settings\\Privacy.vue'
 export { default as ResourcesAddbutton } from '../..\\components\\resources\\Addbutton.vue'
 export { default as ResourcesAddproductbtn } from '../..\\components\\resources\\Addproductbtn.vue'
 export { default as ResourcesAnalyticscard } from '../..\\components\\resources\\Analyticscard.vue'
@@ -51,25 +54,24 @@ export { default as ResourcesTicketsubhead } from '../..\\components\\resources\
 export { default as ResourcesVendorsanalytic } from '../..\\components\\resources\\Vendorsanalytic.vue'
 export { default as ResourcesVendorscard } from '../..\\components\\resources\\Vendorscard.vue'
 export { default as ResourcesVendorsubhead } from '../..\\components\\resources\\Vendorsubhead.vue'
-export { default as SettingsGeneral } from '../..\\components\\settings\\General.vue'
-export { default as SettingsPrivacy } from '../..\\components\\settings\\Privacy.vue'
 export { default as ManageCustomersCategoriesAddcategory } from '../..\\components\\manageCustomers\\categories\\Addcategory.vue'
 export { default as ManageCustomersCategories } from '../..\\components\\manageCustomers\\categories\\Categories.vue'
-export { default as ManageCustomersCustomersAddcustomers } from '../..\\components\\manageCustomers\\customers\\Addcustomers.vue'
-export { default as ManageCustomers } from '../..\\components\\manageCustomers\\customers\\Customers.vue'
-export { default as ManageCustomersCustomersEdit } from '../..\\components\\manageCustomers\\customers\\Edit.vue'
 export { default as ManageCustomersOrdersAllorders } from '../..\\components\\manageCustomers\\orders\\Allorders.vue'
+export { default as ManageCustomersOrders } from '../..\\components\\manageCustomers\\orders\\Orders.vue'
 export { default as ManageCustomersSupportOverview } from '../..\\components\\manageCustomers\\support\\Overview.vue'
 export { default as ManageCustomersSupportResolvedticket } from '../..\\components\\manageCustomers\\support\\Resolvedticket.vue'
 export { default as ManageCustomersSupportUnresolveticket } from '../..\\components\\manageCustomers\\support\\Unresolveticket.vue'
+export { default as ManageCustomersCustomersAddcustomers } from '../..\\components\\manageCustomers\\customers\\Addcustomers.vue'
+export { default as ManageCustomers } from '../..\\components\\manageCustomers\\customers\\Customers.vue'
+export { default as ManageCustomersCustomersEdit } from '../..\\components\\manageCustomers\\customers\\Edit.vue'
 export { default as ManageDriversDriversAdddriver } from '../..\\components\\manageDrivers\\drivers\\Adddriver.vue'
 export { default as ManageDrivers } from '../..\\components\\manageDrivers\\drivers\\Drivers.vue'
 export { default as ManageDriversDriversEdit } from '../..\\components\\manageDrivers\\drivers\\Edit.vue'
-export { default as ManageDriversOrdersAllorders } from '../..\\components\\manageDrivers\\orders\\Allorders.vue'
-export { default as ManageDriversOrders } from '../..\\components\\manageDrivers\\orders\\orders.vue'
 export { default as ManageDriversSupportOverview } from '../..\\components\\manageDrivers\\support\\Overview.vue'
 export { default as ManageDriversSupportResolvedticket } from '../..\\components\\manageDrivers\\support\\Resolvedticket.vue'
 export { default as ManageDriversSupportUnresolveticket } from '../..\\components\\manageDrivers\\support\\Unresolveticket.vue'
+export { default as ManageDriversOrdersAllorders } from '../..\\components\\manageDrivers\\orders\\Allorders.vue'
+export { default as ManageDriversOrders } from '../..\\components\\manageDrivers\\orders\\orders.vue'
 export { default as ManageVendorsOrdersAllorders } from '../..\\components\\manageVendors\\Orders\\Allorders.vue'
 export { default as ManageVendorsProductsAddproduct } from '../..\\components\\manageVendors\\Products\\Addproduct.vue'
 export { default as ManageVendorsProductsAllproducts } from '../..\\components\\manageVendors\\Products\\Allproducts.vue'
@@ -94,6 +96,7 @@ export const LazyManageDriver = import('../..\\components\\Manage-driver.vue' /*
 export const LazyManageVendor = import('../..\\components\\Manage-vendor.vue' /* webpackChunkName: "components/manage-vendor" */).then(c => wrapFunctional(c.default || c))
 export const LazySectionlinks = import('../..\\components\\Sectionlinks.vue' /* webpackChunkName: "components/sectionlinks" */).then(c => wrapFunctional(c.default || c))
 export const LazySidebar = import('../..\\components\\Sidebar.vue' /* webpackChunkName: "components/sidebar" */).then(c => wrapFunctional(c.default || c))
+export const LazySnackbar = import('../..\\components\\snackbar.vue' /* webpackChunkName: "components/snackbar" */).then(c => wrapFunctional(c.default || c))
 export const LazyForgetPasswordPhoneVerification = import('../..\\components\\ForgetPassword\\PhoneVerification.vue' /* webpackChunkName: "components/forget-password-phone-verification" */).then(c => wrapFunctional(c.default || c))
 export const LazyForgetPasswordRecoveryOption = import('../..\\components\\ForgetPassword\\RecoveryOption.vue' /* webpackChunkName: "components/forget-password-recovery-option" */).then(c => wrapFunctional(c.default || c))
 export const LazyForgetPasswordResetPassword = import('../..\\components\\ForgetPassword\\ResetPassword.vue' /* webpackChunkName: "components/forget-password-reset-password" */).then(c => wrapFunctional(c.default || c))
@@ -103,6 +106,8 @@ export const LazyGeneralVendoragreement = import('../..\\components\\General\\Ve
 export const LazyManageCustomersAnalytics = import('../..\\components\\manageCustomers\\Analytics.vue' /* webpackChunkName: "components/manage-customers-analytics" */).then(c => wrapFunctional(c.default || c))
 export const LazyManageDriversAnalytics = import('../..\\components\\manageDrivers\\Analytics.vue' /* webpackChunkName: "components/manage-drivers-analytics" */).then(c => wrapFunctional(c.default || c))
 export const LazyManageVendorsAnalytics = import('../..\\components\\manageVendors\\Analytics.vue' /* webpackChunkName: "components/manage-vendors-analytics" */).then(c => wrapFunctional(c.default || c))
+export const LazySettingsGeneral = import('../..\\components\\settings\\General.vue' /* webpackChunkName: "components/settings-general" */).then(c => wrapFunctional(c.default || c))
+export const LazySettingsPrivacy = import('../..\\components\\settings\\Privacy.vue' /* webpackChunkName: "components/settings-privacy" */).then(c => wrapFunctional(c.default || c))
 export const LazyResourcesAddbutton = import('../..\\components\\resources\\Addbutton.vue' /* webpackChunkName: "components/resources-addbutton" */).then(c => wrapFunctional(c.default || c))
 export const LazyResourcesAddproductbtn = import('../..\\components\\resources\\Addproductbtn.vue' /* webpackChunkName: "components/resources-addproductbtn" */).then(c => wrapFunctional(c.default || c))
 export const LazyResourcesAnalyticscard = import('../..\\components\\resources\\Analyticscard.vue' /* webpackChunkName: "components/resources-analyticscard" */).then(c => wrapFunctional(c.default || c))
@@ -131,25 +136,24 @@ export const LazyResourcesTicketsubhead = import('../..\\components\\resources\\
 export const LazyResourcesVendorsanalytic = import('../..\\components\\resources\\Vendorsanalytic.vue' /* webpackChunkName: "components/resources-vendorsanalytic" */).then(c => wrapFunctional(c.default || c))
 export const LazyResourcesVendorscard = import('../..\\components\\resources\\Vendorscard.vue' /* webpackChunkName: "components/resources-vendorscard" */).then(c => wrapFunctional(c.default || c))
 export const LazyResourcesVendorsubhead = import('../..\\components\\resources\\Vendorsubhead.vue' /* webpackChunkName: "components/resources-vendorsubhead" */).then(c => wrapFunctional(c.default || c))
-export const LazySettingsGeneral = import('../..\\components\\settings\\General.vue' /* webpackChunkName: "components/settings-general" */).then(c => wrapFunctional(c.default || c))
-export const LazySettingsPrivacy = import('../..\\components\\settings\\Privacy.vue' /* webpackChunkName: "components/settings-privacy" */).then(c => wrapFunctional(c.default || c))
 export const LazyManageCustomersCategoriesAddcategory = import('../..\\components\\manageCustomers\\categories\\Addcategory.vue' /* webpackChunkName: "components/manage-customers-categories-addcategory" */).then(c => wrapFunctional(c.default || c))
 export const LazyManageCustomersCategories = import('../..\\components\\manageCustomers\\categories\\Categories.vue' /* webpackChunkName: "components/manage-customers-categories" */).then(c => wrapFunctional(c.default || c))
-export const LazyManageCustomersCustomersAddcustomers = import('../..\\components\\manageCustomers\\customers\\Addcustomers.vue' /* webpackChunkName: "components/manage-customers-customers-addcustomers" */).then(c => wrapFunctional(c.default || c))
-export const LazyManageCustomers = import('../..\\components\\manageCustomers\\customers\\Customers.vue' /* webpackChunkName: "components/manage-customers" */).then(c => wrapFunctional(c.default || c))
-export const LazyManageCustomersCustomersEdit = import('../..\\components\\manageCustomers\\customers\\Edit.vue' /* webpackChunkName: "components/manage-customers-customers-edit" */).then(c => wrapFunctional(c.default || c))
 export const LazyManageCustomersOrdersAllorders = import('../..\\components\\manageCustomers\\orders\\Allorders.vue' /* webpackChunkName: "components/manage-customers-orders-allorders" */).then(c => wrapFunctional(c.default || c))
+export const LazyManageCustomersOrders = import('../..\\components\\manageCustomers\\orders\\Orders.vue' /* webpackChunkName: "components/manage-customers-orders" */).then(c => wrapFunctional(c.default || c))
 export const LazyManageCustomersSupportOverview = import('../..\\components\\manageCustomers\\support\\Overview.vue' /* webpackChunkName: "components/manage-customers-support-overview" */).then(c => wrapFunctional(c.default || c))
 export const LazyManageCustomersSupportResolvedticket = import('../..\\components\\manageCustomers\\support\\Resolvedticket.vue' /* webpackChunkName: "components/manage-customers-support-resolvedticket" */).then(c => wrapFunctional(c.default || c))
 export const LazyManageCustomersSupportUnresolveticket = import('../..\\components\\manageCustomers\\support\\Unresolveticket.vue' /* webpackChunkName: "components/manage-customers-support-unresolveticket" */).then(c => wrapFunctional(c.default || c))
+export const LazyManageCustomersCustomersAddcustomers = import('../..\\components\\manageCustomers\\customers\\Addcustomers.vue' /* webpackChunkName: "components/manage-customers-customers-addcustomers" */).then(c => wrapFunctional(c.default || c))
+export const LazyManageCustomers = import('../..\\components\\manageCustomers\\customers\\Customers.vue' /* webpackChunkName: "components/manage-customers" */).then(c => wrapFunctional(c.default || c))
+export const LazyManageCustomersCustomersEdit = import('../..\\components\\manageCustomers\\customers\\Edit.vue' /* webpackChunkName: "components/manage-customers-customers-edit" */).then(c => wrapFunctional(c.default || c))
 export const LazyManageDriversDriversAdddriver = import('../..\\components\\manageDrivers\\drivers\\Adddriver.vue' /* webpackChunkName: "components/manage-drivers-drivers-adddriver" */).then(c => wrapFunctional(c.default || c))
 export const LazyManageDrivers = import('../..\\components\\manageDrivers\\drivers\\Drivers.vue' /* webpackChunkName: "components/manage-drivers" */).then(c => wrapFunctional(c.default || c))
 export const LazyManageDriversDriversEdit = import('../..\\components\\manageDrivers\\drivers\\Edit.vue' /* webpackChunkName: "components/manage-drivers-drivers-edit" */).then(c => wrapFunctional(c.default || c))
-export const LazyManageDriversOrdersAllorders = import('../..\\components\\manageDrivers\\orders\\Allorders.vue' /* webpackChunkName: "components/manage-drivers-orders-allorders" */).then(c => wrapFunctional(c.default || c))
-export const LazyManageDriversOrders = import('../..\\components\\manageDrivers\\orders\\orders.vue' /* webpackChunkName: "components/manage-drivers-orders" */).then(c => wrapFunctional(c.default || c))
 export const LazyManageDriversSupportOverview = import('../..\\components\\manageDrivers\\support\\Overview.vue' /* webpackChunkName: "components/manage-drivers-support-overview" */).then(c => wrapFunctional(c.default || c))
 export const LazyManageDriversSupportResolvedticket = import('../..\\components\\manageDrivers\\support\\Resolvedticket.vue' /* webpackChunkName: "components/manage-drivers-support-resolvedticket" */).then(c => wrapFunctional(c.default || c))
 export const LazyManageDriversSupportUnresolveticket = import('../..\\components\\manageDrivers\\support\\Unresolveticket.vue' /* webpackChunkName: "components/manage-drivers-support-unresolveticket" */).then(c => wrapFunctional(c.default || c))
+export const LazyManageDriversOrdersAllorders = import('../..\\components\\manageDrivers\\orders\\Allorders.vue' /* webpackChunkName: "components/manage-drivers-orders-allorders" */).then(c => wrapFunctional(c.default || c))
+export const LazyManageDriversOrders = import('../..\\components\\manageDrivers\\orders\\orders.vue' /* webpackChunkName: "components/manage-drivers-orders" */).then(c => wrapFunctional(c.default || c))
 export const LazyManageVendorsOrdersAllorders = import('../..\\components\\manageVendors\\Orders\\Allorders.vue' /* webpackChunkName: "components/manage-vendors-orders-allorders" */).then(c => wrapFunctional(c.default || c))
 export const LazyManageVendorsProductsAddproduct = import('../..\\components\\manageVendors\\Products\\Addproduct.vue' /* webpackChunkName: "components/manage-vendors-products-addproduct" */).then(c => wrapFunctional(c.default || c))
 export const LazyManageVendorsProductsAllproducts = import('../..\\components\\manageVendors\\Products\\Allproducts.vue' /* webpackChunkName: "components/manage-vendors-products-allproducts" */).then(c => wrapFunctional(c.default || c))

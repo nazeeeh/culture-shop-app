@@ -54,14 +54,24 @@
     <v-main>
       <v-container fluid>
         <nuxt />
+        <snackbar :config="snackbarSettings"></snackbar>
       </v-container>
     </v-main>
   </v-app>
 </template>
 
 <script>
-
+import snackbar from '../components/snackbar'
 export default {
+  components:{
+    snackbar
+
+  },
+  data(){
+    return{
+      snackbarSettings: ''
+    }
+  }
  
     }
 

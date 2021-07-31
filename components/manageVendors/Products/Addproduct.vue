@@ -1,6 +1,6 @@
 <template>
  <div>
-  <AddProductButton />
+  <!-- <AddProductButton /> -->
    <div class="sub-section">
     <div class="flex-section">
     <span>#ID</span>
@@ -16,56 +16,67 @@
  <v-layout>
         <v-row>
           <v-col cols="6">
-            <form>
+            <form @submit.prevent="onCreateProduct">
                 <div class="proof">
                  <label for="proof" class="name">Add images</label><br>
                  <div class="border-bg">
-                  <div class="images">
+                   <input ref="file" 
+                   v-on:change="onFileSelected" 
+                   type="file" class="custom-file-input"
+                   accept="image/*">
+                   <icon class="add" name="add"></icon>
+                  <!-- <div class="images">
                     <div class="pic">
-                        <icon name="add"></icon>
+                       <span>
+                         <icon name="add"></icon>
+                       </span>
                     </div>
-                  </div>
+                  </div> -->
                  </div>
                 </div>
                 <div class="grid-input">
                   <div class="input">
                  <label for="name" class="name">Name</label><br>
-                 <input type="text" class="grid">
+                 <input v-model="name" type="text" class="grid">
                 </div>
                 <div class="input">
                  <label for="price" class="name">Price</label><br>
-                 <input type="text" class="grid" placeholder="£ 0.00">
+                 <input v-model="price" type="text" class="grid" placeholder="£ 0.00">
                 </div>
                 </div>
                 <div class="grid-input">
                   <div class="input">
                  <label for="category" class="name">Category</label><br>
-                 <input type="text" class="grid">
+                 <input v-model="category" type="text" class="grid">
                 </div>
                 <div class="input">
                  <label for="tags" class="name">Tags</label><br>
-                 <input type="text" class="grid" placeholder="Enter tag(s)">
+                 <input v-model="tag" type="text" class="grid" placeholder="Enter tag(s)">
                 </div>
                 </div>
                 <div class="grid-input">
                   <div class="input">
                  <label for="Weight of product" class="name">Weight of product</label><br>
-                 <input type="text" class="grid">
+                 <input v-model="weight" type="text" class="grid">
                 </div>
                 <div class="input">
                  <label for="sku" class="name">Sku</label><br>
-                 <input type="text" class="grid">
+                 <input v-model="sku" type="text" class="grid">
                 </div>
                 </div>
                 <div class="input">
                 <label for="permission" class="name">Stock</label><br>
-                <input type="dropdown" class="stock"><br>
+                <input v-model="stock" type="text" class="stock"><br>
                 </div>
                 <div class="input">
                 <label for="description" class="name">Description</label><br>
-                <textarea placeholder="Description"></textarea>
+                <textarea v-model="description" placeholder="Description"></textarea>
                 </div>
-                
+                <div class="btn-btn">
+                <v-btn class="btn btn-cancel py-6 px-10 text-uppercase mr-2">Cancel</v-btn>
+                <v-btn class="btn btn-mark-as-resolved py-6 px-12 text-uppercase mr-2">Add New</v-btn>
+                <v-btn class="btn btn-save py-6 px-12 text-uppercase" type="submit" >Save</v-btn>
+                </div>      
             </form>
           </v-col>
           
@@ -105,13 +116,81 @@
 </template>
 
 <script>
-    import AddProductButton from '../../resources/Addproductbtn'
+    // import AddProductButton from '../../resources/Addproductbtn'
     import Subhead from '../../resources/Productdelete.vue'
     export default {
         components: {
-            AddProductButton,
+            // AddProductButton,
             Subhead
 
+        },
+        data() {
+          return {
+              selectedFile: '',
+              name: '',
+              price: '',
+              category: '',
+              tag: '',
+              weight: '',
+              sku: '',
+              stock: '',
+              description: ''
+          }
+        },
+        computed: {
+          formIsValid() {
+            return this.selectedFile !== null &&
+            this.name !== '' &&
+            this.price !== '' &&
+            this.category !== '' &&
+            this.tag !== '' &&
+            this.weight !== '' &&
+            this.sku !== '' &&
+            this.stock !== '' &&
+            this.description !== ''
+          }
+        },
+
+        methods: {
+          onFileSelected(){
+            this.selectedFile = this.$refs.file.files[0]
+          },
+
+        onCreateProduct(e){
+            e.preventDefault()
+            if(!this.formIsValid) {
+              return
+            }   
+      try {
+          let productData= new FormData();
+          productData.append("shop_id", 1);
+          productData.append("image", this.selectedFile);
+          productData.append("name", this.name); 
+          productData.append("category", this.category);
+          productData.append("price", this.price);
+          productData.append("description", this.description);
+          productData.append("weight", this.weight);
+          productData.append("sku", this.sku);
+          productData.append("tag", this.tag);
+          productData.append("stock", this.stock);
+          
+              const response = this.$api.addProduct(productData)
+              console.log(response)
+
+              this.$showSnackBar({
+                     show: true,
+                     timeout: 3000,
+                     message: `Product Added`,
+                     color: 'green',
+                    })
+                    //RESET INPUT VALUES
+                    this.selectedFile = this.name = this.price = this.category
+                  this.tag = this.weight = this.sku = this.stock = this.description = ""
+                }catch(err){
+                  return err
+            }
+          },
+          
         }
         
     }
@@ -258,4 +337,69 @@ textarea::placeholder{
   width: 8vw;
   cursor: pointer;
 }
+.add{
+  position: absolute;
+  top: 13rem;
+  left: 5rem;
+  cursor: pointer;
+}
+.custom-file-input::-webkit-file-upload-button {
+  visibility: hidden;
+}
+.custom-file-input::before {
+  content: '';
+  margin-top: 15px;
+  margin-left: 10px;
+  width: 8vw;
+  align-self: center;
+  text-align: center;
+  display: inline-block;
+  border: 1px solid #999;
+  border-radius: 6.29091px;
+  padding: 25px 8px;
+  outline: none;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  cursor: pointer;
+  text-shadow: 1px 1px #fff;
+}
+.custom-file-input:hover::before {
+  border-color: black;
+}
+
+.btn-btn{
+  position: absolute;
+  top: 10px;
+  right: 40px;
+  font-family: 'Space Grotesk';
+}
+.btn-save{
+    background: #0CAD73 !important;
+    color: #fff !important;
+    border-radius: 16px;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.07em;
+    box-shadow: none;
+}
+.btn-mark-as-resolved{
+    background: rgba(12, 173, 115, 0.1)!important;
+    color: #0CAD73 !important;
+    border-radius: 16px;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.07em;
+    box-shadow: none;
+}
+.btn-cancel{
+    border-radius: 16px;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.07em;
+    box-shadow: none;
+}
+
 </style>

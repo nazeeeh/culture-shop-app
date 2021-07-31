@@ -9,7 +9,7 @@
      </div>
      <icon name="calender" class="mx-4"></icon>
      <!-- Date -->
-     <span class="text-uppercase datepicker mt-1">{{ displayDate }}</span> 
+     <span class="text-uppercase datepicker mt-1">{{ displayDate() }}</span> 
      </div>
      <div>
       <Subhead />
@@ -27,7 +27,7 @@
                 <div class="grid-input">
                   <div class="input">
                  <label for="first name" class="name">First Name</label><br>
-                 <input type="text" class="grid">
+                 <input type="text" class="grid" :value="customerDetailsToView.name">
                 </div>
                 <div class="input">
                  <label for="last name" class="name">Last Name</label><br>
@@ -108,29 +108,39 @@
 </template>
 
 <script>
+import {mapState} from 'vuex'
     import Buttons from '../../resources/Buttons'
     import Subhead from '../../resources/Subhead'
+    import moment from 'moment'
     export default {
-        name: 'edit customer',
+        name: 'edit',
         components: {
             Buttons,
             Subhead
         },
-     data () {
-        return {
-            date: new Date(),
-            time: new Date(),
-            }
+
+        async fetch(context){
+          console.log('context')
+
+
         },
 
-    computed: {
-     displayDate(){
-        const date = new Date(this.date);
-        date.setHours(this.time.getHours())
-        date.setMinutes(this.time.getMinutes())
-        return date
+     data () {
+        return {
+            
+            }
+        },
+        computed: {
+          ...mapState("customer", ["customerDetailsToView"])
+        },
+        methods: {
+          displayDate(){
+            const m = moment()
+            m.format('MMMM Do YYYY, h:mm:ss a')
+            return m
+          }
         }
-    },
+    
 }
 
 </script>
@@ -178,6 +188,9 @@
   background: rgba(12, 173, 115, 0.1);
   border-radius: 16px;
   height: 4vh;
+}
+form{
+  font-family: 'Space Grotesk';
 }
 .permission {
   border: 2px solid #ECECEC;
