@@ -3,7 +3,6 @@
   <!-- <AddProductButton /> -->
    <div class="sub-section">
     <div class="flex-section">
-    <span>#ID</span>
      <div class="box">
       <span class="text-uppercase t-text" :style="{color: '#0CAD73'}">0 in stock</span> 
      </div>
@@ -25,15 +24,15 @@
                    type="file" class="custom-file-input"
                    accept="image/*">
                    <icon class="add" name="add"></icon>
-                  <!-- <div class="images">
-                    <div class="pic">
-                       <span>
-                         <icon name="add"></icon>
-                       </span>
-                    </div>
-                  </div> -->
                  </div>
                 </div>
+                <!-- <div class="input"> -->
+                 <select  v-model="shop_id">
+                   <optgroup v-for="(item, index) in allShops" :key="index" >
+                   <option :value="item.id">{{item.firstname}}</option>
+                   </optgroup>
+                 </select>
+                <!-- </div>  -->
                 <div class="grid-input">
                   <div class="input">
                  <label for="name" class="name">Name</label><br>
@@ -72,11 +71,13 @@
                 <label for="description" class="name">Description</label><br>
                 <textarea v-model="description" placeholder="Description"></textarea>
                 </div>
+                 
                 <div class="btn-btn">
                 <v-btn class="btn btn-cancel py-6 px-10 text-uppercase mr-2">Cancel</v-btn>
                 <v-btn class="btn btn-mark-as-resolved py-6 px-12 text-uppercase mr-2">Add New</v-btn>
                 <v-btn class="btn btn-save py-6 px-12 text-uppercase" type="submit" >Save</v-btn>
-                </div>      
+                </div>
+                    
             </form>
           </v-col>
           
@@ -107,7 +108,6 @@
             </div>
             <v-divider></v-divider>
             </div>
-            
             </div>
           </v-col>
         </v-row>
@@ -119,10 +119,14 @@
     // import AddProductButton from '../../resources/Addproductbtn'
     import Subhead from '../../resources/Productdelete.vue'
     export default {
+
+      async fetch() {
+        const response = await this.$api.getVendors()
+        this.allShops = response.data
+      },
         components: {
             // AddProductButton,
             Subhead
-
         },
         data() {
           return {
@@ -134,7 +138,9 @@
               weight: '',
               sku: '',
               stock: '',
-              description: ''
+              description: '',
+              allShops: [],
+              shop_id: ""
           }
         },
         computed: {
@@ -163,7 +169,7 @@
             }   
       try {
           let productData= new FormData();
-          productData.append("shop_id", 1);
+          productData.append("shop_id", this.shop_id);
           productData.append("image", this.selectedFile);
           productData.append("name", this.name); 
           productData.append("category", this.category);
@@ -175,8 +181,6 @@
           productData.append("stock", this.stock);
           
               const response = this.$api.addProduct(productData)
-              console.log(response)
-
               this.$showSnackBar({
                      show: true,
                      timeout: 3000,

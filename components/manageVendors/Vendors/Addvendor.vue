@@ -8,7 +8,7 @@
      </div>
      <icon name="calender" class="mx-4"></icon>
      <!-- Date -->
-     <span class="text-uppercase datepicker mt-1">{{ displayDate }}</span> 
+     <span class="text-uppercase datepicker mt-1">{{ displayDate() }}</span> 
     </div>
     </div>
     <v-divider></v-divider>
@@ -19,11 +19,11 @@
                 <div class="proof">
                  <label for="proof" class="name">Storefront imagery</label><br>
                  <div class="border-bg">
-                  <div class="images">
-                    <div class="pic">
-                        <icon name="add"></icon>
-                    </div>
-                  </div>
+                   <input ref="file" 
+                   v-on:change="onFileSelected" 
+                   type="file" class="custom-file-input"
+                   accept="image/*">
+                   <icon class="add" name="add"></icon>
                  </div>
                 </div>
                 <div class="grid-input">
@@ -33,51 +33,67 @@
                 </div>
                 <div class="input">
                  <label for="Store name" class="name">Store name</label><br>
-                 <input type="text" class="grid" value="Leon store">
+                 <input v-model="shopName" type="text" class="grid" value="Leon store">
                 </div>
                 </div>
                 <div class="grid-input">
                   <div class="input">
                  <label for="First name" class="name">First name</label><br>
-                 <input type="text" class="grid">
+                 <input v-model="firstName" type="text" class="grid">
                 </div>
                 <div class="input">
                  <label for="Last name" class="name">Last name</label><br>
-                 <input type="text" class="grid">
+                 <input v-model="lastName" type="text" class="grid">
                 </div>
                 </div>
                 <div class="grid-input">
                   <div class="input">
                  <label for="Email address" class="name">Email address</label><br>
-                 <input type="email" class="grid">
+                 <input v-model="email" type="email" class="grid">
                 </div>
                 <div class="input">
                  <label for="password" class="name">Password</label><br>
-                 <input type="password" class="grid">
+                 <input v-model="password" type="password" class="grid">
                 </div>
-                </div>
-                <div class="input">
-                <label for="Mobile number" class="name">Mobile number</label><br>
-                <input type="text" class="stock"><br>
                 </div>
                  <div class="grid-input">
-                  <div class="input">
+                 <div class="input">
                  <label for="Street address" class="name">Street address</label><br>
-                 <input type="text" class="grid">
+                 <input v-model="address" type="text" class="grid">
                 </div>
                 <div class="input">
                  <label for="postcode" class="name">Postcode</label><br>
-                 <input type="text" class="grid">
+                 <input v-model="postcode" type="text" class="grid">
                 </div>
                 </div>
                 <div class="grid-input">
                   <div class="input">
                  <label for="City" class="name">City</label><br>
-                 <input type="text" class="grid">
+                 <input v-model="city" type="text" class="grid">
                 </div>
                 <div class="input">
                  <label for="Storewide discount" class="name">Storewide discount</label><br>
-                 <input type="text" class="grid">
+                 <input v-model="storewideDiscount" type="text" class="grid">
+                </div>
+                </div>
+                <div class="grid-input">
+                  <div class="input">
+                 <label for="Mobile number" class="name">Mobile number</label><br>
+                 <input v-model="phone" type="text" class="grid">
+                </div>
+                <div class="input">
+                 <label for="Card name" class="name">Name on card</label><br>
+                 <input v-model="nameCard" type="text" class="grid">
+                </div>
+                </div>
+                <div class="grid-input">
+                  <div class="input">
+                 <label for="Sort code" class="name">Sort code</label><br>
+                 <input v-model="sortCode" type="text" class="grid">
+                </div>
+                <div class="input">
+                 <label for="Account number" class="name">Account number</label><br>
+                 <input v-model="accountNumber" type="text" class="grid">
                 </div>
                 </div>
             </form>
@@ -100,28 +116,87 @@
 <script>
     import SaveOrCancelButton from '../../resources/Saveorcancel.vue'
     import OpeningHours from '../../resources/Openhours.vue'
+    import moment from 'moment'
     export default {
         components: {
             SaveOrCancelButton,
             OpeningHours
         },
-        data () {
-        return {
-            date: new Date(),
-            time: new Date(),
-            }
+        data() {
+          return {
+            selectedFile: '',
+              firstName: '',
+              lastName: '',
+              shopName: '',
+              email: '',
+              password: '',
+              address: '',
+              postcode: '',
+              city: '' ,
+              storewideDiscount: '',
+              phone: '',
+              nameCard: '',
+              sortCode: '',
+              accountNumber: ''
+          }
         },
 
     computed: {
-     displayDate(){
-        const date = new Date(this.date);
-        date.setHours(this.time.getHours())
-        date.setMinutes(this.time.getMinutes())
-        return date
+      formIsValid() {
+            return this.selectedFile !== null &&
+            this.firstName !== '' &&
+            this.lastName !== '' &&
+            this.shopName !== '' &&
+            this.email !== '' &&
+            this.password !== '' &&
+            this.address !== '' &&
+            this.postcode !== '' &&
+            this.city !== '' &&
+            this.storewideDiscount !== '' &&
+            this.phone !== '' &&
+            this.nameCard !== '' &&
+            this.sortCode !== '' &&
+            this.accountNumber !== ''
+          }
+    },
+
+    methods: {
+          displayDate(){
+            const m = moment()
+            m.format('MMMM Do YYYY, h:mm:ss a')
+            return m
+          },
+          
+          onFileSelected(){
+            this.selectedFile = this.$refs.file.files[0]
+          },
+          onCreateProduct(e){
+            e.preventDefault()
+            if(!this.formIsValid) {
+              return
+            }   
+      try {
+          let vendorData= new FormData();
+          vendorData.append("firstname", this.firstname);
+          vendorData.append("lastname", this.lastName);
+          vendorData.append("shop_name", this.shopName); 
+          vendorData.append("email", this.email);
+          vendorData.append("password", this.password);
+          vendorData.append("address", this.address);
+          vendorData.append("postcode", this.postcode);
+          vendorData.append("city", this.city);
+          vendorData.append("discount", this.storewideDiscount);
+          vendorData.append("phone", this.phone);
+          vendorData.append("name_card", this.nameCard);
+          vendorData.append("sort_code", this.sortCode);
+          vendorData.append("acct_number", this.accountNumber);
+        }catch (err){
+          return err
         }
     }
+  }
+}
 
-    }
 </script>
 
 <style scoped>
@@ -257,5 +332,34 @@ textarea::placeholder{
   padding: 25px 0;
   width: 8vw;
   cursor: pointer;
+}
+.add{
+  position: absolute;
+  top: 13rem;
+  left: 5rem;
+  cursor: pointer;
+}
+.custom-file-input::-webkit-file-upload-button {
+  visibility: hidden;
+}
+.custom-file-input::before {
+  content: '';
+  margin-top: 15px;
+  margin-left: 10px;
+  width: 8vw;
+  align-self: center;
+  text-align: center;
+  display: inline-block;
+  border: 1px solid #999;
+  border-radius: 6.29091px;
+  padding: 25px 8px;
+  outline: none;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  cursor: pointer;
+  text-shadow: 1px 1px #fff;
+}
+.custom-file-input:hover::before {
+  border-color: black;
 }
 </style>

@@ -1,9 +1,16 @@
 <template>
      <div class="card-2">
-        <div class="box-display" v-for="(content, i) in contents" :key="i">
+        <div class="box-display">
           <div class="text-uppercase p-style ml-8 mt-4" >
-            <p>{{content.name}}</p>
-            <p class="p-counts">{{content.rate}}</p>
+            <p>{{display1.name}}</p>
+            <p class="p-counts">{{customerCount}}</p>
+          </div>
+            <Icon name="right" class="mr-8 mt-6" />
+        </div>
+        <div class="box-display">
+          <div class="text-uppercase p-style ml-8 mt-4" >
+            <p>{{display2.name}}</p>
+            <p class="p-counts">{{display2.count}}</p>
           </div>
             <Icon name="right" class="mr-8 mt-6" />
         </div>
@@ -11,12 +18,23 @@
 </template>
 <script>
 export default {
+    async fetch () {
+      const newCustomerCount = await this.$api.getCustomers()
+      console.log(newCustomerCount.count);
+      this.customerCount += newCustomerCount.count
+    },
     data () {
-      return {
-        contents: [
-            {name: 'New Customers', rate: 0},
-            {name: 'total support tickets', rate: 0}
-        ]
+      return { 
+        display1 : {
+          name: 'New Customers',
+          count: 0
+        },
+        display2 : {
+          name: 'total support tickets',
+          count: 0
+        },
+        customerCount: 0,
+        ticketCount: 0
       }
     }  
 }

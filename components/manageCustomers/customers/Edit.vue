@@ -27,41 +27,41 @@
                 <div class="grid-input">
                   <div class="input">
                  <label for="first name" class="name">First Name</label><br>
-                 <input type="text" class="grid" :value="customerDetailsToView.name">
+                 <input v-model="firstname" type="text" class="grid" >
                 </div>
                 <div class="input">
                  <label for="last name" class="name">Last Name</label><br>
-                 <input type="text" class="grid">
+                 <input v-model="lastname" type="text" class="grid">
                 </div>
                 </div>
                 <div class="grid-input">
                   <div class="input">
                  <label for="email address" class="name">Email address</label><br>
-                 <input type="email" class="grid">
+                 <input v-model="email" type="email" class="grid">
                 </div>
                 <div class="input">
                  <label for="password" class="name">Password</label><br>
-                 <input type="password" class="grid">
+                 <input v-model="password" type="password" class="grid">
                 </div>
                 </div>
                 <div class="grid-input">
                   <div class="input">
                  <label for="street address" class="name">Street address</label><br>
-                 <input type="text" class="grid">
+                 <input v-model="address" type="text" class="grid">
                 </div>
                 <div class="input">
                  <label for="postcode" class="name">Postcode</label><br>
-                 <input type="text" class="grid">
+                 <input v-model="postcode" type="text" class="grid">
                 </div>
                 </div>
                 <div class="grid-input">
                   <div class="input">
                  <label for="city" class="name">City</label><br>
-                 <input type="text" class="grid">
+                 <input v-model="city" type="text" class="grid">
                 </div>
                 <div class="input">
                  <label for="mobile number" class="name">Mobile number</label><br>
-                 <input type="text" class="grid">
+                 <input v-model="phone" type="text" class="grid">
                 </div>
                 </div>
             </form>
@@ -99,7 +99,6 @@
              </div>
             </div>
             </div>
-            
             </div>
           </v-col>
         </v-row>
@@ -114,22 +113,36 @@ import {mapState} from 'vuex'
     import moment from 'moment'
     export default {
         name: 'edit',
+        // props: {
+        //   id:{
+        //     type: String,
+        //     required: true
+        //   }
+        // },
+       
         components: {
             Buttons,
             Subhead
         },
-
-        async fetch(context){
-          console.log('context')
-
-
-        },
+        // async fetch(context){
+        //   console.log('context')
+        // },
 
      data () {
         return {
-            
-            }
+          firstname: '',
+          lastname: '',
+          email: '',
+          password: '',
+          postcode: '',
+          address: '',
+          city: '',
+          phone: '' 
+          }
         },
+        // created(){
+        //   console.log(this.id)
+        // },
         computed: {
           ...mapState("customer", ["customerDetailsToView"])
         },
@@ -138,9 +151,8 @@ import {mapState} from 'vuex'
             const m = moment()
             m.format('MMMM Do YYYY, h:mm:ss a')
             return m
-          }
+          },
         }
-    
 }
 
 </script>
@@ -179,6 +191,7 @@ import {mapState} from 'vuex'
   font-size: 12px;
   line-height: 16px;
   letter-spacing: 0.07em;
+  /* :value="customerDetailsToView.name" */
 }
 .box{
   display: flex;

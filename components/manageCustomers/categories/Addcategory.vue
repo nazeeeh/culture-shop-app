@@ -1,9 +1,9 @@
 <template>
  <div>
-  <Button />
+  <!-- <Button /> -->
   <div class="sub-section">
     <div class="flex-section">
-    <span>#ID</span>
+    <!-- <span>{{shop_id}}</span> -->
      <div class="box">
       <span class="text-uppercase t-text" :style="{color: '#E76D14'}">Draft</span> 
      </div>
@@ -16,18 +16,29 @@
      </div>
    </div>
    <v-divider></v-divider>
-
    <v-row>
     <v-col cols="6">
-     <form>
+     <form @submit.prevent="onCreateCategory">
+        <!-- <div class="input">
+        <label for="last name" class="name">Id</label><br>
+        <select name="role" class="grid">
+        <option value=""></option>
+        <option value="Administrator">Car</option>
+        </select>
+        </div> -->
       <div class="input">
        <label for="name" class="name">Name</label><br>
-       <input type="text"><br><br>
+       <input v-model="name" type="text" ><br><br>
       </div>
       <div class="input">
        <label for="description" class="name">Description</label><br>
-       <textarea name="" id="" rows="10" placeholder="Reply"></textarea>
+       <textarea v-model="description" name="" rows="10" placeholder="Reply"></textarea>
       </div>
+      <div class="btn-btn">
+        <v-btn class="btn btn-cancel py-6 px-10 text-uppercase mr-2">Cancel</v-btn>
+        <v-btn class="btn btn-save-as-draft py-6 px-12 text-uppercase mr-2">Save As Draft</v-btn>
+        <v-btn class="btn btn-save py-6 px-12 text-uppercase" type="submit">Save</v-btn>
+       </div>
      </form>    
     </v-col>
     <v-spacer></v-spacer>
@@ -47,9 +58,7 @@
              <span class="t-small mt-1 text-capitalize">Vendors:</span>
             </div>
                 <v-divider></v-divider>
-            
             </div>
-            
             </div>
           </v-col>
     </v-row>
@@ -57,33 +66,99 @@
 </template>
 
 <script>
-    import Button from '../../resources/Buttons'
+    // import Button from '../../resources/Buttons'
     import Subhead from '../../resources/Subheadcategory'
+    import moment from 'moment'
     export default {
         components: {
-            Button,
+            // Button,
             Subhead
         },
          data () {
         return {
-            date: new Date(),
-            time: new Date(),
+            name: '',
+            description: ''
             }
+        
         },
 
     computed: {
      displayDate(){
-        const date = new Date(this.date);
-        date.setHours(this.time.getHours())
-        date.setMinutes(this.time.getMinutes())
-        return date
+       const m = moment()
+        m.format('MMMM Do YYYY, h:mm:ss a')
+        return m
+        },
+
+        formIsValid() {
+        return this.name !== '' &&
+        this.description !== '' 
         }
     },
+    methods: {
+         onCreateCategory(e){
+            e.preventDefault()
+            if(!this.formIsValid){
+              return 
+            }
+            
+        try{
+            let categoryData= new FormData();
+            categoryData.append("name", this.name);
+            categoryData.append("description", this.description);
+
+            const response = this.$api.addCategory(categoryData)
+            this.$showSnackBar({
+                     show: true,
+                     timeout: 3000,
+                     message: `Category Added`,
+                     color: 'green',
+                    })
+                    //RESET INPUT VALUES
+                    this.name = this.description = ""
+            } catch(err){
+                return err
+            }
+        }          
+    }
         
     }
 </script>
 
 <style scoped>
+.btn-btn{
+  position: absolute;
+  top: 10px;
+  right: 40px;
+  font-family: 'Space Grotesk';
+}
+.btn-save{
+    background: #0CAD73 !important;
+    color: #fff !important;
+    border-radius: 16px;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.07em;
+    box-shadow: none;
+}
+.btn-save-as-draft{
+    background: rgba(231, 109, 20, 0.1)!important;
+    color: #E76D14 !important;
+    border-radius: 16px;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.07em;
+    box-shadow: none;
+}
+.btn-cancel{
+    border-radius: 16px;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.07em;
+    box-shadow: none;
+}
 .sub-section{
     display: flex;
     justify-content: space-between;
@@ -125,6 +200,14 @@ input[type='text']{
 }
 input[type='text']:focus{
     border: 2px solid #192135;
+}
+.grid {
+    border: 2px solid #ECECEC;
+    border-radius: 16px;
+    width: 18.5vw;
+    height: 6vh;
+    padding: 10px;
+    outline: none;
 }
 
 textarea{

@@ -1,7 +1,5 @@
 <template>
  <div>
-  <v-btn class="btn-cancel py-6 px-10 text-uppercase">Cancel</v-btn>
-  <v-btn class="btn-save py-6 px-12 text-uppercase mx-2" :style="{background: '#0CAD73', color: '#fff'}">Save</v-btn>
   <div class="sub-section">
     <div class="flex-section">
      <div class="box">
@@ -11,79 +9,90 @@
      <!-- Date -->
      <span class="text-uppercase datepicker mt-1">{{ displayDate }}</span> 
      </div>
-     
   </div>
   <v-divider></v-divider>
   <v-layout>
         <v-row>
           <v-col cols="6">
-            <form>
+            <form @submit.prevent="onCreateDriver">
+                <div class="grid-input">
+                  <div class="input">
+                 <label for="permission" class="name">Permission</label><br>
+                 <input type="text" class="grid">
+                </div>
                 <div class="input">
-                <label for="permission" class="name ">Permissions</label><br>
-                <input type="dropdown" class="permission"><br><br>
+                 <label for="vehicle type" class="name">Vehicle type</label><br>
+                 <select v-model="vehicle" name="role" class="grid">
+                  <option value=""></option>
+                  <option value="Car">Car</option>
+                </select>
+                </div>
                 </div>
                 <div class="grid-input">
                   <div class="input">
                  <label for="first name" class="name">First Name</label><br>
-                 <input type="text" class="grid">
+                 <input v-model="firstname" type="text" class="grid">
                 </div>
                 <div class="input">
                  <label for="last name" class="name">Last Name</label><br>
-                 <input type="text" class="grid">
+                 <input v-model="lastname" type="text" class="grid">
                 </div>
                 </div>
                 <div class="grid-input">
                   <div class="input">
                  <label for="email address" class="name">Email address</label><br>
-                 <input type="email" class="grid">
+                 <input v-model="email" type="email" class="grid">
                 </div>
                 <div class="input">
                  <label for="password" class="name">Password</label><br>
-                 <input type="password" class="grid">
+                 <input v-model="password" type="password" class="grid">
                 </div>
                 </div>
                 <div class="grid-input">
                   <div class="input">
                  <label for="street address" class="name">Street address</label><br>
-                 <input type="text" class="grid">
+                 <input v-model="address" type="text" class="grid">
                 </div>
                 <div class="input">
                  <label for="postcode" class="name">Postcode</label><br>
-                 <input type="text" class="grid">
+                 <input v-model="postcode" type="text" class="grid">
                 </div>
                 </div>
                 <div class="grid-input">
                   <div class="input">
                  <label for="city" class="name">City</label><br>
-                 <input type="text" class="grid">
+                 <input v-model="city" type="text" class="grid">
                 </div>
                 <div class="input">
                  <label for="mobile number" class="name">Mobile number</label><br>
-                 <input type="text" class="grid">
+                 <input v-model="phone" type="text" class="grid">
                 </div>
                 </div>
                 <div class="grid-input">
                   <div class="input">
                  <label for="city" class="name">Documentation type</label><br>
-                 <input type="text" class="grid">
+                 <select v-model="documentation" name="role" class="grid">
+                  <option value=""></option>
+                  <option value="Passports">Passport</option>
+                </select>
                 </div>
                 <div class="input">
-                 <label for="mobile number" class="name">Documentation number</label><br>
-                 <input type="text" class="grid">
+                 <label for="document number" class="name">Documentation number</label><br>
+                 <input v-model="doc_number" type="text" class="grid">
                 </div>
                 </div>
                 <div class="proof">
                  <label for="proof" class="name">Documentation Proof</label><br>
                  <div class="border-bg">
-                  <div class="images">
-                    <div class="pic">
-                        <icon name="add"></icon>
-                    </div>
-                  </div>
+                   <input ref="file" 
+                   v-on:change="onFileSelected" 
+                   type="file" class="custom-file-input"
+                   accept="image/*">
+                   <icon class="add" name="add"></icon>
                  </div>
-                 <!-- <input type="text" class="grid"> -->
                 </div>
-
+                  <v-btn class="btn-cancel py-6 px-10 text-uppercase">Cancel</v-btn>
+                  <v-btn class="btn-save py-6 px-12 text-uppercase mx-2" type="submit" :style="{background: '#0CAD73', color: '#fff'}">Save</v-btn>
             </form>
           </v-col>
           
@@ -100,22 +109,80 @@
 </template>
 
 <script>
+    import moment from 'moment'
+
     export default {
-         data () {
-        return {
-            date: new Date(),
-            time: new Date(),
-            }
-        },
+        data () {
+         return {
+          firstname: '',
+          lastname: '',
+          email: '',
+          phone: '',
+          address: '',
+          city: '',
+          postcode: '',
+          documentation: '',
+          doc_number: '',
+          vehicle: '',
+          password: '',
+          selectedFile: ''
+        }
+      },
 
     computed: {
      displayDate(){
-        const date = new Date(this.date);
-        date.setHours(this.time.getHours())
-        date.setMinutes(this.time.getMinutes())
-        return date
-        }
+       const m = moment()
+        m.format('MMMM Do YYYY, h:mm:ss a')
+        return m
+        },
+
+    //  formIsValid() {
+    //     return this.firstname !== '' &&
+    //     this.lastname !== '' &&
+    //     this.email !== '' &&
+    //     this.phone !== '' &&
+    //     this.address !== '' &&
+    //     this.postcode !== '' &&
+    //     this.doc_number !== '' &&
+    //     this.vehicle !== '' &&
+    //     this.password !== '' &&
+    //     this.selectedFile !== ''
+    //     }
     },
+    methods: {
+      onFileSelected(){
+            this.selectedFile = this.$refs.file.files[0]
+          },
+
+          onCreateDriver(e){
+            e.preventDefault()
+            // if(!this.formIsValid){
+            //   return 
+            // }
+            try {
+              let driverData = new FormData();
+              driverData.append("firstname", this.firstname);
+              driverData.append("lastname", this.lastname);
+              driverData.append("email", this.email); 
+              driverData.append("phone", this.phone);
+              driverData.append("address", this.address);
+              driverData.append("postcode", this.postcode);
+              driverData.append("city", this.city);
+              driverData.append("documentation", this.documentation);
+              driverData.append("doc_number", this.doc_number);
+              driverData.append("vehicle", this.vehicle);
+              driverData.append("password", this.password);
+              driverData.append("passport", this.selectedFile);
+
+              const response = this.$api.addDriver(driverData)
+              console.log(response)
+            } 
+            catch (err) {
+              return err
+            }
+          }
+    }
+
     }
 </script>
 
@@ -250,5 +317,34 @@ form{
 }
 .grid:focus{
   border: 2px solid #192135;
+}
+.custom-file-input::-webkit-file-upload-button {
+  visibility: hidden;
+}
+.custom-file-input::before {
+  content: '';
+  margin-top: 15px;
+  margin-left: 10px;
+  width: 8vw;
+  align-self: center;
+  text-align: center;
+  display: inline-block;
+  border: 1px solid #999;
+  border-radius: 6.29091px;
+  padding: 25px 8px;
+  outline: none;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  cursor: pointer;
+  text-shadow: 1px 1px #fff;
+}
+.custom-file-input:hover::before {
+  border-color: black;
+}
+.add{
+  position: absolute;
+  top: 49rem;
+  left: 5.5rem;
+  cursor: pointer;
 }
 </style>

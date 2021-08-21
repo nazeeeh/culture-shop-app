@@ -6,46 +6,70 @@
           <label for="checkbox"></label>
         </div>
         <div class="table">
-          <sorted-table :values="values">
             <thead>
-              <tr> 
+              <tr > 
                 <th scope="col" style="text-align: left; width: 10rem;">
-                  <sort-link name="id">Id</sort-link>
+                Id
                 </th>
                 <th scope="col" style="text-align: left; width: 10rem;">
-                  <sort-link name="name"><span style="display: flex; align-items: center"> Date <icon name="up"></icon></span></sort-link>
+                  <span style="display: flex; align-items: center"> Date <icon name="up"></icon></span>
                 </th>
                 <th scope="col" style="text-align: left; width: 10rem;">
-                  <sort-link name="hits">Customer &#38; Role</sort-link>
+                  Customer &#38; Role
                 </th>
                 <th scope="col" style="text-align: left; width: 10rem;">
-                  <sort-link name="hits">Vendor &#38; Role</sort-link>
+                 Vendor &#38; Role
                 </th>
                 <th scope="col" style="text-align: left; width: 10rem;">
-                  <sort-link name="name"><span style="display: flex; align-items: center"> Total <icon name="up"></icon></span></sort-link>
+                  <span style="display: flex; align-items: center"> Total <icon name="up"></icon></span>
                 </th>
                 <th scope="col" style="text-align: left; width: 10rem;">
-                  <sort-link name="hits"><span style="display: flex; align-items: center"><span style="color: grey; margin-right: 1rem;">Status</span> All <icon name="dropdown"></icon> </span></sort-link>
+                  <span style="display: flex; align-items: center"><span style="color: grey; margin-right: 1rem;">Status</span> All <icon name="dropdown"></icon></span>
                 </th>
               </tr>
             </thead>
       <template>
         <tbody>
-          <tr>
+          <tr v-for="item in orders" :key="item.id">
+            <td>{{item.id}}</td>
+            <td>{{convertToDate(item.created_at)}}</td>
+            <td>{{item.name}}</td>
             <td></td>
-            <td></td>
-            <td></td>
+            <td>{{item.total}}</td>
+            <td>{{item.status}}</td>
+            <td class="change">
+              <nuxt-link to="">
+                <span class="edit">edit <icon class="i" name="change"></icon></span>
+              </nuxt-link>
+              <nuxt-link :to="`/manage-customers/orders/orders/${item.order_no}`">
+               <span class="view">view<icon class="i mt-1" name="right"></icon></span>
+              </nuxt-link>
+            </td>
           </tr>
         </tbody>
       </template>
-    </sorted-table>
     </div>
   </div>
 </template>
 
 <script>
+    import moment from 'moment'
     export default {
-        
+       async fetch () {
+        const data = await this.$api.getAllOrders()
+        this.orders = data.orders
+        console.log(data);
+      },
+      data () {
+        return {
+          orders: []
+        }
+      },
+      methods: {
+        convertToDate(date){
+          return moment(date).format('ll');
+          }
+      }
     }
 </script>
 
@@ -58,6 +82,20 @@
     letter-spacing: 0.07em;
     text-transform: uppercase;
     margin: 5px 0px 6px 100px;
+  }
+  .table td {
+    text-transform: capitalize;
+  }
+  .table .change{
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    text-transform: uppercase;
+  }
+  .table .edit, .table .view{
+    display: flex;
+    align-items: center;
+    width: 80px;
   }
   .round {
   position: relative;

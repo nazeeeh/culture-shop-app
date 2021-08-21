@@ -8,7 +8,10 @@ export default (ctx, inject) => {
     const services = {
         order: ctx.$config.orderService,
         customer: ctx.$config.customerService,
-        product: ctx.$config.productService
+        product: ctx.$config.productService,
+        vendor: ctx.$config.vendorService,
+        driver: ctx.$config.driverService,
+        category: ctx.$config.categoryService
     }
 
     const Api = new CsRequests(instance, services, store, auth, snackbar)

@@ -8,36 +8,44 @@
      <label for="checkbox"></label>
     </div>
     <div class="table">
-          <sorted-table :values="values">
             <thead>
               <tr> 
                 <th scope="col" style="text-align: left; width: 10rem;">
-                  <sort-link name="id">Id</sort-link>
+               Id
                 </th>
                 <th scope="col" style="text-align: left; width: 10rem;">
-                  <sort-link name="name"><span style="display: flex; align-items: center"> Date <icon name="up"></icon></span></sort-link>
+                  <span style="display: flex; align-items: center"> Date <icon name="up"></icon></span>
                 </th>
                 <th scope="col" style="text-align: left; width: 10rem;">
-                  <sort-link name="hits">Driver &#38; Role</sort-link>
+                Driver &#38; Role
                 </th>
                 <th scope="col" style="text-align: left; width: 10rem;">
-                  <sort-link name="hits">Driver Details</sort-link>
+                Driver Details
                 </th>
                 <th scope="col" style="text-align: left; width: 10rem;">
-                  <sort-link name="hits"><span style="display: flex; align-items: center"><span style="color: grey; margin-right: 1rem;">Status</span> All <icon name="dropdown"></icon> </span></sort-link>
+                <span style="display: flex; align-items: center"><span style="color: grey; margin-right: 1rem;">Status</span> All <icon name="dropdown"></icon> </span>
                 </th>
               </tr>
             </thead>
       <template>
         <tbody>
-          <tr>
+          <tr v-for="driver in drivers" :key="driver.id">
+            <td> {{ driver.id }}</td>
+            <td> {{ convertToDate(driver.created_at)}}</td>
+            <td> {{ driver.firstname}} {{ driver.lastname}}</td>
+            <td> {{driver.vehicle}} <span><br> {{driver.phone}}</span></td>
             <td></td>
-            <td></td>
-            <td></td>
+            <td class="change">
+              <nuxt-link :to="`/manage-drivers/drivers/edit/${driver.id}`">
+              <span class="edit">edit <icon class="i" name="change"></icon></span>
+              </nuxt-link>
+              <nuxt-link to="">
+               <span class="view">view<icon class="i mt-1" name="right"></icon></span>
+              </nuxt-link>
+            </td>
           </tr>
         </tbody>
       </template>
-    </sorted-table>
     </div>
     <BulkAction />
  </div>
@@ -46,10 +54,26 @@
 <script>
     import ExportSearch from '../../resources/Export'
     import BulkAction from '../../resources/Bulkaction'
+    import moment from 'moment'
     export default {
+    async fetch () {
+      const response = await this.$api.getDriver()
+      console.log(response)
+      this.drivers = response.drivers
+    },
      components: {
          ExportSearch,
          BulkAction
+     },
+     data () {
+       return {
+         drivers: []
+       }
+     },
+     methods: {
+       convertToDate(date){
+        return moment(date).format('ll');
+       }
      }
         
     }
@@ -78,6 +102,23 @@
     letter-spacing: 0.07em;
     text-transform: uppercase;
     margin: 5px 0px 6px 100px;
+  }
+  .table td {
+    text-transform: capitalize;
+  }
+  .table .change{
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    text-transform: uppercase;
+  }
+  .table .edit, .table .view{
+    display: flex;
+    align-items: center;
+    width: 80px;
+  }
+  .table .i{
+    margin-right: 5rem;
   }
    .round {
   position: relative;

@@ -41,14 +41,21 @@ export default {
       editCustomer: process.env.EDIT_CUSTOMERS
     },
     productService: {
-      getProducts: process.env.PRODUCTS,
+      getProducts: process.env.GET_PRODUCTS,
       addProduct: process.env.ADD_PRODUCT
+    },
+    vendorService: {
+      addVendors: process.env.ADD_VENDOR,
+      getVendors: process.env.VENDORS
+    },
+    driverService: {
+      getDrivers: process.env.DRIVERS,
+      addDriver: process.env.ADD_DRIVER
+    },
+    categoryService: {
+      addCategory: process.env.ADD_CATEGORY,
     }
-
-    
   },
-
-
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
