@@ -13,6 +13,7 @@
 <script>
 import snackbar from '../components/snackbar'
 export default {
+  middleware: 'adminLazyAuth',
   components:{
     snackbar
 

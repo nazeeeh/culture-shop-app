@@ -1,197 +1,64 @@
 <template>
-    <div class="login">
-     <div class="main">
-      <div class="logo">
-       <Logo />
-      </div>      
-        <!-- header -->
-        <v-layout>
-         <v-row>
-          <v-col >
-            <h3 class="header">Culture Shop</h3>
-            <h5 class="sub-text">Administrator</h5>
-          </v-col>
-         </v-row>
-        </v-layout>
-        <!-- form -->
-        <v-layout>
-         <v-row>
-          <v-col>
-           <form @submit.prevent="onLogin">
-            <input class="inputs" v-model="login.email" type="email" placeholder="Email Address" /><br><br>
-            <input class="inputs" v-model="login.password" type="password" placeholder="Password"/><br><br>
-            <div class="round">
-             <input type="checkbox" id="checkbox" />
-              <label for="checkbox"></label>
-              <span class="remember-me">Remember me</span>
-            </div><br><br>
-            <v-btn class="sign-in-btn" type="submit" :loading="isLoading">Sign In</v-btn><br><br>
-            <nuxt-link to="/forget-password/recovery-option">
-             <span class="forgotten-password">Forgotten password</span>
-            </nuxt-link>
-           </form>
-          </v-col>
-         </v-row>
-        </v-layout>
-     </div>
-    </div>
+  <div class="dashboard">
+    <v-row>
+      <v-col cols="12" sm="8" md="6">
+        <div class="top-section">
+          <span class="tite">{{ title }}</span><br>
+          <span class="subheading text-uppercase">{{ subheading }}</span>
+        </div>
+      </v-col>
+    </v-row>
+  <v-divider></v-divider>
+  <Subhead />
+  <v-divider></v-divider>
+  <Card />
+  <Cardgraph />
+  <Card2 />
+  <Bottomgraph />
+  </div>
 </template>
 
 <script>
+import Subhead from '~/components/Dashboard-subhead.vue'
+import Card from '~/components/Card-1.vue'
+import Cardgraph from '~/components/Card-graph.vue'
+import Card2 from '~/components/Card-2.vue'
+import Bottomgraph from '~/components/Bottom-graph.vue'
 
-    import Logo from '~/components/Logo'
-    import Config from '@/services/config'
-    export default {
-        middleware: 'adminLazyAuth',
-        components: {
-         Logo
-        },
-        layout: 'auth',
-
-        data() {
-            return {
-                login: {
-                 email: '',
-                 password: ''
-                },
-                isLoading: false,
-            }
-        },
-        methods: {
-            async onLogin() {
-                this.isLoading = true;
-                try{
-                    let response = await this.$auth.loginWith('local', {data: this.login});
-                    // console.log(response.data);
-                    
-                    //  this.$router.push('/dashboard');
-                     //Login Notification messages
-                     this.$showSnackBar({
-                     show: true,
-                     timeout: 3000,
-                     message: `Login successful`,
-                     color: 'green',
-                    })
-                    //RESET inputs
-                    this.email = this.password = '';
-                }catch(err){
-                 this.isLoading = false;
-                     this.$showSnackBar({
-                         show: true,
-                         timeout: 3000,
-                         message: err?.response?.data?.error || "Sorry an error occured",
-                         color: 'red',
-                     })
-                }
-            }
-        }
+export default {
+  data () {
+    return {
+      title: 'Dashboard',
+      subheading: 'Analytics'
     }
+  },
+  components: {
+    Subhead,
+    Card,
+    Cardgraph,
+    Card2,
+    Bottomgraph
+  }
+}
 </script>
-
 <style scoped>
-.login{
-    position: relative;
-    text-align: center;
-    font-family: 'Space Grotesk';
+.tite{
+font-family: 'Space Grotesk';
+font-style: normal;
+font-weight: bold;
+font-size: 24px;
 }
-.login .main{
-    position: absolute;
-    /* border: 1px solid green; */
-    top: 9em;
-    left: 25%;
-    padding: 30px 50px;
-    width: 700px;
+.subheading{
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.07em;
 }
-
-.header{
-    font-weight: bold;
-    font-size: 28px;
-    line-height: 38px;
-    margin-top: 30px;
+.top-section{
+  margin: 5px 0 6px 34px;
 }
 
-.sub-text{
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 22px;
-    margin-bottom: 30px;
-}
 
-.inputs{
-    border: 2px solid #ECECEC;
-    border-radius: 16px;
-    height: 7vh;
-    width: 20vw;
-    padding: 20px;
-    outline: none;
-
-}
-.inputs::placeholder{
-    text-transform: uppercase;
-    font-weight: 600;
-    font-size: 12px;
-    line-height: 16px;
-    letter-spacing: 0.07em;
-    opacity: 0.6;
-}
-.sign-in-btn{
-    background: #0CAD73 !important;
-    color: #fff;
-    box-shadow: none;
-    width: 20vw;
-    border-radius: 40px;
-    height: 54px !important;
-    text-transform: capitalize;
-}
-.remember-me{
-    font-weight: bold;
-    font-size: 15px;
-    opacity: 0.8;
-    margin-left: 10px;
-}
-
-a {
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 15px;
-    line-height: 22px;
-    color: grey;
-    opacity: 0.6;
-    text-transform: capitalize;
-}
-
-label{
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 50%;
-    cursor: pointer;
-    height: 20px;
-    left: 40%;
-    position: absolute;
-    top: 66.5%;
-    width: 20px;
-}
-label:after {
-  border: 2px solid #fff;
-  border-top: none;
-  border-right: none;
-  content: "";
-  height: 6px;
-  left: 3px;
-  opacity: 0;
-  position: absolute;
-  top: 4px;
-  transform: rotate(-45deg);
-  width: 12px;
-}
-input[type="checkbox"] {
-  visibility: hidden;
-}
-input[type="checkbox"]:checked + label {
-  background-color: #0CAD73;
-  border-color: #0CAD73;
-}
-input[type="checkbox"]:checked + label:after {
-  opacity: 1;
-}
 </style>

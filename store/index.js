@@ -5,22 +5,25 @@ export const state = () => ({
     globalSnackbarSettings: {
       show: false,
     },
-    users: []
+    users: [],
+    items:[]
 
   })
 
   //Getters
   export const getters = {
-
+  
   }
 
   //Actions
   export const actions = {
+    async getItems(){
+      const items = await 
+    }
     // async getUsers(){
     //   const users = await $axios.$get(Config.endpoints.admins)
     //   console.log(users)
     //   Commit("addUsers", users)
-
     // }
 
   }

@@ -1,224 +1,261 @@
 [
   {
-    "name": "dashboard",
-    "path": "/dashboard",
-    "component": "C:\\\\Users\\\\HP PC\\\\Documents\\\\culture-shop\\\\pages\\\\dashboard.vue",
-    "chunkName": "pages/dashboard"
+    "name": "login",
+    "path": "/login",
+    "component": "C:\\\\Users\\\\HP PC\\\\Documents\\\\culture-shop\\\\pages\\\\login.vue",
+    "chunkName": "pages/login",
+    "_name": "_7aa80b1a"
   },
   {
     "name": "settings",
     "path": "/settings",
     "component": "C:\\\\Users\\\\HP PC\\\\Documents\\\\culture-shop\\\\pages\\\\settings\\\\index.vue",
-    "chunkName": "pages/settings/index"
+    "chunkName": "pages/settings/index",
+    "_name": "_02ab4140"
   },
   {
     "name": "manage-customers-orders",
     "path": "/manage-customers/orders",
     "component": "C:\\\\Users\\\\HP PC\\\\Documents\\\\culture-shop\\\\pages\\\\manage-customers\\\\orders\\\\index.vue",
-    "chunkName": "pages/manage-customers/orders/index"
+    "chunkName": "pages/manage-customers/orders/index",
+    "_name": "_415254b1"
   },
   {
     "name": "manage-customers-orders-orders",
     "path": "/manage-customers/orders/orders",
     "component": "C:\\\\Users\\\\HP PC\\\\Documents\\\\culture-shop\\\\pages\\\\manage-customers\\\\orders\\\\orders\\\\index.vue",
-    "chunkName": "pages/manage-customers/orders/orders/index"
+    "chunkName": "pages/manage-customers/orders/orders/index",
+    "_name": "_03884e2c"
   },
   {
     "name": "manage-vendors-orders-all",
     "path": "/manage-vendors/orders/all",
     "component": "C:\\\\Users\\\\HP PC\\\\Documents\\\\culture-shop\\\\pages\\\\manage-vendors\\\\orders\\\\all\\\\index.vue",
-    "chunkName": "pages/manage-vendors/orders/all/index"
+    "chunkName": "pages/manage-vendors/orders/all/index",
+    "_name": "_1fb2a258"
   },
   {
     "name": "manage-vendors-products-add",
     "path": "/manage-vendors/products/add",
     "component": "C:\\\\Users\\\\HP PC\\\\Documents\\\\culture-shop\\\\pages\\\\manage-vendors\\\\products\\\\add\\\\index.vue",
-    "chunkName": "pages/manage-vendors/products/add/index"
+    "chunkName": "pages/manage-vendors/products/add/index",
+    "_name": "_40cc2957"
   },
   {
     "name": "manage-vendors-products-all",
     "path": "/manage-vendors/products/all",
     "component": "C:\\\\Users\\\\HP PC\\\\Documents\\\\culture-shop\\\\pages\\\\manage-vendors\\\\products\\\\all\\\\index.vue",
-    "chunkName": "pages/manage-vendors/products/all/index"
+    "chunkName": "pages/manage-vendors/products/all/index",
+    "_name": "_1b1cef52"
   },
   {
     "name": "manage-vendors-support-overview",
     "path": "/manage-vendors/support/overview",
     "component": "C:\\\\Users\\\\HP PC\\\\Documents\\\\culture-shop\\\\pages\\\\manage-vendors\\\\support\\\\overview\\\\index.vue",
-    "chunkName": "pages/manage-vendors/support/overview/index"
+    "chunkName": "pages/manage-vendors/support/overview/index",
+    "_name": "_ada040a8"
   },
   {
     "name": "manage-vendors-vendors-add",
     "path": "/manage-vendors/vendors/add",
     "component": "C:\\\\Users\\\\HP PC\\\\Documents\\\\culture-shop\\\\pages\\\\manage-vendors\\\\vendors\\\\add\\\\index.vue",
-    "chunkName": "pages/manage-vendors/vendors/add/index"
+    "chunkName": "pages/manage-vendors/vendors/add/index",
+    "_name": "_753ae34a"
   },
   {
     "name": "manage-vendors-vendors-all",
     "path": "/manage-vendors/vendors/all",
     "component": "C:\\\\Users\\\\HP PC\\\\Documents\\\\culture-shop\\\\pages\\\\manage-vendors\\\\vendors\\\\all\\\\index.vue",
-    "chunkName": "pages/manage-vendors/vendors/all/index"
+    "chunkName": "pages/manage-vendors/vendors/all/index",
+    "_name": "_26e0424a"
   },
   {
     "name": "manage-customers-orders-orders-id-id",
     "path": "/manage-customers/orders/orders/id/:id",
     "component": "C:\\\\Users\\\\HP PC\\\\Documents\\\\culture-shop\\\\pages\\\\manage-customers\\\\orders\\\\orders\\\\id\\\\_id.vue",
-    "chunkName": "pages/manage-customers/orders/orders/id/_id"
+    "chunkName": "pages/manage-customers/orders/orders/id/_id",
+    "_name": "_b054ff4e"
   },
   {
     "name": "manage-customers-support-tickets-resolved-name",
     "path": "/manage-customers/support/tickets/resolved/:name?",
     "component": "C:\\\\Users\\\\HP PC\\\\Documents\\\\culture-shop\\\\pages\\\\manage-customers\\\\support\\\\tickets\\\\resolved\\\\_name.vue",
-    "chunkName": "pages/manage-customers/support/tickets/resolved/_name"
+    "chunkName": "pages/manage-customers/support/tickets/resolved/_name",
+    "_name": "_abdba544"
   },
   {
     "name": "manage-customers-support-tickets-unresolved-name",
     "path": "/manage-customers/support/tickets/unresolved/:name?",
     "component": "C:\\\\Users\\\\HP PC\\\\Documents\\\\culture-shop\\\\pages\\\\manage-customers\\\\support\\\\tickets\\\\unresolved\\\\_name.vue",
-    "chunkName": "pages/manage-customers/support/tickets/unresolved/_name"
+    "chunkName": "pages/manage-customers/support/tickets/unresolved/_name",
+    "_name": "_281c1925"
   },
   {
     "name": "manage-drivers-support-tickets-resolved-name",
     "path": "/manage-drivers/support/tickets/resolved/:name?",
     "component": "C:\\\\Users\\\\HP PC\\\\Documents\\\\culture-shop\\\\pages\\\\manage-drivers\\\\support\\\\tickets\\\\resolved\\\\_name.vue",
-    "chunkName": "pages/manage-drivers/support/tickets/resolved/_name"
+    "chunkName": "pages/manage-drivers/support/tickets/resolved/_name",
+    "_name": "_67830fe8"
   },
   {
     "name": "manage-drivers-support-tickets-unresolved-name",
     "path": "/manage-drivers/support/tickets/unresolved/:name?",
     "component": "C:\\\\Users\\\\HP PC\\\\Documents\\\\culture-shop\\\\pages\\\\manage-drivers\\\\support\\\\tickets\\\\unresolved\\\\_name.vue",
-    "chunkName": "pages/manage-drivers/support/tickets/unresolved/_name"
+    "chunkName": "pages/manage-drivers/support/tickets/unresolved/_name",
+    "_name": "_4cde812f"
   },
   {
     "name": "manage-vendors-support-tickets-resolved-name",
     "path": "/manage-vendors/support/tickets/resolved/:name?",
     "component": "C:\\\\Users\\\\HP PC\\\\Documents\\\\culture-shop\\\\pages\\\\manage-vendors\\\\support\\\\tickets\\\\resolved\\\\_name.vue",
-    "chunkName": "pages/manage-vendors/support/tickets/resolved/_name"
+    "chunkName": "pages/manage-vendors/support/tickets/resolved/_name",
+    "_name": "_dc8d05f0"
   },
   {
     "name": "manage-vendors-support-tickets-unresolved-name",
     "path": "/manage-vendors/support/tickets/unresolved/:name?",
     "component": "C:\\\\Users\\\\HP PC\\\\Documents\\\\culture-shop\\\\pages\\\\manage-vendors\\\\support\\\\tickets\\\\unresolved\\\\_name.vue",
-    "chunkName": "pages/manage-vendors/support/tickets/unresolved/_name"
+    "chunkName": "pages/manage-vendors/support/tickets/unresolved/_name",
+    "_name": "_79a3b362"
   },
   {
     "name": "manage-customers-category-add-name",
     "path": "/manage-customers/category/add/:name?",
     "component": "C:\\\\Users\\\\HP PC\\\\Documents\\\\culture-shop\\\\pages\\\\manage-customers\\\\category\\\\add\\\\_name.vue",
-    "chunkName": "pages/manage-customers/category/add/_name"
+    "chunkName": "pages/manage-customers/category/add/_name",
+    "_name": "_248bc91a"
   },
   {
     "name": "manage-customers-customers-add-name",
     "path": "/manage-customers/customers/add/:name?",
     "component": "C:\\\\Users\\\\HP PC\\\\Documents\\\\culture-shop\\\\pages\\\\manage-customers\\\\customers\\\\add\\\\_name.vue",
-    "chunkName": "pages/manage-customers/customers/add/_name"
+    "chunkName": "pages/manage-customers/customers/add/_name",
+    "_name": "_3a6d21e2"
   },
   {
     "name": "manage-customers-customers-edit-id",
     "path": "/manage-customers/customers/edit/:id?",
     "component": "C:\\\\Users\\\\HP PC\\\\Documents\\\\culture-shop\\\\pages\\\\manage-customers\\\\customers\\\\edit\\\\_id.vue",
-    "chunkName": "pages/manage-customers/customers/edit/_id"
+    "chunkName": "pages/manage-customers/customers/edit/_id",
+    "_name": "_262f6d47"
   },
   {
     "name": "manage-drivers-drivers-add-name",
     "path": "/manage-drivers/drivers/add/:name?",
     "component": "C:\\\\Users\\\\HP PC\\\\Documents\\\\culture-shop\\\\pages\\\\manage-drivers\\\\drivers\\\\add\\\\_name.vue",
-    "chunkName": "pages/manage-drivers/drivers/add/_name"
+    "chunkName": "pages/manage-drivers/drivers/add/_name",
+    "_name": "_9ff9b43c"
   },
   {
     "name": "manage-drivers-drivers-edit-id",
     "path": "/manage-drivers/drivers/edit/:id?",
     "component": "C:\\\\Users\\\\HP PC\\\\Documents\\\\culture-shop\\\\pages\\\\manage-drivers\\\\drivers\\\\edit\\\\_id.vue",
-    "chunkName": "pages/manage-drivers/drivers/edit/_id"
+    "chunkName": "pages/manage-drivers/drivers/edit/_id",
+    "_name": "_63c8e947"
   },
   {
     "name": "manage-vendors-vendors-edit-id",
     "path": "/manage-vendors/vendors/edit/:id?",
     "component": "C:\\\\Users\\\\HP PC\\\\Documents\\\\culture-shop\\\\pages\\\\manage-vendors\\\\vendors\\\\edit\\\\_id.vue",
-    "chunkName": "pages/manage-vendors/vendors/edit/_id"
+    "chunkName": "pages/manage-vendors/vendors/edit/_id",
+    "_name": "_7fedad47"
   },
   {
     "name": "manage-customers-category-name",
     "path": "/manage-customers/category/:name?",
     "component": "C:\\\\Users\\\\HP PC\\\\Documents\\\\culture-shop\\\\pages\\\\manage-customers\\\\category\\\\_name.vue",
-    "chunkName": "pages/manage-customers/category/_name"
+    "chunkName": "pages/manage-customers/category/_name",
+    "_name": "_380e9c90"
   },
   {
     "name": "manage-customers-customers-name",
     "path": "/manage-customers/customers/:name",
     "component": "C:\\\\Users\\\\HP PC\\\\Documents\\\\culture-shop\\\\pages\\\\manage-customers\\\\customers\\\\_name\\\\index.vue",
-    "chunkName": "pages/manage-customers/customers/_name/index"
+    "chunkName": "pages/manage-customers/customers/_name/index",
+    "_name": "_5edec6be"
   },
   {
     "name": "manage-customers-orders-id",
     "path": "/manage-customers/orders/:id?",
     "component": "C:\\\\Users\\\\HP PC\\\\Documents\\\\culture-shop\\\\pages\\\\manage-customers\\\\orders\\\\_id.vue",
-    "chunkName": "pages/manage-customers/orders/_id"
+    "chunkName": "pages/manage-customers/orders/_id",
+    "_name": "_1a1fcf59"
   },
   {
     "name": "manage-customers-support-name",
     "path": "/manage-customers/support/:name",
     "component": "C:\\\\Users\\\\HP PC\\\\Documents\\\\culture-shop\\\\pages\\\\manage-customers\\\\support\\\\_name\\\\index.vue",
-    "chunkName": "pages/manage-customers/support/_name/index"
+    "chunkName": "pages/manage-customers/support/_name/index",
+    "_name": "_9d5a8eca"
   },
   {
     "name": "manage-drivers-drivers-name",
     "path": "/manage-drivers/drivers/:name",
     "component": "C:\\\\Users\\\\HP PC\\\\Documents\\\\culture-shop\\\\pages\\\\manage-drivers\\\\drivers\\\\_name\\\\index.vue",
-    "chunkName": "pages/manage-drivers/drivers/_name/index"
+    "chunkName": "pages/manage-drivers/drivers/_name/index",
+    "_name": "_38b5a0a1"
   },
   {
     "name": "manage-drivers-orders-name",
     "path": "/manage-drivers/orders/:name",
     "component": "C:\\\\Users\\\\HP PC\\\\Documents\\\\culture-shop\\\\pages\\\\manage-drivers\\\\orders\\\\_name\\\\index.vue",
-    "chunkName": "pages/manage-drivers/orders/_name/index"
+    "chunkName": "pages/manage-drivers/orders/_name/index",
+    "_name": "_78a6324f"
   },
   {
     "name": "manage-drivers-support-name",
     "path": "/manage-drivers/support/:name",
     "component": "C:\\\\Users\\\\HP PC\\\\Documents\\\\culture-shop\\\\pages\\\\manage-drivers\\\\support\\\\_name\\\\index.vue",
-    "chunkName": "pages/manage-drivers/support/_name/index"
+    "chunkName": "pages/manage-drivers/support/_name/index",
+    "_name": "_176b9a25"
   },
   {
     "name": "settings-general-name",
     "path": "/settings/general/:name?",
     "component": "C:\\\\Users\\\\HP PC\\\\Documents\\\\culture-shop\\\\pages\\\\settings\\\\general\\\\_name.vue",
-    "chunkName": "pages/settings/general/_name"
+    "chunkName": "pages/settings/general/_name",
+    "_name": "_34760d84"
   },
   {
     "name": "manage-drivers-orders-name-all-id",
     "path": "/manage-drivers/orders/:name?/all/:id",
     "component": "C:\\\\Users\\\\HP PC\\\\Documents\\\\culture-shop\\\\pages\\\\manage-drivers\\\\orders\\\\_name\\\\all\\\\_id.vue",
-    "chunkName": "pages/manage-drivers/orders/_name/all/_id"
+    "chunkName": "pages/manage-drivers/orders/_name/all/_id",
+    "_name": "_757f9d68"
   },
   {
     "name": "forget-password-name",
     "path": "/forget-password/:name?",
     "component": "C:\\\\Users\\\\HP PC\\\\Documents\\\\culture-shop\\\\pages\\\\forget-password\\\\_name.vue",
-    "chunkName": "pages/forget-password/_name"
+    "chunkName": "pages/forget-password/_name",
+    "_name": "_6a2e03ae"
   },
   {
     "name": "manage-customers-name",
     "path": "/manage-customers/:name?",
     "component": "C:\\\\Users\\\\HP PC\\\\Documents\\\\culture-shop\\\\pages\\\\manage-customers\\\\_name.vue",
-    "chunkName": "pages/manage-customers/_name"
+    "chunkName": "pages/manage-customers/_name",
+    "_name": "_7e55aece"
   },
   {
     "name": "manage-drivers-name",
     "path": "/manage-drivers/:name?",
     "component": "C:\\\\Users\\\\HP PC\\\\Documents\\\\culture-shop\\\\pages\\\\manage-drivers\\\\_name.vue",
-    "chunkName": "pages/manage-drivers/_name"
+    "chunkName": "pages/manage-drivers/_name",
+    "_name": "_7fe6e458"
   },
   {
     "name": "manage-vendors-name",
     "path": "/manage-vendors/:name?",
     "component": "C:\\\\Users\\\\HP PC\\\\Documents\\\\culture-shop\\\\pages\\\\manage-vendors\\\\_name.vue",
-    "chunkName": "pages/manage-vendors/_name"
+    "chunkName": "pages/manage-vendors/_name",
+    "_name": "_229e4178"
   },
   {
     "name": "index",
     "path": "/",
     "component": "C:\\\\Users\\\\HP PC\\\\Documents\\\\culture-shop\\\\pages\\\\index.vue",
-    "chunkName": "pages/index"
+    "chunkName": "pages/index",
+    "_name": "_9dff2ffa"
   }
 ]

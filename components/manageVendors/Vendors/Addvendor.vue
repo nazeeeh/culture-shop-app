@@ -207,7 +207,7 @@
           vendorData.append("sort_code", this.sortCode);
           vendorData.append("acct_number", this.accountNumber);
           vendorData.append("category", this.category);
-
+          
           const sendData = this.$api.addVendor(vendorData)
           console,log(sendData)
         }catch (err){

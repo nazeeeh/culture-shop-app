@@ -36,7 +36,7 @@
             <td>{{item.name}}</td>
             <td></td>
             <td>{{item.total}}</td>
-            <td>{{item.status}}</td>
+            <span class=""></span><td>{{item.status}}</td>
             <td class="change">
               <nuxt-link class="underline" to="">
                 <span class="edit">edit <icon class="i" name="change"></icon></span>
@@ -63,7 +63,7 @@
       data () {
         return {
           orders: []
-        }
+         }
       },
       methods: {
         convertToDate(date){

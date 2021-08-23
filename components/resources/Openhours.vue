@@ -24,7 +24,7 @@
             <div class="time-border">
              <v-list-item-title v-text="child.title" class="text lis"></v-list-item-title>
                <div class="change">
-                <span>{{child.t1}}  {{child.t2}}</span><span style="color: #0CAD73;" @click="dialog =true">Change</span>
+                <span>{{child.t1}}  {{child.t2}}</span><span style="color: #0CAD73;" @click="dialog =true, itemToUse = child">Change</span>
                </div>
             </div>
           </v-list-item-content>
@@ -32,14 +32,14 @@
         <!-- Dialog -->
         <v-layout >
           <v-row justify="center">
-          <v-dialog v-model="dialog" persistent max-width="500">
+          <v-dialog v-model="dialog" :key="updateModal" persistent max-width="500">
           <v-card class="dialog py-8 px-12">
             <v-card-actions>
               <div class="button-dialog">
-              <input type="time" class="grid"/><br>
+              <input @change="selectTime(itemToUse, 't1', 'startTime')" type="time" class="grid startTime"/><br>
               <span>to</span><br>
-              <input type="time" class="grid"><br>
-              <button class="btn-f white--text" color="#0CAD73" @click="dialog = false">ok</button>
+              <input @change="selectTime(itemToUse, 't2', 'endTime')" type="time" class="grid endTime"><br>
+              <button class="btn-f white--text" color="#0CAD73" @click="dialog = false, ++updateModal">ok</button>
               </div>
             </v-card-actions>
             </v-card>
@@ -57,6 +57,8 @@
         data () {
       return {
         dialog: false,
+        updateModal: 0,
+        itemToUse:{},
 
         items: [
         {
@@ -75,6 +77,16 @@
         }
       ],
       }
+      },
+
+      methods: {
+        selectTime(item, ele, node){
+          const index = this.items[0].items.map((element) => 
+          {
+            return element.title
+            }).indexOf(item.title)
+          this.items[0].items[index][ele] = document.querySelector(`.${node}`).value
+        }
       }
     }
 </script>

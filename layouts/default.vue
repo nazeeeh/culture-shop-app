@@ -63,6 +63,7 @@
 <script>
 import snackbar from '../components/snackbar'
 export default {
+  middleware : 'auth',
   components:{
     snackbar
 
