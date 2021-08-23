@@ -15,12 +15,12 @@ export { default as ManageVendor } from '../..\\components\\Manage-vendor.vue'
 export { default as Sectionlinks } from '../..\\components\\Sectionlinks.vue'
 export { default as Sidebar } from '../..\\components\\Sidebar.vue'
 export { default as Snackbar } from '../..\\components\\snackbar.vue'
-export { default as GeneralDriveragreement } from '../..\\components\\General\\Driveragreement.vue'
-export { default as GeneralUserpermission } from '../..\\components\\General\\Userpermission.vue'
-export { default as GeneralVendoragreement } from '../..\\components\\General\\Vendoragreement.vue'
 export { default as ForgetPasswordPhoneVerification } from '../..\\components\\ForgetPassword\\PhoneVerification.vue'
 export { default as ForgetPasswordRecoveryOption } from '../..\\components\\ForgetPassword\\RecoveryOption.vue'
 export { default as ForgetPasswordResetPassword } from '../..\\components\\ForgetPassword\\ResetPassword.vue'
+export { default as GeneralDriveragreement } from '../..\\components\\General\\Driveragreement.vue'
+export { default as GeneralUserpermission } from '../..\\components\\General\\Userpermission.vue'
+export { default as GeneralVendoragreement } from '../..\\components\\General\\Vendoragreement.vue'
 export { default as ManageCustomersAnalytics } from '../..\\components\\manageCustomers\\Analytics.vue'
 export { default as ManageDriversAnalytics } from '../..\\components\\manageDrivers\\Analytics.vue'
 export { default as ManageVendorsAnalytics } from '../..\\components\\manageVendors\\Analytics.vue'
@@ -97,12 +97,12 @@ export const LazyManageVendor = import('../..\\components\\Manage-vendor.vue' /*
 export const LazySectionlinks = import('../..\\components\\Sectionlinks.vue' /* webpackChunkName: "components/sectionlinks" */).then(c => wrapFunctional(c.default || c))
 export const LazySidebar = import('../..\\components\\Sidebar.vue' /* webpackChunkName: "components/sidebar" */).then(c => wrapFunctional(c.default || c))
 export const LazySnackbar = import('../..\\components\\snackbar.vue' /* webpackChunkName: "components/snackbar" */).then(c => wrapFunctional(c.default || c))
-export const LazyGeneralDriveragreement = import('../..\\components\\General\\Driveragreement.vue' /* webpackChunkName: "components/general-driveragreement" */).then(c => wrapFunctional(c.default || c))
-export const LazyGeneralUserpermission = import('../..\\components\\General\\Userpermission.vue' /* webpackChunkName: "components/general-userpermission" */).then(c => wrapFunctional(c.default || c))
-export const LazyGeneralVendoragreement = import('../..\\components\\General\\Vendoragreement.vue' /* webpackChunkName: "components/general-vendoragreement" */).then(c => wrapFunctional(c.default || c))
 export const LazyForgetPasswordPhoneVerification = import('../..\\components\\ForgetPassword\\PhoneVerification.vue' /* webpackChunkName: "components/forget-password-phone-verification" */).then(c => wrapFunctional(c.default || c))
 export const LazyForgetPasswordRecoveryOption = import('../..\\components\\ForgetPassword\\RecoveryOption.vue' /* webpackChunkName: "components/forget-password-recovery-option" */).then(c => wrapFunctional(c.default || c))
 export const LazyForgetPasswordResetPassword = import('../..\\components\\ForgetPassword\\ResetPassword.vue' /* webpackChunkName: "components/forget-password-reset-password" */).then(c => wrapFunctional(c.default || c))
+export const LazyGeneralDriveragreement = import('../..\\components\\General\\Driveragreement.vue' /* webpackChunkName: "components/general-driveragreement" */).then(c => wrapFunctional(c.default || c))
+export const LazyGeneralUserpermission = import('../..\\components\\General\\Userpermission.vue' /* webpackChunkName: "components/general-userpermission" */).then(c => wrapFunctional(c.default || c))
+export const LazyGeneralVendoragreement = import('../..\\components\\General\\Vendoragreement.vue' /* webpackChunkName: "components/general-vendoragreement" */).then(c => wrapFunctional(c.default || c))
 export const LazyManageCustomersAnalytics = import('../..\\components\\manageCustomers\\Analytics.vue' /* webpackChunkName: "components/manage-customers-analytics" */).then(c => wrapFunctional(c.default || c))
 export const LazyManageDriversAnalytics = import('../..\\components\\manageDrivers\\Analytics.vue' /* webpackChunkName: "components/manage-drivers-analytics" */).then(c => wrapFunctional(c.default || c))
 export const LazyManageVendorsAnalytics = import('../..\\components\\manageVendors\\Analytics.vue' /* webpackChunkName: "components/manage-vendors-analytics" */).then(c => wrapFunctional(c.default || c))

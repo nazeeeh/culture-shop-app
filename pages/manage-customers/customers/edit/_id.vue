@@ -17,7 +17,7 @@
       </div>
      </div>
      <v-divider w-100></v-divider>
-     <Edit />
+     <Edit :user="user" />
     </div>
 </template>
 
@@ -26,22 +26,41 @@
     import Edit from '~/components/manageCustomers/customers/Edit.vue'
 
     export default {
+        async fetch(){
+            const response = await fetch('https://api.thecultureshop.co.uk/api/v1/customer/1')
+            const data = await response.json()
+            
+            // console.log(this.$axios)
+            console.log(data.data)
+            this.user = data.data
+        },
+            // const response = await this.$api.getCustomer(params.id)
+            // console.log(response)
+        //     console.log(this.$api)
+        // },
+        name: 'edit',
         components: {
             Edit
         },
-        // async fetch({ params }){
-        //     const response = await this.$api.editCustomer()
-        //     console.log(response)
-        //     console.log(params.id)
-        // },
 
         data () {
             return {
-                title: 'Edit customer'
+                title: 'Edit customer',
+                user: {
+                    firstname: '',
+                    lastname: '',
+                    email: '',
+                    password: '',
+                    postcode: '',
+                    address: '',
+                    city: '',
+                    phone: ''
+                }
             }
+            
         },
-    
-        
+        methods:{      
+            }
 }
 </script>
 

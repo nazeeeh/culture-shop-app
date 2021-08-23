@@ -3,7 +3,7 @@
   <Buttons />
    <div class="sub-section">
     <div class="flex-section">
-    <span>#ID</span>
+    <span>#{{ user.id}}</span>
      <div class="box">
       <span class="text-uppercase t-text" :style="{color: '#0CAD73'}">Approved</span> 
      </div>
@@ -19,7 +19,7 @@
    <v-layout>
         <v-row>
           <v-col cols="6">
-            <form>
+            <form @submit.prevent="onUpdateCustomer">
                 <div class="input">
                 <label for="permission" class="name ">Permissions</label><br>
                 <input type="dropdown" class="permission"><br><br>
@@ -27,42 +27,47 @@
                 <div class="grid-input">
                   <div class="input">
                  <label for="first name" class="name">First Name</label><br>
-                 <input v-model="firstname" type="text" class="grid" >
+                 <input v-model="user.firstname"  type="text" class="grid" >
                 </div>
                 <div class="input">
                  <label for="last name" class="name">Last Name</label><br>
-                 <input v-model="lastname" type="text" class="grid">
+                 <input v-model="user.lastname" type="text" class="grid">
                 </div>
                 </div>
                 <div class="grid-input">
                   <div class="input">
                  <label for="email address" class="name">Email address</label><br>
-                 <input v-model="email" type="email" class="grid">
+                 <input v-model="user.email" type="email" class="grid">
                 </div>
                 <div class="input">
                  <label for="password" class="name">Password</label><br>
-                 <input v-model="password" type="password" class="grid">
+                 <input v-model="user.password" type="password" class="grid">
                 </div>
                 </div>
                 <div class="grid-input">
                   <div class="input">
                  <label for="street address" class="name">Street address</label><br>
-                 <input v-model="address" type="text" class="grid">
+                 <input v-model="user.address" type="text" class="grid">
                 </div>
                 <div class="input">
                  <label for="postcode" class="name">Postcode</label><br>
-                 <input v-model="postcode" type="text" class="grid">
+                 <input v-model="user.postcode" type="text" class="grid">
                 </div>
                 </div>
                 <div class="grid-input">
                   <div class="input">
                  <label for="city" class="name">City</label><br>
-                 <input v-model="city" type="text" class="grid">
+                 <input v-model="user.city" type="text" class="grid">
                 </div>
                 <div class="input">
                  <label for="mobile number" class="name">Mobile number</label><br>
-                 <input v-model="phone" type="text" class="grid">
+                 <input v-model="user.phone" type="text" class="grid">
                 </div>
+                </div>
+                <div class="btn-btn">
+                  <v-btn class="btn btn-cancel py-6 px-10 text-uppercase mr-2">Cancel</v-btn>
+                  <v-btn class="btn btn-save-as-draft py-6 px-12 text-uppercase mr-2">Save As Draft</v-btn>
+                  <v-btn class="btn btn-save py-6 px-12 text-uppercase" type="submit">Save</v-btn>
                 </div>
             </form>
           </v-col>
@@ -113,12 +118,13 @@ import {mapState} from 'vuex'
     import moment from 'moment'
     export default {
         name: 'edit',
-        // props: {
-        //   id:{
-        //     type: String,
-        //     required: true
-        //   }
-        // },
+        props: {
+          user:{
+            type: Object,
+            required: true
+          },
+         
+        },
        
         components: {
             Buttons,
@@ -140,11 +146,14 @@ import {mapState} from 'vuex'
           phone: '' 
           }
         },
+        // fetch(){
+        //   console.log(this.user)
+        // },
         // created(){
         //   console.log(this.id)
         // },
         computed: {
-          ...mapState("customer", ["customerDetailsToView"])
+          // ...mapState("customer", ["customerDetailsToView"])
         },
         methods: {
           displayDate(){
@@ -152,7 +161,38 @@ import {mapState} from 'vuex'
             m.format('MMMM Do YYYY, h:mm:ss a')
             return m
           },
+
+          onUpdateCustomer(e){
+            e.preventDefault()
+            // if(!this.formIsValid){
+            //   return 
+            // }
+        try{
+            let updateData= new FormData();
+            updateData.append("firstname", this.user.firstname);
+            updateData.append("lastname", this.user.lastname);
+            updateData.append("email", this.user.email);
+            updateData.append("password", this.user.password);
+            updateData.append("postcode", this.user.postcode);
+            updateData.append("address", this.user.address);
+            updateData.append("city", this.user.city);
+            updateData.append("phone", this.user.phone);
+
+            const sendData = this.$api.editCustomer(updateData, this.user.id)
+            this.$showSnackBar({
+                     show: true,
+                     timeout: 3000,
+                     message: `Profile Updated`,
+                     color: 'green',
+                    })
+                    //RESET INPUT VALUES
+                    this.firstname = this.lastname = this.email = this.password = this.postcode = 
+                    this.address = this.city = this,phone = ""
+        } catch (err){
+          return err
         }
+      }
+     }
 }
 
 </script>
@@ -306,5 +346,39 @@ form{
     line-height: 16px;
     letter-spacing: 0.07em;
     text-transform: uppercase;
+}
+.btn-btn{
+  position: absolute;
+  top: 10px;
+  right: 40px;
+  font-family: 'Space Grotesk';
+}
+.btn-save{
+    background: #0CAD73 !important;
+    color: #fff !important;
+    border-radius: 16px;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.07em;
+    box-shadow: none;
+}
+.btn-save-as-draft{
+    background: rgba(231, 109, 20, 0.1)!important;
+    color: #E76D14 !important;
+    border-radius: 16px;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.07em;
+    box-shadow: none;
+}
+.btn-cancel{
+    border-radius: 16px;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.07em;
+    box-shadow: none;
 }
 </style>

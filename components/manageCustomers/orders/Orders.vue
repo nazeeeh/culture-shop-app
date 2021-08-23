@@ -4,7 +4,7 @@
   <div class="sub-section">
     <div class="flex-section">
      <div>
-      <span>#ID</span>
+      <span>#{{order.id}}</span>
      </div>
      <div class="box">
       <span class="text-uppercase t-text" :style="{color: '#E76D14'}">Paid</span>   
@@ -47,7 +47,6 @@
       <OrderDetails />
      </div>
      
-     
     </v-col>
     <v-spacer></v-spacer>
      <v-col cols="6">
@@ -86,6 +85,12 @@
             RightSubhead,
             OrderDetails
         },
+        props: {
+        order:{
+          type: Object,
+          required: true
+        }
+      },
         data () {
         return {
            

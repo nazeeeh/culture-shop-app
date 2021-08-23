@@ -38,10 +38,10 @@
             <td>{{item.total}}</td>
             <td>{{item.status}}</td>
             <td class="change">
-              <nuxt-link to="">
+              <nuxt-link class="underline" to="">
                 <span class="edit">edit <icon class="i" name="change"></icon></span>
               </nuxt-link>
-              <nuxt-link :to="`/manage-customers/orders/orders/${item.order_no}`">
+              <nuxt-link class="underline" :to="`/manage-customers/orders/${item.order_no}`">
                <span class="view">view<icon class="i mt-1" name="right"></icon></span>
               </nuxt-link>
             </td>
@@ -96,6 +96,10 @@
     display: flex;
     align-items: center;
     width: 80px;
+    color: grey;
+  }
+  .underline{
+    text-decoration: none;
   }
   .round {
   position: relative;

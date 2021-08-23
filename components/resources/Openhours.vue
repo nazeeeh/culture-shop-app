@@ -24,11 +24,28 @@
             <div class="time-border">
              <v-list-item-title v-text="child.title" class="text lis"></v-list-item-title>
                <div class="change">
-                <span >9:00 - 23:00</span><span style="color: #0CAD73;">Change</span>
+                <span>{{child.t1}}  {{child.t2}}</span><span style="color: #0CAD73;" @click="dialog =true">Change</span>
                </div>
             </div>
           </v-list-item-content>
         </v-list-item>
+        <!-- Dialog -->
+        <v-layout >
+          <v-row justify="center">
+          <v-dialog v-model="dialog" persistent max-width="500">
+          <v-card class="dialog py-8 px-12">
+            <v-card-actions>
+              <div class="button-dialog">
+              <input type="time" class="grid"/><br>
+              <span>to</span><br>
+              <input type="time" class="grid"><br>
+              <button class="btn-f white--text" color="#0CAD73" @click="dialog = false">ok</button>
+              </div>
+            </v-card-actions>
+            </v-card>
+          </v-dialog>
+        </v-row> 
+        </v-layout>
       </v-list-group>
   </v-list>
   
@@ -39,18 +56,20 @@
     export default {
         data () {
       return {
+        dialog: false,
+
         items: [
         {
           action: 'time',
           active: true,
           items: [
-            { title: 'Monday'},
-            { title: 'Tuesday'},
-            { title: 'Wednesday'},
-            { title: 'Thursday'},
-            { title: 'Friday'},
-            { title: 'Saturday'},
-            { title: 'Sunday'}
+            { title: 'Monday', t1: '12:00', t2: '05:00'},
+            { title: 'Tuesday', t1: '12:00', t2: '05:00'},
+            { title: 'Wednesday', t1: '12:00', t2: '05:00'},
+            { title: 'Thursday', t1: '12:00', t2: '05:00'},
+            { title: 'Friday', t1: '12:00', t2: '05:00'},
+            { title: 'Saturday', t1: '12:00', t2: '05:00'},
+            { title: 'Sunday', t1: 'close'}
           ],
           title: 'Opening hours',
         }
@@ -81,16 +100,40 @@
     border: 2px solid #ECECEC;
     border-radius: 16px;
 }
-.lis{
-  
-  /* width: 10px; */
-}
 .change{
   display: flex;
   margin-left: -80px;
   justify-content: space-evenly;
- 
   width: 300px;
   /* margin-right: 30px; */
+}
+.grid {
+    border: 2px solid #ECECEC;
+    border-radius: 16px;
+    width: 18.5vw;
+    height: 6vh;
+    padding: 10px;
+    outline: none;
+    margin: 10px 0;
+}
+.grid:focus{
+  border: 2px solid #192135;
+}
+.button-dialog{
+  text-align: center;
+  width: 100%;
+  margin: 10px 0;
+  font-family: 'Space Grotesk'; 
+}
+/* .btn-f{
+    box-shadow: none;
+    border-radius: 16px;
+    background: #0CAD73
+} */
+button {
+  background:#0CAD73;
+  width: 70%;
+  padding: 5px 0;
+  border-radius: 16px;
 }
 </style>

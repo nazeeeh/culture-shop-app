@@ -27,11 +27,16 @@
                  </div>
                 </div>
                 <!-- <div class="input"> -->
-                 <select  v-model="shop_id">
-                   <optgroup v-for="(item, index) in allShops" :key="index" >
-                   <option :value="item.id">{{item.firstname}}</option>
-                   </optgroup>
+                  <div class="grid-input">
+                    <div class="input">
+                      <label for="name" class="name">Shop vendor</label><br>
+                      <select  v-model="shop_id" class="grid">
+                      <optgroup v-for="(item, index) in allShops" :key="index" >
+                      <option :value="item.id">{{item.firstname}}</option>
+                      </optgroup>
                  </select>
+                    </div>
+                  </div>
                 <!-- </div>  -->
                 <div class="grid-input">
                   <div class="input">
@@ -92,7 +97,7 @@
             </div>
               <v-divider></v-divider>
             <div class="life-spending">
-             <span class="t-small mt-1 text-capitalize">Products:</span>
+             <span class="t-small mt-1 text-capitalize">Products:0</span>
              <div class="view">
               <span>View</span>
               <icon name="right"></icon>
@@ -100,7 +105,7 @@
             </div>
             <v-divider></v-divider>
             <div class="life-spending">
-             <span class="t-small mt-1 text-capitalize">Categories:</span>
+             <span class="t-small mt-1 text-capitalize">Categories:0</span>
              <div class="view">
               <span>View</span>
               <icon name="right"></icon>
@@ -153,7 +158,8 @@
             this.weight !== '' &&
             this.sku !== '' &&
             this.stock !== '' &&
-            this.description !== ''
+            this.description !== '' &&
+            this.shop_id != ''
           }
         },
 

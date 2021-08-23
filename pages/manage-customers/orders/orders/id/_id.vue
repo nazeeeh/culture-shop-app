@@ -12,30 +12,32 @@
         <span class="sub-title text-uppercase">Orders /</span>
        </nuxt-link>
        <nuxt-link to= "/">
-        <span class="sub-title text-uppercase">{{$route.params.name}}</span>
+        <span class="sub-title text-uppercase">All /</span>
+       </nuxt-link>
+       <nuxt-link to= "/">
+        <span class="sub-title text-uppercase">{{$route.params.id}}</span>
        </nuxt-link>
       </div>
      </div>
      <v-divider w-100></v-divider>
-     <AllOrders />
+     <Orders />
     </div>
 </template>
 
 <script>
 
-    import AllOrders from '~/components/manageCustomers/orders/Allorders.vue'
+    import Orders from '~/components/manageCustomers/orders/Orders.vue'
 
     export default {
         components: {
-            AllOrders
+            Orders
         },
 
         data () {
             return {
                 title: 'Orders'
             }
-        },
-        
+        },      
 }
 </script>
 

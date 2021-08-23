@@ -38,7 +38,8 @@ export default {
     },
     customerService:{
       getCustomer: process.env.CUSTOMERS,
-      editCustomer: process.env.EDIT_CUSTOMERS
+      getaCustomer: process.env.GET_A_CUSTOMER,
+      editCustomer: process.env.UPDATE_CUSTOMERS
     },
     productService: {
       getProducts: process.env.GET_PRODUCTS,

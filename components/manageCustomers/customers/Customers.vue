@@ -29,15 +29,15 @@
           <tr v-for="customer in customers" :key="customer.id">
             <td>{{customer.id}}</td>
             <td>{{convertToDate(customer.created_at)}}</td>
-            <td>{{customer.name}}</td>
+            <td>{{customer.firstname}} {{customer.lastname}}</td>
             <td>{{customer.email}}</td>
             <td>Approved</td>
             <td>0</td>
             <td class="change">
-              <nuxt-link :to="`/manage-customers/customers/edit/${customer.id}`">
+              <nuxt-link class="underline" :to="`/manage-customers/customers/edit/${customer.id}`">
                 <span class="edit" @click="setCustomer(customer)">edit <icon class="i" name="change"></icon></span>
               </nuxt-link>
-              <nuxt-link to="">
+              <nuxt-link class="underline" to="">
                <span class="view">view<icon class="i mt-1" name="right"></icon></span>
               </nuxt-link>
             </td>
@@ -66,7 +66,6 @@
       data () {
         return{
           customers: [],
-          // to: '/manage-customers/customers/edit'
         }
       },
         components: {
@@ -123,6 +122,10 @@
     display: flex;
     align-items: center;
     width: 80px;
+    color: grey;
+  }
+  .underline{
+    text-decoration: none;
   }
   .table .i{
     margin-right: 5rem;

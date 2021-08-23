@@ -12,10 +12,10 @@ import Table from '../../resources/Tables'
 import BulkAction from '../../resources/Bulkaction'
     export default {
       name: 'all',
-      async fetch () {
-        const data = await this.$api.getAllOrders()
-        console.log(data);
-      },
+      // async fetch () {
+      //   const data = await this.$api.getAllOrders()
+      //   console.log(data);
+      // },
 
       components: {
           SearchBox,

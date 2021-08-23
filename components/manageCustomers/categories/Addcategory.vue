@@ -51,11 +51,11 @@
             </div>
               <v-divider></v-divider>
             <div class="life-spending">
-             <span class="t-small text-capitalize">Products:</span>
+             <span class="t-small text-capitalize">Products: 0</span>
             </div>
                 <v-divider></v-divider>
             <div class="life-spending">
-             <span class="t-small mt-1 text-capitalize">Vendors:</span>
+             <span class="t-small mt-1 text-capitalize">Vendors: 0</span>
             </div>
                 <v-divider></v-divider>
             </div>

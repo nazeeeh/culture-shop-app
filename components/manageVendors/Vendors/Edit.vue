@@ -9,7 +9,7 @@
      </div>
      <icon name="calender" class="mx-4"></icon>
      <!-- Date -->
-     <span class="text-uppercase datepicker mt-1">{{ displayDate }}</span> 
+     <span class="text-uppercase datepicker mt-1">{{ displayDate() }}</span> 
     </div>
     <div>
      <Subhead />
@@ -157,6 +157,7 @@
     import SaveOrCancelBtn from '../../resources/Saveorcancel'
     import Subhead from '../../resources/Vendorsubhead'
     import OpeningHours from '../../resources/Openhours'
+    import moment from 'moment'
     export default {
         components: {
             SaveOrCancelBtn,
@@ -165,18 +166,16 @@
         },
         data () {
         return {
-            date: new Date(),
-            time: new Date(),
+           
             }
         },
 
-    computed: {
-     displayDate(){
-        const date = new Date(this.date);
-        date.setHours(this.time.getHours())
-        date.setMinutes(this.time.getMinutes())
-        return date
-        }
+    methods: {
+      displayDate(){
+            const m = moment()
+            m.format('MMMM Do YYYY, h:mm:ss a')
+            return m
+          }
     },
         
     }

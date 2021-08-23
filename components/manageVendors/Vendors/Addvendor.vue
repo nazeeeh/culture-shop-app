@@ -1,6 +1,6 @@
 <template>
  <div>
-  <SaveOrCancelButton />
+  <!-- <SaveOrCancelButton /> -->
   <div class="sub-section">
      <div class="flex-section">
      <div class="box">
@@ -15,7 +15,7 @@
     <v-layout>
         <v-row>
           <v-col cols="6">
-            <form>
+            <form @submit.prevent="onCreateVendor">
                 <div class="proof">
                  <label for="proof" class="name">Storefront imagery</label><br>
                  <div class="border-bg">
@@ -96,6 +96,20 @@
                  <input v-model="accountNumber" type="text" class="grid">
                 </div>
                 </div>
+                <div class="grid-input">
+                  <div class="input">
+                    <label for="category" class="name">Category</label><br>
+                    <select  v-model="category" class="grid">
+                      <optgroup>
+                      <option>Shoes</option>
+                      </optgroup>
+                    </select>
+                  </div>
+                </div>
+                <div class="btn-btn">
+                <v-btn class="btn btn-cancel py-6 px-10 text-uppercase mr-2">Cancel</v-btn>
+                <v-btn class="btn btn-save py-6 px-12 text-uppercase" type="submit">Save</v-btn>
+                </div>
             </form>
           </v-col>
           <v-spacer></v-spacer>
@@ -114,12 +128,12 @@
 </template>
 
 <script>
-    import SaveOrCancelButton from '../../resources/Saveorcancel.vue'
+    // import SaveOrCancelButton from '../../resources/Saveorcancel.vue'
     import OpeningHours from '../../resources/Openhours.vue'
     import moment from 'moment'
     export default {
         components: {
-            SaveOrCancelButton,
+            // SaveOrCancelButton,
             OpeningHours
         },
         data() {
@@ -137,7 +151,8 @@
               phone: '',
               nameCard: '',
               sortCode: '',
-              accountNumber: ''
+              accountNumber: '',
+              category: ''
           }
         },
 
@@ -156,7 +171,8 @@
             this.phone !== '' &&
             this.nameCard !== '' &&
             this.sortCode !== '' &&
-            this.accountNumber !== ''
+            this.accountNumber !== '',
+            this.category
           }
     },
 
@@ -170,7 +186,7 @@
           onFileSelected(){
             this.selectedFile = this.$refs.file.files[0]
           },
-          onCreateProduct(e){
+          onCreateVendor(e){
             e.preventDefault()
             if(!this.formIsValid) {
               return
@@ -190,6 +206,10 @@
           vendorData.append("name_card", this.nameCard);
           vendorData.append("sort_code", this.sortCode);
           vendorData.append("acct_number", this.accountNumber);
+          vendorData.append("category", this.category);
+
+          const sendData = this.$api.addVendor(vendorData)
+          console,log(sendData)
         }catch (err){
           return err
         }
@@ -361,5 +381,29 @@ textarea::placeholder{
 }
 .custom-file-input:hover::before {
   border-color: black;
+}
+.btn-btn{
+  position: absolute;
+  top: 10px;
+  right: 40px;
+  font-family: 'Space Grotesk';
+}
+.btn-save{
+    background: #0CAD73 !important;
+    color: #fff !important;
+    border-radius: 16px;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.07em;
+    box-shadow: none;
+}
+.btn-cancel{
+    border-radius: 16px;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.07em;
+    box-shadow: none;
 }
 </style>

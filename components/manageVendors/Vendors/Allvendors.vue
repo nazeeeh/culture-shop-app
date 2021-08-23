@@ -39,10 +39,10 @@
             <td>{{ item.firstname}} {{item.lastname}} <span><br>{{item.email}}</span></td>
             <td></td>
             <td class="change">
-              <nuxt-link :to="`/manage-customers/customers/edit/${item.id}`">
+              <nuxt-link class="underline" :to="`/manage-vendors/vendors/edit/${item.id}`">
                 <span class="edit">edit<icon class="i" name="change"></icon></span>
               </nuxt-link>
-              <nuxt-link to="">
+              <nuxt-link class="underline" to="">
                <span class="view" @click="viewVendor(item)">view<icon class="i mt-1" name="right"></icon></span>
               </nuxt-link>
             </td>
@@ -60,10 +60,11 @@
     import BulkAction from '../../resources/Bulkaction'
     import moment from 'moment'
     export default {
-
+ 
       async fetch() {
           const response = await this.$api.getVendors()
-          this.vendors =response.data
+          this.vendors = response.data
+          console.log(response)
         },
 
         components: {
@@ -78,7 +79,7 @@
         },
         methods:{
           viewVendor(record){
-            alert(JSON.stringify(record))
+            // alert(JSON.stringify(record))
           },
           convertToDate(date){
           return moment(date).format('ll');
@@ -114,6 +115,10 @@
     display: flex;
     align-items: center;
     width: 80px;
+  }
+  .underline{
+    color: grey;
+    text-decoration: none;
   }
   .round {
   position: relative;

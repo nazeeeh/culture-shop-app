@@ -87,7 +87,7 @@ export default {
           action: 'orders',
           active: true,
           items: [
-            { title: 'All', tag: 0, backgroundColor: "rgba(12, 173, 115, 0.1)", color: "#0CAD73", to:'/manage-customers/orders/all'},
+            { title: 'All', tag: 0, backgroundColor: "rgba(12, 173, 115, 0.1)", color: "#0CAD73", to:'/manage-customers/orders'},
             { title: 'Completed', tag: 0, backgroundColor: "rgba(12, 173, 115, 0.1)", color: "#0CAD73"},
             { title: 'Out for delivery', tag: 0, backgroundColor: "rgba(12, 173, 115, 0.1)", color: "#0CAD73"},
             { title: 'delivered', tag: 0, backgroundColor: "rgba(12, 173, 115, 0.1)", color: "#0CAD73" },
