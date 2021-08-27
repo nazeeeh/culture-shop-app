@@ -197,22 +197,32 @@
           vendorData.append("address", this.address);
           vendorData.append("postcode", this.postcode);
           vendorData.append("city", this.city);
-          vendorData.append("discount", this.storewideDiscount);
           vendorData.append("phone", this.phone);
           vendorData.append("name_card", this.nameCard);
           vendorData.append("sort_code", this.sortCode);
           vendorData.append("acct_number", this.accountNumber);
           vendorData.append("category", this.category);
-          vendorData.append("discount", this.storewideDiscount);
-          vendorData.append("monday", this.monday);
-          vendorData.append("tuesday", this.tuesday);
-          vendorData.append("wednesday", this.wednesday);
-          vendorData.append("thursday", this.thursday);
-          vendorData.append("friday", this.friday);
-          vendorData.append("saturday", this.saturday);
-          vendorData.append("sunday", this.sunday);
+          // vendorData.append("discount", this.storewideDiscount);
+          vendorData.append("monday", "8:00am - 10:00am");
+          vendorData.append("tuesday", "8:00am - 10:00am");
+          vendorData.append("wednesday", "8:00am - 10:00am");
+          vendorData.append("thursday", "8:00am - 10:00am");
+          vendorData.append("friday", "8:00am - 10:00am");
+          vendorData.append("saturday","8:00am - 10:00am");
+          vendorData.append("sunday", "closed");
           
           const sendData = this.$api.addVendor(vendorData)
+          this.$showSnackBar({
+                     show: true,
+                     timeout: 3000,
+                     message: `Vendor Added`,
+                     color: 'green',
+                    })
+                    //RESET INPUT VALUES
+                    this.firstName = this.lastName = this.shopName = this.email = this.password =
+                  this.address = this.city = this.documentation = this.doc_number = this.phone
+                  = this.vehicle = this.postcode = this.nameCard = this.sortCode = accountNumber = 
+                  this.category =  ""
           console,log(sendData)
         }catch (err){
           return err
