@@ -1,6 +1,6 @@
 <template>
  <div class="Customers-section">
-  <v-btn class="btn-btn py-6 px-10 text-uppercase" >add new</v-btn>
+  <!-- <v-btn class="btn-btn py-6 px-10 text-uppercase" >add new</v-btn> -->
   <ExportSearch />
   <!-- Table -->
         <div class="round">

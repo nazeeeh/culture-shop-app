@@ -27,9 +27,15 @@
                  </div>
                 </div>
                 <div class="grid-input">
-                  <div class="input">
-                 <label for="Permissions" class="name">Permissions</label><br>
-                 <input type="text" class="grid" >
+                <div class="input">
+                 <label for="category" class="name">Category</label><br>
+                    <select  v-model="category" class="grid">
+                      <optgroup>
+                        <option></option>
+                      <option>Shoes</option>
+                      </optgroup>
+                    </select>
+                    <icon class="dropdown" name="dropdown"></icon>
                 </div>
                 <div class="input">
                  <label for="Store name" class="name">Store name</label><br>
@@ -96,16 +102,6 @@
                  <input v-model="accountNumber" type="text" class="grid">
                 </div>
                 </div>
-                <div class="grid-input">
-                  <div class="input">
-                    <label for="category" class="name">Category</label><br>
-                    <select  v-model="category" class="grid">
-                      <optgroup>
-                      <option>Shoes</option>
-                      </optgroup>
-                    </select>
-                  </div>
-                </div>
                 <div class="btn-btn">
                 <v-btn class="btn btn-cancel py-6 px-10 text-uppercase mr-2">Cancel</v-btn>
                 <v-btn class="btn btn-save py-6 px-12 text-uppercase" type="submit">Save</v-btn>
@@ -152,7 +148,7 @@
               nameCard: '',
               sortCode: '',
               accountNumber: '',
-              category: ''
+              category: '',
           }
         },
 
@@ -207,6 +203,14 @@
           vendorData.append("sort_code", this.sortCode);
           vendorData.append("acct_number", this.accountNumber);
           vendorData.append("category", this.category);
+          vendorData.append("discount", this.storewideDiscount);
+          vendorData.append("monday", this.monday);
+          vendorData.append("tuesday", this.tuesday);
+          vendorData.append("wednesday", this.wednesday);
+          vendorData.append("thursday", this.thursday);
+          vendorData.append("friday", this.friday);
+          vendorData.append("saturday", this.saturday);
+          vendorData.append("sunday", this.sunday);
           
           const sendData = this.$api.addVendor(vendorData)
           console,log(sendData)
@@ -289,6 +293,11 @@ form{
     height: 15vh;
     width: 39vw;
 }
+.dropdown{
+  position: absolute;
+  left:23%;
+  top: 36.5%;
+}
  .name{
     font-weight: 600;
     font-size: 12px;
@@ -327,7 +336,7 @@ textarea::placeholder{
     border-radius: 16px;
     width: 18.5vw;
     height: 6vh;
-    padding: 10px;
+    padding: 5px;
     outline: none;
 }
 .grid:focus{

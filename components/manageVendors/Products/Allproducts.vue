@@ -44,10 +44,10 @@
             <td><span>&#163;</span> {{ product.price }}</td>
             <td>{{ product.stock }}</td>
             <td class="change">
-              <nuxt-link to="">
+              <nuxt-link class="underline" to="">
                 <span class="edit">edit <icon class="i" name="change"></icon></span>
               </nuxt-link>
-              <nuxt-link to="">
+              <nuxt-link class="underline" to="">
                <span class="view">view<icon class="i mt-1" name="right"></icon></span>
               </nuxt-link>
             </td>
@@ -146,5 +146,9 @@
 
 .round input[type="checkbox"]:checked + label:after {
   opacity: 1;
+}
+.underline{
+  color: grey;
+  text-decoration: none;
 }
 </style>

@@ -14,21 +14,30 @@
                 <th scope="col" style="text-align: left; width: 10rem;">
                   <span style="display: flex; align-items: center">Name</span>
                 </th>
-                <th scope="col" style="text-align: left; width: 10rem;">Product</th>
                 <th scope="col" style="text-align: left; width: 10rem;">Vendor</th>
-                <th scope="col" style="text-align: left; width: 10rem;">
+                <!-- <th scope="col" style="text-align: left; width: 10rem;">Product</th> -->
+                
+                <!-- <th scope="col" style="text-align: left; width: 10rem;">
                  <span style="display: flex; align-items: center"><span style="color: grey; margin-right: 1rem;">
                    Status</span> All <icon name="dropdown"></icon> 
                   </span>
-                </th>
+                </th> -->
               </tr>
             </thead>
       <template>
         <tbody>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
+          <tr v-for="category in categories" :key="category.id">
+            <td>{{ category.id }}</td>
+            <td>{{ category.name }}</td>
+            <td>{{ category.vendors }}</td>
+            <td class="change">
+              <nuxt-link class="underline" to="">
+              <span class="edit">edit <icon class="i" name="change"></icon></span>
+              </nuxt-link>
+              <nuxt-link class="underline" to="">
+               <span class="view">view<icon class="i mt-1" name="right"></icon></span>
+              </nuxt-link>
+            </td>
           </tr>
         </tbody>
       </template>
@@ -42,10 +51,22 @@
     import BulkAction from '../../resources/Bulkaction'
     export default {
         name: "all",
+        async fetch(){
+          const response = await this.$api.getCategory()
+          console.log(response)
+          this.categories = response.Categories
+          console.log(this.categories)
+        },
         
         components:{
             SearchBar,
             BulkAction
+        },
+        data(){
+          return {
+            categories: {}
+          }
+          
         }
     }
 </script>
@@ -64,6 +85,27 @@
   font-size: 12px;
   line-height: 16px;
   letter-spacing: 0.07em;
+  }
+  .underline{
+  text-decoration: none;
+  color: grey;
+}
+.table td {
+    text-transform: capitalize;
+  }
+  .table .change{
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    text-transform: uppercase;
+  }
+  .table .edit, .table .view{
+    display: flex;
+    align-items: center;
+    width: 80px;
+  }
+  .table .i{
+    margin-right: 5rem;
   }
   .table {
     font-family: 'Space Grotesk';

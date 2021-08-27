@@ -130,10 +130,7 @@ import {mapState} from 'vuex'
             Buttons,
             Subhead
         },
-        // async fetch(context){
-        //   console.log('context')
-        // },
-
+       
      data () {
         return {
           firstname: '',
@@ -146,9 +143,6 @@ import {mapState} from 'vuex'
           phone: '' 
           }
         },
-        // fetch(){
-        //   console.log(this.user)
-        // },
         // created(){
         //   console.log(this.id)
         // },

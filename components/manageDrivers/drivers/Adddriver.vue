@@ -16,16 +16,13 @@
           <v-col cols="6">
             <form @submit.prevent="onCreateDriver">
                 <div class="grid-input">
-                  <div class="input">
-                 <label for="permission" class="name">Permission</label><br>
-                 <input type="text" class="grid">
-                </div>
                 <div class="input">
                  <label for="vehicle type" class="name">Vehicle type</label><br>
-                 <select v-model="vehicle" name="role" class="grid">
+                 <select v-model="vehicle" name="role" class="grid">  
                   <option value=""></option>
                   <option value="Car">Car</option>
                 </select>
+                <icon class="dropdown" name="dropdown"></icon>
                 </div>
                 </div>
                 <div class="grid-input">
@@ -75,6 +72,7 @@
                   <option value=""></option>
                   <option value="Passports">Passport</option>
                 </select>
+                   <icon class="doc-dropdown" name="dropdown"></icon>
                 </div>
                 <div class="input">
                  <label for="document number" class="name">Documentation number</label><br>
@@ -86,8 +84,7 @@
                  <div class="border-bg">
                    <input ref="file" 
                    v-on:change="onFileSelected" 
-                   type="file" class="custom-file-input"
-                   accept="image/*">
+                   type="file" class="custom-file-input">
                    <icon class="add" name="add"></icon>
                  </div>
                 </div>
@@ -100,7 +97,6 @@
 
           <v-col cols="6">
            <div class="system-bar">
-            
             </div>
           </v-col>
         </v-row>
@@ -120,6 +116,7 @@
           phone: '',
           address: '',
           city: '',
+          selectedFile: '',
           postcode: '',
           documentation: '',
           doc_number: '',
@@ -168,13 +165,24 @@
               driverData.append("address", this.address);
               driverData.append("postcode", this.postcode);
               driverData.append("city", this.city);
+              driverData.append("passport", this.selectedFile);
               driverData.append("documentation", this.documentation);
               driverData.append("doc_number", this.doc_number);
               driverData.append("vehicle", this.vehicle);
               driverData.append("password", this.password);
-              driverData.append("passport", this.selectedFile);
-
+          
               const response = this.$api.addDriver(driverData)
+              this.$showSnackBar({
+                     show: true,
+                     timeout: 3000,
+                     message: `Driver Added`,
+                     color: 'green',
+                    })
+                    //RESET INPUT VALUES
+                    this.selectedFile = this.firstname = this.lastname = this.email =
+                  this.address = this.city = this.documentation = this.doc_number 
+                  = this.vehicle = this.password = ""
+
               console.log(response)
             } 
             catch (err) {
@@ -217,6 +225,16 @@
   display: flex;
   margin: 20px 0 20px 34px;
   font-family: 'Space Grotesk';
+}
+.dropdown{
+  position: absolute;
+  left:23%;
+  top: 20.5%;
+}
+.doc-dropdown{
+  position: absolute;
+  left: 23%;
+  top: 71%;
 }
 .t-text{
   font-weight: 600;
@@ -312,7 +330,7 @@ form{
     border-radius: 16px;
     width: 18.5vw;
     height: 6vh;
-    padding: 10px;
+    padding: 5px;
     outline: none;
 }
 .grid:focus{

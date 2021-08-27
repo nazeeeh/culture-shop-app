@@ -1,11 +1,16 @@
 <template>
  <div class="Add-button">
-  <v-btn class="btn-btn py-6 px-10 text-uppercase" >add new</v-btn>
+  <v-btn class="btn-btn py-6 px-10 text-uppercase" @click="add">add new</v-btn>
  </div>
 </template>
 
 <script>
     export default {
+      methods: {
+        add(){
+          this.$router.push('/manage-vendors/products/add')
+        }
+      }
         
     }
 </script>

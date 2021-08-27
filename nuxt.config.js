@@ -51,10 +51,13 @@ export default {
     },
     driverService: {
       getDrivers: process.env.DRIVERS,
-      addDriver: process.env.ADD_DRIVER
+      addDriver: process.env.ADD_DRIVER,
+      getaDriver: process.env.GET_A_DRIVER,
+      editDriver: process.env.UPDATE_DRIVER
     },
     categoryService: {
       addCategory: process.env.ADD_CATEGORY,
+      getCategory: process.env.GET_CATEGORY
     }
   },
 

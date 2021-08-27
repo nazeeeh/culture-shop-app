@@ -1,6 +1,6 @@
 <template>
  <div class="Drivers-section">
-  <v-btn class="btn-btn py-6 px-10 text-uppercase" >add new</v-btn>
+  <v-btn class="btn-btn py-6 px-10 text-uppercase" @click="add">add new</v-btn>
    <ExportSearch />
    <!-- Table -->
     <div class="round">
@@ -11,7 +11,7 @@
             <thead>
               <tr> 
                 <th scope="col" style="text-align: left; width: 10rem;">
-               Id
+                Id
                 </th>
                 <th scope="col" style="text-align: left; width: 10rem;">
                   <span style="display: flex; align-items: center"> Date <icon name="up"></icon></span>
@@ -36,10 +36,10 @@
             <td> {{driver.vehicle}} <span><br> {{driver.phone}}</span></td>
             <td></td>
             <td class="change">
-              <nuxt-link :to="`/manage-drivers/drivers/edit/${driver.id}`">
+              <nuxt-link class="underline" :to="`/manage-drivers/drivers/edit/${driver.id}`">
               <span class="edit">edit <icon class="i" name="change"></icon></span>
               </nuxt-link>
-              <nuxt-link to="">
+              <nuxt-link class="underline" to="">
                <span class="view">view<icon class="i mt-1" name="right"></icon></span>
               </nuxt-link>
             </td>
@@ -73,10 +73,12 @@
      methods: {
        convertToDate(date){
         return moment(date).format('ll');
+       },
+       add(){
+         this.$router.push('/manage-drivers/drivers/add')
        }
-     }
-        
-    }
+     }      
+  }
 </script>
 
 <style scoped>
@@ -93,6 +95,10 @@
   font-size: 12px;
   line-height: 16px;
   letter-spacing: 0.07em;
+}
+.underline{
+  text-decoration: none;
+  color: grey;
 }
 .table {
     font-family: 'Space Grotesk';

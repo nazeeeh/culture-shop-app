@@ -1,10 +1,8 @@
 <template>
  <div class="Edit-driver">
-  <v-btn class="btn-cancel py-6 px-10 text-uppercase">Cancel</v-btn>
-  <v-btn class="btn-save py-6 px-12 text-uppercase mx-2" :style="{background: '#0CAD73', color: '#fff'}">Save</v-btn>
   <div class="sub-section">
     <div class="flex-section">
-    <span>#ID</span>
+    <span>#{{this.$route.params.id}}</span>
      <div class="box">
       <span class="text-uppercase t-text" :style="{color: '#0CAD73'}">Approved</span> 
      </div>
@@ -20,12 +18,8 @@
  <v-layout>
         <v-row>
           <v-col cols="6">
-            <form>
+            <form @submit.prevent="onUpdateDriver">
                 <div class="grid-input">
-                  <div class="input">
-                 <label for="permission" class="name">Permission</label><br>
-                 <input type="text" class="grid">
-                </div>
                 <div class="input">
                  <label for="vehicle type" class="name">Vehicle type</label><br>
                  <select v-model="vehicle" name="role" class="grid">
@@ -97,7 +91,8 @@
                    <icon class="add" name="add"></icon>
                  </div>
                 </div>
-
+              <v-btn class="btn-cancel py-6 px-10 text-uppercase">Cancel</v-btn>
+              <v-btn class="btn-save py-6 px-12 text-uppercase mx-2" type="submit" :style="{background: '#0CAD73', color: '#fff'}">Save</v-btn>
             </form>
           </v-col>
           
@@ -144,6 +139,15 @@
     import Subhead from '../../resources/Subheaddriver'
     import moment from 'moment'
     export default {
+        
+      name: 'edit',
+      props: {
+        driver: {
+          type: Object,
+          required: true
+        }
+      },
+      
         components: {
             Subhead
            
@@ -170,7 +174,44 @@
             const m = moment()
             m.format('MMMM Do YYYY, h:mm:ss a')
             return m
-          }
+          },
+      onFileSelected(){
+            this.selectedFile = this.$refs.file.files[0]
+          },
+          onUpdateDriver(e){
+            e.preventDefault()
+            // if(!this.formIsValid){
+            //   return 
+            // }
+        try{
+            let updateData = new FormData();
+            updateData.append("firstname", this.firstname);
+            updateData.append("lastname", this.lastname);
+            updateData.append("email", this.email);
+            updateData.append("phone", this.phone);
+            updateData.append("address", this.address);
+            updateData.append("city", this.city);
+            updateData.append("postcode", this.postcode);
+            updateData.append("documentation", this.documentation);
+            updateData.append("doc_number", this.doc_number);
+            updateData.append("vehicle", this.vehicle);
+            updateData.append("password", this.password);
+            updateData.append("passport", this.selectedFile);
+
+            const sendData = this.$api.editDriver(updateData, this.id)
+            this.$showSnackBar({
+                     show: true,
+                     timeout: 3000,
+                     message: `Profile Updated`,
+                     color: 'green',
+                    })
+                    //RESET INPUT VALUES
+                    this.firstname = this.lastname = this.email = this.password = this.postcode = 
+                    this.documentation = this.doc_number = this.vehicle = this.password = this.passport = ""
+        } catch(err){
+          return err
+        }
+      }
     },
         
     }

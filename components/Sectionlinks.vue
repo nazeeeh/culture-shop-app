@@ -106,7 +106,7 @@ export default {
           icon: 'customers',
           lists: [
             { sub: 'All', to:'/manage-customers/customers/all'},
-            { sub: 'Add New', to:'/manage-customers/customers/add'}
+            // { sub: 'Add New', to:'/manage-customers/customers/add'}
           ],
           sub: 'Customers',
         },
