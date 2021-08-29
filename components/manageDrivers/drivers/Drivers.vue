@@ -34,7 +34,7 @@
             <td> {{ convertToDate(driver.created_at)}}</td>
             <td> {{ driver.firstname}} {{ driver.lastname}}</td>
             <td> {{driver.vehicle}} <span><br> {{driver.phone}}</span></td>
-            <td></td>
+            <td :style="{color: '#0CAD73'}"><span class="box">Approved</span></td>
             <td class="change">
               <nuxt-link class="underline" :to="`/manage-drivers/drivers/edit/${driver.id}`">
               <span class="edit">edit <icon class="i" name="change"></icon></span>
@@ -131,6 +131,15 @@
   .table .i{
     margin-right: 5rem;
   }
+   .box{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 7vw;
+  background: rgba(12, 173, 115, 0.1);
+  border-radius: 16px;
+  height: 4vh;
+}
    .round {
   position: relative;
 }

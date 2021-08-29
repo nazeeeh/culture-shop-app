@@ -187,23 +187,23 @@
             // }
         try{
             let updateData = new FormData();
-            updateData.append("firstname", this.firstname);
-            updateData.append("lastname", this.lastname);
-            updateData.append("email", this.email);
-            updateData.append("phone", this.phone);
-            updateData.append("address", this.address);
-            updateData.append("city", this.city);
-            updateData.append("postcode", this.postcode);
-            updateData.append("documentation", this.documentation);
-            updateData.append("doc_number", this.doc_number);
-            updateData.append("vehicle", this.vehicle);
-            updateData.append("password", this.password);
-            updateData.append("passport", this.selectedFile);
+            updateData.append("firstname", this.driver.firstname);
+            updateData.append("lastname", this.driver.lastname);
+            updateData.append("email", this.driver.email);
+            updateData.append("phone", this.driver.phone);
+            updateData.append("address", this.driver.address);
+            updateData.append("city", this.driver.city);
+            updateData.append("postcode", this.driver.postcode);
+            updateData.append("documentation", this.driver.documentation);
+            updateData.append("doc_number", this.driver.doc_number);
+            updateData.append("vehicle", this.driver.vehicle);
+            updateData.append("password", this.driver.password);
+            updateData.append("passport", this.driver.selectedFile);
             
             // async fetch (){
             // const sendData = await $axios.$post(`https://api.thecultureshop.co.uk/api/v1/update/driver2/${params.id}`, updateData)
             
-            const sendData = this.$api.editDriver(updateData)
+            const sendData = this.$api.editDriver(this.$route.params.id, updateData)
             this.$showSnackBar({
                      show: true,
                      timeout: 3000,
