@@ -9,7 +9,7 @@
         </div>
         <div class="table">
             <thead>
-              <tr> 
+              <tr class="border_bottom"> 
                 <th scope="col" style="text-align: left; width: 10rem;">
                  Id
                 </th>
@@ -31,8 +31,8 @@
               </tr>
             </thead>
       <template>
-        <tbody>
-          <tr v-for="item in vendors" :key="item.id">
+        <tbody class="table-details">
+          <tr class="border_bottom" v-for="item in vendors" :key="item.id">
             <td>{{ item.id}}</td>
             <td>{{ convertToDate(item.created_at)}}</td>
             <td>{{ item.shop_name}}</td>
@@ -101,19 +101,25 @@
     letter-spacing: 0.07em;
     margin: 5px 0px 6px 100px;
 }
-  .table thead{
-    text-transform: uppercase;
+.table-details{
+    font-size: 14px;
   }
+
+.table thead{
+    text-transform: uppercase;  
+}
   .table tbody{
     text-transform: capitalize;
   }
 
-   .table .change{
-    display: flex;
-    cursor: pointer;
-    align-items: center;
-    text-transform: uppercase;
-  }
+.table .change{
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  text-transform: uppercase;
+  margin-left: 12em;
+}
+
   .table .edit, .table .view{
     display: flex;
     align-items: center;
@@ -123,9 +129,17 @@
     color: grey;
     text-decoration: none;
   }
+  .table td {
+    text-transform: capitalize;
+    padding: 20px 0;
+  }
   .round {
   position: relative;
 }
+
+/* .border_bottom td{
+  border-bottom: 2px solid #ccc;
+} */
 
 .round label {
   background-color: #fff;

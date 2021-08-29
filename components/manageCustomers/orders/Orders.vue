@@ -4,7 +4,7 @@
   <div class="sub-section">
     <div class="flex-section">
      <div>
-      <span>#{{order.id}}</span>
+      <span>#{{order.order_no}}</span>
      </div>
      <div class="box">
       <span class="text-uppercase t-text" :style="{color: '#E76D14'}">Paid</span>   
@@ -14,8 +14,8 @@
      </div>
      <icon name="calender" class="mx-4"></icon>
      <!-- Date -->
-     <span class="text-uppercase datepicker mt-1">{{ displayDate() }}</span> 
-     <div>
+     <span class="text-uppercase datepicker mt-1">{{ convertToDate(order.created_at)}}</span> 
+     <div class="right-subhead">
       <RightSubhead />
      </div>
      </div>
@@ -29,7 +29,7 @@
       <div class="sub-flex">
        <h4>Leon store</h4>
        <div class="time-flex">
-         <icon name="time"></icon><span class="mx-1 mt-1 t-small">Collection in </span>
+         <icon style="color:#0CAD73;" name="time"></icon><span class="mx-1 mt-1 t-small">Collection in </span>
        </div>
       </div>
       <v-divider></v-divider>
@@ -41,6 +41,17 @@
         <div>
          <span class="mx-9">Price</span>
          <span>Qty</span>
+        </div>
+      </div>
+      <v-divider></v-divider>
+      <div class="products">
+        <div>
+         <span><img src="order.image"></span>
+         <span class="mx-16">{{order.product}}</span>
+        </div>
+        <div>
+         <span class="mx-14">&pound;{{order.price}}</span>
+         <span class="quantity">{{order.quantity}}</span>
         </div>
       </div>
       <v-divider></v-divider>
@@ -57,17 +68,50 @@
                 <span class="t-head mx-2 text-capitalize">Customer</span>
               </div>
               <v-divider></v-divider>
+              <div class="users-view-btn">
+                <div class="user-details">
+                {{order.name}}
+              </div>
+              <nuxt-link class="underline" to="">
+               <span style="color:#0CAD73;" class="view">view<icon class="i mt-1" name="right"></icon></span>
+              </nuxt-link>
+              </div>
+              <v-divider></v-divider>
+              <div class="user-details">
+                {{order.phone}}
+              </div>
+              <v-divider></v-divider>
+              <div class="user-details">
+                {{order.address}}
+              </div>
+              <v-divider></v-divider>
+              <div class="user-details">
+                <span>Order history: 1</span>
+              </div>
+              <v-divider></v-divider>
               <div class="previous-reply">
                <icon name="vendor"></icon>
                <span class="t-head mt-1 mx-2 text-capitalize">Vendor</span>
               </div>
-            <!-- <div class="life-spending">
-             <span class="t-small text-capitalize">Products:</span>
-            </div> -->
-                <v-divider></v-divider>
-            
+              <v-divider></v-divider>
+              <div class="users-view-btn">
+                <div class="user-details">
+                {{order.driver}}
+              </div>
+              <nuxt-link class="underline" to="">
+               <span style="color:#0CAD73;" class="view">view<icon class="i mt-1" name="right"></icon></span>
+              </nuxt-link>
+              </div>
+              <v-divider></v-divider>
+              <div class="user-details">
+                {{order.driver_phone}}
+              </div>
+              <v-divider></v-divider>
+              <div class="user-details">
+                <span >Order history: 1</span>
+              </div>
+              <v-divider></v-divider>
             </div>
-            
             </div>
           </v-col>
     </v-row>
@@ -102,10 +146,13 @@
             const m = moment()
             m.format('MMMM Do YYYY, h:mm:ss a')
             return m
-          }
+          },
+          convertToDate(date){
+          return moment(date).format('lll');
         }
-        
+      }
     }
+
 </script>
 
 <style scoped>
@@ -115,9 +162,11 @@
 }
 .flex-section{
   display: flex;
-
   margin: 20px 0 20px 34px;
   font-family: 'Space Grotesk';
+}
+.right-subhead{
+  margin-left: 11em;
 }
 .t-text{
   font-weight: 600;
@@ -184,6 +233,9 @@
   text-transform: uppercase;
   margin: 20px 0;
 }
+.quantity{
+  color: #0CAD73;
+}
 
 /* .input{
    margin: 20px 0 20px 34px; 
@@ -200,6 +252,19 @@
     font-family: 'Space Grotesk';
     margin-bottom: 20px;
 }
+.underline{
+    text-decoration: none;
+  }
+.users-view-btn{
+  display: flex;
+  justify-content: space-between;
+}
+.view{
+  display: flex;
+  align-items: center;
+  width: 80px;
+  color: grey;
+}
 .previous-reply{
     display: flex;
     font-family: 'Space Grotesk';
@@ -212,6 +277,16 @@
 }
 .bar-section{
     padding: 20px 40px;
+    font-family: 'Space Grotesk';
+}
+.user-details{
+  padding: 10px 0;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.07em;
+  text-transform: capitalize;
 }
 .t-head{
    font-family: 'Space Grotesk';

@@ -29,19 +29,19 @@
               </tr>
             </thead>
       <template>
-        <tbody>
+        <tbody class="table-details">
           <tr v-for="item in orders" :key="item.id">
             <td>{{item.id}}</td>
             <td>{{convertToDate(item.created_at)}}</td>
             <td>{{item.name}}</td>
             <td></td>
             <td>{{item.total}}</td>
-            <td>{{item.status}}</td>
+            <td :style="{color: '#0CAD73'}"><span class="box">{{item.status}}</span></td>
             <td class="change">
               <nuxt-link class="underline" to="">
                 <span class="edit">edit <icon class="i" name="change"></icon></span>
               </nuxt-link>
-              <nuxt-link class="underline" :to="`/manage-customers/orders/${item.order_no}`">
+              <nuxt-link class="underline" :to="`/manage-customers/orders/${item.id}`">
                <span class="view">view<icon class="i mt-1" name="right"></icon></span>
               </nuxt-link>
             </td>
@@ -62,12 +62,19 @@
       },
       data () {
         return {
-          orders: []
+          orders: [],
+          colors: ['red', 'green']
          }
       },
       methods: {
         convertToDate(date){
           return moment(date).format('ll');
+          },
+          colorChange(){
+            if(orders.status = 'pending'){
+              this.colors[0] = style.color
+            }
+
           }
       }
     }
@@ -83,8 +90,12 @@
     text-transform: uppercase;
     margin: 5px 0px 6px 100px;
   }
+  .table-details{
+    font-size: 14px;
+  }
   .table td {
     text-transform: capitalize;
+    padding: 20px 0;
   }
   .table .change{
     display: flex;
@@ -92,6 +103,15 @@
     align-items: center;
     text-transform: uppercase;
   }
+  .box{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 7vw;
+  background: rgba(12, 173, 115, 0.1);
+  border-radius: 16px;
+  height: 4vh;
+}
   .table .edit, .table .view{
     display: flex;
     align-items: center;

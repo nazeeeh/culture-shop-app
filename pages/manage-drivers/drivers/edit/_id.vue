@@ -26,19 +26,25 @@
     import Edit from '~/components/manageDrivers/drivers/Edit.vue'
 
     export default {
-        // async asyncData({$axios, params}){
-        //     const response = await $axios.$get(`https://api.thecultureshop.co.uk/api/v1/driver/${params.id}`)
-        //     console.log(response.data)
-        //     this.driver = response.data
-        // },
-        async fetch({params}){
-            const response = await fetch(`https://api.thecultureshop.co.uk/api/v1/driver/${params.id}`)
-            const data = await response.json()
-
-            console.log(data.data)
-            this.driver = data.data
-            console.log(this.driver)
+        async asyncData({$axios, params}){
+            try{
+            const response = await $axios.$get(`https://api.thecultureshop.co.uk/api/v1/driver/${params.id}`)
+            const driver = response.data
+            console.log(driver)
+            return {driver}
+            }catch(err){
+                return err
+            }
+            
         },
+        // async fetch({params}){
+        //     const response = await fetch(`https://api.thecultureshop.co.uk/api/v1/driver/${params.id}`)
+        //     const data = await response.json()
+
+        //     console.log(data.data)
+        //     this.driver = data.data
+        //     console.log(this.driver)
+        // },
         
     //     async fetch({params}) {
     //         const response = await this.$api.getaDriver(id)
@@ -58,20 +64,20 @@
         data () {
          return {
             title: 'Edit driver',
-            driver: {
-             firstname: 'Rex',
-             lastname: 'Texh',
-             email: 'rextexh@gmail.com',
-             phone: '09087989876',
-             address: 'Area 2 abuja',
-             city: 'Abuja',
-             postcode: '70024',
-             documentation: 'passport',
-             doc_number: '012',
-             vehicle: 'car',
-             password: '',
-             selectedFile: ''
-        }
+        //     driver: {
+        //      firstname: 'Rex',
+        //      lastname: 'Texh',
+        //      email: 'rextexh@gmail.com',
+        //      phone: '09087989876',
+        //      address: 'Area 2 abuja',
+        //      city: 'Abuja',
+        //      postcode: '70024',
+        //      documentation: 'passport',
+        //      doc_number: '012',
+        //      vehicle: 'car',
+        //      password: '',
+        //      selectedFile: ''
+        // }
     }
 },
             

@@ -34,10 +34,10 @@
               </tr>
             </thead>
       <template>
-        <tbody>
+        <tbody class="table-details">
           <tr v-for="product in products" :key="product.id">
             <td>{{product.shop_id}}</td>
-            <td>{{ product.images }}</td>
+            <td><img :src="product.images"/></td>
             <td>{{ product.category }}</td>
             <td>{{ product.name}}</td>
             <td>{{ product.shop_name}} </td>
@@ -95,6 +95,10 @@
   }
   .table td {
     text-transform: capitalize;
+    padding: 20px 0;
+  }
+  .table-details{
+    font-size: 14px;
   }
   .table .change{
     display: flex;

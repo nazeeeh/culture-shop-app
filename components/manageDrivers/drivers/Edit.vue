@@ -2,7 +2,7 @@
  <div class="Edit-driver">
   <div class="sub-section">
     <div class="flex-section">
-    <span>#{{this.$route.params.id}}</span>
+    <span>#{{driver.id}}</span>
      <div class="box">
       <span class="text-uppercase t-text" :style="{color: '#0CAD73'}">Approved</span> 
      </div>
@@ -22,63 +22,65 @@
                 <div class="grid-input">
                 <div class="input">
                  <label for="vehicle type" class="name">Vehicle type</label><br>
-                 <select v-model="vehicle" name="role" class="grid">
+                 <select v-model="driver.vehicle" name="role" class="grid">
                   <option value=""></option>
                   <option value="Car">Car</option>
                 </select>
+                <icon class="dropdown" name="dropdown"></icon>
                 </div>
                 </div>
                 <div class="grid-input">
                   <div class="input">
                  <label for="first name" class="name">First Name</label><br>
-                 <input v-model="firstname" type="text" class="grid">
+                 <input v-model="driver.firstname" type="text" class="grid">
                 </div>
                 <div class="input">
                  <label for="last name" class="name">Last Name</label><br>
-                 <input v-model="lastname" type="text" class="grid">
+                 <input v-model="driver.lastname" type="text" class="grid">
                 </div>
                 </div>
                 <div class="grid-input">
                   <div class="input">
                  <label for="email address" class="name">Email address</label><br>
-                 <input v-model="email" type="email" class="grid">
+                 <input v-model="driver.email" type="email" class="grid">
                 </div>
                 <div class="input">
                  <label for="password" class="name">Password</label><br>
-                 <input v-model="password" type="password" class="grid">
+                 <input v-model="driver.password" type="password" class="grid">
                 </div>
                 </div>
                 <div class="grid-input">
                   <div class="input">
                  <label for="street address" class="name">Street address</label><br>
-                 <input v-model="address" type="text" class="grid">
+                 <input v-model="driver.address" type="text" class="grid">
                 </div>
                 <div class="input">
                  <label for="postcode" class="name">Postcode</label><br>
-                 <input v-model="postcode" type="text" class="grid">
+                 <input v-model="driver.postcode" type="text" class="grid">
                 </div>
                 </div>
                 <div class="grid-input">
                   <div class="input">
                  <label for="city" class="name">City</label><br>
-                 <input v-model="city" type="text" class="grid">
+                 <input v-model="driver.city" type="text" class="grid">
                 </div>
                 <div class="input">
                  <label for="mobile number" class="name">Mobile number</label><br>
-                 <input v-model="phone" type="text" class="grid">
+                 <input v-model="driver.phone" type="text" class="grid">
                 </div>
                 </div>
                 <div class="grid-input">
                   <div class="input">
                  <label for="city" class="name">Documentation type</label><br>
-                 <select v-model="documentation" name="role" class="grid">
+                 <select v-model="driver.documentation" name="role" class="grid">
                   <option value=""></option>
                   <option value="Passports">Passport</option>
                 </select>
+                <icon class="doc-dropdown" name="dropdown"></icon>
                 </div>
                 <div class="input">
                  <label for="document number" class="name">Documentation number</label><br>
-                 <input v-model="doc_number" type="text" class="grid">
+                 <input v-model="driver.doc_number" type="text" class="grid">
                 </div>
                 </div>
                 <div class="proof">
@@ -197,22 +199,25 @@
             updateData.append("vehicle", this.vehicle);
             updateData.append("password", this.password);
             updateData.append("passport", this.selectedFile);
-
-            const sendData = this.$api.editDriver(updateData, this.id)
+            
+            // async fetch (){
+            // const sendData = await $axios.$post(`https://api.thecultureshop.co.uk/api/v1/update/driver2/${params.id}`, updateData)
+            
+            const sendData = this.$api.editDriver(updateData)
             this.$showSnackBar({
                      show: true,
                      timeout: 3000,
                      message: `Profile Updated`,
                      color: 'green',
                     })
-                    //RESET INPUT VALUES
+                    // RESET INPUT VALUES
                     this.firstname = this.lastname = this.email = this.password = this.postcode = 
                     this.documentation = this.doc_number = this.vehicle = this.password = this.passport = ""
         } catch(err){
           return err
         }
       }
-    },
+      }
         
     }
 </script>
@@ -282,6 +287,16 @@
   background: rgba(12, 173, 115, 0.1);
   border-radius: 16px;
   height: 4vh;
+}
+.dropdown{
+  position: absolute;
+  left:23%;
+  top: 19%;
+}
+.doc-dropdown{
+  position: absolute;
+  left: 23%;
+  top: 67%;
 }
 form{
   font-family: 'Space Grotesk';
@@ -433,7 +448,7 @@ form{
 }
 .add{
   position: absolute;
-  top: 49rem;
+  top: 49.5rem;
   left: 5.5rem;
   cursor: pointer;
 }

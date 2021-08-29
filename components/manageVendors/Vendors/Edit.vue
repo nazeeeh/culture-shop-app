@@ -3,7 +3,7 @@
   <SaveOrCancelBtn />
     <div class="sub-section">
      <div class="flex-section">
-     <span>#ID</span>
+     <span>#{{vendor.id}}</span>
      <div class="box">
       <span class="text-uppercase t-text" :style="{color: '#0CAD73'}">Approved</span> 
      </div>
@@ -23,72 +23,76 @@
                 <div class="proof">
                  <label for="proof" class="name">Storefront imagery</label><br>
                  <div class="border-bg">
-                  <div class="images">
-                    <div class="pic">
-                        <icon name="add"></icon>
-                    </div>
-                  </div>
+                   <input ref="file" 
+                   v-on:change="onFileSelected" 
+                   type="file" class="custom-file-input"
+                   accept="image/*">
+                   <icon class="add" name="add"></icon>
                  </div>
                 </div>
                 <div class="grid-input">
-                  <div class="input">
-                 <label for="Permissions" class="name">Permissions</label><br>
-                 <input type="text" class="grid" >
+                 <div class="input">
+                 <label for="category" class="name">Category</label><br>
+                    <select  v-model="vendor.category" class="grid">
+                      <optgroup>
+                        <option></option>
+                      <option>Shoes</option>
+                      <option>Meat</option>
+                      </optgroup>
+                    </select>
+                    <icon class="dropdown" name="dropdown"></icon>
                 </div>
                 <div class="input">
                  <label for="Store name" class="name">Store name</label><br>
-                 <input type="text" class="grid" value="Leon store">
+                 <input v-model="vendor.shop_name" type="text" class="grid" value="Leon store">
                 </div>
                 </div>
                 <div class="grid-input">
                   <div class="input">
                  <label for="First name" class="name">First name</label><br>
-                 <input type="text" class="grid">
+                 <input v-model="vendor.firstname" type="text" class="grid">
                 </div>
                 <div class="input">
                  <label for="Last name" class="name">Last name</label><br>
-                 <input type="text" class="grid">
+                 <input v-model="vendor.lastname" type="text" class="grid">
                 </div>
                 </div>
                 <div class="grid-input">
                   <div class="input">
                  <label for="Email address" class="name">Email address</label><br>
-                 <input type="email" class="grid">
+                 <input v-model="vendor.email" type="email" class="grid">
                 </div>
                 <div class="input">
                  <label for="password" class="name">Password</label><br>
-                 <input type="password" class="grid">
+                 <input v-model="vendor.password" type="password" class="grid">
                 </div>
                 </div>
                 <div class="input">
                 <label for="Mobile number" class="name">Mobile number</label><br>
-                <input type="text" class="stock"><br>
+                <input v-model="vendor.phone" type="text" class="stock"><br>
                 </div>
                  <div class="grid-input">
                   <div class="input">
                  <label for="Street address" class="name">Street address</label><br>
-                 <input type="text" class="grid">
+                 <input v-model="vendor.address" type="text" class="grid">
                 </div>
                 <div class="input">
                  <label for="postcode" class="name">Postcode</label><br>
-                 <input type="text" class="grid">
+                 <input v-model="vendor.postcode" type="text" class="grid">
                 </div>
                 </div>
                 <div class="grid-input">
                   <div class="input">
                  <label for="City" class="name">City</label><br>
-                 <input type="text" class="grid">
+                 <input v-model="vendor.city" type="text" class="grid">
                 </div>
                 <div class="input">
                  <label for="Storewide discount" class="name">Storewide discount</label><br>
                  <input type="text" class="grid">
                 </div>
-                </div>
-                
-                
+                </div>       
             </form>
           </v-col>
-          
           <v-spacer></v-spacer>
 
           <v-col cols="6">
@@ -164,10 +168,30 @@
             Subhead,
             OpeningHours
         },
-        data () {
-        return {
-           
-            }
+        props: {
+        vendor: {
+          type: Object,
+          required: true
+        }
+      },
+        data() {
+          return {
+            selectedFile: '',
+              firstName: '',
+              lastName: '',
+              shopName: '',
+              email: '',
+              password: '',
+              address: '',
+              postcode: '',
+              city: '' ,
+              storewideDiscount: '',
+              phone: '',
+              nameCard: '',
+              sortCode: '',
+              accountNumber: '',
+              category: '',
+          }
         },
 
     methods: {
@@ -215,6 +239,11 @@
   font-size: 12px;
   line-height: 16px;
   letter-spacing: 0.07em;
+}
+.dropdown{
+  position: absolute;
+  left:23%;
+  top: 35%;
 }
 .box{
   display: flex;
@@ -367,5 +396,34 @@ textarea::placeholder{
     line-height: 16px;
     letter-spacing: 0.07em;
     text-transform: uppercase;
+}
+.add{
+  position: absolute;
+  top: 13rem;
+  left: 5rem;
+  cursor: pointer;
+}
+.custom-file-input::-webkit-file-upload-button {
+  visibility: hidden;
+}
+.custom-file-input::before {
+  content: '';
+  margin-top: 15px;
+  margin-left: 10px;
+  width: 8vw;
+  align-self: center;
+  text-align: center;
+  display: inline-block;
+  border: 1px solid #999;
+  border-radius: 6.29091px;
+  padding: 25px 8px;
+  outline: none;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  cursor: pointer;
+  text-shadow: 1px 1px #fff;
+}
+.custom-file-input:hover::before {
+  border-color: black;
 }
 </style>

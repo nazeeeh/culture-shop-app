@@ -17,7 +17,7 @@
       </div>
      </div>
      <v-divider w-100></v-divider>
-     <Editvendor />
+     <Editvendor :vendor="vendor" />
     </div>
 </template>
 
@@ -26,6 +26,16 @@
     import Editvendor from '~/components/manageVendors/Vendors/Edit.vue'
 
     export default {
+        async asyncData({params, $axios}){
+            try{
+            const response = await $axios.$get(`https://api.thecultureshop.co.uk/api/v1/shop/${params.id}`)
+            const vendor = response.data
+            console.log(vendor)
+            return {vendor}
+            }catch(err){
+                return err
+            }
+        },
         components: {
             Editvendor
         },

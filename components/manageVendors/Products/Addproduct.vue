@@ -154,11 +154,11 @@
             this.name !== '' &&
             this.price !== '' &&
             this.category !== '' &&
-            this.tag !== '' &&
-            this.weight !== '' &&
-            this.sku !== '' &&
+            // this.tag !== '' &&
+            // this.weight !== '' &&
+            // this.sku !== '' &&
             this.stock !== '' &&
-            this.description !== '' &&
+            // this.description !== '' &&
             this.shop_id != ''
           }
         },
@@ -349,8 +349,8 @@ textarea::placeholder{
 }
 .add{
   position: absolute;
-  top: 13rem;
-  left: 5rem;
+  top: 13.2rem;
+  left: 5.5rem;
   cursor: pointer;
 }
 .custom-file-input::-webkit-file-upload-button {

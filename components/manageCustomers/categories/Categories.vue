@@ -1,6 +1,6 @@
 <template>
  <div>
-  <v-btn class="btn-btn py-6 px-10 text-uppercase" >add new</v-btn>
+  <v-btn class="btn-btn py-6 px-10 text-uppercase" @click="add">add new</v-btn>
   <SearchBar />
   <!-- Table -->
         <div class="round">
@@ -15,9 +15,9 @@
                   <span style="display: flex; align-items: center">Name</span>
                 </th>
                 <th scope="col" style="text-align: left; width: 10rem;">Vendor</th>
-                <!-- <th scope="col" style="text-align: left; width: 10rem;">Product</th> -->
+                <!-- <th scope="col" style="text-align: left; width: 10rem;">Product</th>
                 
-                <!-- <th scope="col" style="text-align: left; width: 10rem;">
+                <th scope="col" style="text-align: left; width: 10rem;">
                  <span style="display: flex; align-items: center"><span style="color: grey; margin-right: 1rem;">
                    Status</span> All <icon name="dropdown"></icon> 
                   </span>
@@ -25,7 +25,7 @@
               </tr>
             </thead>
       <template>
-        <tbody>
+        <tbody class="table-details">
           <tr v-for="category in categories" :key="category.id">
             <td>{{ category.id }}</td>
             <td>{{ category.name }}</td>
@@ -66,7 +66,11 @@
           return {
             categories: {}
           }
-          
+        },
+        methods: {
+          add () {
+          this.$router.push('/manage-customers/category/add')
+         }
         }
     }
 </script>
@@ -90,14 +94,19 @@
   text-decoration: none;
   color: grey;
 }
+.table-details{
+    font-size: 14px;
+  }
 .table td {
     text-transform: capitalize;
+    padding: 20px 0;
   }
   .table .change{
     display: flex;
     cursor: pointer;
     align-items: center;
     text-transform: uppercase;
+    margin-left: 34em;
   }
   .table .edit, .table .view{
     display: flex;
@@ -128,7 +137,7 @@
   height: 20px;
   left: 35px;
   position: absolute;
-  top: 35px;
+  top: 28px;
   width: 20px;
 }
 .round label:after {

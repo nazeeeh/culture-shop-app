@@ -15,7 +15,10 @@
         <span class="sub-title text-uppercase">All /</span>
        </nuxt-link> -->
        <nuxt-link to= "/">
-        <span class="sub-title text-uppercase">{{$route.params.id}}</span>
+        <span class="sub-title text-uppercase">{{$route.params.id}} /</span>
+       </nuxt-link>
+       <nuxt-link to= "/">
+        <span class="sub-title text-uppercase">{{order.order_no}}</span>
        </nuxt-link>
       </div>
      </div>
@@ -29,26 +32,28 @@
     import Orders from '~/components/manageCustomers/orders/Orders.vue'
 
     export default {
-        async fetch(){
-            const response = await this.$api.getAllOrders()
-            console.log(response)
-            this.order = response.orders
-            console.log(this.order)
+      
+        data () {
+            return {
+                title: 'Orders',
+            }
         },
+
+        async asyncData({$axios, params}){
+            try{
+                const response = await $axios.$get(`https://api.thecultureshop.co.uk/api/v1/order/${params.id}`)  
+                console.log(response.data)
+                const order = response.data
+                return {order}
+            }catch(err){
+                return err
+            }
+        },
+
         components: {
             Orders
         },
 
-        data () {
-            return {
-                title: 'Orders',
-                order: {}
-            }
-        },
-        
-        methods: {
-
-        }
 }
 </script>
 

@@ -189,6 +189,7 @@
             }   
       try {
           let vendorData= new FormData();
+          vendorData.append("user_id", '2');
           vendorData.append("firstname", this.firstname);
           vendorData.append("lastname", this.lastName);
           vendorData.append("shop_name", this.shopName); 
@@ -223,7 +224,6 @@
                   this.address = this.city = this.documentation = this.doc_number = this.phone
                   = this.vehicle = this.postcode = this.nameCard = this.sortCode = accountNumber = 
                   this.category =  ""
-          console,log(sendData)
         }catch (err){
           return err
         }
@@ -306,7 +306,7 @@ form{
 .dropdown{
   position: absolute;
   left:23%;
-  top: 36.5%;
+  top: 35%;
 }
  .name{
     font-weight: 600;

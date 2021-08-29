@@ -28,7 +28,7 @@
               </tr>
             </thead>
       <template>
-        <tbody>
+        <tbody class="table-details">
           <tr v-for="driver in drivers" :key="driver.id">
             <td> {{ driver.id }}</td>
             <td> {{ convertToDate(driver.created_at)}}</td>
@@ -109,14 +109,19 @@
     text-transform: uppercase;
     margin: 5px 0px 6px 100px;
   }
+  .table-details{
+    font-size: 14px;
+  }
   .table td {
     text-transform: capitalize;
+    padding: 20px 0;
   }
   .table .change{
     display: flex;
     cursor: pointer;
     align-items: center;
     text-transform: uppercase;
+    margin-left: 12em;
   }
   .table .edit, .table .view{
     display: flex;

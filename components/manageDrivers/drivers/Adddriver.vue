@@ -229,12 +229,12 @@
 .dropdown{
   position: absolute;
   left:23%;
-  top: 20.5%;
+  top: 19%;
 }
 .doc-dropdown{
   position: absolute;
   left: 23%;
-  top: 71%;
+  top: 67%;
 }
 .t-text{
   font-weight: 600;
@@ -361,7 +361,7 @@ form{
 }
 .add{
   position: absolute;
-  top: 49rem;
+  top: 49.5rem;
   left: 5.5rem;
   cursor: pointer;
 }

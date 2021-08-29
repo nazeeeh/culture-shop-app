@@ -25,13 +25,13 @@
               </tr>
             </thead>
       <template>
-        <tbody>
+        <tbody class="table-details">
           <tr v-for="customer in customers" :key="customer.id">
             <td>{{customer.id}}</td>
             <td>{{convertToDate(customer.created_at)}}</td>
             <td>{{customer.firstname}} {{customer.lastname}}</td>
             <td>{{customer.email}}</td>
-            <td>Approved</td>
+            <td :style="{color: '#0CAD73'}"><span class="box">Approved</span></td>
             <td>0</td>
             <td class="change">
               <nuxt-link class="underline" :to="`/manage-customers/customers/edit/${customer.id}`">
@@ -109,8 +109,21 @@
     text-transform: uppercase;
     margin: 5px 0px 6px 100px;
   }
+  .box{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 7vw;
+  background: rgba(12, 173, 115, 0.1);
+  border-radius: 16px;
+  height: 4vh;
+}
+  .table-details{
+    font-size: 14px;
+  }
   .table td {
     text-transform: capitalize;
+    padding: 30px 0;
   }
   .table .change{
     display: flex;
