@@ -42,9 +42,7 @@ export default {
 }
 </script>
 <style scoped>
-* {
-  box-sizing: border-box;
-}
+
 .tite{
 font-family: 'Space Grotesk';
 font-style: normal;

@@ -206,15 +206,6 @@
   "ManageDriversOrders": {
     "description": "Auto imported from components/manageDrivers/orders/orders.vue"
   },
-  "ManageVendorsOrdersAllorders": {
-    "description": "Auto imported from components/manageVendors/Orders/Allorders.vue"
-  },
-  "ManageVendorsProductsAddproduct": {
-    "description": "Auto imported from components/manageVendors/Products/Addproduct.vue"
-  },
-  "ManageVendorsProductsAllproducts": {
-    "description": "Auto imported from components/manageVendors/Products/Allproducts.vue"
-  },
   "ManageDriversSupportOverview": {
     "description": "Auto imported from components/manageDrivers/support/Overview.vue"
   },
@@ -223,6 +214,15 @@
   },
   "ManageDriversSupportUnresolveticket": {
     "description": "Auto imported from components/manageDrivers/support/Unresolveticket.vue"
+  },
+  "ManageVendorsOrdersAllorders": {
+    "description": "Auto imported from components/manageVendors/Orders/Allorders.vue"
+  },
+  "ManageVendorsProductsAddproduct": {
+    "description": "Auto imported from components/manageVendors/Products/Addproduct.vue"
+  },
+  "ManageVendorsProductsAllproducts": {
+    "description": "Auto imported from components/manageVendors/Products/Allproducts.vue"
   },
   "ManageVendorsSupportOverview": {
     "description": "Auto imported from components/manageVendors/Support/Overview.vue"
