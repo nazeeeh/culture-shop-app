@@ -151,12 +151,8 @@ export default {
     display: flex;
     justify-content: space-between;
     width: 17.5vw;
-    /* background: #FFFFFF; */
-    border: 2px solid #F2F2F2;
     box-sizing: border-box;
     border-radius: 24px;
-    /* margin: 1rem 1rem 0 2rem; */
-
 }
 .p-style{
     font-family: 'Space Grotesk';   
