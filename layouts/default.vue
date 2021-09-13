@@ -35,10 +35,16 @@ export default {
 
 </script>
 <style scoped>
-  * {
-  box-sizing: border-box;
-  padding: 0;
+
+html {
+  font-family: 'Space Grotesk';
+}
+ * {
   margin: 0;
+  padding: 0;
+}
+*, *::after, *::before{
+  box-sizing: border-box;
 }
 
 </style>

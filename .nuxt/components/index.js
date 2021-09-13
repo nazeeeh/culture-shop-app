@@ -59,22 +59,22 @@ export { default as ManageCustomersCategories } from '../..\\components\\manageC
 export { default as ManageCustomersCustomersAddcustomers } from '../..\\components\\manageCustomers\\customers\\Addcustomers.vue'
 export { default as ManageCustomers } from '../..\\components\\manageCustomers\\customers\\Customers.vue'
 export { default as ManageCustomersCustomersEdit } from '../..\\components\\manageCustomers\\customers\\Edit.vue'
+export { default as ManageCustomersOrdersAllorders } from '../..\\components\\manageCustomers\\orders\\Allorders.vue'
+export { default as ManageCustomersOrders } from '../..\\components\\manageCustomers\\orders\\Orders.vue'
 export { default as ManageCustomersSupportOverview } from '../..\\components\\manageCustomers\\support\\Overview.vue'
 export { default as ManageCustomersSupportResolvedticket } from '../..\\components\\manageCustomers\\support\\Resolvedticket.vue'
 export { default as ManageCustomersSupportUnresolveticket } from '../..\\components\\manageCustomers\\support\\Unresolveticket.vue'
-export { default as ManageCustomersOrdersAllorders } from '../..\\components\\manageCustomers\\orders\\Allorders.vue'
-export { default as ManageCustomersOrders } from '../..\\components\\manageCustomers\\orders\\Orders.vue'
 export { default as ManageDriversDriversAdddriver } from '../..\\components\\manageDrivers\\drivers\\Adddriver.vue'
 export { default as ManageDrivers } from '../..\\components\\manageDrivers\\drivers\\Drivers.vue'
 export { default as ManageDriversDriversEdit } from '../..\\components\\manageDrivers\\drivers\\Edit.vue'
 export { default as ManageDriversOrdersAllorders } from '../..\\components\\manageDrivers\\orders\\Allorders.vue'
 export { default as ManageDriversOrders } from '../..\\components\\manageDrivers\\orders\\orders.vue'
-export { default as ManageDriversSupportOverview } from '../..\\components\\manageDrivers\\support\\Overview.vue'
-export { default as ManageDriversSupportResolvedticket } from '../..\\components\\manageDrivers\\support\\Resolvedticket.vue'
-export { default as ManageDriversSupportUnresolveticket } from '../..\\components\\manageDrivers\\support\\Unresolveticket.vue'
 export { default as ManageVendorsOrdersAllorders } from '../..\\components\\manageVendors\\Orders\\Allorders.vue'
 export { default as ManageVendorsProductsAddproduct } from '../..\\components\\manageVendors\\Products\\Addproduct.vue'
 export { default as ManageVendorsProductsAllproducts } from '../..\\components\\manageVendors\\Products\\Allproducts.vue'
+export { default as ManageDriversSupportOverview } from '../..\\components\\manageDrivers\\support\\Overview.vue'
+export { default as ManageDriversSupportResolvedticket } from '../..\\components\\manageDrivers\\support\\Resolvedticket.vue'
+export { default as ManageDriversSupportUnresolveticket } from '../..\\components\\manageDrivers\\support\\Unresolveticket.vue'
 export { default as ManageVendorsSupportOverview } from '../..\\components\\manageVendors\\Support\\Overview.vue'
 export { default as ManageVendorsSupportResolvedticket } from '../..\\components\\manageVendors\\Support\\Resolvedticket.vue'
 export { default as ManageVendorsSupportUnresolvedticket } from '../..\\components\\manageVendors\\Support\\Unresolvedticket.vue'
@@ -141,22 +141,22 @@ export const LazyManageCustomersCategories = import('../..\\components\\manageCu
 export const LazyManageCustomersCustomersAddcustomers = import('../..\\components\\manageCustomers\\customers\\Addcustomers.vue' /* webpackChunkName: "components/manage-customers-customers-addcustomers" */).then(c => wrapFunctional(c.default || c))
 export const LazyManageCustomers = import('../..\\components\\manageCustomers\\customers\\Customers.vue' /* webpackChunkName: "components/manage-customers" */).then(c => wrapFunctional(c.default || c))
 export const LazyManageCustomersCustomersEdit = import('../..\\components\\manageCustomers\\customers\\Edit.vue' /* webpackChunkName: "components/manage-customers-customers-edit" */).then(c => wrapFunctional(c.default || c))
+export const LazyManageCustomersOrdersAllorders = import('../..\\components\\manageCustomers\\orders\\Allorders.vue' /* webpackChunkName: "components/manage-customers-orders-allorders" */).then(c => wrapFunctional(c.default || c))
+export const LazyManageCustomersOrders = import('../..\\components\\manageCustomers\\orders\\Orders.vue' /* webpackChunkName: "components/manage-customers-orders" */).then(c => wrapFunctional(c.default || c))
 export const LazyManageCustomersSupportOverview = import('../..\\components\\manageCustomers\\support\\Overview.vue' /* webpackChunkName: "components/manage-customers-support-overview" */).then(c => wrapFunctional(c.default || c))
 export const LazyManageCustomersSupportResolvedticket = import('../..\\components\\manageCustomers\\support\\Resolvedticket.vue' /* webpackChunkName: "components/manage-customers-support-resolvedticket" */).then(c => wrapFunctional(c.default || c))
 export const LazyManageCustomersSupportUnresolveticket = import('../..\\components\\manageCustomers\\support\\Unresolveticket.vue' /* webpackChunkName: "components/manage-customers-support-unresolveticket" */).then(c => wrapFunctional(c.default || c))
-export const LazyManageCustomersOrdersAllorders = import('../..\\components\\manageCustomers\\orders\\Allorders.vue' /* webpackChunkName: "components/manage-customers-orders-allorders" */).then(c => wrapFunctional(c.default || c))
-export const LazyManageCustomersOrders = import('../..\\components\\manageCustomers\\orders\\Orders.vue' /* webpackChunkName: "components/manage-customers-orders" */).then(c => wrapFunctional(c.default || c))
 export const LazyManageDriversDriversAdddriver = import('../..\\components\\manageDrivers\\drivers\\Adddriver.vue' /* webpackChunkName: "components/manage-drivers-drivers-adddriver" */).then(c => wrapFunctional(c.default || c))
 export const LazyManageDrivers = import('../..\\components\\manageDrivers\\drivers\\Drivers.vue' /* webpackChunkName: "components/manage-drivers" */).then(c => wrapFunctional(c.default || c))
 export const LazyManageDriversDriversEdit = import('../..\\components\\manageDrivers\\drivers\\Edit.vue' /* webpackChunkName: "components/manage-drivers-drivers-edit" */).then(c => wrapFunctional(c.default || c))
 export const LazyManageDriversOrdersAllorders = import('../..\\components\\manageDrivers\\orders\\Allorders.vue' /* webpackChunkName: "components/manage-drivers-orders-allorders" */).then(c => wrapFunctional(c.default || c))
 export const LazyManageDriversOrders = import('../..\\components\\manageDrivers\\orders\\orders.vue' /* webpackChunkName: "components/manage-drivers-orders" */).then(c => wrapFunctional(c.default || c))
-export const LazyManageDriversSupportOverview = import('../..\\components\\manageDrivers\\support\\Overview.vue' /* webpackChunkName: "components/manage-drivers-support-overview" */).then(c => wrapFunctional(c.default || c))
-export const LazyManageDriversSupportResolvedticket = import('../..\\components\\manageDrivers\\support\\Resolvedticket.vue' /* webpackChunkName: "components/manage-drivers-support-resolvedticket" */).then(c => wrapFunctional(c.default || c))
-export const LazyManageDriversSupportUnresolveticket = import('../..\\components\\manageDrivers\\support\\Unresolveticket.vue' /* webpackChunkName: "components/manage-drivers-support-unresolveticket" */).then(c => wrapFunctional(c.default || c))
 export const LazyManageVendorsOrdersAllorders = import('../..\\components\\manageVendors\\Orders\\Allorders.vue' /* webpackChunkName: "components/manage-vendors-orders-allorders" */).then(c => wrapFunctional(c.default || c))
 export const LazyManageVendorsProductsAddproduct = import('../..\\components\\manageVendors\\Products\\Addproduct.vue' /* webpackChunkName: "components/manage-vendors-products-addproduct" */).then(c => wrapFunctional(c.default || c))
 export const LazyManageVendorsProductsAllproducts = import('../..\\components\\manageVendors\\Products\\Allproducts.vue' /* webpackChunkName: "components/manage-vendors-products-allproducts" */).then(c => wrapFunctional(c.default || c))
+export const LazyManageDriversSupportOverview = import('../..\\components\\manageDrivers\\support\\Overview.vue' /* webpackChunkName: "components/manage-drivers-support-overview" */).then(c => wrapFunctional(c.default || c))
+export const LazyManageDriversSupportResolvedticket = import('../..\\components\\manageDrivers\\support\\Resolvedticket.vue' /* webpackChunkName: "components/manage-drivers-support-resolvedticket" */).then(c => wrapFunctional(c.default || c))
+export const LazyManageDriversSupportUnresolveticket = import('../..\\components\\manageDrivers\\support\\Unresolveticket.vue' /* webpackChunkName: "components/manage-drivers-support-unresolveticket" */).then(c => wrapFunctional(c.default || c))
 export const LazyManageVendorsSupportOverview = import('../..\\components\\manageVendors\\Support\\Overview.vue' /* webpackChunkName: "components/manage-vendors-support-overview" */).then(c => wrapFunctional(c.default || c))
 export const LazyManageVendorsSupportResolvedticket = import('../..\\components\\manageVendors\\Support\\Resolvedticket.vue' /* webpackChunkName: "components/manage-vendors-support-resolvedticket" */).then(c => wrapFunctional(c.default || c))
 export const LazyManageVendorsSupportUnresolvedticket = import('../..\\components\\manageVendors\\Support\\Unresolvedticket.vue' /* webpackChunkName: "components/manage-vendors-support-unresolvedticket" */).then(c => wrapFunctional(c.default || c))
