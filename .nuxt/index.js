@@ -19,7 +19,7 @@ import nuxt_plugin_workbox_4101a8d7 from 'nuxt_plugin_workbox_4101a8d7' // Sourc
 import nuxt_plugin_metaplugin_a9845352 from 'nuxt_plugin_metaplugin_a9845352' // Source: .\\pwa\\meta.plugin.js (mode: 'all')
 import nuxt_plugin_iconplugin_a035086a from 'nuxt_plugin_iconplugin_a035086a' // Source: .\\pwa\\icon.plugin.js (mode: 'all')
 import nuxt_plugin_axios_6fd0e67b from 'nuxt_plugin_axios_6fd0e67b' // Source: .\\axios.js (mode: 'all')
-import nuxt_plugin_prettycheckbox_1cd8a504 from 'nuxt_plugin_prettycheckbox_1cd8a504' // Source: ..\\plugins\\pretty-checkbox (mode: 'all')
+import nuxt_plugin_pretty_44e9d928 from 'nuxt_plugin_pretty_44e9d928' // Source: ..\\plugins\\pretty (mode: 'all')
 import nuxt_plugin_globalSnackbar_7bd1d2be from 'nuxt_plugin_globalSnackbar_7bd1d2be' // Source: ..\\plugins\\globalSnackbar (mode: 'all')
 import nuxt_plugin_api_5e4622e4 from 'nuxt_plugin_api_5e4622e4' // Source: ..\\plugins\\api (mode: 'all')
 import nuxt_plugin_plugin_44dacdea from 'nuxt_plugin_plugin_44dacdea' // Source: .\\auth\\plugin.js (mode: 'all')
@@ -240,8 +240,8 @@ async function createApp(ssrContext, config = {}) {
     await nuxt_plugin_axios_6fd0e67b(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_prettycheckbox_1cd8a504 === 'function') {
-    await nuxt_plugin_prettycheckbox_1cd8a504(app.context, inject)
+  if (typeof nuxt_plugin_pretty_44e9d928 === 'function') {
+    await nuxt_plugin_pretty_44e9d928(app.context, inject)
   }
 
   if (typeof nuxt_plugin_globalSnackbar_7bd1d2be === 'function') {

@@ -8,7 +8,8 @@
         </div>
       </v-col>
     </v-row>
-  <v-divider></v-divider>
+    <hr/>
+  <!-- <v-divider></v-divider> -->
   <Subhead />
   <v-divider></v-divider>
   <Card />

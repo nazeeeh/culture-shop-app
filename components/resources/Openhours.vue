@@ -39,7 +39,7 @@
               <input @change="selectTime(itemToUse, 't1', 'startTime')" type="time" class="grid startTime"/><br>
               <span>to</span><br>
               <input @change="selectTime(itemToUse, 't2', 'endTime')" type="time" class="grid endTime"><br>
-              <button class="btn-f white--text" color="#0CAD73" @click="dialog = false, ++updateModal">ok</button>
+              <button class="btn-f white--text" color="#0CAD73" @click="dialog = false, ++updateModal, sendDataToAddVendor()">ok</button>
               </div>
             </v-card-actions>
             </v-card>
@@ -80,6 +80,9 @@
       },
 
       methods: {
+        sendDataToAddVendor () {
+          this.$emit("openHoursData", this.items[0].items)
+        },
         selectTime(item, ele, node){
           const index = this.items[0].items.map((element) => 
           {

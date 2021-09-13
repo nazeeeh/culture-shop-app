@@ -36,7 +36,7 @@
             <td>{{item.name}}</td>
             <td></td>
             <td>{{item.total}}</td>
-            <td :style="{color: '#0CAD73'}"><span class="box">{{item.status}}</span></td>
+            <td :style="{color: setColor ? 'red': '#0CAD73'}"><span class="box">{{item.status}}</span></td>
             <td class="change">
               <nuxt-link class="underline" to="">
                 <span class="edit">edit <icon class="i" name="change"></icon></span>
@@ -63,7 +63,7 @@
       data () {
         return {
           orders: [],
-          colors: ['red', 'green']
+          setColor: false
          }
       },
       methods: {
@@ -72,8 +72,10 @@
           },
           colorChange(){
             if(orders.status = 'pending'){
-              this.colors[0] = style.color
+              this.setColor = 'red'
+               console.log(orders.status)
             }
+            console.log(orders.status)
 
           }
       }

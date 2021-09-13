@@ -113,7 +113,7 @@
            <div class="system-bar">
             <div class="bar-section">
               <div class="customer-spending">
-                <OpeningHours />  
+                <OpeningHours @openHoursData="setOpenHoursData"/>
               </div>
             </div>
             </div>
@@ -134,6 +134,7 @@
         },
         data() {
           return {
+            openHoursData: [],
             selectedFile: '',
               firstName: '',
               lastName: '',
@@ -173,20 +174,24 @@
     },
 
     methods: {
+      setOpenHoursData (values) {
+        this.openHoursData = values
+        console.log(this.openHoursData);
+      },
           displayDate(){
             const m = moment()
             m.format('MMMM Do YYYY, h:mm:ss a')
             return m
           },
-          
+
           onFileSelected(){
             this.selectedFile = this.$refs.file.files[0]
           },
-          onCreateVendor(e){
+        async onCreateVendor(e){
             e.preventDefault()
-            if(!this.formIsValid) {
-              return
-            }   
+            // if(!this.formIsValid) {
+            //   return
+            // }   
       try {
           let vendorData= new FormData();
           vendorData.append("user_id", '2');
@@ -203,16 +208,14 @@
           vendorData.append("sort_code", this.sortCode);
           vendorData.append("acct_number", this.accountNumber);
           vendorData.append("category", this.category);
+          vendorData.append("shop_image",this.selectedFile)
           // vendorData.append("discount", this.storewideDiscount);
-          vendorData.append("monday", "8:00am - 10:00am");
-          vendorData.append("tuesday", "8:00am - 10:00am");
-          vendorData.append("wednesday", "8:00am - 10:00am");
-          vendorData.append("thursday", "8:00am - 10:00am");
-          vendorData.append("friday", "8:00am - 10:00am");
-          vendorData.append("saturday","8:00am - 10:00am");
-          vendorData.append("sunday", "closed");
+          this.openHoursData.forEach((item) => {
+            vendorData.append(item?.title, `${item.t1}${item.t2? ` - ${item.t2}` : ''}`)
+          })
           
-          const sendData = this.$api.addVendor(vendorData)
+          const sendData = await this.$api.addVendor(vendorData)
+          console.log(sendData)
           this.$showSnackBar({
                      show: true,
                      timeout: 3000,

@@ -11,9 +11,6 @@
        <nuxt-link to= "/">
         <span class="sub-title text-uppercase">Orders /</span>
        </nuxt-link>
-       <!-- <nuxt-link to= "/">
-        <span class="sub-title text-uppercase">All /</span>
-       </nuxt-link> -->
        <nuxt-link to= "/">
         <span class="sub-title text-uppercase">{{$route.params.id}} /</span>
        </nuxt-link>
@@ -30,7 +27,6 @@
 <script>
 
     import Orders from '~/components/manageCustomers/orders/Orders.vue'
-
     export default {
       
         data () {
@@ -53,7 +49,6 @@
         components: {
             Orders
         },
-
 }
 </script>
 
