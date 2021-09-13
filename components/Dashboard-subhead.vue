@@ -1,5 +1,5 @@
 <template>
-    <div class="sub-head">
+  <div class="subhead">
     <v-row>
       <v-col cols="12" sm="8" md="6">
           <div class="p-align">

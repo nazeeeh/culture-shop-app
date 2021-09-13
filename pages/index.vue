@@ -8,8 +8,7 @@
         </div>
       </v-col>
     </v-row>
-    <hr/>
-  <!-- <v-divider></v-divider> -->
+  <v-divider></v-divider>
   <Subhead />
   <v-divider></v-divider>
   <Card />
@@ -43,6 +42,11 @@ export default {
 }
 </script>
 <style scoped>
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
 .tite{
 font-family: 'Space Grotesk';
 font-style: normal;
