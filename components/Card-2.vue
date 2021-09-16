@@ -1,7 +1,7 @@
 <template>
      <div class="card-2">
          <!-- Delivered Orders -->
-        <div class="box-display" :style="{backgroundColor: '#E7F7F1'}">
+        <div class="box-display" :style="{backgroundColor: '#a7f5a9'}">
           <div class="text-uppercase p-style ml-8 mt-4" >
             <p>{{display1.name}}</p>
             <p class="p-counts" :style="{color: '#0CAD73'}">{{ deliveredCount}}</p>
@@ -9,7 +9,7 @@
             <Icon name="right" class="mr-8 mt-6" />
         </div>
         <!-- Refunded Orders -->
-        <div class="box-display" :style="{backgroundColor: '#FDF0E8'}">
+        <div class="box-display" :style="{backgroundColor: '#ffbe86'}">
           <div class="text-uppercase p-style ml-8 mt-4" >
             <p>{{display2.name}}</p>
             <p class="p-counts" :style="{color: '#E76D14'}">{{ refundedCount}}</p>
@@ -17,7 +17,7 @@
             <Icon name="right" class="mr-8 mt-6" />
         </div>
         <!-- Cancelled Orders -->
-        <div class="box-display" :style="{backgroundColor: '#FEE7EE'}">
+        <div class="box-display" :style="{backgroundColor: '#ff9ab9'}">
           <div class="text-uppercase p-style ml-8 mt-4" >
             <p>{{display3.name}}</p>
             <p class="p-counts" :style="{color: '#F11054'}">{{ cancelledCount }}</p>
@@ -25,7 +25,7 @@
             <Icon name="right" class="mr-8 mt-6" />
         </div>
         <!-- Failed Orders -->
-        <div class="box-display" :style="{backgroundColor: '#FEE7EE'}">
+        <div class="box-display" :style="{backgroundColor: '#ff9ab9'}">
           <div class="text-uppercase p-style ml-8 mt-4" >
             <p>{{display4.name}}</p>
             <p class="p-counts" :style="{color: '#F11054'}">{{ display4.count}}</p>
@@ -33,7 +33,7 @@
             <Icon name="right" class="mr-8 mt-6" />
         </div>
         <!-- TBC Orders -->
-        <div class="box-display" :style="{backgroundColor: '#E7F7F1'}">
+        <div class="box-display" :style="{backgroundColor: '#a7f5a9'}">
           <div class="text-uppercase p-style ml-8 mt-4" >
             <p>{{display5.name}}</p>
             <p class="p-counts" :style="{color: '#0CAD73'}">{{ display5.count}}</p>
@@ -41,7 +41,7 @@
             <Icon name="right" class="mr-8 mt-6" />
         </div>
         <!-- Pending Orders -->
-        <div class="box-display" :style="{backgroundColor: '#FDF0E8'}">
+        <div class="box-display" :style="{backgroundColor: '#ffbe86'}">
           <div class="text-uppercase p-style ml-8 mt-4" >
             <p>{{display6.name}}</p>
             <p class="p-counts" :style="{color: '#E76D14'}">{{ pendingCount }}</p>
@@ -49,7 +49,7 @@
             <Icon name="right" class="mr-8 mt-6" />
         </div>
         <!-- Comfirmed Orders -->
-        <div class="box-display" :style="{backgroundColor: '#E7F7F1'}">
+        <div class="box-display" :style="{backgroundColor: '#a7f5a9'}">
           <div class="text-uppercase p-style ml-8 mt-4" >
             <p>{{display7.name}}</p>
             <p class="p-counts" :style="{color: '#0CAD73'}">{{ display1.count}}</p>
@@ -57,7 +57,7 @@
             <Icon name="right" class="mr-8 mt-6" />
         </div>
         <!-- TBC Orders -->
-        <div class="box-display" :style="{backgroundColor: '#E7F7F1'}">
+        <div class="box-display" :style="{backgroundColor: '#a7f5a9'}">
           <div class="text-uppercase p-style ml-8 mt-4" >
             <p>{{display8.name}}</p>
             <p class="p-counts" :style="{color: '#0CAD73'}">{{ display1.count}}</p>
@@ -147,12 +147,16 @@ export default {
     /*  */
     margin: 20px 20px;
 }
+p {
+  color: #000;
+}
 .box-display{
     display: flex;
     justify-content: space-between;
-    width: 17.5vw;
+    width: 17vw;
     box-sizing: border-box;
     border-radius: 24px;
+    padding: 5px 0
 }
 .p-style{
     font-family: 'Space Grotesk';   

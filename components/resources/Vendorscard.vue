@@ -33,10 +33,11 @@ export default {
 .box-display{
     display: flex;
     justify-content: space-between;
-    width: 22vw;
+    width: 23.7vw;
     border: 2px solid #F2F2F2;
     box-sizing: border-box;
     border-radius: 24px;
+    padding: 5px 0;
 }
 .p-style{
     font-family: 'Space Grotesk';   

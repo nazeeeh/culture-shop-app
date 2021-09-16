@@ -39,11 +39,11 @@ export default {
     display: flex;
     justify-content: space-between;
     margin: 20px 20px;
-    /* height: 10vh; */
     width: 24vw;
     border: 2px solid #F2F2F2;
     box-sizing: border-box;
     border-radius: 24px;
+    padding: 5px 0;
 }
 .p-style{
     font-family: 'Space Grotesk';   

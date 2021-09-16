@@ -23,11 +23,12 @@ export default {
 </script>
 <style scoped>
 .card-graph{
-
+    font-family: 'Space Grotesk';
     margin: 20px 30px;
     border: 2px solid #F2F2F2;
     box-sizing: border-box;
-    border-radius: 24px;  
+    border-radius: 24px;
+    padding: 10px 0 0 0;  
 }
 
 .box-display{
