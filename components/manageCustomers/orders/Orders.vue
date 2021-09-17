@@ -29,7 +29,10 @@
       <div class="sub-flex">
        <h4>Leon store</h4>
        <div class="time-flex">
-         <icon style="color:#0CAD73;" name="time"></icon><span class="mx-1 mt-1 t-small">Collection in </span>
+         <div class="time-bg">
+           <icon name="time"></icon>
+         </div>
+         <span class="mx-1 mt-1 t-small">Collection in </span>
        </div>
       </div>
       <v-divider></v-divider>
@@ -47,10 +50,10 @@
       <div class="products">
         <div>
          <span><img src="order.image"></span>
-         <span class="mx-16">{{order.product}}</span>
+         <span class="product-orders">{{order.product}}</span>
         </div>
         <div>
-         <span class="mx-14">&pound;{{order.price}}</span>
+         <span class="product-price">&pound;{{order.price}}</span>
          <span class="quantity">{{order.quantity}}</span>
         </div>
       </div>
@@ -65,7 +68,7 @@
             <div class="bar-section">
               <div class="customer-spending">
                 <icon name="profile"></icon>
-                <span class="t-head mx-2 text-capitalize">Customer</span>
+                <span class="t-head mb-2 mx-2 text-capitalize">Customer</span>
               </div>
               <v-divider></v-divider>
               <div class="users-view-btn">
@@ -73,7 +76,7 @@
                 {{order.name}}
               </div>
               <nuxt-link class="underline" to="">
-               <span style="color:#0CAD73;" class="view">view<icon class="i mt-1" name="right"></icon></span>
+               <span style="color:#0CAD73;" class="view text-capitalize">view<icon class="i mt-2" name="right"></icon></span>
               </nuxt-link>
               </div>
               <v-divider></v-divider>
@@ -99,7 +102,7 @@
                 {{order.driver}}
               </div>
               <nuxt-link class="underline" to="">
-               <span style="color:#0CAD73;" class="view">view<icon class="i mt-1" name="right"></icon></span>
+               <span style="color:#0CAD73;" class="view text-capitalize">view<icon class="i mt-2" name="right"></icon></span>
               </nuxt-link>
               </div>
               <v-divider></v-divider>
@@ -164,6 +167,7 @@
 .flex-section{
   display: flex;
   align-items: center;
+  width: 100%;
   margin: 20px 0 20px 34px;
   font-family: 'Space Grotesk';
  
@@ -189,6 +193,14 @@
    line-height: 130%; 
  
 }
+.product-orders{
+  margin-left: 70px;
+}
+
+.product-price{
+  margin-right: 46px;
+}
+
 .t-small{
     font-family: 'Space Grotesk';
     font-style: normal;
@@ -196,6 +208,11 @@
     font-size: 14px;
     line-height: 130%;
 }
+/* .time-bg{
+  background-color: rgb(129, 199, 129);
+  border-radius: 100%;
+  width: 40%;
+} */
 .datepicker{
   font-weight: 600;
   font-size: 12px;
@@ -240,7 +257,7 @@
   font-size: 12px;
   line-height: 16px;
   letter-spacing: 0.07em;
-  text-transform: uppercase;
+  text-transform: capitalize;
   margin: 20px 0;
 }
 .quantity{
@@ -259,6 +276,7 @@
 }
 .customer-spending{
     display: flex;
+    align-items: center;
     font-family: 'Space Grotesk';
     margin-bottom: 20px;
 }
@@ -267,7 +285,9 @@
   }
 .users-view-btn{
   display: flex;
+  align-items: center;
   justify-content: space-between;
+  padding: 15px 0;
 }
 .view{
   display: flex;
@@ -279,6 +299,7 @@
     display: flex;
     font-family: 'Space Grotesk';
     margin-top: 20px;
+    padding: 20px 0;
 }
 .life-spending{
     display: flex;
@@ -290,12 +311,12 @@
     font-family: 'Space Grotesk';
 }
 .user-details{
-  padding: 10px 0;
+  padding: 15px 0;
   font-style: normal;
   font-weight: 600;
   font-size: 14px;
   line-height: 16px;
-  letter-spacing: 0.07em;
+  /* letter-spacing: 0.07em; */
   text-transform: capitalize;
 }
 .t-head{

@@ -1,7 +1,7 @@
 <template>
  <div class="order-subhead">
   <div class="flex">
-   <icon name="print"></icon><span class="mt-1 mx-2" style="color:grey">Print invoice</span><span class="mx-1">.</span>
+   <icon name="print"></icon><span class="mt-1 mx-2" style="color: #192135">Print invoice</span><span class="mx-1">.</span>
    <span class="mt-1 mx-2">Order updates</span><icon name="dropdown"></icon><span class="mx-1">.</span>
    <span class="mt-1 mx-2" style="color:grey">Payment</span><icon name="dropdown"></icon>
    <span class="mt-1 mx-2" style="color:grey">Status</span><icon name="dropdown"></icon>

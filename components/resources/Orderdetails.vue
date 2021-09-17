@@ -17,20 +17,23 @@
     <div class="flex-grid">
      <div>
         <span>Subtotal</span><br>
-        <span>Delivery fee</span><br>
+        <span style="color: grey">Delivery fee</span><br>
+        <span style="color: grey">Service fee</span><br>
+        <span style="color: grey">VAT</span><br>
         <span>Paid by customer</span><br>
-        <span>Paid by driver</span><br>
-        <span>Paid by vendor</span><br>
-        <span>Paid by culture shop</span><br>
+        <span>Paid to driver</span><br>
+        <span>Paid to vendor</span><br>
+        <span>Paid to culture shop</span><br>
     </div>
     <div>
-        <span>&pound;0.0</span><br>
-        <span>&pound;0.0</span><br>
-        <span>&pound;0.0</span><br>
-        <span>&pound;0.0</span><br>
-        <span>&pound;0.0</span><br>
-        <span>&pound;0.0</span>
-
+        <span>&pound;0.00</span><br>
+        <span style="color: grey">&pound;0.00</span><br>
+        <span style="color: grey">&pound;0.00</span><br>
+        <span style="color: grey">0%</span><br>
+        <span>&pound;0.00</span><br>
+        <span>&pound;0.00</span><br>
+        <span>&pound;0.00</span><br>
+        <span>&pound;0.00</span>
     </div>
     </div>
   </div>
@@ -40,7 +43,6 @@
      <p>Special notes from customer:</p>
  </div>
  </div>
- 
 </template>
 
 <script>
