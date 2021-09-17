@@ -60,6 +60,13 @@
     border-radius: 12px;
     height: 6vh;
     padding: 10px;
+    text-indent: 25px;
+  }
+
+  input[type='search']::placeholder{
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 12px;
   }
 
 </style>

@@ -35,7 +35,7 @@
             <td>{{convertToDate(item.created_at)}}</td>
             <td>{{item.name}}</td>
             <td></td>
-            <td>{{item.total}}</td>
+            <td>&pound;{{item.total}}</td>
             <td :style="{color: setColor ? 'red': '#0CAD73'}"><span class="box">{{item.status}}</span></td>
             <td class="change">
               <nuxt-link class="underline" to="">

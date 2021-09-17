@@ -31,8 +31,10 @@
         <v-list-item
           v-for="child in item.items"
           :key="child.title"
-          :to="child.to"
-        ><div class="round" :style="{backgroundColor: child.backgroundColor}"><span class="ml-3 mt-2" :style="{color: child.color}">{{child.tag}}</span></div>
+          :to="child.to">
+            <div class="round pa-0" :style="{backgroundColor: child.backgroundColor}">
+              <span class="mx-3 top" :style="{color: child.color}">{{child.tag}}</span>
+            </div>
           <v-list-item-content>
             <v-list-item-title v-text="child.title" class="text-uppercase text-settings"></v-list-item-title>
           </v-list-item-content>
@@ -144,7 +146,9 @@ export default {
     width: 80%;
     
 }
-
+.top{
+  margin-top: 15px;
+}
 .text-settings{
   font-family: 'Space Grotesk';
   text-transform: uppercase;
@@ -156,10 +160,7 @@ export default {
 }
 
 .round{
-  /* position: relative;
-  right: 40px; */
   height: 3vh;
-  /* width: 2vw; */
   background: red;
   border-radius: 16px;
   width: 30px !important;

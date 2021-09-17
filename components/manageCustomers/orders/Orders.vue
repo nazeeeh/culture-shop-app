@@ -4,7 +4,7 @@
   <div class="sub-section">
     <div class="flex-section">
      <div>
-      <span>#{{order.order_no}}</span>
+      <span class="order-id-text">#{{order.order_no}}</span>
      </div>
      <div class="box">
       <span class="text-uppercase t-text" :style="{color: '#E76D14'}">Paid</span>   
@@ -12,9 +12,9 @@
      <div class="box">
       <span class="text-uppercase t-text" :style="{color: '#E76D14'}">Pending</span> 
      </div>
-     <icon name="calender" class="mx-4"></icon>
+     <icon name="calender" class="mx-3"></icon>
      <!-- Date -->
-     <span class="text-uppercase datepicker mt-1">{{ convertToDate(order.created_at)}}</span> 
+     <span class="text-uppercase datepicker mb-1">{{ convertToDate(order.created_at)}}</span> 
      <div class="right-subhead">
       <RightSubhead />
      </div>
@@ -158,15 +158,23 @@
 <style scoped>
 .sub-section{
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+  
 }
 .flex-section{
   display: flex;
+  align-items: center;
   margin: 20px 0 20px 34px;
   font-family: 'Space Grotesk';
+ 
 }
 .right-subhead{
-  margin-left: 11em;
+  margin-left: 5em;
+}
+.order-id-text{
+  font-weight: 600;
+  margin-right: 12px;
+  letter-spacing: 0.07em;
 }
 .t-text{
   font-weight: 600;
@@ -179,6 +187,7 @@
    font-weight: 600;
    font-size: 16px;
    line-height: 130%; 
+ 
 }
 .t-small{
     font-family: 'Space Grotesk';
@@ -190,17 +199,18 @@
 .datepicker{
   font-weight: 600;
   font-size: 12px;
-  line-height: 16px;
+  /* line-height: 16px; */
   letter-spacing: 0.07em;
 }
 .box{
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 7vw;
+  width: 6vw;
   background: rgba(231, 109, 20, 0.1);
   border-radius: 16px;
   height: 4vh;
+  margin: 0 5px;
 }
 .left-section{
   margin: 20px 0 20px 34px; 

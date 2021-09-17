@@ -44,7 +44,7 @@ export default {
     align-items: center;
     padding: 2px 12px;
     border-radius: 16px;
-    height: 5vh;
+    height: 4vh;
 }
 .p-align{
     font-weight: 600;

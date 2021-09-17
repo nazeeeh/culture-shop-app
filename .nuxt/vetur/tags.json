@@ -44,9 +44,6 @@
   "Snackbar": {
     "description": "Auto imported from components/snackbar.vue"
   },
-  "ManageDriversAnalytics": {
-    "description": "Auto imported from components/manageDrivers/Analytics.vue"
-  },
   "GeneralDriveragreement": {
     "description": "Auto imported from components/General/Driveragreement.vue"
   },
@@ -55,6 +52,24 @@
   },
   "GeneralVendoragreement": {
     "description": "Auto imported from components/General/Vendoragreement.vue"
+  },
+  "ForgetPasswordPhoneVerification": {
+    "description": "Auto imported from components/ForgetPassword/PhoneVerification.vue"
+  },
+  "ForgetPasswordRecoveryOption": {
+    "description": "Auto imported from components/ForgetPassword/RecoveryOption.vue"
+  },
+  "ForgetPasswordResetPassword": {
+    "description": "Auto imported from components/ForgetPassword/ResetPassword.vue"
+  },
+  "ManageCustomersAnalytics": {
+    "description": "Auto imported from components/manageCustomers/Analytics.vue"
+  },
+  "ManageDriversAnalytics": {
+    "description": "Auto imported from components/manageDrivers/Analytics.vue"
+  },
+  "ManageVendorsAnalytics": {
+    "description": "Auto imported from components/manageVendors/Analytics.vue"
   },
   "ResourcesAddbutton": {
     "description": "Auto imported from components/resources/Addbutton.vue"
@@ -140,32 +155,11 @@
   "ResourcesVendorsubhead": {
     "description": "Auto imported from components/resources/Vendorsubhead.vue"
   },
-  "ManageCustomersAnalytics": {
-    "description": "Auto imported from components/manageCustomers/Analytics.vue"
+  "SettingsGeneral": {
+    "description": "Auto imported from components/settings/General.vue"
   },
-  "ManageDriversDriversAdddriver": {
-    "description": "Auto imported from components/manageDrivers/drivers/Adddriver.vue"
-  },
-  "ManageDrivers": {
-    "description": "Auto imported from components/manageDrivers/drivers/Drivers.vue"
-  },
-  "ManageDriversDriversEdit": {
-    "description": "Auto imported from components/manageDrivers/drivers/Edit.vue"
-  },
-  "ManageDriversOrdersAllorders": {
-    "description": "Auto imported from components/manageDrivers/orders/Allorders.vue"
-  },
-  "ManageDriversOrders": {
-    "description": "Auto imported from components/manageDrivers/orders/orders.vue"
-  },
-  "ManageDriversSupportOverview": {
-    "description": "Auto imported from components/manageDrivers/support/Overview.vue"
-  },
-  "ManageDriversSupportResolvedticket": {
-    "description": "Auto imported from components/manageDrivers/support/Resolvedticket.vue"
-  },
-  "ManageDriversSupportUnresolveticket": {
-    "description": "Auto imported from components/manageDrivers/support/Unresolveticket.vue"
+  "SettingsPrivacy": {
+    "description": "Auto imported from components/settings/Privacy.vue"
   },
   "ManageCustomersCategoriesAddcategory": {
     "description": "Auto imported from components/manageCustomers/categories/Addcategory.vue"
@@ -197,32 +191,38 @@
   "ManageCustomersSupportUnresolveticket": {
     "description": "Auto imported from components/manageCustomers/support/Unresolveticket.vue"
   },
-  "SettingsGeneral": {
-    "description": "Auto imported from components/settings/General.vue"
+  "ManageDriversDriversAdddriver": {
+    "description": "Auto imported from components/manageDrivers/drivers/Adddriver.vue"
   },
-  "SettingsPrivacy": {
-    "description": "Auto imported from components/settings/Privacy.vue"
+  "ManageDrivers": {
+    "description": "Auto imported from components/manageDrivers/drivers/Drivers.vue"
   },
-  "ForgetPasswordPhoneVerification": {
-    "description": "Auto imported from components/ForgetPassword/PhoneVerification.vue"
+  "ManageDriversDriversEdit": {
+    "description": "Auto imported from components/manageDrivers/drivers/Edit.vue"
   },
-  "ForgetPasswordRecoveryOption": {
-    "description": "Auto imported from components/ForgetPassword/RecoveryOption.vue"
+  "ManageDriversOrdersAllorders": {
+    "description": "Auto imported from components/manageDrivers/orders/Allorders.vue"
   },
-  "ForgetPasswordResetPassword": {
-    "description": "Auto imported from components/ForgetPassword/ResetPassword.vue"
+  "ManageDriversOrders": {
+    "description": "Auto imported from components/manageDrivers/orders/orders.vue"
   },
-  "ManageVendorsAnalytics": {
-    "description": "Auto imported from components/manageVendors/Analytics.vue"
+  "ManageDriversSupportOverview": {
+    "description": "Auto imported from components/manageDrivers/support/Overview.vue"
+  },
+  "ManageDriversSupportResolvedticket": {
+    "description": "Auto imported from components/manageDrivers/support/Resolvedticket.vue"
+  },
+  "ManageDriversSupportUnresolveticket": {
+    "description": "Auto imported from components/manageDrivers/support/Unresolveticket.vue"
+  },
+  "ManageVendorsOrdersAllorders": {
+    "description": "Auto imported from components/manageVendors/Orders/Allorders.vue"
   },
   "ManageVendorsProductsAddproduct": {
     "description": "Auto imported from components/manageVendors/Products/Addproduct.vue"
   },
   "ManageVendorsProductsAllproducts": {
     "description": "Auto imported from components/manageVendors/Products/Allproducts.vue"
-  },
-  "ManageVendorsOrdersAllorders": {
-    "description": "Auto imported from components/manageVendors/Orders/Allorders.vue"
   },
   "ManageVendorsSupportOverview": {
     "description": "Auto imported from components/manageVendors/Support/Overview.vue"
