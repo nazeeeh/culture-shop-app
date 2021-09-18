@@ -20,10 +20,6 @@
         <v-row>
           <v-col cols="6">
             <form @submit.prevent="onUpdateCustomer">
-                <div class="input">
-                <label for="permission" class="name ">Permissions</label><br>
-                <input type="dropdown" class="permission"><br><br>
-                </div>
                 <div class="grid-input">
                   <div class="input">
                  <label for="first name" class="name">First Name</label><br>
@@ -259,6 +255,7 @@ form{
     line-height: 16px;
     letter-spacing: 0.07em;
     text-transform: uppercase;
+    
 }
 .system-bar{
     border-left: 2px solid #ECECEC;
@@ -288,13 +285,19 @@ form{
 .grid {
     border: 2px solid #ECECEC;
     border-radius: 16px;
-    width: 18.5vw;
-    height: 6vh;
-    padding: 10px;
+    width: 19vw;
+    height: 8vh;
+    padding-left: 25px;
+    margin-top: 12px;
     outline: none;
+    
 }
+/* input[type="text"]::placeholder{
+  padding-left: 40px;
+} */
+
 .grid:focus{
-  border: 2px solid #192135;
+  border: 2px solid #444444;
 }
 
 /* graph component css */

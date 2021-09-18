@@ -19,16 +19,9 @@
    <v-row>
     <v-col cols="6">
      <form @submit.prevent="onCreateCategory">
-        <!-- <div class="input">
-        <label for="last name" class="name">Id</label><br>
-        <select name="role" class="grid">
-        <option value=""></option>
-        <option value="Administrator">Car</option>
-        </select>
-        </div> -->
       <div class="input">
        <label for="name" class="name">Name</label><br>
-       <input v-model="name" type="text" ><br><br>
+       <input v-model="name" type="text"><br><br>
       </div>
       <div class="input">
        <label for="description" class="name">Description</label><br>
@@ -188,34 +181,40 @@
   border-radius: 16px;
   height: 4vh;
 }
+form {
+    font-family: 'Space Grotesk';
+}
 input[type='text']{
     /* border: 2px solid #ECECEC; */
     border: 2px solid #ECECEC;
     border-radius: 16px;
     width: 40vw;
-    height: 6vh;
-    padding: 10px;
-    outline: none;
+    height: 8vh;
+    margin-top: 12px;
+    outline: none;    
+    padding-left: 25px;
     
 }
 input[type='text']:focus{
     border: 2px solid #192135;
 }
-.grid {
+/* .grid {
     border: 2px solid #ECECEC;
     border-radius: 16px;
     width: 18.5vw;
     height: 6vh;
     padding: 10px;
     outline: none;
-}
+} */
 
 textarea{
     border: 2px solid #ECECEC;
     border-radius: 16px;
-    padding: 10px;
+    padding-left: 25px;
+    padding-top: 10px;
     width: 40vw;
     outline: none;
+    margin-top: 12px;
 }
 textarea:focus{
     border: 2px solid #192135;

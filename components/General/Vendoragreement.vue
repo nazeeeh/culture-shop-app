@@ -125,19 +125,24 @@ font-size: 12px;
 line-height: 16px;
 letter-spacing: 0.07em
 }
+form {
+    font-family: 'Space Grotesk';
+}
 input[type='text']{
-    border: 2px solid #192135;
+    border: 2px solid #ececec;
     border-radius: 16px;
-    width: 40vw;
-    height: 6vh;
-    padding: 10px;
+    width: 39vw;
+    height: 8vh;
+    padding-left: 25px;
+    margin-top: 12px;
 }
 
 textarea{
     border: 2px solid #ECECEC;
     border-radius: 16px;
-    padding: 10px;
-    width: 40vw;
+    padding-left: 25px;
+    padding-top: 10px;
+    width: 39vw;
 
 }
 .input{

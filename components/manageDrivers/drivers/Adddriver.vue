@@ -15,8 +15,7 @@
         <v-row>
           <v-col cols="6">
             <form @submit.prevent="onCreateDriver">
-                <div class="grid-input">
-                <div class="input">
+                <div class="input svg-inner">
                  <label for="vehicle type" class="name">Vehicle type</label><br>
                  <select v-model="vehicle" name="role" class="grid">  
                   <option value=""></option>
@@ -24,7 +23,7 @@
                 </select>
                 <icon class="dropdown" name="dropdown"></icon>
                 </div>
-                </div>
+              
                 <div class="grid-input">
                   <div class="input">
                  <label for="first name" class="name">First Name</label><br>
@@ -66,7 +65,7 @@
                 </div>
                 </div>
                 <div class="grid-input">
-                  <div class="input">
+                  <div class="input svg-inner">
                  <label for="city" class="name">Documentation type</label><br>
                  <select v-model="documentation" name="role" class="grid">
                   <option value=""></option>
@@ -74,7 +73,7 @@
                 </select>
                    <icon class="doc-dropdown" name="dropdown"></icon>
                 </div>
-                <div class="input">
+                <div class="input ">
                  <label for="document number" class="name">Documentation number</label><br>
                  <input v-model="doc_number" type="text" class="grid">
                 </div>
@@ -226,16 +225,7 @@
   margin: 20px 0 20px 34px;
   font-family: 'Space Grotesk';
 }
-.dropdown{
-  position: absolute;
-  left:23%;
-  top: 19%;
-}
-.doc-dropdown{
-  position: absolute;
-  left: 23%;
-  top: 67%;
-}
+
 .t-text{
   font-weight: 600;
   font-size: 12px;
@@ -325,14 +315,39 @@ form{
   flex-direction: row;
 }
 
+.svg-inner {
+  position: relative;
+  width: 100%;
+
+}
+.dropdown{
+  position: absolute;
+  left: 40%;
+  top: 55%;
+  display: block;
+  padding: 0;
+  z-index: 1;
+}
+
+.doc-dropdown{
+  position: absolute;
+  left: 84%;
+  top: 55%;
+  display: block;
+  padding: 0;
+  z-index: 1;
+}
+
 .grid {
     border: 2px solid #ECECEC;
     border-radius: 16px;
-    width: 18.5vw;
-    height: 6vh;
-    padding: 5px;
+    width: 19vw;
+    height: 8vh;
+    padding-left: 25px;
+    margin-top: 12px;
     outline: none;
 }
+
 .grid:focus{
   border: 2px solid #192135;
 }

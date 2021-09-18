@@ -6,23 +6,15 @@
 
     <div v-for="(set, i) in settingsTwo" :key="i" class="settings-list"  >
         <div>
-            <v-list dense>
-             <v-list-item>
-                 <span class="p-b" :style="{color: set.color}"> {{ set.content }} </span>
-             </v-list-item>
-            </v-list>
+            <span class="p-b" :style="{color: set.color}"> {{ set.content }} </span>
         </div>
-        <v-list dense>
+       
          <div class="f-left">
-         <v-list-item :to="set.to" router>
-         <span class="p-s text-uppercase">
+            <span class="p-s text-uppercase">
                 {{ set.views }}
             </span>
-              <icon :name="set.icon" class="mt-2"></icon>
-
-         </v-list-item>
+            <icon :name="set.icon" class="mt-2"></icon>
         </div>
-        </v-list>
     </div>
   </div>
 </template>
@@ -57,12 +49,17 @@ export default {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 20px 20px;
+    padding: 30px 35px;
     font-family: 'Space Grotesk';
     border-bottom: 2px solid #F2F2F2;
+    color: #000;
+}
+.settings-list:hover{
+    background-color: #f0f0f0;
 }
 .f-left{
     display: flex;
+    align-items: center;
 }
 .p-b{
     font-weight: bold;

@@ -12,7 +12,7 @@
             <template v-if="$auth.$state.loggedIn">
               <v-list-item-content>
               <v-list-item-title class="white--text">{{ $auth.$state.user.name }}</v-list-item-title>
-              <v-list-item-subtitle class="white--text">{{$auth.$state.user.role }}</v-list-item-subtitle>
+              <v-list-item-subtitle class="white--text user-role">{{$auth.$state.user.role }}</v-list-item-subtitle>
              </v-list-item-content>
             </template>
             <template v-else>
@@ -54,5 +54,9 @@ export default {
     text-align: left;
     text-transform: uppercase;
     color: #fff;
+}
+
+.user-role{
+  opacity: 70%;
 }
 </style>

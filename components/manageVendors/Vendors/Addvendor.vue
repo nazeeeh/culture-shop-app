@@ -18,16 +18,24 @@
             <form @submit.prevent="onCreateVendor">
                 <div class="proof">
                  <label for="proof" class="name">Storefront imagery</label><br>
-                 <div class="border-bg">
+                 <vue-upload-multiple-image
+                 dragText="Upload Image"
+                 browseText=""
+                 showEdit= ""
+                 primaryText=""
+                 showDelete= ""
+                 markIsPrimaryText=""
+                 ></vue-upload-multiple-image>
+                 <!-- <div class="border-bg">
                    <input ref="file" 
                    v-on:change="onFileSelected" 
                    type="file" class="custom-file-input"
                    accept="image/*">
                    <icon class="add" name="add"></icon>
-                 </div>
+                 </div> -->
                 </div>
                 <div class="grid-input">
-                <div class="input">
+                <div class="input svg-inner">
                  <label for="category" class="name">Category</label><br>
                     <select  v-model="category" class="grid">
                       <optgroup>
@@ -126,10 +134,12 @@
 <script>
     // import SaveOrCancelButton from '../../resources/Saveorcancel.vue'
     import OpeningHours from '../../resources/Openhours.vue'
+    import VueUploadMultipleImage from 'vue-upload-multiple-image'
     import moment from 'moment'
     export default {
         components: {
             // SaveOrCancelButton,
+            VueUploadMultipleImage,
             OpeningHours
         },
         data() {
@@ -306,10 +316,18 @@ form{
     height: 15vh;
     width: 39vw;
 }
+.svg-inner {
+  position: relative;
+  width: 100%;
+
+}
 .dropdown{
   position: absolute;
-  left:23%;
-  top: 35%;
+  left: 85%;
+  top: 55%;
+  display: block;
+  padding: 0;
+  z-index: 1;
 }
  .name{
     font-weight: 600;
@@ -347,9 +365,10 @@ textarea::placeholder{
 .grid {
     border: 2px solid #ECECEC;
     border-radius: 16px;
-    width: 18.5vw;
-    height: 6vh;
-    padding: 5px;
+    width: 19vw;
+    height: 8vh;
+    padding-left: 25px;
+    margin-top: 12px;
     outline: none;
 }
 .grid:focus{

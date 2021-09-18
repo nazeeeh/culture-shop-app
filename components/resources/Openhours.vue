@@ -10,7 +10,7 @@
       >
         <template v-slot:activator>
           <v-list-item-icon>
-            <icon :name="item.action"></icon>
+            <icon class="ml-6" :name="item.action"></icon>
           </v-list-item-icon>
           <v-list-item-content>
             <v-list-item-title v-text="item.title" class="t-head mb-2 text-capitalize"></v-list-item-title>
@@ -62,7 +62,7 @@
 
         items: [
         {
-          action: 'time',
+          action: 'openings',
           active: true,
           items: [
             { title: 'Monday', t1: '12:00', t2: '05:00'},
@@ -107,11 +107,12 @@
     font-weight: normal;
     font-size: 16px;
     line-height: 22px;
+    padding-left: 16px;
 }
 .time-border{
     display:flex;
     /* justify-content: center; */
-    padding: 10px;
+    padding: 18px;
     border: 2px solid #ECECEC;
     border-radius: 16px;
 }

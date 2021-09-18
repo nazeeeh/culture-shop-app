@@ -27,17 +27,6 @@ import Config from '../../../services/config'
 export default {
   props: ['users'],
 
-  //  async asyncData({ $axios }){
-  //     try{
-  //       let response = await $axios.$get(Config.endpoints.admins)
-  //       console.log(response)
-  //       return{
-  //         admins: response.admins
-  //       }
-  //       }catch(err){
-  //         console.log(err)
-  //       }
-  //     },
 
     components: {
         userPermission,

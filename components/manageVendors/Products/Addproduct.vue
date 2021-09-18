@@ -26,18 +26,15 @@
                    <icon class="add" name="add"></icon>
                  </div>
                 </div>
-                <!-- <div class="input"> -->
-                  <div class="grid-input">
-                    <div class="input">
+                    <div class="input svg-inner">
                       <label for="name" class="name">Shop vendor</label><br>
                       <select  v-model="shop_id" class="grid">
                       <optgroup v-for="(item, index) in allShops" :key="index" >
                       <option :value="item.id">{{item.firstname}}</option>
                       </optgroup>
-                 </select>
+                    </select>
+                  <icon class="dropdown" name="dropdown"></icon>
                     </div>
-                  </div>
-                <!-- </div>  -->
                 <div class="grid-input">
                   <div class="input">
                  <label for="name" class="name">Name</label><br>
@@ -252,9 +249,10 @@ form{
 .stock {
   border: 2px solid #ECECEC;
   border-radius: 16px;
-  width: 39vw;
-  height: 6vh;
-  padding: 10px;
+  width: 40.5vw;
+  height: 8vh;
+  padding-left: 25px;
+  margin-top: 12px;
   outline: none;
 }
 .stock:focus{
@@ -280,15 +278,29 @@ form{
     text-transform: uppercase;
 }
 textarea{
-    width: 39vw;
+    width: 40.5vw;
     border: 2px solid #ECECEC;
     border-radius: 16px;
     height: 20vh;
+    padding-left: 25px;
+    padding-top: 10px;
+    margin-top: 12px;
     outline: none;
 }
-textarea::placeholder{
-    padding: 10px 20px;
+.svg-inner {
+  position: relative;
+  width: 100%;
 }
+
+.dropdown{
+  position: absolute;
+  left: 40%;
+  top: 55%;
+  display: block;
+  padding: 0;
+  z-index: 1;
+}
+
 .system-bar{
     border-left: 2px solid #ECECEC;
     height: 120vh;
@@ -317,9 +329,10 @@ textarea::placeholder{
 .grid {
     border: 2px solid #ECECEC;
     border-radius: 16px;
-    width: 18.5vw;
-    height: 6vh;
-    padding: 10px;
+    width: 19vw;
+    height: 8vh;
+    padding-left: 25px;
+    margin-top: 12px;
     outline: none;
 }
 .grid:focus{

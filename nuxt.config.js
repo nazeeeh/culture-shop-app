@@ -66,6 +66,7 @@ export default {
     '~/plugins/pretty',
     '~/plugins/globalSnackbar',         
     '~/plugins/api',
+    '~/plugins/image'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

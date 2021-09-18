@@ -31,7 +31,7 @@
                  </div>
                 </div>
                 <div class="grid-input">
-                 <div class="input">
+                 <div class="input svg-inner">
                  <label for="category" class="name">Category</label><br>
                     <select  v-model="vendor.category" class="grid">
                       <optgroup>
@@ -67,10 +67,6 @@
                  <input v-model="vendor.password" type="password" class="grid">
                 </div>
                 </div>
-                <div class="input">
-                <label for="Mobile number" class="name">Mobile number</label><br>
-                <input v-model="vendor.phone" type="text" class="stock"><br>
-                </div>
                  <div class="grid-input">
                   <div class="input">
                  <label for="Street address" class="name">Street address</label><br>
@@ -81,16 +77,36 @@
                  <input v-model="vendor.postcode" type="text" class="grid">
                 </div>
                 </div>
-                <div class="grid-input">
+               <div class="grid-input">
                   <div class="input">
                  <label for="City" class="name">City</label><br>
                  <input v-model="vendor.city" type="text" class="grid">
                 </div>
                 <div class="input">
                  <label for="Storewide discount" class="name">Storewide discount</label><br>
-                 <input type="text" class="grid">
+                 <input v-model="storewideDiscount" type="text" class="grid">
                 </div>
-                </div>       
+                </div>
+                <div class="grid-input">
+                  <div class="input">
+                 <label for="Mobile number" class="name">Mobile number</label><br>
+                 <input v-model="vendor.phone" type="text" class="grid">
+                </div>
+                <div class="input">
+                 <label for="Card name" class="name">Name on card</label><br>
+                 <input v-model="vendor.nameCard" type="text" class="grid">
+                </div>
+                </div>
+                <div class="grid-input">
+                  <div class="input">
+                 <label for="Sort code" class="name">Sort code</label><br>
+                 <input v-model="vendor.sortCode" type="text" class="grid">
+                </div>
+                <div class="input">
+                 <label for="Account number" class="name">Account number</label><br>
+                 <input v-model="vendor.accountNumber" type="text" class="grid">
+                </div>
+                </div>    
             </form>
           </v-col>
           <v-spacer></v-spacer>
@@ -102,7 +118,7 @@
                 <OpeningHours />  
               </div>
               <v-divider></v-divider>
-              <div class="customer-spending mt-2"> 
+              <div class="app-clip mt-2"> 
                <icon name="clip"></icon>
                <span class="t-head mt-1 mx-2 text-capitalize">App clip usage</span>
               </div>
@@ -111,7 +127,7 @@
              <span class="t-small mt-1 text-capitalize">Innvocations:</span>
             </div>
             <v-divider></v-divider>
-            <div class="customer-spending mt-2"> 
+            <div class="vendor-earnings mt-2"> 
                <icon name="pie"></icon>
                <span class="t-head mt-1 mx-2 text-capitalize">Vendor Earning activities</span>
               </div>
@@ -240,10 +256,19 @@
   line-height: 16px;
   letter-spacing: 0.07em;
 }
+
+.svg-inner {
+  position: relative;
+  width: 100%;
+}
+
 .dropdown{
   position: absolute;
-  left:23%;
-  top: 35%;
+  left: 85%;
+  top: 55%;
+  display: block;
+  padding: 0;
+  z-index: 1;
 }
 .box{
   display: flex;
@@ -306,7 +331,20 @@ textarea::placeholder{
     display: flex;
     font-family: 'Space Grotesk';
     margin-bottom: 20px;
+    margin-left: -40px;
 }
+.app-clip{
+    display: flex;
+    font-family: 'Space Grotesk';
+    margin-bottom: 20px;
+}
+
+.vendor-earnings{
+    display: flex;
+    font-family: 'Space Grotesk';
+    margin-bottom: 20px;
+}
+
 .life-spending{
     display: flex;
     justify-content: space-between;
@@ -325,9 +363,10 @@ textarea::placeholder{
 .grid {
     border: 2px solid #ECECEC;
     border-radius: 16px;
-    width: 18.5vw;
-    height: 6vh;
-    padding: 10px;
+    width: 19vw;
+    height: 8vh;
+    padding-left: 25px;
+    margin-top: 12px;
     outline: none;
 }
 .grid:focus{

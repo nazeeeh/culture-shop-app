@@ -5,24 +5,16 @@
     </div>
     
     <div v-for="(setting, i) in settings" :key="i" class="settings-list">
+      <nuxt-link :to="setting.to" class="nuxt-link">
         <div>
-            <v-list dense>
-             <v-list-item>
-                 <span class="p-b"> {{ setting.content }} </span>
-             </v-list-item>
-            </v-list>
+          <span class="p-b">{{ setting.content }}</span>
         </div>
-        <v-list dense>
-         <div class="f-left">
-         <v-list-item :to="setting.to" router>
-         <span class="p-s text-uppercase">
-                {{ setting.views }}
-            </span>
+    
+        <div class="f-left">
+         <span class="p-s text-uppercase">{{ setting.views }}</span>
               <icon :name="setting.icon" class="mt-2"></icon>
-
-         </v-list-item>
         </div>
-        </v-list>
+        </nuxt-link> 
     </div>
   </div>
 </template>
@@ -56,15 +48,31 @@ export default {
     margin-left: 2.1rem;
 }
 .settings-list{
+    display: block;
+    padding: 30px 35px;
+    font-family: 'Space Grotesk';
+    border-bottom: 2px solid #F2F2F2;
+    cursor: pointer;
+}
+
+.settings-list:hover{
+    background-color: #f0f0f0;
+}
+
+.tile:hover{
+    background-color: #f0f0f0;
+}
+.nuxt-link{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 20px 20px;
-    font-family: 'Space Grotesk';
-    border-bottom: 2px solid #F2F2F2;
+    text-decoration: none;
+    color: #000;
 }
+
 .f-left{
     display: flex;
+    align-items: center;
 }
 .p-b{
     font-weight: bold;
@@ -77,7 +85,5 @@ export default {
     letter-spacing: 0.07em;
     color: #8D8D8D;
 }
-/* a{
-    text-decoration: none;
-} */
+
 </style>

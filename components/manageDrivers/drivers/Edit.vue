@@ -19,8 +19,8 @@
         <v-row>
           <v-col cols="6">
             <form @submit.prevent="onUpdateDriver">
-                <div class="grid-input">
-                <div class="input">
+       
+                <div class="input svg-inner">
                  <label for="vehicle type" class="name">Vehicle type</label><br>
                  <select v-model="driver.vehicle" name="role" class="grid">
                   <option value=""></option>
@@ -28,7 +28,7 @@
                 </select>
                 <icon class="dropdown" name="dropdown"></icon>
                 </div>
-                </div>
+           
                 <div class="grid-input">
                   <div class="input">
                  <label for="first name" class="name">First Name</label><br>
@@ -69,8 +69,8 @@
                  <input v-model="driver.phone" type="text" class="grid">
                 </div>
                 </div>
-                <div class="grid-input">
-                  <div class="input">
+                <div class="grid-input ">
+                  <div class="input svg-inner">
                  <label for="city" class="name">Documentation type</label><br>
                  <select v-model="driver.documentation" name="role" class="grid">
                   <option value=""></option>
@@ -288,15 +288,28 @@
   border-radius: 16px;
   height: 4vh;
 }
+
+.svg-inner {
+  position: relative;
+  width: 100%;
+}
+
 .dropdown{
   position: absolute;
-  left:23%;
-  top: 19%;
+  left: 40%;
+  top: 55%;
+  display: block;
+  padding: 0;
+  z-index: 1;
 }
+
 .doc-dropdown{
   position: absolute;
-  left: 23%;
-  top: 67%;
+  left: 84%;
+  top: 55%;
+  display: block;
+  padding: 0;
+  z-index: 1;
 }
 form{
   font-family: 'Space Grotesk';
@@ -359,9 +372,10 @@ form{
 .grid {
     border: 2px solid #ECECEC;
     border-radius: 16px;
-    width: 18.5vw;
-    height: 6vh;
-    padding: 10px;
+    width: 19vw;
+    height: 8vh;
+    padding-left: 25px;
+    margin-top: 12px;
     outline: none;
 }
 .grid:focus{
