@@ -53,6 +53,12 @@
   "ForgetPasswordResetPassword": {
     "description": "Auto imported from components/ForgetPassword/ResetPassword.vue"
   },
+  "ManageCustomersAnalytics": {
+    "description": "Auto imported from components/manageCustomers/Analytics.vue"
+  },
+  "ManageDriversAnalytics": {
+    "description": "Auto imported from components/manageDrivers/Analytics.vue"
+  },
   "GeneralDriveragreement": {
     "description": "Auto imported from components/General/Driveragreement.vue"
   },
@@ -61,12 +67,6 @@
   },
   "GeneralVendoragreement": {
     "description": "Auto imported from components/General/Vendoragreement.vue"
-  },
-  "ManageCustomersAnalytics": {
-    "description": "Auto imported from components/manageCustomers/Analytics.vue"
-  },
-  "ManageDriversAnalytics": {
-    "description": "Auto imported from components/manageDrivers/Analytics.vue"
   },
   "ManageVendorsAnalytics": {
     "description": "Auto imported from components/manageVendors/Analytics.vue"

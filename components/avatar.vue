@@ -56,7 +56,7 @@ export default {
     color: #fff;
 }
 
-.user-role{
+/* .user-role{
   opacity: 99.9%;
-}
+} */
 </style>
