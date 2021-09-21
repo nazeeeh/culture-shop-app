@@ -57,6 +57,6 @@ export default {
 }
 
 .user-role{
-  opacity: 70%;
+  opacity: 90%;
 }
 </style>
