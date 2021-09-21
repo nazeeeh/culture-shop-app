@@ -30,7 +30,7 @@
       </template>
       <template v-slot:[`item.status`]="{item}">
         <v-chip :color="colorChange(item.status)">
-         <span style="text-transform: uppercase; font-size: 12px"> {{item.status}} </span>
+         <span :class="item.status=='accepted'? 'green--text' : 'orange--text'" style="text-transform: uppercase; font-size: 12px"> {{item.status}} </span>
         </v-chip>
       </template>
       <template v-slot:[`item.total`]="{ item }">
