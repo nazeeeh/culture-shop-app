@@ -22,13 +22,21 @@
             <form>
                 <div class="proof">
                  <label for="proof" class="name">Storefront imagery</label><br>
-                 <div class="border-bg">
+                 <vue-upload-multiple-image
+                 dragText="Upload Image"
+                 browseText=""
+                 showEdit= ""
+                 primaryText=""
+                 showDelete= ""
+                 markIsPrimaryText=""
+                 ></vue-upload-multiple-image>
+                 <!-- <div class="border-bg">
                    <input ref="file" 
                    v-on:change="onFileSelected" 
                    type="file" class="custom-file-input"
                    accept="image/*">
                    <icon class="add" name="add"></icon>
-                 </div>
+                 </div> -->
                 </div>
                 <div class="grid-input">
                  <div class="input svg-inner">
@@ -175,6 +183,7 @@
 
 <script>
     import SaveOrCancelBtn from '../../resources/Saveorcancel'
+    import VueUploadMultipleImage from 'vue-upload-multiple-image'
     import Subhead from '../../resources/Vendorsubhead'
     import OpeningHours from '../../resources/Openhours'
     import moment from 'moment'
@@ -182,7 +191,8 @@
         components: {
             SaveOrCancelBtn,
             Subhead,
-            OpeningHours
+            OpeningHours,
+            VueUploadMultipleImage
         },
         props: {
         vendor: {

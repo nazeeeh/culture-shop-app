@@ -80,12 +80,20 @@
                 </div>
                 <div class="proof">
                  <label for="proof" class="name">Documentation Proof</label><br>
-                 <div class="border-bg">
+                 <vue-upload-multiple-image
+                 dragText="Upload Image"
+                 browseText=""
+                 showEdit= ""
+                 primaryText=""
+                 showDelete= ""
+                 markIsPrimaryText=""
+                 ></vue-upload-multiple-image>
+                 <!-- <div class="border-bg">
                    <input ref="file" 
                    v-on:change="onFileSelected" 
                    type="file" class="custom-file-input">
                    <icon class="add" name="add"></icon>
-                 </div>
+                 </div> -->
                 </div>
                   <v-btn class="btn-cancel py-6 px-10 text-uppercase">Cancel</v-btn>
                   <v-btn class="btn-save py-6 px-12 text-uppercase mx-2" type="submit" :style="{background: '#0CAD73', color: '#fff'}">Save</v-btn>
@@ -105,8 +113,13 @@
 
 <script>
     import moment from 'moment'
+    import VueUploadMultipleImage from 'vue-upload-multiple-image'
+    
 
     export default {
+      components: {
+        VueUploadMultipleImage
+      },
         data () {
          return {
           firstname: '',

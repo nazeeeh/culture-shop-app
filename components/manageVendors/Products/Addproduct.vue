@@ -18,13 +18,21 @@
             <form @submit.prevent="onCreateProduct">
                 <div class="proof">
                  <label for="proof" class="name">Add images</label><br>
-                 <div class="border-bg">
+                 <vue-upload-multiple-image
+                 dragText="Upload Image"
+                 browseText=""
+                 showEdit= ""
+                 primaryText=""
+                 showDelete= ""
+                 markIsPrimaryText=""
+                 ></vue-upload-multiple-image>
+                 <!-- <div class="border-bg">
                    <input ref="file" 
                    v-on:change="onFileSelected" 
                    type="file" class="custom-file-input"
                    accept="image/*">
                    <icon class="add" name="add"></icon>
-                 </div>
+                 </div> -->
                 </div>
                     <div class="input svg-inner">
                       <label for="name" class="name">Shop vendor</label><br>
@@ -120,6 +128,7 @@
 <script>
     // import AddProductButton from '../../resources/Addproductbtn'
     import Subhead from '../../resources/Productdelete.vue'
+    import VueUploadMultipleImage from 'vue-upload-multiple-image'
     export default {
 
       async fetch() {
@@ -128,7 +137,8 @@
       },
         components: {
             // AddProductButton,
-            Subhead
+            Subhead,
+            VueUploadMultipleImage
         },
         data() {
           return {

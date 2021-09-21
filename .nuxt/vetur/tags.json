@@ -182,6 +182,15 @@
   "ManageCustomersOrders": {
     "description": "Auto imported from components/manageCustomers/orders/Orders.vue"
   },
+  "ManageCustomersSupportOverview": {
+    "description": "Auto imported from components/manageCustomers/support/Overview.vue"
+  },
+  "ManageCustomersSupportResolvedticket": {
+    "description": "Auto imported from components/manageCustomers/support/Resolvedticket.vue"
+  },
+  "ManageCustomersSupportUnresolveticket": {
+    "description": "Auto imported from components/manageCustomers/support/Unresolveticket.vue"
+  },
   "ManageDriversDriversAdddriver": {
     "description": "Auto imported from components/manageDrivers/drivers/Adddriver.vue"
   },
@@ -232,14 +241,5 @@
   },
   "ManageVendorsVendorsEdit": {
     "description": "Auto imported from components/manageVendors/Vendors/Edit.vue"
-  },
-  "ManageCustomersSupportOverview": {
-    "description": "Auto imported from components/manageCustomers/support/Overview.vue"
-  },
-  "ManageCustomersSupportResolvedticket": {
-    "description": "Auto imported from components/manageCustomers/support/Resolvedticket.vue"
-  },
-  "ManageCustomersSupportUnresolveticket": {
-    "description": "Auto imported from components/manageCustomers/support/Unresolveticket.vue"
   }
 }

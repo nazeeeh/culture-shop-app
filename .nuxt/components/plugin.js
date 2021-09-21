@@ -63,6 +63,9 @@ const components = {
   ManageCustomersCustomersEdit: () => import('../..\\components\\manageCustomers\\customers\\Edit.vue' /* webpackChunkName: "components/manage-customers-customers-edit" */).then(c => wrapFunctional(c.default || c)),
   ManageCustomersOrdersAllorders: () => import('../..\\components\\manageCustomers\\orders\\Allorders.vue' /* webpackChunkName: "components/manage-customers-orders-allorders" */).then(c => wrapFunctional(c.default || c)),
   ManageCustomersOrders: () => import('../..\\components\\manageCustomers\\orders\\Orders.vue' /* webpackChunkName: "components/manage-customers-orders" */).then(c => wrapFunctional(c.default || c)),
+  ManageCustomersSupportOverview: () => import('../..\\components\\manageCustomers\\support\\Overview.vue' /* webpackChunkName: "components/manage-customers-support-overview" */).then(c => wrapFunctional(c.default || c)),
+  ManageCustomersSupportResolvedticket: () => import('../..\\components\\manageCustomers\\support\\Resolvedticket.vue' /* webpackChunkName: "components/manage-customers-support-resolvedticket" */).then(c => wrapFunctional(c.default || c)),
+  ManageCustomersSupportUnresolveticket: () => import('../..\\components\\manageCustomers\\support\\Unresolveticket.vue' /* webpackChunkName: "components/manage-customers-support-unresolveticket" */).then(c => wrapFunctional(c.default || c)),
   ManageDriversDriversAdddriver: () => import('../..\\components\\manageDrivers\\drivers\\Adddriver.vue' /* webpackChunkName: "components/manage-drivers-drivers-adddriver" */).then(c => wrapFunctional(c.default || c)),
   ManageDrivers: () => import('../..\\components\\manageDrivers\\drivers\\Drivers.vue' /* webpackChunkName: "components/manage-drivers" */).then(c => wrapFunctional(c.default || c)),
   ManageDriversDriversEdit: () => import('../..\\components\\manageDrivers\\drivers\\Edit.vue' /* webpackChunkName: "components/manage-drivers-drivers-edit" */).then(c => wrapFunctional(c.default || c)),
@@ -79,10 +82,7 @@ const components = {
   ManageVendorsSupportUnresolvedticket: () => import('../..\\components\\manageVendors\\Support\\Unresolvedticket.vue' /* webpackChunkName: "components/manage-vendors-support-unresolvedticket" */).then(c => wrapFunctional(c.default || c)),
   ManageVendorsVendorsAddvendor: () => import('../..\\components\\manageVendors\\Vendors\\Addvendor.vue' /* webpackChunkName: "components/manage-vendors-vendors-addvendor" */).then(c => wrapFunctional(c.default || c)),
   ManageVendorsVendorsAllvendors: () => import('../..\\components\\manageVendors\\Vendors\\Allvendors.vue' /* webpackChunkName: "components/manage-vendors-vendors-allvendors" */).then(c => wrapFunctional(c.default || c)),
-  ManageVendorsVendorsEdit: () => import('../..\\components\\manageVendors\\Vendors\\Edit.vue' /* webpackChunkName: "components/manage-vendors-vendors-edit" */).then(c => wrapFunctional(c.default || c)),
-  ManageCustomersSupportOverview: () => import('../..\\components\\manageCustomers\\support\\Overview.vue' /* webpackChunkName: "components/manage-customers-support-overview" */).then(c => wrapFunctional(c.default || c)),
-  ManageCustomersSupportResolvedticket: () => import('../..\\components\\manageCustomers\\support\\Resolvedticket.vue' /* webpackChunkName: "components/manage-customers-support-resolvedticket" */).then(c => wrapFunctional(c.default || c)),
-  ManageCustomersSupportUnresolveticket: () => import('../..\\components\\manageCustomers\\support\\Unresolveticket.vue' /* webpackChunkName: "components/manage-customers-support-unresolveticket" */).then(c => wrapFunctional(c.default || c))
+  ManageVendorsVendorsEdit: () => import('../..\\components\\manageVendors\\Vendors\\Edit.vue' /* webpackChunkName: "components/manage-vendors-vendors-edit" */).then(c => wrapFunctional(c.default || c))
 }
 
 for (const name in components) {

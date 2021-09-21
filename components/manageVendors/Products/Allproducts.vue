@@ -153,7 +153,7 @@
     text-transform: uppercase;
   }
   .edit, .view{
-    font-family: 'Space grotesk';
+    font-family: 'Space grotesk'; 
     font-size: 12px;
     font-weight: 600;
     display: flex;
