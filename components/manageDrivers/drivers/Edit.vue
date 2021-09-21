@@ -92,6 +92,7 @@
                  primaryText=""
                  showDelete= ""
                  markIsPrimaryText=""
+                 v-on:change="onFileSelected"
                  ></vue-upload-multiple-image>
                  <!-- <div class="border-bg">
                    <input ref="file" 
