@@ -12,7 +12,7 @@
          </div>
         </div>
         <v-divider class="mx-8"></v-divider>
-        <img src="~/assets/img/Graph-grow.png" class="mx-8 my-6 " />
+        <img src="~/assets/img/Graph-grow.png" class="mx-8 my-6 " width="960px" />
         </div>
      </div>
 </template>

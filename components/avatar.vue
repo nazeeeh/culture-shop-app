@@ -4,7 +4,7 @@
           <v-list-item v-for="(admin, i) in users" :key="i" two-line class="px-0">
             <v-list-item-avatar>
               <v-avatar color="indigo">
-              <v-icon dark>
+              <v-icon class="pa-0 ma-0" dark>
                 mdi-account-circle
               </v-icon>
             </v-avatar>
@@ -56,7 +56,8 @@ export default {
     color: #fff;
 }
 
-/* .user-role{
-  opacity: 99.9%;
-} */
+.user-role{
+  opacity: 70%;
+  z-index: 100;
+}
 </style>

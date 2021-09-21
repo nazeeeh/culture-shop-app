@@ -13,7 +13,7 @@
         </div>
         <v-divider class="mx-8"></v-divider>
         <div class="graph-1">
-         <img src="~/assets/img/Graph.png" class="mx-8 my-6 " />
+         <img src="~/assets/img/Graph.png" class="mx-8 my-6" width="250px" />
         </div>
         </div>
 
@@ -30,7 +30,7 @@
         </div>
         <v-divider class="mx-8"></v-divider>
         <div class="graph-1">
-        <img src="~/assets/img/Graph.png" class="mx-8 my-6 " />
+        <img src="~/assets/img/Graph.png" class="mx-8 my-6 " width="250px"/>
         </div>
         </div>
         <div class="outer-layer">
@@ -47,7 +47,7 @@
         <v-divider class="mx-8"></v-divider>
         <div>
         <div class="graph-1">
-        <img src="~/assets/img/Graph-2.png" class="mx-8 my-6 " /> 
+        <img src="~/assets/img/Graph-2.png" class="mx-8 my-6 " width="250px"/> 
         </div>
         </div>
         </div>
