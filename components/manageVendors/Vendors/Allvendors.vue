@@ -1,9 +1,40 @@
 <template>
- <div>
+ <div class="">
   <v-btn class="btn-btn py-6 px-10 text-uppercase" @click="add">add new</v-btn>
   <Export />
   <!-- Table -->
-        <div class="round">
+    <div class="table">
+    <v-data-table
+      v-model="selected"
+      :headers="headers"
+      :items="vendors"
+      :single-select="singleSelect"
+      item-key="name"
+      show-select
+      class="elevation-1"
+    
+    >
+     <template v-slot:[`header.name`]="{ header }">
+        <th >{{ header.name }} </th>
+      </template>
+    <template v-slot:[`item.created_at`]="{ item }">
+      {{ convertToDate(item.created_at) }}
+    </template>
+    <template v-slot:[`item.actions`]="{ item }">
+      <div class="change">
+        <nuxt-link class="underline" :to="`/manage-vendors/vendors/edit/${item.id}`">
+          <span class="edit">Edit <icon class="i" name="change"></icon></span>
+        </nuxt-link>
+      <span class="view">View<icon class="i mt-1" name="right"></icon></span>
+      </div>
+    </template>
+    <template v-slot:[`item.firstname`]="{ item }">
+      {{item.firstname }} {{item.lastname }}
+    </template>
+    </v-data-table>
+    </div>
+
+        <!-- <div class="round">
           <input type="checkbox" id="checkbox" />
           <label for="checkbox"></label>
         </div>
@@ -48,10 +79,10 @@
             </td>
           </tr>
         </tbody>
-      </template>
+      </template>-->
+      <BulkAction />
     </div>
-    <BulkAction />
- </div>
+    
 </template>
 
 <script>
@@ -74,7 +105,17 @@
         },
         data(){
           return {
-            vendors: []
+            vendors: [],
+            selected: [],
+            headers: [
+            {text:'ID', value:'id', sortable: false},
+            {text:'DATE', value:'created_at'},
+            {text: 'VENDOR & ROLE', value: 'shop_name'},
+            {text: 'VENDOR DETAILS', value: 'firstname'},
+            {text: 'STATUS All', value: 'status'},
+            {text: '', value: 'actions', width: '200px'}
+            ]
+            
           }
         },
         methods:{
@@ -96,10 +137,12 @@
 .table {
     font-family: 'Space Grotesk';
     font-weight: 600;
-    font-size: 12px;
+    font-size: 14px;
+    text-transform: capitalize;
     line-height: 16px;
     letter-spacing: 0.07em;
-    margin: 5px 0px 6px 100px;
+    margin-top: 40px;
+    /* margin: 5px 0px 6px 100px; */
 }
 .table-details{
     font-size: 14px;
@@ -111,8 +154,7 @@
   .table tbody{
     text-transform: capitalize;
   }
-
-.table .change{
+.change{
   display: flex;
   cursor: pointer;
   align-items: center;
@@ -120,10 +162,14 @@
   margin-left: 12em;
 }
 
-  .table .edit, .table .view{
+.edit, .view{
+    font-family: 'Space grotesk';
+    font-size: 12px;
+    font-weight: 600;
     display: flex;
     align-items: center;
     width: 80px;
+    color: grey;
   }
   .underline{
     color: grey;

@@ -1,11 +1,41 @@
 <template>
   <div>
     <!-- Table -->
-        <div class="round">
+    <div class="table">
+      <v-data-table
+        v-model="selected"
+        :headers="headers"
+        :items="orders"
+        :single-select="singleSelect"
+        item-key="name"
+        show-select
+        class="elevation-1"
+      
+      >
+      <template v-slot:[`header.name`]="{ header }">
+          <th>{{ header.name }} </th>
+        </template>
+      <template v-slot:[`item.created_at`]="{ item }">
+        {{ convertToDate(item.created_at) }}
+      </template>
+      <template v-slot:[`item.actions`]="{ item }">
+        <div class="change">
+          <nuxt-link class="underline" :to="`/manage-vendors/vendors/edit/${item.id}`">
+            <span class="edit">Edit <icon class="i" name="change"></icon></span>
+          </nuxt-link>
+        <span class="view">View<icon class="i mt-1" name="right"></icon></span>
+        </div>
+      </template>
+      <template v-slot:[`item.name`]="{ item }">
+        {{item.name }}
+      </template>
+      </v-data-table>
+      </div>
+        <!-- <div class="round">
           <input type="checkbox" id="checkbox" />
           <label for="checkbox"></label>
-        </div>
-        <div class="table">
+        </div> -->
+        <!-- <div class="table">
             <thead>
               <tr > 
                 <th scope="col" style="text-align: left; width: 10rem;">
@@ -48,7 +78,7 @@
           </tr>
         </tbody>
       </template>
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -63,7 +93,17 @@
       data () {
         return {
           orders: [],
-          setColor: false
+          setColor: false,
+          selected: [],
+            headers: [
+            {text:'ID', value:'id', sortable: false},
+            {text:'DATE', value:'created_at'},
+            {text: 'CUSTOMER & ROLE', value: 'name'},
+            {text: 'VENDOR & ROLE', value: 'lastname'},
+            {text: 'TOTAL', value: ''},
+            {text: 'STATUS All', value: 'status'},
+            {text: '', value: 'actions'}
+            ]
          }
       },
       methods: {
@@ -90,7 +130,7 @@
     line-height: 16px;
     letter-spacing: 0.07em;
     text-transform: uppercase;
-    margin: 5px 0px 6px 100px;
+    /* margin: 5px 0px 6px 100px; */
   }
   .table-details{
     font-size: 14px;

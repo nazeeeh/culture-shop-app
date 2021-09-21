@@ -3,12 +3,42 @@
   <!-- <v-btn class="btn-btn py-6 px-10 text-uppercase" >add new</v-btn> -->
   <ExportSearch />
   <!-- Table -->
-        <div class="round">
+    <div class="table">
+    <v-data-table
+      v-model="selected"
+      :headers="headers"
+      :items="customers"
+      :single-select="singleSelect"
+      item-key="name"
+      show-select
+      class="elevation-1"
+    
+    >
+     <template v-slot:[`header.name`]="{ header }">
+        <th >{{ header.name }} </th>
+      </template>
+    <template v-slot:[`item.created_at`]="{ item }">
+      {{ convertToDate(item.created_at) }}
+    </template>
+    <template v-slot:[`item.actions`]="{ item }">
+      <div class="change">
+        <nuxt-link class="underline" :to="`/manage-customers/customers/edit/${item.id}`">
+          <span class="edit">Edit <icon class="i" name="change"></icon></span>
+        </nuxt-link>
+      <span class="view">View<icon class="i mt-1" name="right"></icon></span>
+      </div>
+    </template>
+    <template v-slot:[`item.firstname`]="{ item }">
+      {{item.firstname }} {{item.lastname }}
+    </template>
+    </v-data-table>
+    </div>
+        <!-- <div class="round">
         
           <input type="checkbox" id="checkbox" />
           <label for="checkbox"></label>
-        </div>
-        <div class="table">
+        </div> -->
+        <!-- <div class="table">
             <thead>
               <tr> 
                 <th scope="col" style="text-align: left; width: 10rem;">Id</th>
@@ -45,7 +75,7 @@
           </tr>
         </tbody>
       </template>
-    </div>
+    </div> -->
     <BulkAction />
  </div>
 </template>
@@ -67,6 +97,16 @@
       data () {
         return{
           customers: [],
+          selected: [],
+            headers: [
+            {text:'ID', value:'id', sortable: false},
+            {text:'DATE', value:'created_at'},
+            {text: 'CUSTOMER & ROLE', value: 'firstname'},
+            {text: 'CUSTOMER DETAILS', value: 'email'},
+            {text: 'STATUS All', value: 'status'},
+            {text: 'PURCHASES', value: '0'},
+            {text: '', value: 'actions', width: '200px'}
+            ]
         }
       },
         components: {
@@ -107,8 +147,9 @@
     font-size: 12px;
     line-height: 16px;
     letter-spacing: 0.07em;
-    text-transform: uppercase;
-    margin: 5px 0px 6px 100px;
+    text-transform: capitalize;
+     margin-top: 40px;
+    /* margin: 5px 0px 6px 100px; */
   }
   .box{
   display: flex;

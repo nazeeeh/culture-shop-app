@@ -37,7 +37,7 @@
             <v-card-actions>
               <div class="button-dialog">
               <input @change="selectTime(itemToUse, 't1', 'startTime')" type="time" class="grid startTime"/><br>
-              <span>to</span><br>
+              <span>to</span><br> 
               <input @change="selectTime(itemToUse, 't2', 'endTime')" type="time" class="grid endTime"><br>
               <button class="btn-f white--text" color="#0CAD73" @click="dialog = false, ++updateModal, sendDataToAddVendor()">ok</button>
               </div>
