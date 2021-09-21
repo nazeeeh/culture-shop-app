@@ -2,7 +2,39 @@
  <div class="All-orders">
   <Exports />
   <!-- Table -->
-        <div class="round">
+      <div class="table">
+      <v-data-table
+        v-model="selected"
+        :headers="headers"
+        :items="items"
+        :single-select="singleSelect"
+        item-key="name"
+        show-select
+        class="elevation-1"      
+      >
+    
+      <template v-slot:[`header`]="{ header }">
+          <th>{{ header }} </th>
+        </template>
+      <template v-slot:[`item.created_at`]="{ item }">
+        {{ convertToDate(item.created_at) }}
+      </template>
+      <template v-slot:[`item.actions`]="{ item }">
+        <div class="change">
+          <!-- <nuxt-link class="underline"> -->
+            <span class="edit">Edit <icon class="i" name="change"></icon></span>
+          <!-- </nuxt-link> -->
+          <nuxt-link class="underline" :to="`/manage-customers/orders/${item.id}`">
+            <span class="view">View<icon class="i mt-1" name="right"></icon></span>
+          </nuxt-link>
+        </div>
+      </template>
+      <template v-slot:[`item.total`]="{ item }">
+        &pound;{{item.total }}
+      </template>
+      </v-data-table>
+      </div>
+        <!-- <div class="round">
           <input type="checkbox" id="checkbox" />
           <label for="checkbox"></label>
         </div>
@@ -40,7 +72,7 @@
         </tbody>
       </template>
     </sorted-table>
-    </div>
+    </div> -->
     <BulkAction />
  </div>
 </template>
@@ -53,6 +85,20 @@
             Exports,
             BulkAction
 
+        },
+        data () {
+          return {
+            selected: [],
+            headers: [
+            {text:'ID', value:'id', sortable: false},
+            {text:'DATE', value:''},
+            {text: 'VENDOR & ROLE', value: ''},
+            {text: 'CUSTOMER & ROLE', value: ''},
+            {text: 'TOTAL', value: ''},
+            {text: 'STATUS All', value: ''},
+            {text: '', value: 'actions', width: '200px'}
+            ]
+          }
         }
         
     }
@@ -65,8 +111,9 @@
     font-size: 12px;
     line-height: 16px;
     letter-spacing: 0.07em;
-    text-transform: uppercase;
-    margin: 5px 0px 6px 100px;
+    text-transform: capitalize;
+    /* margin: 5px 0px 6px 100px; */
+    margin-top: 40px;
   }
   .round {
   position: relative;

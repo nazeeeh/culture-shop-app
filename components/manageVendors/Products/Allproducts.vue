@@ -3,7 +3,42 @@
   <AddButton />
   <SubheadSection />
   <!-- Table -->
-        <div class="round">
+      <div class="table">
+      <v-data-table
+        v-model="selected"
+        :headers="headers"
+        :items="products"
+        :single-select="singleSelect"
+        item-key="name"
+        show-select
+        class="elevation-1"      
+      >
+    
+      <template v-slot:[`header`]="{ header }">
+          <th>{{ header }} </th>
+        </template>
+      <template v-slot:[`item.images`]="{ item }">
+        <img :src="item.images" />
+      </template>
+      <template v-slot:[`item.price`]="{ item }">
+        &#163;{{item.price}}
+      </template>
+      <template v-slot:[`item.actions`]="{ item }">
+        <div class="change">
+          <!-- <nuxt-link class="underline"> -->
+            <span class="edit">Edit <icon class="i" name="change"></icon></span>
+          <!-- </nuxt-link> -->
+          <nuxt-link class="underline" :to="`/manage-customers/orders/${item.id}`">
+            <span class="view">View<icon class="i mt-1" name="right"></icon></span>
+          </nuxt-link>
+        </div>
+      </template>
+      <template v-slot:[`item.total`]="{ item }">
+        &pound;{{item.total }}
+      </template>
+      </v-data-table>
+      </div>
+        <!-- <div class="round">
           <input type="checkbox" id="checkbox" />
           <label for="checkbox"></label>
         </div>
@@ -54,7 +89,7 @@
           </tr>
         </tbody>
       </template>
-    </div>
+    </div> -->
     <BulkAction />
  </div>
 </template>
@@ -76,7 +111,17 @@
         },
         data () {
           return {
-            products : []
+            products : [],
+            headers: [
+            {text:'ID', value:'id', sortable: false},
+            {text:'IMAGE', value:'images'},
+            {text: 'CATEGORY', value: 'category'},
+            {text: 'NAME', value: 'name'},
+            {text: 'VENDOR & ROLE', value: 'shop_name'},
+            {text: 'PRICE', value: 'price'},
+            {text: 'STOCK All', value: 'stock'},
+            {text: '', value: 'actions', width: '100px'}
+            ]
           }
         }
         
@@ -90,8 +135,9 @@
     font-size: 12px;
     line-height: 16px;
     letter-spacing: 0.07em;
-    text-transform: uppercase;
-    margin: 5px 0px 6px 100px;
+    text-transform: capitalize;
+    margin-top: 40px;
+    /* margin: 5px 0px 6px 100px; */
   }
   .table td {
     text-transform: capitalize;
@@ -100,16 +146,20 @@
   .table-details{
     font-size: 14px;
   }
-  .table .change{
+  .change{
     display: flex;
     cursor: pointer;
     align-items: center;
     text-transform: uppercase;
   }
-  .table .edit, .table .view{
+  .edit, .view{
+    font-family: 'Space grotesk';
+    font-size: 12px;
+    font-weight: 600;
     display: flex;
     align-items: center;
     width: 80px;
+    color: grey;
   }
   .round {
   position: relative;

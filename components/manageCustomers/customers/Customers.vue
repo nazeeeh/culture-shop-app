@@ -173,7 +173,10 @@
     align-items: center;
     text-transform: uppercase;
   }
-  .table .edit, .table .view{
+  .edit, .view{
+    font-family: 'Space grotesk';
+    font-size: 12px;
+    font-weight: 600;
     display: flex;
     align-items: center;
     width: 80px;

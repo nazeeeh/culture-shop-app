@@ -9,25 +9,27 @@
         :single-select="singleSelect"
         item-key="name"
         show-select
-        class="elevation-1"
-      
+        class="elevation-1"      
       >
-      <template v-slot:[`header.name`]="{ header }">
-          <th>{{ header.name }} </th>
+    
+      <template v-slot:[`header`]="{ header }">
+          <th>{{ header }} </th>
         </template>
       <template v-slot:[`item.created_at`]="{ item }">
         {{ convertToDate(item.created_at) }}
       </template>
       <template v-slot:[`item.actions`]="{ item }">
         <div class="change">
-          <nuxt-link class="underline" :to="`/manage-vendors/vendors/edit/${item.id}`">
+          <!-- <nuxt-link class="underline"> -->
             <span class="edit">Edit <icon class="i" name="change"></icon></span>
+          <!-- </nuxt-link> -->
+          <nuxt-link class="underline" :to="`/manage-customers/orders/${item.id}`">
+            <span class="view">View<icon class="i mt-1" name="right"></icon></span>
           </nuxt-link>
-        <span class="view">View<icon class="i mt-1" name="right"></icon></span>
         </div>
       </template>
-      <template v-slot:[`item.name`]="{ item }">
-        {{item.name }}
+      <template v-slot:[`item.total`]="{ item }">
+        &pound;{{item.total }}
       </template>
       </v-data-table>
       </div>
@@ -99,10 +101,10 @@
             {text:'ID', value:'id', sortable: false},
             {text:'DATE', value:'created_at'},
             {text: 'CUSTOMER & ROLE', value: 'name'},
-            {text: 'VENDOR & ROLE', value: 'lastname'},
-            {text: 'TOTAL', value: ''},
+            {text: 'VENDOR & ROLE', value: ''},
+            {text: 'TOTAL', value: 'total'},
             {text: 'STATUS All', value: 'status'},
-            {text: '', value: 'actions'}
+            {text: '', value: 'actions', width: '200px'}
             ]
          }
       },
@@ -129,7 +131,8 @@
     font-size: 12px;
     line-height: 16px;
     letter-spacing: 0.07em;
-    text-transform: uppercase;
+    text-transform: capitalize;
+    margin-top: 40px;
     /* margin: 5px 0px 6px 100px; */
   }
   .table-details{
@@ -154,7 +157,10 @@
   border-radius: 16px;
   height: 4vh;
 }
-  .table .edit, .table .view{
+  .edit, .view{
+    font-family: 'Space grotesk';
+    font-size: 12px;
+    font-weight: 600;
     display: flex;
     align-items: center;
     width: 80px;
