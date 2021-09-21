@@ -30,7 +30,7 @@
       </template>
       <template v-slot:[`item.status`]="{item}">
         <v-chip :color="colorChange(item.status)">
-          {{item.status}}
+         <span style="text-transform: uppercase; font-size: 12px"> {{item.status}} </span>
         </v-chip>
       </template>
       <template v-slot:[`item.total`]="{ item }">
@@ -117,19 +117,11 @@
         convertToDate(date){
           return moment(date).format('ll');
           },
-      //     getColor (calories) {
-      //   if (calories > 400) return 'red'
-      //   else if (calories > 200) return 'orange'
-      //   else return 'green'
-      // },
-          colorChange(status){
-            if (status == 'accepted') {
-              return '#0CAD73'
-            } else if (status == 'pending') {
-              return '#E76D14'
-            }
-              else return 'red'
 
+          colorChange(status){
+            if (status == 'accepted') { return '#0CAD733A'} 
+            else if (status == 'pending') {return '#E76D143A'}
+            else return 'red'
           }
       }
     }
