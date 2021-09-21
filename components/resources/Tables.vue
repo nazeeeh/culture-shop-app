@@ -28,6 +28,11 @@
           </nuxt-link>
         </div>
       </template>
+      <template v-slot:[`item.status`]="{item}">
+        <v-chip :color="colorChange(item.status)">
+          {{item.status}}
+        </v-chip>
+      </template>
       <template v-slot:[`item.total`]="{ item }">
         &pound;{{item.total }}
       </template>
@@ -112,12 +117,18 @@
         convertToDate(date){
           return moment(date).format('ll');
           },
-          colorChange(){
-            if(orders.status = 'pending'){
-              this.setColor = 'red'
-               console.log(orders.status)
+      //     getColor (calories) {
+      //   if (calories > 400) return 'red'
+      //   else if (calories > 200) return 'orange'
+      //   else return 'green'
+      // },
+          colorChange(status){
+            if (status == 'accepted') {
+              return '#0CAD73'
+            } else if (status == 'pending') {
+              return '#E76D14'
             }
-            console.log(orders.status)
+              else return 'red'
 
           }
       }
