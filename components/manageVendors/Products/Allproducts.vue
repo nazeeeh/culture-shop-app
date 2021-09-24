@@ -28,7 +28,7 @@
           <!-- <nuxt-link class="underline"> -->
             <span class="edit">Edit <icon class="i" name="change"></icon></span>
           <!-- </nuxt-link> -->
-          <nuxt-link class="underline" :to="`/manage-customers/orders/${item.id}`">
+          <nuxt-link class="underline" to="">
             <span class="view">View<icon class="i mt-1" name="right"></icon></span>
           </nuxt-link>
         </div>

@@ -44,14 +44,8 @@
   "Snackbar": {
     "description": "Auto imported from components/snackbar.vue"
   },
-  "ForgetPasswordPhoneVerification": {
-    "description": "Auto imported from components/ForgetPassword/PhoneVerification.vue"
-  },
-  "ForgetPasswordRecoveryOption": {
-    "description": "Auto imported from components/ForgetPassword/RecoveryOption.vue"
-  },
-  "ForgetPasswordResetPassword": {
-    "description": "Auto imported from components/ForgetPassword/ResetPassword.vue"
+  "ManageCustomersAnalytics": {
+    "description": "Auto imported from components/manageCustomers/Analytics.vue"
   },
   "GeneralDriveragreement": {
     "description": "Auto imported from components/General/Driveragreement.vue"
@@ -62,11 +56,17 @@
   "GeneralVendoragreement": {
     "description": "Auto imported from components/General/Vendoragreement.vue"
   },
-  "ManageCustomersAnalytics": {
-    "description": "Auto imported from components/manageCustomers/Analytics.vue"
-  },
   "ManageDriversAnalytics": {
     "description": "Auto imported from components/manageDrivers/Analytics.vue"
+  },
+  "ForgetPasswordPhoneVerification": {
+    "description": "Auto imported from components/ForgetPassword/PhoneVerification.vue"
+  },
+  "ForgetPasswordRecoveryOption": {
+    "description": "Auto imported from components/ForgetPassword/RecoveryOption.vue"
+  },
+  "ForgetPasswordResetPassword": {
+    "description": "Auto imported from components/ForgetPassword/ResetPassword.vue"
   },
   "ManageVendorsAnalytics": {
     "description": "Auto imported from components/manageVendors/Analytics.vue"

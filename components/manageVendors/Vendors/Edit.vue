@@ -289,6 +289,7 @@
   background: rgba(12, 173, 115, 0.1);
   border-radius: 16px;
   height: 4vh;
+  margin-left: 10px;
 }
 form{
   font-family: 'Space Grotesk';

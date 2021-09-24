@@ -201,6 +201,7 @@ import {mapState} from 'vuex'
   font-weight: 600;
   font-size: 12px;
   letter-spacing: 0.07em;
+  /* margin: 0 auto; */
 }
 .t-head{
    font-family: 'Space Grotesk';
@@ -231,6 +232,7 @@ import {mapState} from 'vuex'
   background: rgba(12, 173, 115, 0.1);
   border-radius: 16px;
   height: 4vh;
+  margin-left: 10px;
 }
 form{
   font-family: 'Space Grotesk';
